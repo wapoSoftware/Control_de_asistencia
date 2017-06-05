@@ -1,0 +1,70 @@
+﻿<Page
+    x:Class="Assistence_Control.Menu.Main"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:templateSelectors="using:Assistence_Control.TemplateSelectors"
+    xmlns:local="using:Assistence_Control.Menu"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <Page.Resources>
+        <templateSelectors:MenuTemplateSelector x:Key="MenuTemplateSelector" 
+                                        MenuTabletTemplate="{StaticResource MenuTabletTemplate}"
+                                        MenuTabletTemplateLarge="{StaticResource MenuTabletTemplateLarge}"
+                                        MenuMobileTemplate="{StaticResource MenuMobileTemplate}"
+                                        MenuMobileTemplateLarge="{StaticResource MenuMobileTemplateLarge}"></templateSelectors:MenuTemplateSelector>
+
+    </Page.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="20"/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Row="1" Grid.Column="1">
+            <Grid.Background>
+                <SolidColorBrush Color="{StaticResource MainBackground}"/>
+            </Grid.Background>
+            <GridView x:Name="gvMenu" 
+              VerticalAlignment="Center" 
+              ItemsSource="{Binding DatosMenu}"
+              ItemTemplateSelector="{StaticResource MenuTemplateSelector}"
+              IsItemClickEnabled="True"
+              ItemClick="gvMenu_ItemClick" HorizontalAlignment="Center">
+                <VisualStateManager.VisualStateGroups>
+                    <VisualStateGroup x:Name="Devices">
+                        <VisualState x:Name="Tablet">
+                            <VisualState.Setters>
+                                <Setter Target="gvMenu.(FrameworkElement.HorizontalAlignment)" Value="Center"/>
+                                <Setter Target="gvMenu.(FrameworkElement.VerticalAlignment)" Value="Center"/>
+                                <Setter Target="gvMenu.(Control.Padding)">
+                                    <Setter.Value>
+                                        <Thickness>0</Thickness>
+                                    </Setter.Value>
+                                </Setter>
+                            </VisualState.Setters>
+                            <VisualState.StateTriggers>
+                                <AdaptiveTrigger MinWindowWidth="720"/>
+                            </VisualState.StateTriggers>
+                        </VisualState>
+                        <VisualState x:Name="Mobile">
+                            <VisualState.Setters>
+                                <Setter Target="gvMenu.(Control.Padding)">
+                                    <Setter.Value>
+                                        <Thickness>0</Thickness>
+                                    </Setter.Value>
+                                </Setter>
+                                <Setter Target="gvMenu.(FrameworkElement.HorizontalAlignment)" Value="Center"/>
+                            </VisualState.Setters>
+                            <VisualState.StateTriggers>
+                                <AdaptiveTrigger MinWindowWidth="320"/>
+                            </VisualState.StateTriggers>
+                        </VisualState>
+                    </VisualStateGroup>
+                </VisualStateManager.VisualStateGroups>
+            </GridView>
+        </Grid>
+
+    </Grid>
+
+</Page>
