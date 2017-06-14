@@ -1,5 +1,6 @@
 ﻿using Assistence_Control.TemplateSelectors;
 using Assistence_Control.Utilerias.Items;
+using Assistence_Control.Views.Areas;
 using Assistence_Control.Views.Empleados;
 using System;
 using System.Collections.Generic;
@@ -22,12 +23,17 @@ namespace Assistence_Control.Menu
 {
     public sealed partial class Main : Page
     {
-        Frame rootFrame = (Window.Current.Content as Frame);
+        Frame thisFrame = Window.Current.Content as Frame;
+        Frame rootFrame;
         public Main()
         {
             this.InitializeComponent();
-            rootFrame.SizeChanged += RootFrame_SizeChanged;
+            thisFrame.SizeChanged += RootFrame_SizeChanged;
             cargarMenus();
+        }
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            rootFrame = e.Parameter as Frame;
         }
         private void cargarMenus()
         {
@@ -38,46 +44,45 @@ namespace Assistence_Control.Menu
                 Titulo = "Empleados",
                 Descripcion = "Empleados",
                 BackGroundColor = "#ffc412",
-                TileSize = 1
-                
+                TileSize = 1,
+                Imagen = "ms-appx://Assistence_Control/Assets/employee.png"                
             });
             menus.Add(new DatosMenu()
             {
                 Titulo = "Areas",
                 Descripcion = "Areas",
                 BackGroundColor = "#c6690f",
-                TileSize = 2
-
+                TileSize = 1,
+                Imagen = "ms-appx://Assistence_Control/Assets/field.png"
             });
             menus.Add(new DatosMenu()
             {
                 Titulo = "Reportes",
                 Descripcion = "Reportes",
                 BackGroundColor = "#742971",
-                TileSize = 1
-
+                TileSize = 1,
+                Imagen = "ms-appx://Assistence_Control/Assets/padnote.png"
             });
             menus.Add(new DatosMenu()
             {
                 Titulo = "Horarios",
                 Descripcion = "Horarios",
                 BackGroundColor = "#ff2116",
-                TileSize = 2
-
+                TileSize = 1,
+                Imagen = "ms-appx://Assistence_Control/Assets/calendar.png"
             }); menus.Add(new DatosMenu()
             {
                 Titulo = "Usuarios",
                 Descripcion = "Usuarios",
                 BackGroundColor = "#007be8",
-                TileSize = 1
-
+                TileSize = 1,
+                Imagen = "ms-appx://Assistence_Control/Assets/users.png"
             });
             gvMenu.ItemsSource = menus;
         }
 
         private void gvMenu_ItemClick(object sender, ItemClickEventArgs e)
         {
-            Frame rootFrame = Window.Current.Content as Frame;
             DatosMenu menu = ((DatosMenu)e.ClickedItem);
             switch (menu.Titulo)
             {
@@ -85,6 +90,7 @@ namespace Assistence_Control.Menu
                     rootFrame.Navigate(typeof(abcEmpleado));
                     break;
                 case "Areas":
+                    rootFrame.Navigate(typeof(abcAreas));
                     break;
                 case "Reportes":
                     break;

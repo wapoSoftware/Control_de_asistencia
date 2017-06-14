@@ -9,8 +9,8 @@
     <UserControl.Resources>
         <DataTemplate x:Key="NavLinkItemTemplate" x:DataType="local:NavLink">
             <StackPanel Orientation="Horizontal"  Margin="2,0,0,0">
-                <SymbolIcon Symbol="{x:Bind Symbol}" Foreground="White"/>
-                <TextBlock Text="{x:Bind Label}" Margin="24,0,0,0" VerticalAlignment="Center" Foreground="White"/>
+                <Image Source="{Binding Source}" Height="30" Width="30" />
+                <TextBlock Text="{x:Bind Label}" Margin="24,0,0,0" VerticalAlignment="Center" Foreground="White" FontSize="25"/>
             </StackPanel>
         </DataTemplate>
     </UserControl.Resources>

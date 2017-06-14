@@ -1,0 +1,278 @@
+﻿<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx">
+  <edmx:DataServices m:DataServiceVersion="1.0" m:MaxDataServiceVersion="3.0" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata">
+    <Schema Namespace="ControlDeAsistenciaModel" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <EntityType Name="Area">
+        <Key>
+          <PropertyRef Name="AreaId" />
+        </Key>
+        <Property Name="AreaId" Type="Edm.Int32" Nullable="false" p6:StoreGeneratedPattern="Identity" xmlns:p6="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+        <Property Name="Nombre" Type="Edm.String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+        <Property Name="Descripcion" Type="Edm.String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+        <Property Name="UsuarioRegistro" Type="Edm.Int32" Nullable="false" />
+        <Property Name="FechaHoraRegistro" Type="Edm.DateTime" Nullable="false" Precision="3" />
+        <NavigationProperty Name="EmpleadoArea" Relationship="ControlDeAsistenciaModel.FK_EmpleadoArea_Area" ToRole="EmpleadoArea" FromRole="Area" />
+        <NavigationProperty Name="HorarioArea" Relationship="ControlDeAsistenciaModel.FK_HorarioArea_Area" ToRole="HorarioArea" FromRole="Area" />
+      </EntityType>
+      <EntityType Name="Asistencia">
+        <Key>
+          <PropertyRef Name="AsistenciaId" />
+        </Key>
+        <Property Name="AsistenciaId" Type="Edm.Int32" Nullable="false" p6:StoreGeneratedPattern="Identity" xmlns:p6="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+        <Property Name="EmpleadoId" Type="Edm.Int32" Nullable="false" />
+        <Property Name="FechaHora" Type="Edm.DateTime" Nullable="false" Precision="3" />
+        <Property Name="Estado" Type="Edm.Int32" Nullable="false" />
+        <NavigationProperty Name="Empleado" Relationship="ControlDeAsistenciaModel.FK_Asistencia_Empleado" ToRole="Empleado" FromRole="Asistencia" />
+      </EntityType>
+      <EntityType Name="Empleado">
+        <Key>
+          <PropertyRef Name="EmpleadoId" />
+        </Key>
+        <Property Name="EmpleadoId" Type="Edm.Int32" Nullable="false" p6:StoreGeneratedPattern="Identity" xmlns:p6="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+        <Property Name="Nombre" Type="Edm.String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+        <Property Name="Apellido1" Type="Edm.String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+        <Property Name="Apellido2" Type="Edm.String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+        <Property Name="Edad" Type="Edm.String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+        <Property Name="UsuarioRegistro" Type="Edm.Int32" Nullable="false" />
+        <Property Name="FechaHoraRegistro" Type="Edm.DateTime" Nullable="false" Precision="3" />
+        <NavigationProperty Name="Asistencia" Relationship="ControlDeAsistenciaModel.FK_Asistencia_Empleado" ToRole="Asistencia" FromRole="Empleado" />
+        <NavigationProperty Name="EmpleadoArea" Relationship="ControlDeAsistenciaModel.FK_EmpleadoArea_Empleado" ToRole="EmpleadoArea" FromRole="Empleado" />
+        <NavigationProperty Name="EmpleadoPermiso" Relationship="ControlDeAsistenciaModel.FK_EmpleadoPermiso_Empleado" ToRole="EmpleadoPermiso" FromRole="Empleado" />
+        <NavigationProperty Name="Usuario" Relationship="ControlDeAsistenciaModel.FK_Usuario_Empleado" ToRole="Usuario" FromRole="Empleado" />
+      </EntityType>
+      <EntityType Name="EmpleadoArea">
+        <Key>
+          <PropertyRef Name="AreaId" />
+          <PropertyRef Name="EmpleadoId" />
+        </Key>
+        <Property Name="EmpleadoId" Type="Edm.Int32" Nullable="false" />
+        <Property Name="AreaId" Type="Edm.Int32" Nullable="false" />
+        <Property Name="FechaInicio" Type="Edm.DateTime" Nullable="false" Precision="3" />
+        <Property Name="FechaFinal" Type="Edm.DateTime" Nullable="false" Precision="3" />
+        <Property Name="UsuarioRegistro" Type="Edm.Int32" Nullable="false" />
+        <Property Name="FechaHoraRegistro" Type="Edm.DateTime" Nullable="false" Precision="3" />
+        <NavigationProperty Name="Area" Relationship="ControlDeAsistenciaModel.FK_EmpleadoArea_Area" ToRole="Area" FromRole="EmpleadoArea" />
+        <NavigationProperty Name="Empleado" Relationship="ControlDeAsistenciaModel.FK_EmpleadoArea_Empleado" ToRole="Empleado" FromRole="EmpleadoArea" />
+      </EntityType>
+      <EntityType Name="EmpleadoPermiso">
+        <Key>
+          <PropertyRef Name="EmpleadoId" />
+          <PropertyRef Name="PermisoId" />
+        </Key>
+        <Property Name="EmpleadoId" Type="Edm.Int32" Nullable="false" />
+        <Property Name="PermisoId" Type="Edm.Int32" Nullable="false" />
+        <Property Name="FechaInicio" Type="Edm.DateTime" Nullable="false" Precision="3" />
+        <Property Name="FechaFinal" Type="Edm.DateTime" Nullable="false" Precision="3" />
+        <Property Name="UsuarioRegistro" Type="Edm.Int32" Nullable="false" />
+        <Property Name="FechaHoraRegistro" Type="Edm.DateTime" Precision="3" />
+        <NavigationProperty Name="Empleado" Relationship="ControlDeAsistenciaModel.FK_EmpleadoPermiso_Empleado" ToRole="Empleado" FromRole="EmpleadoPermiso" />
+        <NavigationProperty Name="Permiso" Relationship="ControlDeAsistenciaModel.FK_EmpleadoPermiso_Permiso" ToRole="Permiso" FromRole="EmpleadoPermiso" />
+      </EntityType>
+      <EntityType Name="Horario">
+        <Key>
+          <PropertyRef Name="HorarioId" />
+        </Key>
+        <Property Name="HorarioId" Type="Edm.Int32" Nullable="false" p6:StoreGeneratedPattern="Identity" xmlns:p6="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+        <Property Name="Nombre" Type="Edm.String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+        <Property Name="HoraEntrada" Type="Edm.DateTime" Nullable="false" Precision="3" />
+        <Property Name="HoraSalida" Type="Edm.DateTime" Nullable="false" Precision="3" />
+        <Property Name="UsuarioRegistro" Type="Edm.Int32" Nullable="false" />
+        <Property Name="FechaHoraRegistro" Type="Edm.DateTime" Nullable="false" Precision="3" />
+        <NavigationProperty Name="HorarioArea" Relationship="ControlDeAsistenciaModel.FK_HorarioArea_Horario" ToRole="HorarioArea" FromRole="Horario" />
+      </EntityType>
+      <EntityType Name="HorarioArea">
+        <Key>
+          <PropertyRef Name="AreaId" />
+          <PropertyRef Name="HorarioId" />
+        </Key>
+        <Property Name="HorarioId" Type="Edm.Int32" Nullable="false" />
+        <Property Name="AreaId" Type="Edm.Int32" Nullable="false" />
+        <Property Name="FechaInicio" Type="Edm.DateTime" Nullable="false" Precision="3" />
+        <Property Name="FechaFinal" Type="Edm.DateTime" Nullable="false" Precision="3" />
+        <Property Name="UsuarioRegistro" Type="Edm.Int32" Nullable="false" />
+        <Property Name="FechaHoraRegistro" Type="Edm.DateTime" Nullable="false" Precision="3" />
+        <NavigationProperty Name="Area" Relationship="ControlDeAsistenciaModel.FK_HorarioArea_Area" ToRole="Area" FromRole="HorarioArea" />
+        <NavigationProperty Name="Horario" Relationship="ControlDeAsistenciaModel.FK_HorarioArea_Horario" ToRole="Horario" FromRole="HorarioArea" />
+      </EntityType>
+      <EntityType Name="Permiso">
+        <Key>
+          <PropertyRef Name="PermisoId" />
+        </Key>
+        <Property Name="PermisoId" Type="Edm.Int32" Nullable="false" p6:StoreGeneratedPattern="Identity" xmlns:p6="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+        <Property Name="Nombre" Type="Edm.String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+        <Property Name="Descripcion" Type="Edm.String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+        <Property Name="UsuarioRegistro" Type="Edm.Int32" Nullable="false" />
+        <Property Name="FechaHoraRegistro" Type="Edm.DateTime" Nullable="false" Precision="3" />
+        <NavigationProperty Name="EmpleadoPermiso" Relationship="ControlDeAsistenciaModel.FK_EmpleadoPermiso_Permiso" ToRole="EmpleadoPermiso" FromRole="Permiso" />
+      </EntityType>
+      <EntityType Name="Usuario">
+        <Key>
+          <PropertyRef Name="UsuarioId" />
+        </Key>
+        <Property Name="UsuarioId" Type="Edm.Int32" Nullable="false" p6:StoreGeneratedPattern="Identity" xmlns:p6="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+        <Property Name="EmpleadoId" Type="Edm.Int32" Nullable="false" />
+        <Property Name="Contrasena" Type="Edm.String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+        <Property Name="Nivel" Type="Edm.Int32" Nullable="false" />
+        <Property Name="UsuarioRegistro" Type="Edm.Int32" Nullable="false" />
+        <Property Name="FechaHoraRegistro" Type="Edm.DateTime" Nullable="false" Precision="3" />
+        <NavigationProperty Name="Empleado" Relationship="ControlDeAsistenciaModel.FK_Usuario_Empleado" ToRole="Empleado" FromRole="Usuario" />
+      </EntityType>
+      <Association Name="FK_EmpleadoArea_Area">
+        <End Type="ControlDeAsistenciaModel.Area" Role="Area" Multiplicity="1">
+          <OnDelete Action="Cascade" />
+        </End>
+        <End Type="ControlDeAsistenciaModel.EmpleadoArea" Role="EmpleadoArea" Multiplicity="*" />
+        <ReferentialConstraint>
+          <Principal Role="Area">
+            <PropertyRef Name="AreaId" />
+          </Principal>
+          <Dependent Role="EmpleadoArea">
+            <PropertyRef Name="AreaId" />
+          </Dependent>
+        </ReferentialConstraint>
+      </Association>
+      <Association Name="FK_HorarioArea_Area">
+        <End Type="ControlDeAsistenciaModel.Area" Role="Area" Multiplicity="1">
+          <OnDelete Action="Cascade" />
+        </End>
+        <End Type="ControlDeAsistenciaModel.HorarioArea" Role="HorarioArea" Multiplicity="*" />
+        <ReferentialConstraint>
+          <Principal Role="Area">
+            <PropertyRef Name="AreaId" />
+          </Principal>
+          <Dependent Role="HorarioArea">
+            <PropertyRef Name="AreaId" />
+          </Dependent>
+        </ReferentialConstraint>
+      </Association>
+      <Association Name="FK_Asistencia_Empleado">
+        <End Type="ControlDeAsistenciaModel.Empleado" Role="Empleado" Multiplicity="1">
+          <OnDelete Action="Cascade" />
+        </End>
+        <End Type="ControlDeAsistenciaModel.Asistencia" Role="Asistencia" Multiplicity="*" />
+        <ReferentialConstraint>
+          <Principal Role="Empleado">
+            <PropertyRef Name="EmpleadoId" />
+          </Principal>
+          <Dependent Role="Asistencia">
+            <PropertyRef Name="EmpleadoId" />
+          </Dependent>
+        </ReferentialConstraint>
+      </Association>
+      <Association Name="FK_EmpleadoArea_Empleado">
+        <End Type="ControlDeAsistenciaModel.Empleado" Role="Empleado" Multiplicity="1">
+          <OnDelete Action="Cascade" />
+        </End>
+        <End Type="ControlDeAsistenciaModel.EmpleadoArea" Role="EmpleadoArea" Multiplicity="*" />
+        <ReferentialConstraint>
+          <Principal Role="Empleado">
+            <PropertyRef Name="EmpleadoId" />
+          </Principal>
+          <Dependent Role="EmpleadoArea">
+            <PropertyRef Name="EmpleadoId" />
+          </Dependent>
+        </ReferentialConstraint>
+      </Association>
+      <Association Name="FK_EmpleadoPermiso_Empleado">
+        <End Type="ControlDeAsistenciaModel.Empleado" Role="Empleado" Multiplicity="1">
+          <OnDelete Action="Cascade" />
+        </End>
+        <End Type="ControlDeAsistenciaModel.EmpleadoPermiso" Role="EmpleadoPermiso" Multiplicity="*" />
+        <ReferentialConstraint>
+          <Principal Role="Empleado">
+            <PropertyRef Name="EmpleadoId" />
+          </Principal>
+          <Dependent Role="EmpleadoPermiso">
+            <PropertyRef Name="EmpleadoId" />
+          </Dependent>
+        </ReferentialConstraint>
+      </Association>
+      <Association Name="FK_Usuario_Empleado">
+        <End Type="ControlDeAsistenciaModel.Empleado" Role="Empleado" Multiplicity="1">
+          <OnDelete Action="Cascade" />
+        </End>
+        <End Type="ControlDeAsistenciaModel.Usuario" Role="Usuario" Multiplicity="*" />
+        <ReferentialConstraint>
+          <Principal Role="Empleado">
+            <PropertyRef Name="EmpleadoId" />
+          </Principal>
+          <Dependent Role="Usuario">
+            <PropertyRef Name="EmpleadoId" />
+          </Dependent>
+        </ReferentialConstraint>
+      </Association>
+      <Association Name="FK_EmpleadoPermiso_Permiso">
+        <End Type="ControlDeAsistenciaModel.Permiso" Role="Permiso" Multiplicity="1">
+          <OnDelete Action="Cascade" />
+        </End>
+        <End Type="ControlDeAsistenciaModel.EmpleadoPermiso" Role="EmpleadoPermiso" Multiplicity="*" />
+        <ReferentialConstraint>
+          <Principal Role="Permiso">
+            <PropertyRef Name="PermisoId" />
+          </Principal>
+          <Dependent Role="EmpleadoPermiso">
+            <PropertyRef Name="PermisoId" />
+          </Dependent>
+        </ReferentialConstraint>
+      </Association>
+      <Association Name="FK_HorarioArea_Horario">
+        <End Type="ControlDeAsistenciaModel.Horario" Role="Horario" Multiplicity="1">
+          <OnDelete Action="Cascade" />
+        </End>
+        <End Type="ControlDeAsistenciaModel.HorarioArea" Role="HorarioArea" Multiplicity="*" />
+        <ReferentialConstraint>
+          <Principal Role="Horario">
+            <PropertyRef Name="HorarioId" />
+          </Principal>
+          <Dependent Role="HorarioArea">
+            <PropertyRef Name="HorarioId" />
+          </Dependent>
+        </ReferentialConstraint>
+      </Association>
+    </Schema>
+    <Schema Namespace="wsControlAsistencia" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <EntityContainer Name="ControlDeAsistenciaEntities" m:IsDefaultEntityContainer="true" p6:LazyLoadingEnabled="true" xmlns:p6="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+        <EntitySet Name="Area" EntityType="ControlDeAsistenciaModel.Area" />
+        <EntitySet Name="Asistencia" EntityType="ControlDeAsistenciaModel.Asistencia" />
+        <EntitySet Name="Empleado" EntityType="ControlDeAsistenciaModel.Empleado" />
+        <EntitySet Name="EmpleadoArea" EntityType="ControlDeAsistenciaModel.EmpleadoArea" />
+        <EntitySet Name="EmpleadoPermiso" EntityType="ControlDeAsistenciaModel.EmpleadoPermiso" />
+        <EntitySet Name="Horario" EntityType="ControlDeAsistenciaModel.Horario" />
+        <EntitySet Name="HorarioArea" EntityType="ControlDeAsistenciaModel.HorarioArea" />
+        <EntitySet Name="Permiso" EntityType="ControlDeAsistenciaModel.Permiso" />
+        <EntitySet Name="Usuario" EntityType="ControlDeAsistenciaModel.Usuario" />
+        <AssociationSet Name="FK_EmpleadoArea_Area" Association="ControlDeAsistenciaModel.FK_EmpleadoArea_Area">
+          <End Role="Area" EntitySet="Area" />
+          <End Role="EmpleadoArea" EntitySet="EmpleadoArea" />
+        </AssociationSet>
+        <AssociationSet Name="FK_HorarioArea_Area" Association="ControlDeAsistenciaModel.FK_HorarioArea_Area">
+          <End Role="Area" EntitySet="Area" />
+          <End Role="HorarioArea" EntitySet="HorarioArea" />
+        </AssociationSet>
+        <AssociationSet Name="FK_Asistencia_Empleado" Association="ControlDeAsistenciaModel.FK_Asistencia_Empleado">
+          <End Role="Asistencia" EntitySet="Asistencia" />
+          <End Role="Empleado" EntitySet="Empleado" />
+        </AssociationSet>
+        <AssociationSet Name="FK_EmpleadoArea_Empleado" Association="ControlDeAsistenciaModel.FK_EmpleadoArea_Empleado">
+          <End Role="Empleado" EntitySet="Empleado" />
+          <End Role="EmpleadoArea" EntitySet="EmpleadoArea" />
+        </AssociationSet>
+        <AssociationSet Name="FK_EmpleadoPermiso_Empleado" Association="ControlDeAsistenciaModel.FK_EmpleadoPermiso_Empleado">
+          <End Role="Empleado" EntitySet="Empleado" />
+          <End Role="EmpleadoPermiso" EntitySet="EmpleadoPermiso" />
+        </AssociationSet>
+        <AssociationSet Name="FK_Usuario_Empleado" Association="ControlDeAsistenciaModel.FK_Usuario_Empleado">
+          <End Role="Empleado" EntitySet="Empleado" />
+          <End Role="Usuario" EntitySet="Usuario" />
+        </AssociationSet>
+        <AssociationSet Name="FK_EmpleadoPermiso_Permiso" Association="ControlDeAsistenciaModel.FK_EmpleadoPermiso_Permiso">
+          <End Role="EmpleadoPermiso" EntitySet="EmpleadoPermiso" />
+          <End Role="Permiso" EntitySet="Permiso" />
+        </AssociationSet>
+        <AssociationSet Name="FK_HorarioArea_Horario" Association="ControlDeAsistenciaModel.FK_HorarioArea_Horario">
+          <End Role="Horario" EntitySet="Horario" />
+          <End Role="HorarioArea" EntitySet="HorarioArea" />
+        </AssociationSet>
+      </EntityContainer>
+    </Schema>
+  </edmx:DataServices>
+</edmx:Edmx>

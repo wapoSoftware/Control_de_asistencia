@@ -16,13 +16,13 @@
         <ScrollViewer>
             <Grid>
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="80"/>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
-                <TextBlock Text="Empleados" Margin="30,0,0,30" FontSize="50"></TextBlock>
-                <controls:DataGrid MaxHeight="400" x:Name="DataGrid" SelectionMode="Single" Margin="30,0,30,10" Grid.Row="1" ItemsSource="{Binding EmpleadoITem}" HeaderBackground="#FF8B8383" >
+                <TextBlock Text="Empleados" Margin="30,0,0,0" FontSize="50"></TextBlock>
+                <controls:DataGrid MaxHeight="360" x:Name="DataGrid" SelectionMode="Single" Margin="30,0,30,10" Grid.Row="1" ItemsSource="{Binding EmpleadoITem}" HeaderBackground="#FF8B8383" >
                     <controls:DataGrid.Foreground>
                         <SolidColorBrush Color="White"/>
                     </controls:DataGrid.Foreground>

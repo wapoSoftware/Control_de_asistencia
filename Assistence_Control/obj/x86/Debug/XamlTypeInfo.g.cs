@@ -13,7 +13,7 @@ namespace Assistence_Control
 {
     public partial class App : global::Windows.UI.Xaml.Markup.IXamlMetadataProvider
     {
-    private global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlTypeInfoProvider _provider;
+    private global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlTypeInfoProvider _provider;
 
         /// <summary>
         /// GetXamlType(Type)
@@ -22,7 +22,7 @@ namespace Assistence_Control
         {
             if(_provider == null)
             {
-                _provider = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlTypeInfoProvider();
+                _provider = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlTypeInfoProvider();
             }
             return _provider.GetXamlTypeByType(type);
         }
@@ -34,7 +34,7 @@ namespace Assistence_Control
         {
             if(_provider == null)
             {
-                _provider = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlTypeInfoProvider();
+                _provider = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlTypeInfoProvider();
             }
             return _provider.GetXamlTypeByName(fullName);
         }
@@ -49,7 +49,7 @@ namespace Assistence_Control
     }
 }
 
-namespace Assistence_Control.Assistence_Control_XamlTypeInfo
+namespace Assistance_Control.Assistence_Control_XamlTypeInfo
 {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 14.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -67,7 +67,7 @@ namespace Assistence_Control.Assistence_Control_XamlTypeInfo
             {
                 xamlType = CreateXamlType(typeIndex);
             }
-            var userXamlType = xamlType as global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType;
+            var userXamlType = xamlType as global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType;
             if(xamlType == null || (userXamlType != null && userXamlType.IsReturnTypeStub && !userXamlType.IsLocalType))
             {
                 global::Windows.UI.Xaml.Markup.IXamlType libXamlType = CheckOtherMetadataProvidersForType(type);
@@ -103,7 +103,7 @@ namespace Assistence_Control.Assistence_Control_XamlTypeInfo
             {
                 xamlType = CreateXamlType(typeIndex);
             }
-            var userXamlType = xamlType as global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType;
+            var userXamlType = xamlType as global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType;
             if(xamlType == null || (userXamlType != null && userXamlType.IsReturnTypeStub && !userXamlType.IsLocalType))
             {
                 global::Windows.UI.Xaml.Markup.IXamlType libXamlType = CheckOtherMetadataProvidersForName(typeName);
@@ -169,12 +169,12 @@ namespace Assistence_Control.Assistence_Control_XamlTypeInfo
             _typeNameTable[9] = "System.Collections.ObjectModel.Collection`1<Assistence_Control.Menu.NavLink>";
             _typeNameTable[10] = "Assistence_Control.Menu.NavLink";
             _typeNameTable[11] = "String";
-            _typeNameTable[12] = "Windows.UI.Xaml.Controls.Symbol";
-            _typeNameTable[13] = "Assistence_Control.TemplateSelectors.MenuTemplateSelector";
-            _typeNameTable[14] = "Windows.UI.Xaml.Controls.DataTemplateSelector";
-            _typeNameTable[15] = "Windows.UI.Xaml.DataTemplate";
-            _typeNameTable[16] = "Assistence_Control.Menu.Main";
-            _typeNameTable[17] = "Assistence_Control.Menu.pMasterPage";
+            _typeNameTable[12] = "Assistence_Control.TemplateSelectors.MenuTemplateSelector";
+            _typeNameTable[13] = "Windows.UI.Xaml.Controls.DataTemplateSelector";
+            _typeNameTable[14] = "Windows.UI.Xaml.DataTemplate";
+            _typeNameTable[15] = "Assistence_Control.Menu.Main";
+            _typeNameTable[16] = "Assistence_Control.Menu.pMasterPage";
+            _typeNameTable[17] = "Assistence_Control.Views.Areas.abcAreas";
             _typeNameTable[18] = "MyToolkit.Controls.DataGrid";
             _typeNameTable[19] = "Windows.UI.Xaml.Controls.Control";
             _typeNameTable[20] = "Windows.UI.Xaml.Controls.SelectionMode";
@@ -318,12 +318,12 @@ namespace Assistence_Control.Assistence_Control_XamlTypeInfo
             _typeTable[9] = typeof(global::System.Collections.ObjectModel.Collection<global::Assistence_Control.Menu.NavLink>);
             _typeTable[10] = typeof(global::Assistence_Control.Menu.NavLink);
             _typeTable[11] = typeof(global::System.String);
-            _typeTable[12] = typeof(global::Windows.UI.Xaml.Controls.Symbol);
-            _typeTable[13] = typeof(global::Assistence_Control.TemplateSelectors.MenuTemplateSelector);
-            _typeTable[14] = typeof(global::Windows.UI.Xaml.Controls.DataTemplateSelector);
-            _typeTable[15] = typeof(global::Windows.UI.Xaml.DataTemplate);
-            _typeTable[16] = typeof(global::Assistence_Control.Menu.Main);
-            _typeTable[17] = typeof(global::Assistence_Control.Menu.pMasterPage);
+            _typeTable[12] = typeof(global::Assistence_Control.TemplateSelectors.MenuTemplateSelector);
+            _typeTable[13] = typeof(global::Windows.UI.Xaml.Controls.DataTemplateSelector);
+            _typeTable[14] = typeof(global::Windows.UI.Xaml.DataTemplate);
+            _typeTable[15] = typeof(global::Assistence_Control.Menu.Main);
+            _typeTable[16] = typeof(global::Assistence_Control.Menu.pMasterPage);
+            _typeTable[17] = typeof(global::Assistence_Control.Views.Areas.abcAreas);
             _typeTable[18] = typeof(global::MyToolkit.Controls.DataGrid);
             _typeTable[19] = typeof(global::Windows.UI.Xaml.Controls.Control);
             _typeTable[20] = typeof(global::Windows.UI.Xaml.Controls.SelectionMode);
@@ -492,9 +492,10 @@ namespace Assistence_Control.Assistence_Control_XamlTypeInfo
         private object Activate_8_ObservableCollection() { return new global::System.Collections.ObjectModel.ObservableCollection<global::Assistence_Control.Menu.NavLink>(); }
         private object Activate_9_Collection() { return new global::System.Collections.ObjectModel.Collection<global::Assistence_Control.Menu.NavLink>(); }
         private object Activate_10_NavLink() { return new global::Assistence_Control.Menu.NavLink(); }
-        private object Activate_13_MenuTemplateSelector() { return new global::Assistence_Control.TemplateSelectors.MenuTemplateSelector(); }
-        private object Activate_16_Main() { return new global::Assistence_Control.Menu.Main(); }
-        private object Activate_17_pMasterPage() { return new global::Assistence_Control.Menu.pMasterPage(); }
+        private object Activate_12_MenuTemplateSelector() { return new global::Assistence_Control.TemplateSelectors.MenuTemplateSelector(); }
+        private object Activate_15_Main() { return new global::Assistence_Control.Menu.Main(); }
+        private object Activate_16_pMasterPage() { return new global::Assistence_Control.Menu.pMasterPage(); }
+        private object Activate_17_abcAreas() { return new global::Assistence_Control.Views.Areas.abcAreas(); }
         private object Activate_18_DataGrid() { return new global::MyToolkit.Controls.DataGrid(); }
         private object Activate_22_DataGridColumnCollection() { return new global::MyToolkit.Controls.DataGridColumnCollection(); }
         private object Activate_23_ObservableCollection() { return new global::System.Collections.ObjectModel.ObservableCollection<global::MyToolkit.Controls.DataGridColumnBase>(); }
@@ -722,8 +723,8 @@ namespace Assistence_Control.Assistence_Control_XamlTypeInfo
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {
-            global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlSystemBaseType xamlType = null;
-            global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType userType;
+            global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlSystemBaseType xamlType = null;
+            global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType userType;
             string typeName = _typeNameTable[typeIndex];
             global::System.Type type = _typeTable[typeIndex];
 
@@ -731,7 +732,7 @@ namespace Assistence_Control.Assistence_Control_XamlTypeInfo
             {
 
             case 0:   //  Windows.UI.Color
-                userType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.ValueType"));
+                userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.ValueType"));
                 userType.AddMemberName("A");
                 userType.AddMemberName("B");
                 userType.AddMemberName("G");
@@ -740,37 +741,37 @@ namespace Assistence_Control.Assistence_Control_XamlTypeInfo
                 break;
 
             case 1:   //  System.ValueType
-                userType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 xamlType = userType;
                 break;
 
             case 2:   //  Object
-                xamlType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                xamlType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
             case 3:   //  Byte
-                userType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.ValueType"));
+                userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.ValueType"));
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
             case 4:   //  Assistence_Control.Inicio.Login
-                userType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
                 userType.Activator = Activate_4_Login;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
             case 5:   //  Windows.UI.Xaml.Controls.Page
-                xamlType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                xamlType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
             case 6:   //  Windows.UI.Xaml.Controls.UserControl
-                xamlType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                xamlType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
             case 7:   //  Assistence_Control.Menu.MasterPage
-                userType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
+                userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
                 userType.Activator = Activate_7_MasterPage;
                 userType.AddMemberName("NavLinks");
                 userType.SetIsLocalType();
@@ -778,40 +779,36 @@ namespace Assistence_Control.Assistence_Control_XamlTypeInfo
                 break;
 
             case 8:   //  System.Collections.ObjectModel.ObservableCollection`1<Assistence_Control.Menu.NavLink>
-                userType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Collections.ObjectModel.Collection`1<Assistence_Control.Menu.NavLink>"));
+                userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Collections.ObjectModel.Collection`1<Assistence_Control.Menu.NavLink>"));
                 userType.CollectionAdd = VectorAdd_8_ObservableCollection;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
             case 9:   //  System.Collections.ObjectModel.Collection`1<Assistence_Control.Menu.NavLink>
-                userType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.Activator = Activate_9_Collection;
                 userType.CollectionAdd = VectorAdd_9_Collection;
                 xamlType = userType;
                 break;
 
             case 10:   //  Assistence_Control.Menu.NavLink
-                userType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.Activator = Activate_10_NavLink;
                 userType.AddMemberName("Title");
                 userType.AddMemberName("Label");
-                userType.AddMemberName("Symbol");
+                userType.AddMemberName("Source");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
             case 11:   //  String
-                xamlType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                xamlType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 12:   //  Windows.UI.Xaml.Controls.Symbol
-                xamlType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlSystemBaseType(typeName, type);
-                break;
-
-            case 13:   //  Assistence_Control.TemplateSelectors.MenuTemplateSelector
-                userType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.DataTemplateSelector"));
-                userType.Activator = Activate_13_MenuTemplateSelector;
+            case 12:   //  Assistence_Control.TemplateSelectors.MenuTemplateSelector
+                userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.DataTemplateSelector"));
+                userType.Activator = Activate_12_MenuTemplateSelector;
                 userType.AddMemberName("MenuTabletTemplate");
                 userType.AddMemberName("MenuTabletTemplateLarge");
                 userType.AddMemberName("MenuMobileTemplate");
@@ -820,30 +817,37 @@ namespace Assistence_Control.Assistence_Control_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 14:   //  Windows.UI.Xaml.Controls.DataTemplateSelector
-                xamlType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+            case 13:   //  Windows.UI.Xaml.Controls.DataTemplateSelector
+                xamlType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 15:   //  Windows.UI.Xaml.DataTemplate
-                xamlType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+            case 14:   //  Windows.UI.Xaml.DataTemplate
+                xamlType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 16:   //  Assistence_Control.Menu.Main
-                userType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_16_Main;
+            case 15:   //  Assistence_Control.Menu.Main
+                userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_15_Main;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 17:   //  Assistence_Control.Menu.pMasterPage
-                userType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_17_pMasterPage;
+            case 16:   //  Assistence_Control.Menu.pMasterPage
+                userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_16_pMasterPage;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 17:   //  Assistence_Control.Views.Areas.abcAreas
+                userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_17_abcAreas;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
             case 18:   //  MyToolkit.Controls.DataGrid
-                userType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Control"));
+                userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Control"));
                 userType.Activator = Activate_18_DataGrid;
                 userType.AddMemberName("SelectionMode");
                 userType.AddMemberName("ItemsSource");
@@ -864,40 +868,40 @@ namespace Assistence_Control.Assistence_Control_XamlTypeInfo
                 break;
 
             case 19:   //  Windows.UI.Xaml.Controls.Control
-                xamlType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                xamlType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
             case 20:   //  Windows.UI.Xaml.Controls.SelectionMode
-                xamlType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                xamlType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
             case 21:   //  Windows.UI.Xaml.Media.Brush
-                xamlType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                xamlType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
             case 22:   //  MyToolkit.Controls.DataGridColumnCollection
-                userType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Collections.ObjectModel.ObservableCollection`1<MyToolkit.Controls.DataGridColumnBase>"));
+                userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Collections.ObjectModel.ObservableCollection`1<MyToolkit.Controls.DataGridColumnBase>"));
                 userType.CollectionAdd = VectorAdd_22_DataGridColumnCollection;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
             case 23:   //  System.Collections.ObjectModel.ObservableCollection`1<MyToolkit.Controls.DataGridColumnBase>
-                userType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Collections.ObjectModel.Collection`1<MyToolkit.Controls.DataGridColumnBase>"));
+                userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Collections.ObjectModel.Collection`1<MyToolkit.Controls.DataGridColumnBase>"));
                 userType.Activator = Activate_23_ObservableCollection;
                 userType.CollectionAdd = VectorAdd_23_ObservableCollection;
                 xamlType = userType;
                 break;
 
             case 24:   //  System.Collections.ObjectModel.Collection`1<MyToolkit.Controls.DataGridColumnBase>
-                userType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.Activator = Activate_24_Collection;
                 userType.CollectionAdd = VectorAdd_24_Collection;
                 xamlType = userType;
                 break;
 
             case 25:   //  MyToolkit.Controls.DataGridColumnBase
-                userType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.DependencyObject"));
+                userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.DependencyObject"));
                 userType.AddMemberName("CanSort");
                 userType.AddMemberName("IsSelected");
                 userType.AddMemberName("IsAscending");
@@ -909,44 +913,44 @@ namespace Assistence_Control.Assistence_Control_XamlTypeInfo
                 break;
 
             case 26:   //  Windows.UI.Xaml.DependencyObject
-                xamlType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                xamlType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
             case 27:   //  Boolean
-                xamlType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                xamlType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
             case 28:   //  Windows.UI.Xaml.GridLength
-                xamlType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                xamlType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
             case 29:   //  Windows.UI.Xaml.PropertyPath
-                xamlType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                xamlType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
             case 30:   //  System.Collections.Generic.IList`1<Object>
-                userType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, null);
+                userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, null);
                 userType.CollectionAdd = VectorAdd_30_IList;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
             case 31:   //  MyToolkit.Collections.IObservableCollectionView
-                userType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, null);
+                userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, null);
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
             case 32:   //  Int32
-                xamlType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                xamlType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
             case 33:   //  Windows.UI.Xaml.Style
-                xamlType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                xamlType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
             case 34:   //  MyToolkit.Controls.DataGridTextColumn
-                userType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("MyToolkit.Controls.DataGridBoundColumn"));
+                userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("MyToolkit.Controls.DataGridBoundColumn"));
                 userType.Activator = Activate_34_DataGridTextColumn;
                 userType.AddMemberName("Style");
                 userType.AddMemberName("FontSize");
@@ -956,22 +960,22 @@ namespace Assistence_Control.Assistence_Control_XamlTypeInfo
                 break;
 
             case 35:   //  MyToolkit.Controls.DataGridBoundColumn
-                userType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("MyToolkit.Controls.DataGridColumnBase"));
+                userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("MyToolkit.Controls.DataGridColumnBase"));
                 userType.AddMemberName("Binding");
                 userType.AddMemberName("OrderPropertyPath");
                 xamlType = userType;
                 break;
 
             case 36:   //  Windows.UI.Xaml.Data.Binding
-                xamlType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                xamlType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
             case 37:   //  Double
-                xamlType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                xamlType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
             case 38:   //  Windows.UI.Text.FontStyle
-                userType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
+                userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("Normal", global::Windows.UI.Text.FontStyle.Normal);
                 userType.AddEnumValue("Oblique", global::Windows.UI.Text.FontStyle.Oblique);
                 userType.AddEnumValue("Italic", global::Windows.UI.Text.FontStyle.Italic);
@@ -979,19 +983,19 @@ namespace Assistence_Control.Assistence_Control_XamlTypeInfo
                 break;
 
             case 39:   //  System.Enum
-                userType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.ValueType"));
+                userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.ValueType"));
                 xamlType = userType;
                 break;
 
             case 40:   //  Assistence_Control.Views.Empleados.abcEmpleado
-                userType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
                 userType.Activator = Activate_40_abcEmpleado;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
             case 41:   //  DevExpress.UI.Xaml.Controls.PdfViewerControl
-                userType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Control"));
+                userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Control"));
                 userType.Activator = Activate_41_PdfViewerControl;
                 userType.AddMemberName("DocumentSource");
                 userType.AddMemberName("DocumentUri");
@@ -1065,30 +1069,30 @@ namespace Assistence_Control.Assistence_Control_XamlTypeInfo
                 break;
 
             case 42:   //  System.Uri
-                userType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
             case 43:   //  DevExpress.UI.Xaml.Controls.PdfViewMode
-                userType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
+                userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("SinglePage", global::DevExpress.UI.Xaml.Controls.PdfViewMode.SinglePage);
                 userType.AddEnumValue("Continuous", global::DevExpress.UI.Xaml.Controls.PdfViewMode.Continuous);
                 xamlType = userType;
                 break;
 
             case 44:   //  Windows.Graphics.Printing.IPrintDocumentSource
-                userType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, null);
+                userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, null);
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
             case 45:   //  Windows.UI.Xaml.Thickness
-                xamlType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                xamlType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
             case 46:   //  DevExpress.UI.Xaml.Controls.PdfZoomMode
-                userType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
+                userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("FitPageLevel", global::DevExpress.UI.Xaml.Controls.PdfZoomMode.FitPageLevel);
                 userType.AddEnumValue("FitWidth", global::DevExpress.UI.Xaml.Controls.PdfZoomMode.FitWidth);
                 userType.AddEnumValue("FitHeight", global::DevExpress.UI.Xaml.Controls.PdfZoomMode.FitHeight);
@@ -1099,70 +1103,70 @@ namespace Assistence_Control.Assistence_Control_XamlTypeInfo
                 break;
 
             case 47:   //  Single
-                xamlType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                xamlType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
             case 48:   //  DevExpress.UI.Xaml.Controls.PdfDocumentContainer
-                userType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.Mvvm.BindableBase"));
+                userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.Mvvm.BindableBase"));
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
             case 49:   //  DevExpress.Mvvm.BindableBase
-                userType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 xamlType = userType;
                 break;
 
             case 50:   //  Windows.UI.Xaml.CornerRadius
-                xamlType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                xamlType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
             case 51:   //  System.Windows.Input.ICommand
-                userType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, null);
+                userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, null);
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
             case 52:   //  System.Collections.Generic.IEnumerable`1<DevExpress.UI.Xaml.Controls.IPdfPageBookmark>
-                userType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, null);
+                userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, null);
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
             case 53:   //  DevExpress.UI.Xaml.Controls.SettingsBarItemCollection
-                userType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Collections.ObjectModel.ObservableCollection`1<DevExpress.UI.Xaml.Controls.ISettingsBarItem>"));
+                userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Collections.ObjectModel.ObservableCollection`1<DevExpress.UI.Xaml.Controls.ISettingsBarItem>"));
                 userType.CollectionAdd = VectorAdd_53_SettingsBarItemCollection;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
             case 54:   //  System.Collections.ObjectModel.ObservableCollection`1<DevExpress.UI.Xaml.Controls.ISettingsBarItem>
-                userType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Collections.ObjectModel.Collection`1<DevExpress.UI.Xaml.Controls.ISettingsBarItem>"));
+                userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Collections.ObjectModel.Collection`1<DevExpress.UI.Xaml.Controls.ISettingsBarItem>"));
                 userType.Activator = Activate_54_ObservableCollection;
                 userType.CollectionAdd = VectorAdd_54_ObservableCollection;
                 xamlType = userType;
                 break;
 
             case 55:   //  System.Collections.ObjectModel.Collection`1<DevExpress.UI.Xaml.Controls.ISettingsBarItem>
-                userType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.Activator = Activate_55_Collection;
                 userType.CollectionAdd = VectorAdd_55_Collection;
                 xamlType = userType;
                 break;
 
             case 56:   //  DevExpress.UI.Xaml.Controls.ISettingsBarItem
-                userType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, null);
+                userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, null);
                 xamlType = userType;
                 break;
 
             case 57:   //  DevExpress.UI.Xaml.Controls.PdfViewerErrorWrapper
-                userType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.Mvvm.BindableBase"));
+                userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.Mvvm.BindableBase"));
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
             case 58:   //  DevExpress.UI.Xaml.Controls.RadialContextMenuCommandBase
-                userType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.Core.Native.DXControl"));
+                userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.Core.Native.DXControl"));
                 userType.Activator = Activate_58_RadialContextMenuCommandBase;
                 userType.AddMemberName("Content");
                 userType.AddMemberName("ActualIndex");
@@ -1178,7 +1182,7 @@ namespace Assistence_Control.Assistence_Control_XamlTypeInfo
                 break;
 
             case 59:   //  DevExpress.Core.Native.DXControl
-                userType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Control"));
+                userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Control"));
                 userType.Activator = Activate_59_DXControl;
                 userType.AddMemberName("IsFocused");
                 userType.AddMemberName("IsKeyboardFocusWithin");
@@ -1188,17 +1192,17 @@ namespace Assistence_Control.Assistence_Control_XamlTypeInfo
                 break;
 
             case 60:   //  Windows.Foundation.Point
-                xamlType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                xamlType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
             case 61:   //  DevExpress.UI.Xaml.Controls.Internal.ViewInfo
-                userType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.Mvvm.BindableBase"));
+                userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.Mvvm.BindableBase"));
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
             case 62:   //  DevExpress.UI.Xaml.Controls.RadialMenuControlBase
-                userType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.ContentControl"));
+                userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.ContentControl"));
                 userType.Activator = Activate_62_RadialMenuControlBase;
                 userType.AddMemberName("DefaultActionCommand");
                 userType.AddMemberName("NavigateCommand");
@@ -1207,11 +1211,11 @@ namespace Assistence_Control.Assistence_Control_XamlTypeInfo
                 break;
 
             case 63:   //  Windows.UI.Xaml.Controls.ContentControl
-                xamlType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                xamlType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
             case 64:   //  DevExpress.UI.Xaml.Ribbon.BackstageTabItem
-                userType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.RibbonSelectorItemBase"));
+                userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.RibbonSelectorItemBase"));
                 userType.Activator = Activate_64_BackstageTabItem;
                 userType.SetContentPropertyName("DevExpress.UI.Xaml.Ribbon.BackstageTabItem.ControlPane");
                 userType.AddMemberName("ControlPane");
@@ -1222,19 +1226,19 @@ namespace Assistence_Control.Assistence_Control_XamlTypeInfo
                 break;
 
             case 65:   //  DevExpress.UI.Xaml.Ribbon.Internal.RibbonSelectorItemBase
-                userType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.RibbonItemBaseEx"));
+                userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.RibbonItemBaseEx"));
                 userType.Activator = Activate_65_RibbonSelectorItemBase;
                 userType.AddMemberName("IsSelected");
                 xamlType = userType;
                 break;
 
             case 66:   //  DevExpress.UI.Xaml.Ribbon.Internal.RibbonItemBaseEx
-                userType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.RibbonItemBase"));
+                userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.RibbonItemBase"));
                 xamlType = userType;
                 break;
 
             case 67:   //  DevExpress.UI.Xaml.Ribbon.Internal.RibbonItemBase
-                userType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.PointerItemBase"));
+                userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.PointerItemBase"));
                 userType.AddMemberName("Icon");
                 userType.AddMemberName("IconSource");
                 userType.AddMemberName("IconTemplate");
@@ -1256,7 +1260,7 @@ namespace Assistence_Control.Assistence_Control_XamlTypeInfo
                 break;
 
             case 68:   //  DevExpress.UI.Xaml.Ribbon.Internal.PointerItemBase
-                userType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.UI.Xaml.Internal.ContentControlEx"));
+                userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.UI.Xaml.Internal.ContentControlEx"));
                 userType.AddMemberName("ClickMode");
                 userType.AddMemberName("IsPointerOver");
                 userType.AddMemberName("IsPressed");
@@ -1264,39 +1268,39 @@ namespace Assistence_Control.Assistence_Control_XamlTypeInfo
                 break;
 
             case 69:   //  DevExpress.UI.Xaml.Internal.ContentControlEx
-                userType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.ContentControl"));
+                userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.ContentControl"));
                 userType.AddMemberName("IsLoaded");
                 xamlType = userType;
                 break;
 
             case 70:   //  DevExpress.UI.Xaml.Ribbon.ControlPaneShowMode
-                userType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
+                userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("Inline", global::DevExpress.UI.Xaml.Ribbon.ControlPaneShowMode.Inline);
                 userType.AddEnumValue("Flyout", global::DevExpress.UI.Xaml.Ribbon.ControlPaneShowMode.Flyout);
                 xamlType = userType;
                 break;
 
             case 71:   //  Windows.UI.Xaml.Controls.IconElement
-                xamlType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                xamlType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
             case 72:   //  Windows.UI.Xaml.Media.SolidColorBrush
-                xamlType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                xamlType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
             case 73:   //  Windows.UI.Xaml.Media.Stretch
-                xamlType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                xamlType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
             case 74:   //  DevExpress.UI.Xaml.IconSizeUnit
-                userType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
+                userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("px", global::DevExpress.UI.Xaml.IconSizeUnit.px);
                 userType.AddEnumValue("pt", global::DevExpress.UI.Xaml.IconSizeUnit.pt);
                 xamlType = userType;
                 break;
 
             case 75:   //  DevExpress.UI.Xaml.Ribbon.RibbonItemStyle
-                userType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
+                userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("Default", global::DevExpress.UI.Xaml.Ribbon.RibbonItemStyle.Default);
                 userType.AddEnumValue("GlyphWithText", global::DevExpress.UI.Xaml.Ribbon.RibbonItemStyle.GlyphWithText);
                 userType.AddEnumValue("Glyph", global::DevExpress.UI.Xaml.Ribbon.RibbonItemStyle.Glyph);
@@ -1305,7 +1309,7 @@ namespace Assistence_Control.Assistence_Control_XamlTypeInfo
                 break;
 
             case 76:   //  DevExpress.UI.Xaml.Ribbon.CollapsePriority
-                userType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
+                userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("Low", global::DevExpress.UI.Xaml.Ribbon.CollapsePriority.Low);
                 userType.AddEnumValue("Normal", global::DevExpress.UI.Xaml.Ribbon.CollapsePriority.Normal);
                 userType.AddEnumValue("High", global::DevExpress.UI.Xaml.Ribbon.CollapsePriority.High);
@@ -1313,17 +1317,17 @@ namespace Assistence_Control.Assistence_Control_XamlTypeInfo
                 break;
 
             case 77:   //  DevExpress.UI.Xaml.Ribbon.ControlTemplateSelector
-                userType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
             case 78:   //  Windows.UI.Xaml.Controls.ClickMode
-                xamlType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                xamlType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
             case 79:   //  DevExpress.UI.Xaml.Ribbon.BackstageView
-                userType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.RibbonHeaderedContainerBase"));
+                userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.RibbonHeaderedContainerBase"));
                 userType.Activator = Activate_79_BackstageView;
                 userType.SetContentPropertyName("DevExpress.UI.Xaml.Ribbon.BackstageView.Items");
                 userType.AddMemberName("Items");
@@ -1345,57 +1349,57 @@ namespace Assistence_Control.Assistence_Control_XamlTypeInfo
                 break;
 
             case 80:   //  DevExpress.UI.Xaml.Ribbon.Internal.RibbonHeaderedContainerBase
-                userType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.UI.Xaml.Internal.ControlEx"));
+                userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.UI.Xaml.Internal.ControlEx"));
                 userType.AddMemberName("Caption");
                 xamlType = userType;
                 break;
 
             case 81:   //  DevExpress.UI.Xaml.Internal.ControlEx
-                userType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Control"));
+                userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Control"));
                 userType.AddMemberName("IsLoaded");
                 xamlType = userType;
                 break;
 
             case 82:   //  DevExpress.UI.Xaml.Ribbon.BackstageItemCollection
-                userType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.UI.Xaml.Internal.TemplatedCollectionWithOwner`2<DevExpress.UI.Xaml.Ribbon.IBackstageItem, DevExpress.UI.Xaml.Ribbon.BackstageView>"));
+                userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.UI.Xaml.Internal.TemplatedCollectionWithOwner`2<DevExpress.UI.Xaml.Ribbon.IBackstageItem, DevExpress.UI.Xaml.Ribbon.BackstageView>"));
                 userType.CollectionAdd = VectorAdd_82_BackstageItemCollection;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
             case 83:   //  DevExpress.UI.Xaml.Internal.TemplatedCollectionWithOwner`2<DevExpress.UI.Xaml.Ribbon.IBackstageItem, DevExpress.UI.Xaml.Ribbon.BackstageView>
-                userType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.UI.Xaml.Internal.TemplatedCollection`1<DevExpress.UI.Xaml.Ribbon.IBackstageItem>"));
+                userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.UI.Xaml.Internal.TemplatedCollection`1<DevExpress.UI.Xaml.Ribbon.IBackstageItem>"));
                 userType.CollectionAdd = VectorAdd_83_TemplatedCollectionWithOwner;
                 xamlType = userType;
                 break;
 
             case 84:   //  DevExpress.UI.Xaml.Internal.TemplatedCollection`1<DevExpress.UI.Xaml.Ribbon.IBackstageItem>
-                userType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.Core.Native.ObservableCollectionView`1<DevExpress.UI.Xaml.Ribbon.IBackstageItem>"));
+                userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.Core.Native.ObservableCollectionView`1<DevExpress.UI.Xaml.Ribbon.IBackstageItem>"));
                 userType.Activator = Activate_84_TemplatedCollection;
                 userType.CollectionAdd = VectorAdd_84_TemplatedCollection;
                 xamlType = userType;
                 break;
 
             case 85:   //  DevExpress.Core.Native.ObservableCollectionView`1<DevExpress.UI.Xaml.Ribbon.IBackstageItem>
-                userType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.Mvvm.BindableBase"));
+                userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.Mvvm.BindableBase"));
                 userType.CollectionAdd = VectorAdd_85_ObservableCollectionView;
                 xamlType = userType;
                 break;
 
             case 86:   //  DevExpress.UI.Xaml.Ribbon.IBackstageItem
-                userType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, null);
+                userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, null);
                 userType.AddMemberName("ClosePopupOnClick");
                 xamlType = userType;
                 break;
 
             case 87:   //  DevExpress.UI.Xaml.Ribbon.IBackstageTabItem
-                userType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, null);
+                userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, null);
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
             case 88:   //  DevExpress.UI.Xaml.TitleSettings
-                userType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.DependencyObject"));
+                userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.DependencyObject"));
                 userType.Activator = Activate_88_TitleSettings;
                 userType.AddMemberName("ButtonInactiveForeground");
                 userType.AddMemberName("ButtonInactiveBackground");
@@ -1414,25 +1418,25 @@ namespace Assistence_Control.Assistence_Control_XamlTypeInfo
                 break;
 
             case 89:   //  Windows.UI.Xaml.UIElement
-                xamlType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                xamlType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
             case 90:   //  DevExpress.UI.Xaml.Ribbon.BackstageButtonItem
-                userType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.RibbonButtonItemBase"));
+                userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.RibbonButtonItemBase"));
                 userType.Activator = Activate_90_BackstageButtonItem;
                 userType.SetIsBindable();
                 xamlType = userType;
                 break;
 
             case 91:   //  DevExpress.UI.Xaml.Ribbon.Internal.RibbonButtonItemBase
-                userType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.RibbonItemBase"));
+                userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.RibbonItemBase"));
                 userType.AddMemberName("Command");
                 userType.AddMemberName("CommandParameter");
                 xamlType = userType;
                 break;
 
             case 92:   //  DevExpress.UI.Xaml.Ribbon.RibbonGalleryItemGroup
-                userType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.DependencyObject"));
+                userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.DependencyObject"));
                 userType.Activator = Activate_92_RibbonGalleryItemGroup;
                 userType.SetContentPropertyName("DevExpress.UI.Xaml.Ribbon.RibbonGalleryItemGroup.Items");
                 userType.AddMemberName("Items");
@@ -1442,20 +1446,20 @@ namespace Assistence_Control.Assistence_Control_XamlTypeInfo
                 break;
 
             case 93:   //  DevExpress.UI.Xaml.Ribbon.RibbonGalleryItemCollection
-                userType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.Core.Native.ObservableCollectionView`1<Object>"));
+                userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.Core.Native.ObservableCollectionView`1<Object>"));
                 userType.CollectionAdd = VectorAdd_93_RibbonGalleryItemCollection;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
             case 94:   //  DevExpress.Core.Native.ObservableCollectionView`1<Object>
-                userType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.Mvvm.BindableBase"));
+                userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.Mvvm.BindableBase"));
                 userType.CollectionAdd = VectorAdd_94_ObservableCollectionView;
                 xamlType = userType;
                 break;
 
             case 95:   //  DevExpress.UI.Xaml.Ribbon.HelpPane
-                userType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.DependencyObject"));
+                userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.DependencyObject"));
                 userType.Activator = Activate_95_HelpPane;
                 userType.SetContentPropertyName("DevExpress.UI.Xaml.Ribbon.HelpPane.Items");
                 userType.AddMemberName("Items");
@@ -1469,34 +1473,34 @@ namespace Assistence_Control.Assistence_Control_XamlTypeInfo
                 break;
 
             case 96:   //  DevExpress.UI.Xaml.Ribbon.HelpPaneItemCollection
-                userType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.UI.Xaml.Internal.TemplatedCollection`1<DevExpress.UI.Xaml.Ribbon.IHelpPaneItem>"));
+                userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.UI.Xaml.Internal.TemplatedCollection`1<DevExpress.UI.Xaml.Ribbon.IHelpPaneItem>"));
                 userType.CollectionAdd = VectorAdd_96_HelpPaneItemCollection;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
             case 97:   //  DevExpress.UI.Xaml.Internal.TemplatedCollection`1<DevExpress.UI.Xaml.Ribbon.IHelpPaneItem>
-                userType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.Core.Native.ObservableCollectionView`1<DevExpress.UI.Xaml.Ribbon.IHelpPaneItem>"));
+                userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.Core.Native.ObservableCollectionView`1<DevExpress.UI.Xaml.Ribbon.IHelpPaneItem>"));
                 userType.Activator = Activate_97_TemplatedCollection;
                 userType.CollectionAdd = VectorAdd_97_TemplatedCollection;
                 xamlType = userType;
                 break;
 
             case 98:   //  DevExpress.Core.Native.ObservableCollectionView`1<DevExpress.UI.Xaml.Ribbon.IHelpPaneItem>
-                userType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.Mvvm.BindableBase"));
+                userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.Mvvm.BindableBase"));
                 userType.CollectionAdd = VectorAdd_98_ObservableCollectionView;
                 xamlType = userType;
                 break;
 
             case 99:   //  DevExpress.UI.Xaml.Ribbon.IHelpPaneItem
-                userType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, null);
+                userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, null);
                 userType.AddMemberName("PlatformVisibility");
                 userType.AddMemberName("Placement");
                 xamlType = userType;
                 break;
 
             case 100:   //  DevExpress.Mvvm.Native.DeviceFamily
-                userType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
+                userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("Unknown", global::DevExpress.Mvvm.Native.DeviceFamily.Unknown);
                 userType.AddEnumValue("Desktop", global::DevExpress.Mvvm.Native.DeviceFamily.Desktop);
                 userType.AddEnumValue("Mobile", global::DevExpress.Mvvm.Native.DeviceFamily.Mobile);
@@ -1505,7 +1509,7 @@ namespace Assistence_Control.Assistence_Control_XamlTypeInfo
                 break;
 
             case 101:   //  DevExpress.UI.Xaml.Ribbon.HelpPaneItemPlacement
-                userType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
+                userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("Default", global::DevExpress.UI.Xaml.Ribbon.HelpPaneItemPlacement.Default);
                 userType.AddEnumValue("Header", global::DevExpress.UI.Xaml.Ribbon.HelpPaneItemPlacement.Header);
                 userType.AddEnumValue("Footer", global::DevExpress.UI.Xaml.Ribbon.HelpPaneItemPlacement.Footer);
@@ -1513,7 +1517,7 @@ namespace Assistence_Control.Assistence_Control_XamlTypeInfo
                 break;
 
             case 102:   //  DevExpress.UI.Xaml.Ribbon.RibbonControl
-                userType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.UI.Xaml.Internal.ContentControlEx"));
+                userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.UI.Xaml.Internal.ContentControlEx"));
                 userType.Activator = Activate_102_RibbonControl;
                 userType.SetContentPropertyName("DevExpress.UI.Xaml.Ribbon.RibbonControl.Tabs");
                 userType.AddMemberName("Tabs");
@@ -1544,33 +1548,33 @@ namespace Assistence_Control.Assistence_Control_XamlTypeInfo
                 break;
 
             case 103:   //  DevExpress.UI.Xaml.Ribbon.RibbonTabCollection
-                userType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.UI.Xaml.Internal.TemplatedCollectionWithOwner`2<DevExpress.UI.Xaml.Ribbon.RibbonTab, DevExpress.UI.Xaml.Ribbon.RibbonControl>"));
+                userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.UI.Xaml.Internal.TemplatedCollectionWithOwner`2<DevExpress.UI.Xaml.Ribbon.RibbonTab, DevExpress.UI.Xaml.Ribbon.RibbonControl>"));
                 userType.CollectionAdd = VectorAdd_103_RibbonTabCollection;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
             case 104:   //  DevExpress.UI.Xaml.Internal.TemplatedCollectionWithOwner`2<DevExpress.UI.Xaml.Ribbon.RibbonTab, DevExpress.UI.Xaml.Ribbon.RibbonControl>
-                userType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.UI.Xaml.Internal.TemplatedCollection`1<DevExpress.UI.Xaml.Ribbon.RibbonTab>"));
+                userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.UI.Xaml.Internal.TemplatedCollection`1<DevExpress.UI.Xaml.Ribbon.RibbonTab>"));
                 userType.CollectionAdd = VectorAdd_104_TemplatedCollectionWithOwner;
                 xamlType = userType;
                 break;
 
             case 105:   //  DevExpress.UI.Xaml.Internal.TemplatedCollection`1<DevExpress.UI.Xaml.Ribbon.RibbonTab>
-                userType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.Core.Native.ObservableCollectionView`1<DevExpress.UI.Xaml.Ribbon.RibbonTab>"));
+                userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.Core.Native.ObservableCollectionView`1<DevExpress.UI.Xaml.Ribbon.RibbonTab>"));
                 userType.Activator = Activate_105_TemplatedCollection;
                 userType.CollectionAdd = VectorAdd_105_TemplatedCollection;
                 xamlType = userType;
                 break;
 
             case 106:   //  DevExpress.Core.Native.ObservableCollectionView`1<DevExpress.UI.Xaml.Ribbon.RibbonTab>
-                userType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.Mvvm.BindableBase"));
+                userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.Mvvm.BindableBase"));
                 userType.CollectionAdd = VectorAdd_106_ObservableCollectionView;
                 xamlType = userType;
                 break;
 
             case 107:   //  DevExpress.UI.Xaml.Ribbon.RibbonTab
-                userType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.RibbonHeaderedContainerBase"));
+                userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.RibbonHeaderedContainerBase"));
                 userType.Activator = Activate_107_RibbonTab;
                 userType.SetContentPropertyName("DevExpress.UI.Xaml.Ribbon.RibbonTab.Groups");
                 userType.AddMemberName("Groups");
@@ -1582,27 +1586,27 @@ namespace Assistence_Control.Assistence_Control_XamlTypeInfo
                 break;
 
             case 108:   //  DevExpress.UI.Xaml.Ribbon.RibbonGroupCollection
-                userType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.UI.Xaml.Internal.TemplatedCollection`1<DevExpress.UI.Xaml.Ribbon.RibbonGroup>"));
+                userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.UI.Xaml.Internal.TemplatedCollection`1<DevExpress.UI.Xaml.Ribbon.RibbonGroup>"));
                 userType.CollectionAdd = VectorAdd_108_RibbonGroupCollection;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
             case 109:   //  DevExpress.UI.Xaml.Internal.TemplatedCollection`1<DevExpress.UI.Xaml.Ribbon.RibbonGroup>
-                userType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.Core.Native.ObservableCollectionView`1<DevExpress.UI.Xaml.Ribbon.RibbonGroup>"));
+                userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.Core.Native.ObservableCollectionView`1<DevExpress.UI.Xaml.Ribbon.RibbonGroup>"));
                 userType.Activator = Activate_109_TemplatedCollection;
                 userType.CollectionAdd = VectorAdd_109_TemplatedCollection;
                 xamlType = userType;
                 break;
 
             case 110:   //  DevExpress.Core.Native.ObservableCollectionView`1<DevExpress.UI.Xaml.Ribbon.RibbonGroup>
-                userType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.Mvvm.BindableBase"));
+                userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.Mvvm.BindableBase"));
                 userType.CollectionAdd = VectorAdd_110_ObservableCollectionView;
                 xamlType = userType;
                 break;
 
             case 111:   //  DevExpress.UI.Xaml.Ribbon.RibbonGroup
-                userType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.RibbonGroupPanelBase"));
+                userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.RibbonGroupPanelBase"));
                 userType.Activator = Activate_111_RibbonGroup;
                 userType.SetContentPropertyName("DevExpress.UI.Xaml.Ribbon.RibbonGroup.Items");
                 userType.AddMemberName("Items");
@@ -1623,7 +1627,7 @@ namespace Assistence_Control.Assistence_Control_XamlTypeInfo
                 break;
 
             case 112:   //  DevExpress.UI.Xaml.Ribbon.Internal.RibbonGroupPanelBase
-                userType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.UI.Xaml.Internal.ItemsPanelBase`1<DevExpress.UI.Xaml.Ribbon.IRibbonItem>"));
+                userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.UI.Xaml.Internal.ItemsPanelBase`1<DevExpress.UI.Xaml.Ribbon.IRibbonItem>"));
                 userType.AddMemberName("Caption");
                 userType.AddMemberName("DropDownControl");
                 userType.AddMemberName("FlyoutItems");
@@ -1632,36 +1636,36 @@ namespace Assistence_Control.Assistence_Control_XamlTypeInfo
                 break;
 
             case 113:   //  DevExpress.UI.Xaml.Internal.ItemsPanelBase`1<DevExpress.UI.Xaml.Ribbon.IRibbonItem>
-                userType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Panel"));
+                userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Panel"));
                 xamlType = userType;
                 break;
 
             case 114:   //  Windows.UI.Xaml.Controls.Panel
-                xamlType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                xamlType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
             case 115:   //  DevExpress.UI.Xaml.Ribbon.RibbonItemCollection
-                userType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.UI.Xaml.Internal.TemplatedCollection`1<DevExpress.UI.Xaml.Ribbon.IRibbonItem>"));
+                userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.UI.Xaml.Internal.TemplatedCollection`1<DevExpress.UI.Xaml.Ribbon.IRibbonItem>"));
                 userType.Activator = Activate_115_RibbonItemCollection;
                 userType.CollectionAdd = VectorAdd_115_RibbonItemCollection;
                 xamlType = userType;
                 break;
 
             case 116:   //  DevExpress.UI.Xaml.Internal.TemplatedCollection`1<DevExpress.UI.Xaml.Ribbon.IRibbonItem>
-                userType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.Core.Native.ObservableCollectionView`1<DevExpress.UI.Xaml.Ribbon.IRibbonItem>"));
+                userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.Core.Native.ObservableCollectionView`1<DevExpress.UI.Xaml.Ribbon.IRibbonItem>"));
                 userType.Activator = Activate_116_TemplatedCollection;
                 userType.CollectionAdd = VectorAdd_116_TemplatedCollection;
                 xamlType = userType;
                 break;
 
             case 117:   //  DevExpress.Core.Native.ObservableCollectionView`1<DevExpress.UI.Xaml.Ribbon.IRibbonItem>
-                userType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.Mvvm.BindableBase"));
+                userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.Mvvm.BindableBase"));
                 userType.CollectionAdd = VectorAdd_117_ObservableCollectionView;
                 xamlType = userType;
                 break;
 
             case 118:   //  DevExpress.UI.Xaml.Ribbon.IRibbonItem
-                userType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, null);
+                userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, null);
                 userType.AddMemberName("ItemStyle");
                 userType.AddMemberName("CollapsePriority");
                 userType.AddMemberName("CollapsedGroupName");
@@ -1671,7 +1675,7 @@ namespace Assistence_Control.Assistence_Control_XamlTypeInfo
                 break;
 
             case 119:   //  DevExpress.UI.Xaml.Ribbon.Internal.MeasureState
-                userType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
+                userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("Finished", global::DevExpress.UI.Xaml.Ribbon.Internal.MeasureState.Finished);
                 userType.AddEnumValue("Items", global::DevExpress.UI.Xaml.Ribbon.Internal.MeasureState.Items);
                 userType.AddEnumValue("FlyoutItems", global::DevExpress.UI.Xaml.Ribbon.Internal.MeasureState.FlyoutItems);
@@ -1679,24 +1683,24 @@ namespace Assistence_Control.Assistence_Control_XamlTypeInfo
                 break;
 
             case 120:   //  DevExpress.UI.Xaml.Ribbon.Internal.IFlyoutCalculator
-                userType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, null);
+                userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, null);
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
             case 121:   //  Windows.Foundation.Size
-                xamlType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                xamlType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
             case 122:   //  DevExpress.UI.Xaml.Ribbon.RibbonViewMode
-                userType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
+                userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("Normal", global::DevExpress.UI.Xaml.Ribbon.RibbonViewMode.Normal);
                 userType.AddEnumValue("AutoHide", global::DevExpress.UI.Xaml.Ribbon.RibbonViewMode.AutoHide);
                 xamlType = userType;
                 break;
 
             case 123:   //  DevExpress.UI.Xaml.Ribbon.RibbonState
-                userType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
+                userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("Normal", global::DevExpress.UI.Xaml.Ribbon.RibbonState.Normal);
                 userType.AddEnumValue("Minimized", global::DevExpress.UI.Xaml.Ribbon.RibbonState.Minimized);
                 userType.AddEnumValue("Hidden", global::DevExpress.UI.Xaml.Ribbon.RibbonState.Hidden);
@@ -1705,7 +1709,7 @@ namespace Assistence_Control.Assistence_Control_XamlTypeInfo
                 break;
 
             case 124:   //  DevExpress.UI.Xaml.Ribbon.RibbonMenuButton
-                userType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.RibbonMenuButtonBase"));
+                userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.RibbonMenuButtonBase"));
                 userType.Activator = Activate_124_RibbonMenuButton;
                 userType.SetContentPropertyName("DevExpress.UI.Xaml.Ribbon.RibbonMenuButton.Items");
                 userType.AddMemberName("Items");
@@ -1715,7 +1719,7 @@ namespace Assistence_Control.Assistence_Control_XamlTypeInfo
                 break;
 
             case 125:   //  DevExpress.UI.Xaml.Ribbon.Internal.RibbonMenuButtonBase
-                userType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.RibbonMenuItemBase"));
+                userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.RibbonMenuItemBase"));
                 userType.AddMemberName("ItemTemplate");
                 userType.AddMemberName("ItemTemplateSelector");
                 userType.AddMemberName("FlyoutColumnCount");
@@ -1723,7 +1727,7 @@ namespace Assistence_Control.Assistence_Control_XamlTypeInfo
                 break;
 
             case 126:   //  DevExpress.UI.Xaml.Ribbon.Internal.RibbonMenuItemBase
-                userType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.RibbonItemBaseEx"));
+                userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.RibbonItemBaseEx"));
                 userType.AddMemberName("FlyoutCaption");
                 userType.AddMemberName("IsOpen");
                 userType.AddMemberName("FlyoutSettings");
@@ -1731,20 +1735,20 @@ namespace Assistence_Control.Assistence_Control_XamlTypeInfo
                 break;
 
             case 127:   //  System.Collections.Generic.IList`1<DevExpress.UI.Xaml.Ribbon.IRibbonItem>
-                userType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, null);
+                userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, null);
                 userType.CollectionAdd = VectorAdd_127_IList;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
             case 128:   //  DevExpress.UI.Xaml.FlyoutSettingsBase
-                userType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.DependencyObject"));
+                userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.DependencyObject"));
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
             case 129:   //  DevExpress.UI.Xaml.Ribbon.RibbonSplitButton
-                userType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.RibbonMenuItemBase"));
+                userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.RibbonMenuItemBase"));
                 userType.Activator = Activate_129_RibbonSplitButton;
                 userType.SetContentPropertyName("DevExpress.UI.Xaml.Ribbon.RibbonSplitButton.FlyoutContent");
                 userType.AddMemberName("FlyoutContent");
@@ -1757,7 +1761,7 @@ namespace Assistence_Control.Assistence_Control_XamlTypeInfo
                 break;
 
             case 130:   //  DevExpress.UI.Xaml.Ribbon.Internal.FlyoutCalculator
-                userType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.Activator = Activate_130_FlyoutCalculator;
                 userType.AddMemberName("VisibleItems");
                 userType.AddMemberName("ColumnCount");
@@ -1767,19 +1771,19 @@ namespace Assistence_Control.Assistence_Control_XamlTypeInfo
                 break;
 
             case 131:   //  System.Collections.Generic.IEnumerable`1<DevExpress.UI.Xaml.Ribbon.IRibbonItem>
-                userType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, null);
+                userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, null);
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
             case 132:   //  DevExpress.UI.Xaml.Ribbon.Internal.ISeparatorManager
-                userType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, null);
+                userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, null);
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
             case 133:   //  DevExpress.UI.Xaml.Ribbon.Internal.StackedFlyoutControl
-                userType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.RibbonFlyoutControl"));
+                userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.RibbonFlyoutControl"));
                 userType.Activator = Activate_133_StackedFlyoutControl;
                 userType.AddMemberName("Caption");
                 userType.AddMemberName("IsHeaderVisible");
@@ -1791,19 +1795,19 @@ namespace Assistence_Control.Assistence_Control_XamlTypeInfo
                 break;
 
             case 134:   //  DevExpress.UI.Xaml.Ribbon.Internal.RibbonFlyoutControl
-                userType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.UI.Xaml.FlyoutControl"));
+                userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.UI.Xaml.FlyoutControl"));
                 userType.Activator = Activate_134_RibbonFlyoutControl;
                 xamlType = userType;
                 break;
 
             case 135:   //  DevExpress.UI.Xaml.FlyoutControl
-                userType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.UI.Xaml.Native.FlyoutBase"));
+                userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.UI.Xaml.Native.FlyoutBase"));
                 userType.Activator = Activate_135_FlyoutControl;
                 xamlType = userType;
                 break;
 
             case 136:   //  DevExpress.UI.Xaml.Native.FlyoutBase
-                userType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.UI.Xaml.Native.PopupBase"));
+                userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.UI.Xaml.Native.PopupBase"));
                 userType.Activator = Activate_136_FlyoutBase;
                 userType.AddMemberName("ActualSettings");
                 userType.AddMemberName("IndicatorDirection");
@@ -1824,7 +1828,7 @@ namespace Assistence_Control.Assistence_Control_XamlTypeInfo
                 break;
 
             case 137:   //  DevExpress.UI.Xaml.Native.PopupBase
-                userType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.ContentControl"));
+                userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.ContentControl"));
                 userType.Activator = Activate_137_PopupBase;
                 userType.AddMemberName("Child");
                 userType.AddMemberName("HorizontalOffset");
@@ -1840,7 +1844,7 @@ namespace Assistence_Control.Assistence_Control_XamlTypeInfo
                 break;
 
             case 138:   //  DevExpress.UI.Xaml.Ribbon.Internal.EnabledMode
-                userType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
+                userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("Auto", global::DevExpress.UI.Xaml.Ribbon.Internal.EnabledMode.Auto);
                 userType.AddEnumValue("Always", global::DevExpress.UI.Xaml.Ribbon.Internal.EnabledMode.Always);
                 userType.AddEnumValue("Never", global::DevExpress.UI.Xaml.Ribbon.Internal.EnabledMode.Never);
@@ -1848,7 +1852,7 @@ namespace Assistence_Control.Assistence_Control_XamlTypeInfo
                 break;
 
             case 139:   //  DevExpress.UI.Xaml.Native.IndicatorDirection
-                userType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
+                userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("None", global::DevExpress.UI.Xaml.Native.IndicatorDirection.None);
                 userType.AddEnumValue("Left", global::DevExpress.UI.Xaml.Native.IndicatorDirection.Left);
                 userType.AddEnumValue("Top", global::DevExpress.UI.Xaml.Native.IndicatorDirection.Top);
@@ -1858,23 +1862,23 @@ namespace Assistence_Control.Assistence_Control_XamlTypeInfo
                 break;
 
             case 140:   //  Windows.UI.Xaml.Duration
-                xamlType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                xamlType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
             case 141:   //  Windows.Foundation.Rect
-                xamlType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                xamlType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
             case 142:   //  Windows.UI.Xaml.Media.Animation.Storyboard
-                xamlType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                xamlType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
             case 143:   //  Windows.UI.Xaml.FrameworkElement
-                xamlType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                xamlType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
             case 144:   //  DevExpress.UI.Xaml.Native.PlacementMode
-                userType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
+                userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("Bottom", global::DevExpress.UI.Xaml.Native.PlacementMode.Bottom);
                 userType.AddEnumValue("Right", global::DevExpress.UI.Xaml.Native.PlacementMode.Right);
                 userType.AddEnumValue("Mouse", global::DevExpress.UI.Xaml.Native.PlacementMode.Mouse);
@@ -1885,7 +1889,7 @@ namespace Assistence_Control.Assistence_Control_XamlTypeInfo
                 break;
 
             case 145:   //  DevExpress.UI.Xaml.Ribbon.Internal.RibbonTabsControl
-                userType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.UI.Xaml.Internal.ControlEx"));
+                userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.UI.Xaml.Internal.ControlEx"));
                 userType.Activator = Activate_145_RibbonTabsControl;
                 userType.AddMemberName("ItemsSource");
                 userType.AddMemberName("HeaderItemTemplate");
@@ -1900,7 +1904,7 @@ namespace Assistence_Control.Assistence_Control_XamlTypeInfo
                 break;
 
             case 146:   //  DevExpress.UI.Xaml.Ribbon.TabHeaderItemCollection
-                userType = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.RibbonItemCollection"));
+                userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.RibbonItemCollection"));
                 userType.CollectionAdd = VectorAdd_146_TabHeaderItemCollection;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
@@ -2041,15 +2045,15 @@ namespace Assistence_Control.Assistence_Control_XamlTypeInfo
             var that = (global::Assistence_Control.Menu.NavLink)instance;
             that.Label = (global::System.String)Value;
         }
-        private object get_7_NavLink_Symbol(object instance)
+        private object get_7_NavLink_Source(object instance)
         {
             var that = (global::Assistence_Control.Menu.NavLink)instance;
-            return that.Symbol;
+            return that.Source;
         }
-        private void set_7_NavLink_Symbol(object instance, object Value)
+        private void set_7_NavLink_Source(object instance, object Value)
         {
             var that = (global::Assistence_Control.Menu.NavLink)instance;
-            that.Symbol = (global::Windows.UI.Xaml.Controls.Symbol)Value;
+            that.Source = (global::System.String)Value;
         }
         private object get_8_MenuTemplateSelector_MenuTabletTemplate(object instance)
         {
@@ -4439,1966 +4443,1966 @@ namespace Assistence_Control.Assistence_Control_XamlTypeInfo
 
         private global::Windows.UI.Xaml.Markup.IXamlMember CreateXamlMember(string longMemberName)
         {
-            global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember xamlMember = null;
-            global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType userType;
+            global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember xamlMember = null;
+            global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType userType;
 
             switch (longMemberName)
             {
             case "Windows.UI.Color.A":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Windows.UI.Color");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "A", "Byte");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Windows.UI.Color");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "A", "Byte");
                 xamlMember.Getter = get_0_Color_A;
                 xamlMember.Setter = set_0_Color_A;
                 break;
             case "Windows.UI.Color.B":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Windows.UI.Color");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "B", "Byte");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Windows.UI.Color");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "B", "Byte");
                 xamlMember.Getter = get_1_Color_B;
                 xamlMember.Setter = set_1_Color_B;
                 break;
             case "Windows.UI.Color.G":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Windows.UI.Color");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "G", "Byte");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Windows.UI.Color");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "G", "Byte");
                 xamlMember.Getter = get_2_Color_G;
                 xamlMember.Setter = set_2_Color_G;
                 break;
             case "Windows.UI.Color.R":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Windows.UI.Color");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "R", "Byte");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Windows.UI.Color");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "R", "Byte");
                 xamlMember.Getter = get_3_Color_R;
                 xamlMember.Setter = set_3_Color_R;
                 break;
             case "Assistence_Control.Menu.MasterPage.NavLinks":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Assistence_Control.Menu.MasterPage");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "NavLinks", "System.Collections.ObjectModel.ObservableCollection`1<Assistence_Control.Menu.NavLink>");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Assistence_Control.Menu.MasterPage");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "NavLinks", "System.Collections.ObjectModel.ObservableCollection`1<Assistence_Control.Menu.NavLink>");
                 xamlMember.Getter = get_4_MasterPage_NavLinks;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Assistence_Control.Menu.NavLink.Title":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Assistence_Control.Menu.NavLink");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "Title", "String");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Assistence_Control.Menu.NavLink");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "Title", "String");
                 xamlMember.Getter = get_5_NavLink_Title;
                 xamlMember.Setter = set_5_NavLink_Title;
                 break;
             case "Assistence_Control.Menu.NavLink.Label":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Assistence_Control.Menu.NavLink");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "Label", "String");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Assistence_Control.Menu.NavLink");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "Label", "String");
                 xamlMember.Getter = get_6_NavLink_Label;
                 xamlMember.Setter = set_6_NavLink_Label;
                 break;
-            case "Assistence_Control.Menu.NavLink.Symbol":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Assistence_Control.Menu.NavLink");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "Symbol", "Windows.UI.Xaml.Controls.Symbol");
-                xamlMember.Getter = get_7_NavLink_Symbol;
-                xamlMember.Setter = set_7_NavLink_Symbol;
+            case "Assistence_Control.Menu.NavLink.Source":
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Assistence_Control.Menu.NavLink");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "Source", "String");
+                xamlMember.Getter = get_7_NavLink_Source;
+                xamlMember.Setter = set_7_NavLink_Source;
                 break;
             case "Assistence_Control.TemplateSelectors.MenuTemplateSelector.MenuTabletTemplate":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Assistence_Control.TemplateSelectors.MenuTemplateSelector");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "MenuTabletTemplate", "Windows.UI.Xaml.DataTemplate");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Assistence_Control.TemplateSelectors.MenuTemplateSelector");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "MenuTabletTemplate", "Windows.UI.Xaml.DataTemplate");
                 xamlMember.Getter = get_8_MenuTemplateSelector_MenuTabletTemplate;
                 xamlMember.Setter = set_8_MenuTemplateSelector_MenuTabletTemplate;
                 break;
             case "Assistence_Control.TemplateSelectors.MenuTemplateSelector.MenuTabletTemplateLarge":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Assistence_Control.TemplateSelectors.MenuTemplateSelector");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "MenuTabletTemplateLarge", "Windows.UI.Xaml.DataTemplate");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Assistence_Control.TemplateSelectors.MenuTemplateSelector");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "MenuTabletTemplateLarge", "Windows.UI.Xaml.DataTemplate");
                 xamlMember.Getter = get_9_MenuTemplateSelector_MenuTabletTemplateLarge;
                 xamlMember.Setter = set_9_MenuTemplateSelector_MenuTabletTemplateLarge;
                 break;
             case "Assistence_Control.TemplateSelectors.MenuTemplateSelector.MenuMobileTemplate":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Assistence_Control.TemplateSelectors.MenuTemplateSelector");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "MenuMobileTemplate", "Windows.UI.Xaml.DataTemplate");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Assistence_Control.TemplateSelectors.MenuTemplateSelector");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "MenuMobileTemplate", "Windows.UI.Xaml.DataTemplate");
                 xamlMember.Getter = get_10_MenuTemplateSelector_MenuMobileTemplate;
                 xamlMember.Setter = set_10_MenuTemplateSelector_MenuMobileTemplate;
                 break;
             case "Assistence_Control.TemplateSelectors.MenuTemplateSelector.MenuMobileTemplateLarge":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Assistence_Control.TemplateSelectors.MenuTemplateSelector");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "MenuMobileTemplateLarge", "Windows.UI.Xaml.DataTemplate");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Assistence_Control.TemplateSelectors.MenuTemplateSelector");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "MenuMobileTemplateLarge", "Windows.UI.Xaml.DataTemplate");
                 xamlMember.Getter = get_11_MenuTemplateSelector_MenuMobileTemplateLarge;
                 xamlMember.Setter = set_11_MenuTemplateSelector_MenuMobileTemplateLarge;
                 break;
             case "MyToolkit.Controls.DataGrid.SelectionMode":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MyToolkit.Controls.DataGrid");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "SelectionMode", "Windows.UI.Xaml.Controls.SelectionMode");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MyToolkit.Controls.DataGrid");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "SelectionMode", "Windows.UI.Xaml.Controls.SelectionMode");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_12_DataGrid_SelectionMode;
                 xamlMember.Setter = set_12_DataGrid_SelectionMode;
                 break;
             case "MyToolkit.Controls.DataGrid.ItemsSource":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MyToolkit.Controls.DataGrid");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ItemsSource", "Object");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MyToolkit.Controls.DataGrid");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ItemsSource", "Object");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_13_DataGrid_ItemsSource;
                 xamlMember.Setter = set_13_DataGrid_ItemsSource;
                 break;
             case "MyToolkit.Controls.DataGrid.HeaderBackground":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MyToolkit.Controls.DataGrid");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "HeaderBackground", "Windows.UI.Xaml.Media.Brush");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MyToolkit.Controls.DataGrid");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "HeaderBackground", "Windows.UI.Xaml.Media.Brush");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_14_DataGrid_HeaderBackground;
                 xamlMember.Setter = set_14_DataGrid_HeaderBackground;
                 break;
             case "MyToolkit.Controls.DataGrid.Columns":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MyToolkit.Controls.DataGrid");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "Columns", "MyToolkit.Controls.DataGridColumnCollection");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MyToolkit.Controls.DataGrid");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "Columns", "MyToolkit.Controls.DataGridColumnCollection");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_15_DataGrid_Columns;
                 xamlMember.Setter = set_15_DataGrid_Columns;
                 break;
             case "MyToolkit.Controls.DataGridColumnBase.CanSort":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MyToolkit.Controls.DataGridColumnBase");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "CanSort", "Boolean");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MyToolkit.Controls.DataGridColumnBase");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "CanSort", "Boolean");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_16_DataGridColumnBase_CanSort;
                 xamlMember.Setter = set_16_DataGridColumnBase_CanSort;
                 break;
             case "MyToolkit.Controls.DataGridColumnBase.IsSelected":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MyToolkit.Controls.DataGridColumnBase");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "IsSelected", "Boolean");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MyToolkit.Controls.DataGridColumnBase");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "IsSelected", "Boolean");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_17_DataGridColumnBase_IsSelected;
                 xamlMember.SetIsReadOnly();
                 break;
             case "MyToolkit.Controls.DataGridColumnBase.IsAscending":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MyToolkit.Controls.DataGridColumnBase");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "IsAscending", "Boolean");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MyToolkit.Controls.DataGridColumnBase");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "IsAscending", "Boolean");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_18_DataGridColumnBase_IsAscending;
                 xamlMember.SetIsReadOnly();
                 break;
             case "MyToolkit.Controls.DataGridColumnBase.IsAscendingDefault":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MyToolkit.Controls.DataGridColumnBase");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "IsAscendingDefault", "Boolean");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MyToolkit.Controls.DataGridColumnBase");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "IsAscendingDefault", "Boolean");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_19_DataGridColumnBase_IsAscendingDefault;
                 xamlMember.Setter = set_19_DataGridColumnBase_IsAscendingDefault;
                 break;
             case "MyToolkit.Controls.DataGridColumnBase.Header":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MyToolkit.Controls.DataGridColumnBase");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "Header", "Object");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MyToolkit.Controls.DataGridColumnBase");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "Header", "Object");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_20_DataGridColumnBase_Header;
                 xamlMember.Setter = set_20_DataGridColumnBase_Header;
                 break;
             case "MyToolkit.Controls.DataGridColumnBase.Width":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MyToolkit.Controls.DataGridColumnBase");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "Width", "Windows.UI.Xaml.GridLength");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MyToolkit.Controls.DataGridColumnBase");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "Width", "Windows.UI.Xaml.GridLength");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_21_DataGridColumnBase_Width;
                 xamlMember.Setter = set_21_DataGridColumnBase_Width;
                 break;
             case "MyToolkit.Controls.DataGridColumnBase.OrderPropertyPath":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MyToolkit.Controls.DataGridColumnBase");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "OrderPropertyPath", "Windows.UI.Xaml.PropertyPath");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MyToolkit.Controls.DataGridColumnBase");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "OrderPropertyPath", "Windows.UI.Xaml.PropertyPath");
                 xamlMember.Getter = get_22_DataGridColumnBase_OrderPropertyPath;
                 xamlMember.SetIsReadOnly();
                 break;
             case "MyToolkit.Controls.DataGrid.SelectedItems":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MyToolkit.Controls.DataGrid");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "SelectedItems", "System.Collections.Generic.IList`1<Object>");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MyToolkit.Controls.DataGrid");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "SelectedItems", "System.Collections.Generic.IList`1<Object>");
                 xamlMember.Getter = get_23_DataGrid_SelectedItems;
                 xamlMember.SetIsReadOnly();
                 break;
             case "MyToolkit.Controls.DataGrid.Items":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MyToolkit.Controls.DataGrid");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "Items", "MyToolkit.Collections.IObservableCollectionView");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MyToolkit.Controls.DataGrid");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "Items", "MyToolkit.Collections.IObservableCollectionView");
                 xamlMember.Getter = get_24_DataGrid_Items;
                 xamlMember.SetIsReadOnly();
                 break;
             case "MyToolkit.Controls.DataGrid.SelectedColumn":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MyToolkit.Controls.DataGrid");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "SelectedColumn", "MyToolkit.Controls.DataGridColumnBase");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MyToolkit.Controls.DataGrid");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "SelectedColumn", "MyToolkit.Controls.DataGridColumnBase");
                 xamlMember.Getter = get_25_DataGrid_SelectedColumn;
                 xamlMember.SetIsReadOnly();
                 break;
             case "MyToolkit.Controls.DataGrid.SelectedItem":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MyToolkit.Controls.DataGrid");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "SelectedItem", "Object");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MyToolkit.Controls.DataGrid");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "SelectedItem", "Object");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_26_DataGrid_SelectedItem;
                 xamlMember.Setter = set_26_DataGrid_SelectedItem;
                 break;
             case "MyToolkit.Controls.DataGrid.DefaultOrderIndex":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MyToolkit.Controls.DataGrid");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "DefaultOrderIndex", "Int32");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MyToolkit.Controls.DataGrid");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "DefaultOrderIndex", "Int32");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_27_DataGrid_DefaultOrderIndex;
                 xamlMember.Setter = set_27_DataGrid_DefaultOrderIndex;
                 break;
             case "MyToolkit.Controls.DataGrid.RowStyle":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MyToolkit.Controls.DataGrid");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "RowStyle", "Windows.UI.Xaml.Style");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MyToolkit.Controls.DataGrid");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "RowStyle", "Windows.UI.Xaml.Style");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_28_DataGrid_RowStyle;
                 xamlMember.Setter = set_28_DataGrid_RowStyle;
                 break;
             case "MyToolkit.Controls.DataGrid.ItemDetailsTemplate":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MyToolkit.Controls.DataGrid");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ItemDetailsTemplate", "Windows.UI.Xaml.DataTemplate");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MyToolkit.Controls.DataGrid");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ItemDetailsTemplate", "Windows.UI.Xaml.DataTemplate");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_29_DataGrid_ItemDetailsTemplate;
                 xamlMember.Setter = set_29_DataGrid_ItemDetailsTemplate;
                 break;
             case "MyToolkit.Controls.DataGrid.HeaderTemplate":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MyToolkit.Controls.DataGrid");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "HeaderTemplate", "Windows.UI.Xaml.DataTemplate");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MyToolkit.Controls.DataGrid");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "HeaderTemplate", "Windows.UI.Xaml.DataTemplate");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_30_DataGrid_HeaderTemplate;
                 xamlMember.Setter = set_30_DataGrid_HeaderTemplate;
                 break;
             case "MyToolkit.Controls.DataGrid.CellTemplate":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MyToolkit.Controls.DataGrid");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "CellTemplate", "Windows.UI.Xaml.DataTemplate");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MyToolkit.Controls.DataGrid");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "CellTemplate", "Windows.UI.Xaml.DataTemplate");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_31_DataGrid_CellTemplate;
                 xamlMember.Setter = set_31_DataGrid_CellTemplate;
                 break;
             case "MyToolkit.Controls.DataGrid.RowBackgroundOddBrush":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MyToolkit.Controls.DataGrid");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "RowBackgroundOddBrush", "Windows.UI.Xaml.Media.Brush");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MyToolkit.Controls.DataGrid");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "RowBackgroundOddBrush", "Windows.UI.Xaml.Media.Brush");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_32_DataGrid_RowBackgroundOddBrush;
                 xamlMember.Setter = set_32_DataGrid_RowBackgroundOddBrush;
                 break;
             case "MyToolkit.Controls.DataGrid.RowBackgroundEvenBrush":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MyToolkit.Controls.DataGrid");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "RowBackgroundEvenBrush", "Windows.UI.Xaml.Media.Brush");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MyToolkit.Controls.DataGrid");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "RowBackgroundEvenBrush", "Windows.UI.Xaml.Media.Brush");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_33_DataGrid_RowBackgroundEvenBrush;
                 xamlMember.Setter = set_33_DataGrid_RowBackgroundEvenBrush;
                 break;
             case "MyToolkit.Controls.DataGridBoundColumn.Binding":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MyToolkit.Controls.DataGridBoundColumn");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "Binding", "Windows.UI.Xaml.Data.Binding");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MyToolkit.Controls.DataGridBoundColumn");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "Binding", "Windows.UI.Xaml.Data.Binding");
                 xamlMember.Getter = get_34_DataGridBoundColumn_Binding;
                 xamlMember.Setter = set_34_DataGridBoundColumn_Binding;
                 break;
             case "MyToolkit.Controls.DataGridTextColumn.Style":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MyToolkit.Controls.DataGridTextColumn");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "Style", "Windows.UI.Xaml.Style");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MyToolkit.Controls.DataGridTextColumn");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "Style", "Windows.UI.Xaml.Style");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_35_DataGridTextColumn_Style;
                 xamlMember.Setter = set_35_DataGridTextColumn_Style;
                 break;
             case "MyToolkit.Controls.DataGridTextColumn.FontSize":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MyToolkit.Controls.DataGridTextColumn");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "FontSize", "Double");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MyToolkit.Controls.DataGridTextColumn");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "FontSize", "Double");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_36_DataGridTextColumn_FontSize;
                 xamlMember.Setter = set_36_DataGridTextColumn_FontSize;
                 break;
             case "MyToolkit.Controls.DataGridTextColumn.FontStyle":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MyToolkit.Controls.DataGridTextColumn");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "FontStyle", "Windows.UI.Text.FontStyle");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MyToolkit.Controls.DataGridTextColumn");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "FontStyle", "Windows.UI.Text.FontStyle");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_37_DataGridTextColumn_FontStyle;
                 xamlMember.Setter = set_37_DataGridTextColumn_FontStyle;
                 break;
             case "MyToolkit.Controls.DataGridTextColumn.Foreground":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MyToolkit.Controls.DataGridTextColumn");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "Foreground", "Windows.UI.Xaml.Media.Brush");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MyToolkit.Controls.DataGridTextColumn");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "Foreground", "Windows.UI.Xaml.Media.Brush");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_38_DataGridTextColumn_Foreground;
                 xamlMember.Setter = set_38_DataGridTextColumn_Foreground;
                 break;
             case "MyToolkit.Controls.DataGridBoundColumn.OrderPropertyPath":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MyToolkit.Controls.DataGridBoundColumn");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "OrderPropertyPath", "Windows.UI.Xaml.PropertyPath");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MyToolkit.Controls.DataGridBoundColumn");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "OrderPropertyPath", "Windows.UI.Xaml.PropertyPath");
                 xamlMember.Getter = get_39_DataGridBoundColumn_OrderPropertyPath;
                 xamlMember.SetIsReadOnly();
                 break;
             case "DevExpress.UI.Xaml.Controls.PdfViewerControl.DocumentSource":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "DocumentSource", "Object");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "DocumentSource", "Object");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_40_PdfViewerControl_DocumentSource;
                 xamlMember.Setter = set_40_PdfViewerControl_DocumentSource;
                 break;
             case "DevExpress.UI.Xaml.Controls.PdfViewerControl.DocumentUri":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "DocumentUri", "System.Uri");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "DocumentUri", "System.Uri");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_41_PdfViewerControl_DocumentUri;
                 xamlMember.Setter = set_41_PdfViewerControl_DocumentUri;
                 break;
             case "DevExpress.UI.Xaml.Controls.PdfViewerControl.PdfViewMode":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "PdfViewMode", "DevExpress.UI.Xaml.Controls.PdfViewMode");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "PdfViewMode", "DevExpress.UI.Xaml.Controls.PdfViewMode");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_42_PdfViewerControl_PdfViewMode;
                 xamlMember.Setter = set_42_PdfViewerControl_PdfViewMode;
                 break;
             case "DevExpress.UI.Xaml.Controls.PdfViewerControl.PrintDocumentSource":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "PrintDocumentSource", "Windows.Graphics.Printing.IPrintDocumentSource");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "PrintDocumentSource", "Windows.Graphics.Printing.IPrintDocumentSource");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_43_PdfViewerControl_PrintDocumentSource;
                 xamlMember.Setter = set_43_PdfViewerControl_PrintDocumentSource;
                 break;
             case "DevExpress.UI.Xaml.Controls.PdfViewerControl.PageSpacing":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "PageSpacing", "Int32");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "PageSpacing", "Int32");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_44_PdfViewerControl_PageSpacing;
                 xamlMember.Setter = set_44_PdfViewerControl_PageSpacing;
                 break;
             case "DevExpress.UI.Xaml.Controls.PdfViewerControl.PageMargin":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "PageMargin", "Windows.UI.Xaml.Thickness");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "PageMargin", "Windows.UI.Xaml.Thickness");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_45_PdfViewerControl_PageMargin;
                 xamlMember.Setter = set_45_PdfViewerControl_PageMargin;
                 break;
             case "DevExpress.UI.Xaml.Controls.PdfViewerControl.ContentMargin":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ContentMargin", "Windows.UI.Xaml.Thickness");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ContentMargin", "Windows.UI.Xaml.Thickness");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_46_PdfViewerControl_ContentMargin;
                 xamlMember.Setter = set_46_PdfViewerControl_ContentMargin;
                 break;
             case "DevExpress.UI.Xaml.Controls.PdfViewerControl.ZoomMode":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ZoomMode", "DevExpress.UI.Xaml.Controls.PdfZoomMode");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ZoomMode", "DevExpress.UI.Xaml.Controls.PdfZoomMode");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_47_PdfViewerControl_ZoomMode;
                 xamlMember.Setter = set_47_PdfViewerControl_ZoomMode;
                 break;
             case "DevExpress.UI.Xaml.Controls.PdfViewerControl.CurrentPageIndex":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "CurrentPageIndex", "Int32");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "CurrentPageIndex", "Int32");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_48_PdfViewerControl_CurrentPageIndex;
                 xamlMember.Setter = set_48_PdfViewerControl_CurrentPageIndex;
                 break;
             case "DevExpress.UI.Xaml.Controls.PdfViewerControl.CurrentZoomFactor":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "CurrentZoomFactor", "Single");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "CurrentZoomFactor", "Single");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_49_PdfViewerControl_CurrentZoomFactor;
                 xamlMember.Setter = set_49_PdfViewerControl_CurrentZoomFactor;
                 break;
             case "DevExpress.UI.Xaml.Controls.PdfViewerControl.DefaultZoomFactor":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "DefaultZoomFactor", "Double");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "DefaultZoomFactor", "Double");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_50_PdfViewerControl_DefaultZoomFactor;
                 xamlMember.Setter = set_50_PdfViewerControl_DefaultZoomFactor;
                 break;
             case "DevExpress.UI.Xaml.Controls.PdfViewerControl.MaxZoomFactor":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "MaxZoomFactor", "Double");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "MaxZoomFactor", "Double");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_51_PdfViewerControl_MaxZoomFactor;
                 xamlMember.Setter = set_51_PdfViewerControl_MaxZoomFactor;
                 break;
             case "DevExpress.UI.Xaml.Controls.PdfViewerControl.CurrentPageNumber":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "CurrentPageNumber", "Int32");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "CurrentPageNumber", "Int32");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_52_PdfViewerControl_CurrentPageNumber;
                 xamlMember.Setter = set_52_PdfViewerControl_CurrentPageNumber;
                 break;
             case "DevExpress.UI.Xaml.Controls.PdfViewerControl.IsSettingsBarVisible":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "IsSettingsBarVisible", "Boolean");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "IsSettingsBarVisible", "Boolean");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_53_PdfViewerControl_IsSettingsBarVisible;
                 xamlMember.Setter = set_53_PdfViewerControl_IsSettingsBarVisible;
                 break;
             case "DevExpress.UI.Xaml.Controls.PdfViewerControl.IsZoomBarVisible":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "IsZoomBarVisible", "Boolean");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "IsZoomBarVisible", "Boolean");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_54_PdfViewerControl_IsZoomBarVisible;
                 xamlMember.Setter = set_54_PdfViewerControl_IsZoomBarVisible;
                 break;
             case "DevExpress.UI.Xaml.Controls.PdfViewerControl.IsPageBarVisible":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "IsPageBarVisible", "Boolean");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "IsPageBarVisible", "Boolean");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_55_PdfViewerControl_IsPageBarVisible;
                 xamlMember.Setter = set_55_PdfViewerControl_IsPageBarVisible;
                 break;
             case "DevExpress.UI.Xaml.Controls.PdfViewerControl.IsFindTextPanelVisible":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "IsFindTextPanelVisible", "Boolean");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "IsFindTextPanelVisible", "Boolean");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_56_PdfViewerControl_IsFindTextPanelVisible;
                 xamlMember.Setter = set_56_PdfViewerControl_IsFindTextPanelVisible;
                 break;
             case "DevExpress.UI.Xaml.Controls.PdfViewerControl.IsTextSearchEnabled":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "IsTextSearchEnabled", "Boolean");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "IsTextSearchEnabled", "Boolean");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_57_PdfViewerControl_IsTextSearchEnabled;
                 xamlMember.Setter = set_57_PdfViewerControl_IsTextSearchEnabled;
                 break;
             case "DevExpress.UI.Xaml.Controls.PdfViewerControl.ActualIsSettingsBarVisible":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ActualIsSettingsBarVisible", "Boolean");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ActualIsSettingsBarVisible", "Boolean");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_58_PdfViewerControl_ActualIsSettingsBarVisible;
                 xamlMember.SetIsReadOnly();
                 break;
             case "DevExpress.UI.Xaml.Controls.PdfViewerControl.ActualIsPageBarVisible":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ActualIsPageBarVisible", "Boolean");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ActualIsPageBarVisible", "Boolean");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_59_PdfViewerControl_ActualIsPageBarVisible;
                 xamlMember.SetIsReadOnly();
                 break;
             case "DevExpress.UI.Xaml.Controls.PdfViewerControl.ActualIsZoomBarVisible":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ActualIsZoomBarVisible", "Boolean");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ActualIsZoomBarVisible", "Boolean");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_60_PdfViewerControl_ActualIsZoomBarVisible;
                 xamlMember.SetIsReadOnly();
                 break;
             case "DevExpress.UI.Xaml.Controls.PdfViewerControl.ActualIsFindTextPanelVisible":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ActualIsFindTextPanelVisible", "Boolean");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ActualIsFindTextPanelVisible", "Boolean");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_61_PdfViewerControl_ActualIsFindTextPanelVisible;
                 xamlMember.SetIsReadOnly();
                 break;
             case "DevExpress.UI.Xaml.Controls.PdfViewerControl.ActualIsLoading":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ActualIsLoading", "Boolean");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ActualIsLoading", "Boolean");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_62_PdfViewerControl_ActualIsLoading;
                 xamlMember.SetIsReadOnly();
                 break;
             case "DevExpress.UI.Xaml.Controls.PdfViewerControl.IsDataLoading":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "IsDataLoading", "Boolean");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "IsDataLoading", "Boolean");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_63_PdfViewerControl_IsDataLoading;
                 xamlMember.Setter = set_63_PdfViewerControl_IsDataLoading;
                 break;
             case "DevExpress.UI.Xaml.Controls.PdfViewerControl.PageCount":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "PageCount", "Int32");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "PageCount", "Int32");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_64_PdfViewerControl_PageCount;
                 xamlMember.SetIsReadOnly();
                 break;
             case "DevExpress.UI.Xaml.Controls.PdfViewerControl.Document":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "Document", "DevExpress.UI.Xaml.Controls.PdfDocumentContainer");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "Document", "DevExpress.UI.Xaml.Controls.PdfDocumentContainer");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_65_PdfViewerControl_Document;
                 xamlMember.SetIsReadOnly();
                 break;
             case "DevExpress.UI.Xaml.Controls.PdfViewerControl.CornerRadius":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "CornerRadius", "Windows.UI.Xaml.CornerRadius");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "CornerRadius", "Windows.UI.Xaml.CornerRadius");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_66_PdfViewerControl_CornerRadius;
                 xamlMember.Setter = set_66_PdfViewerControl_CornerRadius;
                 break;
             case "DevExpress.UI.Xaml.Controls.PdfViewerControl.ShowPrintDocumentButton":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ShowPrintDocumentButton", "Boolean");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ShowPrintDocumentButton", "Boolean");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_67_PdfViewerControl_ShowPrintDocumentButton;
                 xamlMember.Setter = set_67_PdfViewerControl_ShowPrintDocumentButton;
                 break;
             case "DevExpress.UI.Xaml.Controls.PdfViewerControl.ShowOpenDocumentButton":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ShowOpenDocumentButton", "Boolean");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ShowOpenDocumentButton", "Boolean");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_68_PdfViewerControl_ShowOpenDocumentButton;
                 xamlMember.Setter = set_68_PdfViewerControl_ShowOpenDocumentButton;
                 break;
             case "DevExpress.UI.Xaml.Controls.PdfViewerControl.ShowSaveDocumentButton":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ShowSaveDocumentButton", "Boolean");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ShowSaveDocumentButton", "Boolean");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_69_PdfViewerControl_ShowSaveDocumentButton;
                 xamlMember.Setter = set_69_PdfViewerControl_ShowSaveDocumentButton;
                 break;
             case "DevExpress.UI.Xaml.Controls.PdfViewerControl.ShowBookmarksButton":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ShowBookmarksButton", "Boolean");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ShowBookmarksButton", "Boolean");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_70_PdfViewerControl_ShowBookmarksButton;
                 xamlMember.Setter = set_70_PdfViewerControl_ShowBookmarksButton;
                 break;
             case "DevExpress.UI.Xaml.Controls.PdfViewerControl.ActualIsPrintDocumentButtonVisible":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ActualIsPrintDocumentButtonVisible", "Boolean");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ActualIsPrintDocumentButtonVisible", "Boolean");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_71_PdfViewerControl_ActualIsPrintDocumentButtonVisible;
                 xamlMember.SetIsReadOnly();
                 break;
             case "DevExpress.UI.Xaml.Controls.PdfViewerControl.PrintDocumentCommand":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "PrintDocumentCommand", "System.Windows.Input.ICommand");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "PrintDocumentCommand", "System.Windows.Input.ICommand");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_72_PdfViewerControl_PrintDocumentCommand;
                 xamlMember.Setter = set_72_PdfViewerControl_PrintDocumentCommand;
                 break;
             case "DevExpress.UI.Xaml.Controls.PdfViewerControl.Bookmarks":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "Bookmarks", "System.Collections.Generic.IEnumerable`1<DevExpress.UI.Xaml.Controls.IPdfPageBookmark>");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "Bookmarks", "System.Collections.Generic.IEnumerable`1<DevExpress.UI.Xaml.Controls.IPdfPageBookmark>");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_73_PdfViewerControl_Bookmarks;
                 xamlMember.Setter = set_73_PdfViewerControl_Bookmarks;
                 break;
             case "DevExpress.UI.Xaml.Controls.PdfViewerControl.LeftSideSettingsBarItems":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "LeftSideSettingsBarItems", "DevExpress.UI.Xaml.Controls.SettingsBarItemCollection");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "LeftSideSettingsBarItems", "DevExpress.UI.Xaml.Controls.SettingsBarItemCollection");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_74_PdfViewerControl_LeftSideSettingsBarItems;
                 xamlMember.SetIsReadOnly();
                 break;
             case "DevExpress.UI.Xaml.Controls.PdfViewerControl.LeftSideSettingsBarItemsSource":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "LeftSideSettingsBarItemsSource", "Object");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "LeftSideSettingsBarItemsSource", "Object");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_75_PdfViewerControl_LeftSideSettingsBarItemsSource;
                 xamlMember.Setter = set_75_PdfViewerControl_LeftSideSettingsBarItemsSource;
                 break;
             case "DevExpress.UI.Xaml.Controls.PdfViewerControl.RightSideSettingsBarItems":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "RightSideSettingsBarItems", "DevExpress.UI.Xaml.Controls.SettingsBarItemCollection");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "RightSideSettingsBarItems", "DevExpress.UI.Xaml.Controls.SettingsBarItemCollection");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_76_PdfViewerControl_RightSideSettingsBarItems;
                 xamlMember.SetIsReadOnly();
                 break;
             case "DevExpress.UI.Xaml.Controls.PdfViewerControl.RightSideSettingsBarItemsSource":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "RightSideSettingsBarItemsSource", "Object");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "RightSideSettingsBarItemsSource", "Object");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_77_PdfViewerControl_RightSideSettingsBarItemsSource;
                 xamlMember.Setter = set_77_PdfViewerControl_RightSideSettingsBarItemsSource;
                 break;
             case "DevExpress.UI.Xaml.Controls.PdfViewerControl.ShowLeftSideDefaultSettingsBarItems":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ShowLeftSideDefaultSettingsBarItems", "Boolean");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ShowLeftSideDefaultSettingsBarItems", "Boolean");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_78_PdfViewerControl_ShowLeftSideDefaultSettingsBarItems;
                 xamlMember.Setter = set_78_PdfViewerControl_ShowLeftSideDefaultSettingsBarItems;
                 break;
             case "DevExpress.UI.Xaml.Controls.PdfViewerControl.ShowRightSideDefaultSettingsBarItems":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ShowRightSideDefaultSettingsBarItems", "Boolean");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ShowRightSideDefaultSettingsBarItems", "Boolean");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_79_PdfViewerControl_ShowRightSideDefaultSettingsBarItems;
                 xamlMember.Setter = set_79_PdfViewerControl_ShowRightSideDefaultSettingsBarItems;
                 break;
             case "DevExpress.UI.Xaml.Controls.PdfViewerControl.SettingsBarFlyoutItemTemplateSelector":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "SettingsBarFlyoutItemTemplateSelector", "Windows.UI.Xaml.Controls.DataTemplateSelector");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "SettingsBarFlyoutItemTemplateSelector", "Windows.UI.Xaml.Controls.DataTemplateSelector");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_80_PdfViewerControl_SettingsBarFlyoutItemTemplateSelector;
                 xamlMember.Setter = set_80_PdfViewerControl_SettingsBarFlyoutItemTemplateSelector;
                 break;
             case "DevExpress.UI.Xaml.Controls.PdfViewerControl.ViewerError":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ViewerError", "DevExpress.UI.Xaml.Controls.PdfViewerErrorWrapper");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ViewerError", "DevExpress.UI.Xaml.Controls.PdfViewerErrorWrapper");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_81_PdfViewerControl_ViewerError;
                 xamlMember.Setter = set_81_PdfViewerControl_ViewerError;
                 break;
             case "DevExpress.UI.Xaml.Controls.PdfViewerControl.DocumentPrintingQuality":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "DocumentPrintingQuality", "Double");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "DocumentPrintingQuality", "Double");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_82_PdfViewerControl_DocumentPrintingQuality;
                 xamlMember.Setter = set_82_PdfViewerControl_DocumentPrintingQuality;
                 break;
             case "DevExpress.UI.Xaml.Controls.PdfViewerControl.ThumbnailHeight":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ThumbnailHeight", "Double");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ThumbnailHeight", "Double");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_83_PdfViewerControl_ThumbnailHeight;
                 xamlMember.Setter = set_83_PdfViewerControl_ThumbnailHeight;
                 break;
             case "DevExpress.UI.Xaml.Controls.PdfViewerControl.ThumbnailSpacing":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ThumbnailSpacing", "Double");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ThumbnailSpacing", "Double");
                 xamlMember.Getter = get_84_PdfViewerControl_ThumbnailSpacing;
                 xamlMember.Setter = set_84_PdfViewerControl_ThumbnailSpacing;
                 break;
             case "DevExpress.UI.Xaml.Controls.PdfViewerControl.IsInitialized":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "IsInitialized", "Boolean");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "IsInitialized", "Boolean");
                 xamlMember.Getter = get_85_PdfViewerControl_IsInitialized;
                 xamlMember.SetIsReadOnly();
                 break;
             case "DevExpress.UI.Xaml.Controls.PdfViewerControl.IsZoomedOutView":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "IsZoomedOutView", "Boolean");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "IsZoomedOutView", "Boolean");
                 xamlMember.Getter = get_86_PdfViewerControl_IsZoomedOutView;
                 xamlMember.SetIsReadOnly();
                 break;
             case "DevExpress.UI.Xaml.Controls.PdfViewerControl.ContainerActualWidth":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ContainerActualWidth", "Double");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ContainerActualWidth", "Double");
                 xamlMember.Getter = get_87_PdfViewerControl_ContainerActualWidth;
                 xamlMember.SetIsReadOnly();
                 break;
             case "DevExpress.UI.Xaml.Controls.PdfViewerControl.ContainerActualHeight":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ContainerActualHeight", "Double");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ContainerActualHeight", "Double");
                 xamlMember.Getter = get_88_PdfViewerControl_ContainerActualHeight;
                 xamlMember.SetIsReadOnly();
                 break;
             case "DevExpress.UI.Xaml.Controls.PdfViewerControl.ZoomCommand":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ZoomCommand", "System.Windows.Input.ICommand");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ZoomCommand", "System.Windows.Input.ICommand");
                 xamlMember.Getter = get_89_PdfViewerControl_ZoomCommand;
                 xamlMember.SetIsReadOnly();
                 break;
             case "DevExpress.UI.Xaml.Controls.PdfViewerControl.SetViewModeCommand":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "SetViewModeCommand", "System.Windows.Input.ICommand");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "SetViewModeCommand", "System.Windows.Input.ICommand");
                 xamlMember.Getter = get_90_PdfViewerControl_SetViewModeCommand;
                 xamlMember.SetIsReadOnly();
                 break;
             case "DevExpress.UI.Xaml.Controls.PdfViewerControl.FitSizeCommand":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "FitSizeCommand", "System.Windows.Input.ICommand");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "FitSizeCommand", "System.Windows.Input.ICommand");
                 xamlMember.Getter = get_91_PdfViewerControl_FitSizeCommand;
                 xamlMember.SetIsReadOnly();
                 break;
             case "DevExpress.UI.Xaml.Controls.PdfViewerControl.SetZoomModeCommand":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "SetZoomModeCommand", "System.Windows.Input.ICommand");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "SetZoomModeCommand", "System.Windows.Input.ICommand");
                 xamlMember.Getter = get_92_PdfViewerControl_SetZoomModeCommand;
                 xamlMember.SetIsReadOnly();
                 break;
             case "DevExpress.UI.Xaml.Controls.PdfViewerControl.OpenFileCommand":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "OpenFileCommand", "System.Windows.Input.ICommand");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "OpenFileCommand", "System.Windows.Input.ICommand");
                 xamlMember.Getter = get_93_PdfViewerControl_OpenFileCommand;
                 xamlMember.SetIsReadOnly();
                 break;
             case "DevExpress.UI.Xaml.Controls.PdfViewerControl.SaveAsCommand":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "SaveAsCommand", "System.Windows.Input.ICommand");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "SaveAsCommand", "System.Windows.Input.ICommand");
                 xamlMember.Getter = get_94_PdfViewerControl_SaveAsCommand;
                 xamlMember.SetIsReadOnly();
                 break;
             case "DevExpress.UI.Xaml.Controls.PdfViewerControl.LoadDocumentCommand":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "LoadDocumentCommand", "System.Windows.Input.ICommand");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "LoadDocumentCommand", "System.Windows.Input.ICommand");
                 xamlMember.Getter = get_95_PdfViewerControl_LoadDocumentCommand;
                 xamlMember.SetIsReadOnly();
                 break;
             case "DevExpress.UI.Xaml.Controls.PdfViewerControl.CloseDocumentCommand":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "CloseDocumentCommand", "System.Windows.Input.ICommand");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "CloseDocumentCommand", "System.Windows.Input.ICommand");
                 xamlMember.Getter = get_96_PdfViewerControl_CloseDocumentCommand;
                 xamlMember.SetIsReadOnly();
                 break;
             case "DevExpress.UI.Xaml.Controls.PdfViewerControl.NextPageCommand":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "NextPageCommand", "System.Windows.Input.ICommand");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "NextPageCommand", "System.Windows.Input.ICommand");
                 xamlMember.Getter = get_97_PdfViewerControl_NextPageCommand;
                 xamlMember.SetIsReadOnly();
                 break;
             case "DevExpress.UI.Xaml.Controls.PdfViewerControl.PreviousPageCommand":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "PreviousPageCommand", "System.Windows.Input.ICommand");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "PreviousPageCommand", "System.Windows.Input.ICommand");
                 xamlMember.Getter = get_98_PdfViewerControl_PreviousPageCommand;
                 xamlMember.SetIsReadOnly();
                 break;
             case "DevExpress.UI.Xaml.Controls.PdfViewerControl.SetPageNumberCommand":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "SetPageNumberCommand", "System.Windows.Input.ICommand");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "SetPageNumberCommand", "System.Windows.Input.ICommand");
                 xamlMember.Getter = get_99_PdfViewerControl_SetPageNumberCommand;
                 xamlMember.SetIsReadOnly();
                 break;
             case "DevExpress.UI.Xaml.Controls.PdfViewerControl.SetZoomFactorCommand":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "SetZoomFactorCommand", "System.Windows.Input.ICommand");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "SetZoomFactorCommand", "System.Windows.Input.ICommand");
                 xamlMember.Getter = get_100_PdfViewerControl_SetZoomFactorCommand;
                 xamlMember.SetIsReadOnly();
                 break;
             case "DevExpress.UI.Xaml.Controls.PdfViewerControl.FindTextCommand":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "FindTextCommand", "System.Windows.Input.ICommand");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "FindTextCommand", "System.Windows.Input.ICommand");
                 xamlMember.Getter = get_101_PdfViewerControl_FindTextCommand;
                 xamlMember.SetIsReadOnly();
                 break;
             case "DevExpress.UI.Xaml.Controls.PdfViewerControl.FindNextTextCommand":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "FindNextTextCommand", "System.Windows.Input.ICommand");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "FindNextTextCommand", "System.Windows.Input.ICommand");
                 xamlMember.Getter = get_102_PdfViewerControl_FindNextTextCommand;
                 xamlMember.SetIsReadOnly();
                 break;
             case "DevExpress.UI.Xaml.Controls.PdfViewerControl.FindPreviousTextCommand":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "FindPreviousTextCommand", "System.Windows.Input.ICommand");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "FindPreviousTextCommand", "System.Windows.Input.ICommand");
                 xamlMember.Getter = get_103_PdfViewerControl_FindPreviousTextCommand;
                 xamlMember.SetIsReadOnly();
                 break;
             case "DevExpress.UI.Xaml.Controls.PdfViewerControl.ClearFindResultsCommand":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ClearFindResultsCommand", "System.Windows.Input.ICommand");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ClearFindResultsCommand", "System.Windows.Input.ICommand");
                 xamlMember.Getter = get_104_PdfViewerControl_ClearFindResultsCommand;
                 xamlMember.SetIsReadOnly();
                 break;
             case "DevExpress.UI.Xaml.Controls.PdfViewerControl.ShowFindPanelCommand":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ShowFindPanelCommand", "System.Windows.Input.ICommand");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ShowFindPanelCommand", "System.Windows.Input.ICommand");
                 xamlMember.Getter = get_105_PdfViewerControl_ShowFindPanelCommand;
                 xamlMember.SetIsReadOnly();
                 break;
             case "DevExpress.UI.Xaml.Controls.PdfViewerControl.CloseFindPanelAndClearFindResultsCommand":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "CloseFindPanelAndClearFindResultsCommand", "System.Windows.Input.ICommand");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.PdfViewerControl");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "CloseFindPanelAndClearFindResultsCommand", "System.Windows.Input.ICommand");
                 xamlMember.Getter = get_106_PdfViewerControl_CloseFindPanelAndClearFindResultsCommand;
                 xamlMember.SetIsReadOnly();
                 break;
             case "DevExpress.UI.Xaml.Controls.RadialContextMenuCommandBase.Content":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.RadialContextMenuCommandBase");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "Content", "Object");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.RadialContextMenuCommandBase");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "Content", "Object");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_107_RadialContextMenuCommandBase_Content;
                 xamlMember.Setter = set_107_RadialContextMenuCommandBase_Content;
                 break;
             case "DevExpress.UI.Xaml.Controls.RadialContextMenuCommandBase.ActualIndex":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.RadialContextMenuCommandBase");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ActualIndex", "Int32");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.RadialContextMenuCommandBase");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ActualIndex", "Int32");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_108_RadialContextMenuCommandBase_ActualIndex;
                 xamlMember.Setter = set_108_RadialContextMenuCommandBase_ActualIndex;
                 break;
             case "DevExpress.UI.Xaml.Controls.RadialContextMenuCommandBase.Index":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.RadialContextMenuCommandBase");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "Index", "Int32");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.RadialContextMenuCommandBase");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "Index", "Int32");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_109_RadialContextMenuCommandBase_Index;
                 xamlMember.Setter = set_109_RadialContextMenuCommandBase_Index;
                 break;
             case "DevExpress.UI.Xaml.Controls.RadialContextMenuCommandBase.Location":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.RadialContextMenuCommandBase");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "Location", "Windows.Foundation.Point");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.RadialContextMenuCommandBase");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "Location", "Windows.Foundation.Point");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_110_RadialContextMenuCommandBase_Location;
                 xamlMember.SetIsReadOnly();
                 break;
             case "DevExpress.UI.Xaml.Controls.RadialContextMenuCommandBase.ContentTemplate":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.RadialContextMenuCommandBase");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ContentTemplate", "Windows.UI.Xaml.DataTemplate");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.RadialContextMenuCommandBase");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ContentTemplate", "Windows.UI.Xaml.DataTemplate");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_111_RadialContextMenuCommandBase_ContentTemplate;
                 xamlMember.Setter = set_111_RadialContextMenuCommandBase_ContentTemplate;
                 break;
             case "DevExpress.UI.Xaml.Controls.RadialContextMenuCommandBase.ActualContentTemplate":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.RadialContextMenuCommandBase");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ActualContentTemplate", "Windows.UI.Xaml.DataTemplate");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.RadialContextMenuCommandBase");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ActualContentTemplate", "Windows.UI.Xaml.DataTemplate");
                 xamlMember.Getter = get_112_RadialContextMenuCommandBase_ActualContentTemplate;
                 xamlMember.SetIsReadOnly();
                 break;
             case "DevExpress.UI.Xaml.Controls.RadialContextMenuCommandBase.ViewInfo":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.RadialContextMenuCommandBase");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ViewInfo", "DevExpress.UI.Xaml.Controls.Internal.ViewInfo");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.RadialContextMenuCommandBase");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ViewInfo", "DevExpress.UI.Xaml.Controls.Internal.ViewInfo");
                 xamlMember.Getter = get_113_RadialContextMenuCommandBase_ViewInfo;
                 xamlMember.SetIsReadOnly();
                 break;
             case "DevExpress.UI.Xaml.Controls.RadialContextMenuCommandBase.Uri":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.RadialContextMenuCommandBase");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "Uri", "System.Uri");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.RadialContextMenuCommandBase");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "Uri", "System.Uri");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_114_RadialContextMenuCommandBase_Uri;
                 xamlMember.Setter = set_114_RadialContextMenuCommandBase_Uri;
                 break;
             case "DevExpress.UI.Xaml.Controls.RadialContextMenuCommandBase.Label":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.RadialContextMenuCommandBase");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "Label", "String");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.RadialContextMenuCommandBase");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "Label", "String");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_115_RadialContextMenuCommandBase_Label;
                 xamlMember.Setter = set_115_RadialContextMenuCommandBase_Label;
                 break;
             case "DevExpress.Core.Native.DXControl.IsFocused":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.Core.Native.DXControl");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "IsFocused", "Boolean");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.Core.Native.DXControl");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "IsFocused", "Boolean");
                 xamlMember.Getter = get_116_DXControl_IsFocused;
                 xamlMember.SetIsReadOnly();
                 break;
             case "DevExpress.Core.Native.DXControl.IsKeyboardFocusWithin":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.Core.Native.DXControl");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "IsKeyboardFocusWithin", "Boolean");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.Core.Native.DXControl");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "IsKeyboardFocusWithin", "Boolean");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_117_DXControl_IsKeyboardFocusWithin;
                 xamlMember.SetIsReadOnly();
                 break;
             case "DevExpress.Core.Native.DXControl.IsLoaded":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.Core.Native.DXControl");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "IsLoaded", "Boolean");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.Core.Native.DXControl");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "IsLoaded", "Boolean");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_118_DXControl_IsLoaded;
                 xamlMember.SetIsReadOnly();
                 break;
             case "DevExpress.Core.Native.DXControl.IsMouseOver":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.Core.Native.DXControl");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "IsMouseOver", "Boolean");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.Core.Native.DXControl");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "IsMouseOver", "Boolean");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_119_DXControl_IsMouseOver;
                 xamlMember.SetIsReadOnly();
                 break;
             case "DevExpress.UI.Xaml.Controls.RadialMenuControlBase.DefaultActionCommand":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.RadialMenuControlBase");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "DefaultActionCommand", "System.Windows.Input.ICommand");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.RadialMenuControlBase");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "DefaultActionCommand", "System.Windows.Input.ICommand");
                 xamlMember.Getter = get_120_RadialMenuControlBase_DefaultActionCommand;
                 xamlMember.SetIsReadOnly();
                 break;
             case "DevExpress.UI.Xaml.Controls.RadialMenuControlBase.NavigateCommand":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.RadialMenuControlBase");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "NavigateCommand", "System.Windows.Input.ICommand");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Controls.RadialMenuControlBase");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "NavigateCommand", "System.Windows.Input.ICommand");
                 xamlMember.Getter = get_121_RadialMenuControlBase_NavigateCommand;
                 xamlMember.SetIsReadOnly();
                 break;
             case "DevExpress.UI.Xaml.Ribbon.BackstageTabItem.ControlPane":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.BackstageTabItem");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ControlPane", "Object");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.BackstageTabItem");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ControlPane", "Object");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_122_BackstageTabItem_ControlPane;
                 xamlMember.Setter = set_122_BackstageTabItem_ControlPane;
                 break;
             case "DevExpress.UI.Xaml.Ribbon.BackstageTabItem.ControlPaneShowMode":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.BackstageTabItem");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ControlPaneShowMode", "DevExpress.UI.Xaml.Ribbon.ControlPaneShowMode");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.BackstageTabItem");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ControlPaneShowMode", "DevExpress.UI.Xaml.Ribbon.ControlPaneShowMode");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_123_BackstageTabItem_ControlPaneShowMode;
                 xamlMember.Setter = set_123_BackstageTabItem_ControlPaneShowMode;
                 break;
             case "DevExpress.UI.Xaml.Ribbon.BackstageTabItem.FlyoutCaption":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.BackstageTabItem");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "FlyoutCaption", "String");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.BackstageTabItem");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "FlyoutCaption", "String");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_124_BackstageTabItem_FlyoutCaption;
                 xamlMember.Setter = set_124_BackstageTabItem_FlyoutCaption;
                 break;
             case "DevExpress.UI.Xaml.Ribbon.Internal.RibbonSelectorItemBase.IsSelected":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.RibbonSelectorItemBase");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "IsSelected", "Boolean");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.RibbonSelectorItemBase");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "IsSelected", "Boolean");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_125_RibbonSelectorItemBase_IsSelected;
                 xamlMember.Setter = set_125_RibbonSelectorItemBase_IsSelected;
                 break;
             case "DevExpress.UI.Xaml.Ribbon.Internal.RibbonItemBase.Icon":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.RibbonItemBase");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "Icon", "Windows.UI.Xaml.Controls.IconElement");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.RibbonItemBase");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "Icon", "Windows.UI.Xaml.Controls.IconElement");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_126_RibbonItemBase_Icon;
                 xamlMember.Setter = set_126_RibbonItemBase_Icon;
                 break;
             case "DevExpress.UI.Xaml.Ribbon.Internal.RibbonItemBase.IconSource":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.RibbonItemBase");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "IconSource", "Object");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.RibbonItemBase");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "IconSource", "Object");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_127_RibbonItemBase_IconSource;
                 xamlMember.Setter = set_127_RibbonItemBase_IconSource;
                 break;
             case "DevExpress.UI.Xaml.Ribbon.Internal.RibbonItemBase.IconTemplate":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.RibbonItemBase");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "IconTemplate", "Windows.UI.Xaml.DataTemplate");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.RibbonItemBase");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "IconTemplate", "Windows.UI.Xaml.DataTemplate");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_128_RibbonItemBase_IconTemplate;
                 xamlMember.Setter = set_128_RibbonItemBase_IconTemplate;
                 break;
             case "DevExpress.UI.Xaml.Ribbon.Internal.RibbonItemBase.FlyoutFlowBreak":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.RibbonItemBase");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "FlyoutFlowBreak", "Boolean");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.RibbonItemBase");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "FlyoutFlowBreak", "Boolean");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_129_RibbonItemBase_FlyoutFlowBreak;
                 xamlMember.Setter = set_129_RibbonItemBase_FlyoutFlowBreak;
                 break;
             case "DevExpress.UI.Xaml.Ribbon.Internal.RibbonItemBase.FlyoutSameRow":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.RibbonItemBase");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "FlyoutSameRow", "Boolean");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.RibbonItemBase");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "FlyoutSameRow", "Boolean");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_130_RibbonItemBase_FlyoutSameRow;
                 xamlMember.Setter = set_130_RibbonItemBase_FlyoutSameRow;
                 break;
             case "DevExpress.UI.Xaml.Ribbon.Internal.RibbonItemBase.FlyoutFlowBreakWithSeparator":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.RibbonItemBase");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "FlyoutFlowBreakWithSeparator", "Boolean");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.RibbonItemBase");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "FlyoutFlowBreakWithSeparator", "Boolean");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_131_RibbonItemBase_FlyoutFlowBreakWithSeparator;
                 xamlMember.Setter = set_131_RibbonItemBase_FlyoutFlowBreakWithSeparator;
                 break;
             case "DevExpress.UI.Xaml.Ribbon.Internal.RibbonItemBase.IconFill":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.RibbonItemBase");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "IconFill", "Windows.UI.Xaml.Media.SolidColorBrush");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.RibbonItemBase");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "IconFill", "Windows.UI.Xaml.Media.SolidColorBrush");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_132_RibbonItemBase_IconFill;
                 xamlMember.Setter = set_132_RibbonItemBase_IconFill;
                 break;
             case "DevExpress.UI.Xaml.Ribbon.Internal.RibbonItemBase.IconWidth":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.RibbonItemBase");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "IconWidth", "Double");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.RibbonItemBase");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "IconWidth", "Double");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_133_RibbonItemBase_IconWidth;
                 xamlMember.Setter = set_133_RibbonItemBase_IconWidth;
                 break;
             case "DevExpress.UI.Xaml.Ribbon.Internal.RibbonItemBase.IconHeight":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.RibbonItemBase");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "IconHeight", "Double");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.RibbonItemBase");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "IconHeight", "Double");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_134_RibbonItemBase_IconHeight;
                 xamlMember.Setter = set_134_RibbonItemBase_IconHeight;
                 break;
             case "DevExpress.UI.Xaml.Ribbon.Internal.RibbonItemBase.IconStretch":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.RibbonItemBase");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "IconStretch", "Windows.UI.Xaml.Media.Stretch");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.RibbonItemBase");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "IconStretch", "Windows.UI.Xaml.Media.Stretch");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_135_RibbonItemBase_IconStretch;
                 xamlMember.Setter = set_135_RibbonItemBase_IconStretch;
                 break;
             case "DevExpress.UI.Xaml.Ribbon.Internal.RibbonItemBase.IconSizeUnit":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.RibbonItemBase");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "IconSizeUnit", "DevExpress.UI.Xaml.IconSizeUnit");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.RibbonItemBase");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "IconSizeUnit", "DevExpress.UI.Xaml.IconSizeUnit");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_136_RibbonItemBase_IconSizeUnit;
                 xamlMember.Setter = set_136_RibbonItemBase_IconSizeUnit;
                 break;
             case "DevExpress.UI.Xaml.Ribbon.Internal.RibbonItemBase.ClosePopupOnClick":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.RibbonItemBase");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ClosePopupOnClick", "Boolean");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.RibbonItemBase");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ClosePopupOnClick", "Boolean");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_137_RibbonItemBase_ClosePopupOnClick;
                 xamlMember.Setter = set_137_RibbonItemBase_ClosePopupOnClick;
                 break;
             case "DevExpress.UI.Xaml.Ribbon.Internal.RibbonItemBase.ItemStyle":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.RibbonItemBase");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ItemStyle", "DevExpress.UI.Xaml.Ribbon.RibbonItemStyle");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.RibbonItemBase");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ItemStyle", "DevExpress.UI.Xaml.Ribbon.RibbonItemStyle");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_138_RibbonItemBase_ItemStyle;
                 xamlMember.Setter = set_138_RibbonItemBase_ItemStyle;
                 break;
             case "DevExpress.UI.Xaml.Ribbon.Internal.RibbonItemBase.ShowInFlyoutOnly":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.RibbonItemBase");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ShowInFlyoutOnly", "Boolean");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.RibbonItemBase");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ShowInFlyoutOnly", "Boolean");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_139_RibbonItemBase_ShowInFlyoutOnly;
                 xamlMember.Setter = set_139_RibbonItemBase_ShowInFlyoutOnly;
                 break;
             case "DevExpress.UI.Xaml.Ribbon.Internal.RibbonItemBase.CollapsePriority":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.RibbonItemBase");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "CollapsePriority", "DevExpress.UI.Xaml.Ribbon.CollapsePriority");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.RibbonItemBase");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "CollapsePriority", "DevExpress.UI.Xaml.Ribbon.CollapsePriority");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_140_RibbonItemBase_CollapsePriority;
                 xamlMember.Setter = set_140_RibbonItemBase_CollapsePriority;
                 break;
             case "DevExpress.UI.Xaml.Ribbon.Internal.RibbonItemBase.CollapsedGroupName":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.RibbonItemBase");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "CollapsedGroupName", "String");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.RibbonItemBase");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "CollapsedGroupName", "String");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_141_RibbonItemBase_CollapsedGroupName;
                 xamlMember.Setter = set_141_RibbonItemBase_CollapsedGroupName;
                 break;
             case "DevExpress.UI.Xaml.Ribbon.Internal.RibbonItemBase.TemplateSelector":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.RibbonItemBase");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "TemplateSelector", "DevExpress.UI.Xaml.Ribbon.ControlTemplateSelector");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.RibbonItemBase");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "TemplateSelector", "DevExpress.UI.Xaml.Ribbon.ControlTemplateSelector");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_142_RibbonItemBase_TemplateSelector;
                 xamlMember.Setter = set_142_RibbonItemBase_TemplateSelector;
                 break;
             case "DevExpress.UI.Xaml.Ribbon.Internal.PointerItemBase.ClickMode":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.PointerItemBase");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ClickMode", "Windows.UI.Xaml.Controls.ClickMode");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.PointerItemBase");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ClickMode", "Windows.UI.Xaml.Controls.ClickMode");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_143_PointerItemBase_ClickMode;
                 xamlMember.Setter = set_143_PointerItemBase_ClickMode;
                 break;
             case "DevExpress.UI.Xaml.Ribbon.Internal.PointerItemBase.IsPointerOver":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.PointerItemBase");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "IsPointerOver", "Boolean");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.PointerItemBase");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "IsPointerOver", "Boolean");
                 xamlMember.Getter = get_144_PointerItemBase_IsPointerOver;
                 xamlMember.SetIsReadOnly();
                 break;
             case "DevExpress.UI.Xaml.Ribbon.Internal.PointerItemBase.IsPressed":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.PointerItemBase");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "IsPressed", "Boolean");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.PointerItemBase");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "IsPressed", "Boolean");
                 xamlMember.Getter = get_145_PointerItemBase_IsPressed;
                 xamlMember.SetIsReadOnly();
                 break;
             case "DevExpress.UI.Xaml.Internal.ContentControlEx.IsLoaded":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Internal.ContentControlEx");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "IsLoaded", "Boolean");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Internal.ContentControlEx");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "IsLoaded", "Boolean");
                 xamlMember.Getter = get_146_ContentControlEx_IsLoaded;
                 xamlMember.SetIsReadOnly();
                 break;
             case "DevExpress.UI.Xaml.Ribbon.BackstageView.Items":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.BackstageView");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "Items", "DevExpress.UI.Xaml.Ribbon.BackstageItemCollection");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.BackstageView");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "Items", "DevExpress.UI.Xaml.Ribbon.BackstageItemCollection");
                 xamlMember.Getter = get_147_BackstageView_Items;
                 xamlMember.SetIsReadOnly();
                 break;
             case "DevExpress.UI.Xaml.Ribbon.IBackstageItem.ClosePopupOnClick":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.IBackstageItem");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ClosePopupOnClick", "Boolean");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.IBackstageItem");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ClosePopupOnClick", "Boolean");
                 xamlMember.Getter = get_148_IBackstageItem_ClosePopupOnClick;
                 xamlMember.SetIsReadOnly();
                 break;
             case "DevExpress.UI.Xaml.Ribbon.BackstageView.ItemsSource":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.BackstageView");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ItemsSource", "Object");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.BackstageView");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ItemsSource", "Object");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_149_BackstageView_ItemsSource;
                 xamlMember.Setter = set_149_BackstageView_ItemsSource;
                 break;
             case "DevExpress.UI.Xaml.Ribbon.BackstageView.ItemTemplate":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.BackstageView");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ItemTemplate", "Windows.UI.Xaml.DataTemplate");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.BackstageView");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ItemTemplate", "Windows.UI.Xaml.DataTemplate");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_150_BackstageView_ItemTemplate;
                 xamlMember.Setter = set_150_BackstageView_ItemTemplate;
                 break;
             case "DevExpress.UI.Xaml.Ribbon.BackstageView.ItemTemplateSelector":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.BackstageView");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ItemTemplateSelector", "Windows.UI.Xaml.Controls.DataTemplateSelector");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.BackstageView");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ItemTemplateSelector", "Windows.UI.Xaml.Controls.DataTemplateSelector");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_151_BackstageView_ItemTemplateSelector;
                 xamlMember.Setter = set_151_BackstageView_ItemTemplateSelector;
                 break;
             case "DevExpress.UI.Xaml.Ribbon.BackstageView.SelectedTab":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.BackstageView");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "SelectedTab", "DevExpress.UI.Xaml.Ribbon.IBackstageTabItem");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.BackstageView");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "SelectedTab", "DevExpress.UI.Xaml.Ribbon.IBackstageTabItem");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_152_BackstageView_SelectedTab;
                 xamlMember.Setter = set_152_BackstageView_SelectedTab;
                 break;
             case "DevExpress.UI.Xaml.Ribbon.BackstageView.IsOpen":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.BackstageView");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "IsOpen", "Boolean");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.BackstageView");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "IsOpen", "Boolean");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_153_BackstageView_IsOpen;
                 xamlMember.Setter = set_153_BackstageView_IsOpen;
                 break;
             case "DevExpress.UI.Xaml.Ribbon.BackstageView.SelectedTabOnShow":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.BackstageView");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "SelectedTabOnShow", "DevExpress.UI.Xaml.Ribbon.IBackstageTabItem");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.BackstageView");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "SelectedTabOnShow", "DevExpress.UI.Xaml.Ribbon.IBackstageTabItem");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_154_BackstageView_SelectedTabOnShow;
                 xamlMember.Setter = set_154_BackstageView_SelectedTabOnShow;
                 break;
             case "DevExpress.UI.Xaml.Ribbon.BackstageView.SelectedTabCaptionOnShow":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.BackstageView");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "SelectedTabCaptionOnShow", "String");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.BackstageView");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "SelectedTabCaptionOnShow", "String");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_155_BackstageView_SelectedTabCaptionOnShow;
                 xamlMember.Setter = set_155_BackstageView_SelectedTabCaptionOnShow;
                 break;
             case "DevExpress.UI.Xaml.Ribbon.BackstageView.SelectedTabIndexOnShow":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.BackstageView");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "SelectedTabIndexOnShow", "Int32");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.BackstageView");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "SelectedTabIndexOnShow", "Int32");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_156_BackstageView_SelectedTabIndexOnShow;
                 xamlMember.Setter = set_156_BackstageView_SelectedTabIndexOnShow;
                 break;
             case "DevExpress.UI.Xaml.Ribbon.BackstageView.TitleSettings":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.BackstageView");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "TitleSettings", "DevExpress.UI.Xaml.TitleSettings");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.BackstageView");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "TitleSettings", "DevExpress.UI.Xaml.TitleSettings");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_157_BackstageView_TitleSettings;
                 xamlMember.Setter = set_157_BackstageView_TitleSettings;
                 break;
             case "DevExpress.UI.Xaml.Ribbon.BackstageView.PlacementTarget":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.BackstageView");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "PlacementTarget", "Windows.UI.Xaml.UIElement");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.BackstageView");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "PlacementTarget", "Windows.UI.Xaml.UIElement");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_158_BackstageView_PlacementTarget;
                 xamlMember.Setter = set_158_BackstageView_PlacementTarget;
                 break;
             case "DevExpress.UI.Xaml.Ribbon.BackstageView.ActualPlacementTarget":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.BackstageView");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ActualPlacementTarget", "Windows.UI.Xaml.UIElement");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.BackstageView");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ActualPlacementTarget", "Windows.UI.Xaml.UIElement");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_159_BackstageView_ActualPlacementTarget;
                 xamlMember.SetIsReadOnly();
                 break;
             case "DevExpress.UI.Xaml.Ribbon.BackstageView.StaysOpen":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.BackstageView");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "StaysOpen", "Boolean");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.BackstageView");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "StaysOpen", "Boolean");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_160_BackstageView_StaysOpen;
                 xamlMember.Setter = set_160_BackstageView_StaysOpen;
                 break;
             case "DevExpress.UI.Xaml.Ribbon.BackstageView.CloseCommand":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.BackstageView");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "CloseCommand", "System.Windows.Input.ICommand");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.BackstageView");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "CloseCommand", "System.Windows.Input.ICommand");
                 xamlMember.Getter = get_161_BackstageView_CloseCommand;
                 xamlMember.SetIsReadOnly();
                 break;
             case "DevExpress.UI.Xaml.Ribbon.Internal.RibbonHeaderedContainerBase.Caption":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.RibbonHeaderedContainerBase");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "Caption", "String");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.RibbonHeaderedContainerBase");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "Caption", "String");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_162_RibbonHeaderedContainerBase_Caption;
                 xamlMember.Setter = set_162_RibbonHeaderedContainerBase_Caption;
                 break;
             case "DevExpress.UI.Xaml.Internal.ControlEx.IsLoaded":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Internal.ControlEx");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "IsLoaded", "Boolean");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Internal.ControlEx");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "IsLoaded", "Boolean");
                 xamlMember.Getter = get_163_ControlEx_IsLoaded;
                 xamlMember.SetIsReadOnly();
                 break;
             case "DevExpress.UI.Xaml.Ribbon.Internal.RibbonButtonItemBase.Command":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.RibbonButtonItemBase");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "Command", "System.Windows.Input.ICommand");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.RibbonButtonItemBase");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "Command", "System.Windows.Input.ICommand");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_164_RibbonButtonItemBase_Command;
                 xamlMember.Setter = set_164_RibbonButtonItemBase_Command;
                 break;
             case "DevExpress.UI.Xaml.Ribbon.Internal.RibbonButtonItemBase.CommandParameter":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.RibbonButtonItemBase");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "CommandParameter", "Object");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.RibbonButtonItemBase");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "CommandParameter", "Object");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_165_RibbonButtonItemBase_CommandParameter;
                 xamlMember.Setter = set_165_RibbonButtonItemBase_CommandParameter;
                 break;
             case "DevExpress.UI.Xaml.Ribbon.RibbonGalleryItemGroup.Items":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.RibbonGalleryItemGroup");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "Items", "DevExpress.UI.Xaml.Ribbon.RibbonGalleryItemCollection");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.RibbonGalleryItemGroup");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "Items", "DevExpress.UI.Xaml.Ribbon.RibbonGalleryItemCollection");
                 xamlMember.Getter = get_166_RibbonGalleryItemGroup_Items;
                 xamlMember.SetIsReadOnly();
                 break;
             case "DevExpress.UI.Xaml.Ribbon.RibbonGalleryItemGroup.Title":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.RibbonGalleryItemGroup");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "Title", "String");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.RibbonGalleryItemGroup");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "Title", "String");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_167_RibbonGalleryItemGroup_Title;
                 xamlMember.Setter = set_167_RibbonGalleryItemGroup_Title;
                 break;
             case "DevExpress.UI.Xaml.Ribbon.HelpPane.Items":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.HelpPane");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "Items", "DevExpress.UI.Xaml.Ribbon.HelpPaneItemCollection");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.HelpPane");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "Items", "DevExpress.UI.Xaml.Ribbon.HelpPaneItemCollection");
                 xamlMember.Getter = get_168_HelpPane_Items;
                 xamlMember.SetIsReadOnly();
                 break;
             case "DevExpress.UI.Xaml.Ribbon.IHelpPaneItem.PlatformVisibility":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.IHelpPaneItem");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "PlatformVisibility", "DevExpress.Mvvm.Native.DeviceFamily");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.IHelpPaneItem");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "PlatformVisibility", "DevExpress.Mvvm.Native.DeviceFamily");
                 xamlMember.Getter = get_169_IHelpPaneItem_PlatformVisibility;
                 xamlMember.SetIsReadOnly();
                 break;
             case "DevExpress.UI.Xaml.Ribbon.IHelpPaneItem.Placement":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.IHelpPaneItem");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "Placement", "DevExpress.UI.Xaml.Ribbon.HelpPaneItemPlacement");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.IHelpPaneItem");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "Placement", "DevExpress.UI.Xaml.Ribbon.HelpPaneItemPlacement");
                 xamlMember.Getter = get_170_IHelpPaneItem_Placement;
                 xamlMember.SetIsReadOnly();
                 break;
             case "DevExpress.UI.Xaml.Ribbon.HelpPane.ItemsSource":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.HelpPane");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ItemsSource", "Object");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.HelpPane");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ItemsSource", "Object");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_171_HelpPane_ItemsSource;
                 xamlMember.Setter = set_171_HelpPane_ItemsSource;
                 break;
             case "DevExpress.UI.Xaml.Ribbon.HelpPane.ItemTemplate":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.HelpPane");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ItemTemplate", "Windows.UI.Xaml.DataTemplate");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.HelpPane");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ItemTemplate", "Windows.UI.Xaml.DataTemplate");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_172_HelpPane_ItemTemplate;
                 xamlMember.Setter = set_172_HelpPane_ItemTemplate;
                 break;
             case "DevExpress.UI.Xaml.Ribbon.HelpPane.ItemTemplateSelector":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.HelpPane");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ItemTemplateSelector", "Windows.UI.Xaml.Controls.DataTemplateSelector");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.HelpPane");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ItemTemplateSelector", "Windows.UI.Xaml.Controls.DataTemplateSelector");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_173_HelpPane_ItemTemplateSelector;
                 xamlMember.Setter = set_173_HelpPane_ItemTemplateSelector;
                 break;
             case "DevExpress.UI.Xaml.Ribbon.HelpPane.ActualHeaderItems":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.HelpPane");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ActualHeaderItems", "DevExpress.UI.Xaml.Ribbon.HelpPaneItemCollection");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.HelpPane");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ActualHeaderItems", "DevExpress.UI.Xaml.Ribbon.HelpPaneItemCollection");
                 xamlMember.Getter = get_174_HelpPane_ActualHeaderItems;
                 xamlMember.SetIsReadOnly();
                 break;
             case "DevExpress.UI.Xaml.Ribbon.HelpPane.ActualFooterItems":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.HelpPane");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ActualFooterItems", "DevExpress.UI.Xaml.Ribbon.HelpPaneItemCollection");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.HelpPane");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ActualFooterItems", "DevExpress.UI.Xaml.Ribbon.HelpPaneItemCollection");
                 xamlMember.Getter = get_175_HelpPane_ActualFooterItems;
                 xamlMember.SetIsReadOnly();
                 break;
             case "DevExpress.UI.Xaml.Ribbon.RibbonControl.Tabs":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.RibbonControl");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "Tabs", "DevExpress.UI.Xaml.Ribbon.RibbonTabCollection");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.RibbonControl");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "Tabs", "DevExpress.UI.Xaml.Ribbon.RibbonTabCollection");
                 xamlMember.Getter = get_176_RibbonControl_Tabs;
                 xamlMember.SetIsReadOnly();
                 break;
             case "DevExpress.UI.Xaml.Ribbon.RibbonTab.Groups":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.RibbonTab");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "Groups", "DevExpress.UI.Xaml.Ribbon.RibbonGroupCollection");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.RibbonTab");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "Groups", "DevExpress.UI.Xaml.Ribbon.RibbonGroupCollection");
                 xamlMember.Getter = get_177_RibbonTab_Groups;
                 xamlMember.SetIsReadOnly();
                 break;
             case "DevExpress.UI.Xaml.Ribbon.RibbonGroup.Items":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.RibbonGroup");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "Items", "DevExpress.UI.Xaml.Ribbon.RibbonItemCollection");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.RibbonGroup");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "Items", "DevExpress.UI.Xaml.Ribbon.RibbonItemCollection");
                 xamlMember.Getter = get_178_RibbonGroup_Items;
                 xamlMember.SetIsReadOnly();
                 break;
             case "DevExpress.UI.Xaml.Ribbon.IRibbonItem.ItemStyle":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.IRibbonItem");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ItemStyle", "DevExpress.UI.Xaml.Ribbon.RibbonItemStyle");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.IRibbonItem");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ItemStyle", "DevExpress.UI.Xaml.Ribbon.RibbonItemStyle");
                 xamlMember.Getter = get_179_IRibbonItem_ItemStyle;
                 xamlMember.SetIsReadOnly();
                 break;
             case "DevExpress.UI.Xaml.Ribbon.IRibbonItem.CollapsePriority":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.IRibbonItem");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "CollapsePriority", "DevExpress.UI.Xaml.Ribbon.CollapsePriority");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.IRibbonItem");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "CollapsePriority", "DevExpress.UI.Xaml.Ribbon.CollapsePriority");
                 xamlMember.Getter = get_180_IRibbonItem_CollapsePriority;
                 xamlMember.SetIsReadOnly();
                 break;
             case "DevExpress.UI.Xaml.Ribbon.IRibbonItem.CollapsedGroupName":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.IRibbonItem");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "CollapsedGroupName", "String");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.IRibbonItem");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "CollapsedGroupName", "String");
                 xamlMember.Getter = get_181_IRibbonItem_CollapsedGroupName;
                 xamlMember.SetIsReadOnly();
                 break;
             case "DevExpress.UI.Xaml.Ribbon.IRibbonItem.ShowInFlyoutOnly":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.IRibbonItem");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ShowInFlyoutOnly", "Boolean");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.IRibbonItem");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ShowInFlyoutOnly", "Boolean");
                 xamlMember.Getter = get_182_IRibbonItem_ShowInFlyoutOnly;
                 xamlMember.SetIsReadOnly();
                 break;
             case "DevExpress.UI.Xaml.Ribbon.IRibbonItem.HasContent":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.IRibbonItem");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "HasContent", "Boolean");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.IRibbonItem");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "HasContent", "Boolean");
                 xamlMember.Getter = get_183_IRibbonItem_HasContent;
                 xamlMember.SetIsReadOnly();
                 break;
             case "DevExpress.UI.Xaml.Ribbon.RibbonGroup.ItemsSource":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.RibbonGroup");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ItemsSource", "Object");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.RibbonGroup");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ItemsSource", "Object");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_184_RibbonGroup_ItemsSource;
                 xamlMember.Setter = set_184_RibbonGroup_ItemsSource;
                 break;
             case "DevExpress.UI.Xaml.Ribbon.RibbonGroup.ItemTemplate":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.RibbonGroup");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ItemTemplate", "Windows.UI.Xaml.DataTemplate");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.RibbonGroup");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ItemTemplate", "Windows.UI.Xaml.DataTemplate");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_185_RibbonGroup_ItemTemplate;
                 xamlMember.Setter = set_185_RibbonGroup_ItemTemplate;
                 break;
             case "DevExpress.UI.Xaml.Ribbon.RibbonGroup.ItemTemplateSelector":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.RibbonGroup");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ItemTemplateSelector", "Windows.UI.Xaml.Controls.DataTemplateSelector");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.RibbonGroup");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ItemTemplateSelector", "Windows.UI.Xaml.Controls.DataTemplateSelector");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_186_RibbonGroup_ItemTemplateSelector;
                 xamlMember.Setter = set_186_RibbonGroup_ItemTemplateSelector;
                 break;
             case "DevExpress.UI.Xaml.Ribbon.RibbonGroup.IconSizeUnit":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.RibbonGroup");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "IconSizeUnit", "DevExpress.UI.Xaml.IconSizeUnit");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.RibbonGroup");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "IconSizeUnit", "DevExpress.UI.Xaml.IconSizeUnit");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_187_RibbonGroup_IconSizeUnit;
                 xamlMember.Setter = set_187_RibbonGroup_IconSizeUnit;
                 break;
             case "DevExpress.UI.Xaml.Ribbon.RibbonGroup.Icon":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.RibbonGroup");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "Icon", "Windows.UI.Xaml.Controls.IconElement");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.RibbonGroup");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "Icon", "Windows.UI.Xaml.Controls.IconElement");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_188_RibbonGroup_Icon;
                 xamlMember.Setter = set_188_RibbonGroup_Icon;
                 break;
             case "DevExpress.UI.Xaml.Ribbon.RibbonGroup.IconSource":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.RibbonGroup");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "IconSource", "Object");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.RibbonGroup");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "IconSource", "Object");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_189_RibbonGroup_IconSource;
                 xamlMember.Setter = set_189_RibbonGroup_IconSource;
                 break;
             case "DevExpress.UI.Xaml.Ribbon.RibbonGroup.IconTemplate":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.RibbonGroup");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "IconTemplate", "Windows.UI.Xaml.DataTemplate");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.RibbonGroup");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "IconTemplate", "Windows.UI.Xaml.DataTemplate");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_190_RibbonGroup_IconTemplate;
                 xamlMember.Setter = set_190_RibbonGroup_IconTemplate;
                 break;
             case "DevExpress.UI.Xaml.Ribbon.RibbonGroup.IconWidth":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.RibbonGroup");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "IconWidth", "Double");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.RibbonGroup");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "IconWidth", "Double");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_191_RibbonGroup_IconWidth;
                 xamlMember.Setter = set_191_RibbonGroup_IconWidth;
                 break;
             case "DevExpress.UI.Xaml.Ribbon.RibbonGroup.IconHeight":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.RibbonGroup");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "IconHeight", "Double");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.RibbonGroup");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "IconHeight", "Double");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_192_RibbonGroup_IconHeight;
                 xamlMember.Setter = set_192_RibbonGroup_IconHeight;
                 break;
             case "DevExpress.UI.Xaml.Ribbon.RibbonGroup.IconStretch":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.RibbonGroup");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "IconStretch", "Windows.UI.Xaml.Media.Stretch");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.RibbonGroup");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "IconStretch", "Windows.UI.Xaml.Media.Stretch");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_193_RibbonGroup_IconStretch;
                 xamlMember.Setter = set_193_RibbonGroup_IconStretch;
                 break;
             case "DevExpress.UI.Xaml.Ribbon.RibbonGroup.IconFill":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.RibbonGroup");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "IconFill", "Windows.UI.Xaml.Media.SolidColorBrush");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.RibbonGroup");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "IconFill", "Windows.UI.Xaml.Media.SolidColorBrush");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_194_RibbonGroup_IconFill;
                 xamlMember.Setter = set_194_RibbonGroup_IconFill;
                 break;
             case "DevExpress.UI.Xaml.Ribbon.RibbonGroup.FlyoutColumnCount":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.RibbonGroup");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "FlyoutColumnCount", "Int32");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.RibbonGroup");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "FlyoutColumnCount", "Int32");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_195_RibbonGroup_FlyoutColumnCount;
                 xamlMember.Setter = set_195_RibbonGroup_FlyoutColumnCount;
                 break;
             case "DevExpress.UI.Xaml.Ribbon.RibbonGroup.MeasureState":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.RibbonGroup");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "MeasureState", "DevExpress.UI.Xaml.Ribbon.Internal.MeasureState");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.RibbonGroup");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "MeasureState", "DevExpress.UI.Xaml.Ribbon.Internal.MeasureState");
                 xamlMember.Getter = get_196_RibbonGroup_MeasureState;
                 xamlMember.Setter = set_196_RibbonGroup_MeasureState;
                 break;
             case "DevExpress.UI.Xaml.Ribbon.Internal.RibbonGroupPanelBase.Caption":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.RibbonGroupPanelBase");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "Caption", "String");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.RibbonGroupPanelBase");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "Caption", "String");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_197_RibbonGroupPanelBase_Caption;
                 xamlMember.Setter = set_197_RibbonGroupPanelBase_Caption;
                 break;
             case "DevExpress.UI.Xaml.Ribbon.Internal.RibbonGroupPanelBase.DropDownControl":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.RibbonGroupPanelBase");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "DropDownControl", "Windows.UI.Xaml.UIElement");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.RibbonGroupPanelBase");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "DropDownControl", "Windows.UI.Xaml.UIElement");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_198_RibbonGroupPanelBase_DropDownControl;
                 xamlMember.Setter = set_198_RibbonGroupPanelBase_DropDownControl;
                 break;
             case "DevExpress.UI.Xaml.Ribbon.Internal.RibbonGroupPanelBase.FlyoutItems":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.RibbonGroupPanelBase");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "FlyoutItems", "DevExpress.UI.Xaml.Ribbon.RibbonItemCollection");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.RibbonGroupPanelBase");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "FlyoutItems", "DevExpress.UI.Xaml.Ribbon.RibbonItemCollection");
                 xamlMember.Getter = get_199_RibbonGroupPanelBase_FlyoutItems;
                 xamlMember.SetIsReadOnly();
                 break;
             case "DevExpress.UI.Xaml.Ribbon.Internal.RibbonGroupPanelBase.FlyoutCalculator":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.RibbonGroupPanelBase");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "FlyoutCalculator", "DevExpress.UI.Xaml.Ribbon.Internal.IFlyoutCalculator");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.RibbonGroupPanelBase");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "FlyoutCalculator", "DevExpress.UI.Xaml.Ribbon.Internal.IFlyoutCalculator");
                 xamlMember.Getter = get_200_RibbonGroupPanelBase_FlyoutCalculator;
                 xamlMember.SetIsReadOnly();
                 break;
             case "DevExpress.UI.Xaml.Ribbon.RibbonTab.GroupsSource":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.RibbonTab");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "GroupsSource", "Object");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.RibbonTab");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "GroupsSource", "Object");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_201_RibbonTab_GroupsSource;
                 xamlMember.Setter = set_201_RibbonTab_GroupsSource;
                 break;
             case "DevExpress.UI.Xaml.Ribbon.RibbonTab.GroupTemplate":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.RibbonTab");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "GroupTemplate", "Windows.UI.Xaml.DataTemplate");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.RibbonTab");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "GroupTemplate", "Windows.UI.Xaml.DataTemplate");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_202_RibbonTab_GroupTemplate;
                 xamlMember.Setter = set_202_RibbonTab_GroupTemplate;
                 break;
             case "DevExpress.UI.Xaml.Ribbon.RibbonTab.GroupTemplateSelector":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.RibbonTab");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "GroupTemplateSelector", "Windows.UI.Xaml.Controls.DataTemplateSelector");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.RibbonTab");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "GroupTemplateSelector", "Windows.UI.Xaml.Controls.DataTemplateSelector");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_203_RibbonTab_GroupTemplateSelector;
                 xamlMember.Setter = set_203_RibbonTab_GroupTemplateSelector;
                 break;
             case "DevExpress.UI.Xaml.Ribbon.RibbonTab.IsSelected":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.RibbonTab");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "IsSelected", "Boolean");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.RibbonTab");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "IsSelected", "Boolean");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_204_RibbonTab_IsSelected;
                 xamlMember.Setter = set_204_RibbonTab_IsSelected;
                 break;
             case "DevExpress.UI.Xaml.Ribbon.RibbonControl.ActualSize":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.RibbonControl");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ActualSize", "Windows.Foundation.Size");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.RibbonControl");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ActualSize", "Windows.Foundation.Size");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_205_RibbonControl_ActualSize;
                 xamlMember.SetIsReadOnly();
                 break;
             case "DevExpress.UI.Xaml.Ribbon.RibbonControl.TabsSource":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.RibbonControl");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "TabsSource", "Object");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.RibbonControl");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "TabsSource", "Object");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_206_RibbonControl_TabsSource;
                 xamlMember.Setter = set_206_RibbonControl_TabsSource;
                 break;
             case "DevExpress.UI.Xaml.Ribbon.RibbonControl.TabTemplate":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.RibbonControl");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "TabTemplate", "Windows.UI.Xaml.DataTemplate");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.RibbonControl");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "TabTemplate", "Windows.UI.Xaml.DataTemplate");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_207_RibbonControl_TabTemplate;
                 xamlMember.Setter = set_207_RibbonControl_TabTemplate;
                 break;
             case "DevExpress.UI.Xaml.Ribbon.RibbonControl.TabTemplateSelector":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.RibbonControl");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "TabTemplateSelector", "Windows.UI.Xaml.Controls.DataTemplateSelector");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.RibbonControl");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "TabTemplateSelector", "Windows.UI.Xaml.Controls.DataTemplateSelector");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_208_RibbonControl_TabTemplateSelector;
                 xamlMember.Setter = set_208_RibbonControl_TabTemplateSelector;
                 break;
             case "DevExpress.UI.Xaml.Ribbon.RibbonControl.SelectedTab":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.RibbonControl");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "SelectedTab", "DevExpress.UI.Xaml.Ribbon.RibbonTab");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.RibbonControl");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "SelectedTab", "DevExpress.UI.Xaml.Ribbon.RibbonTab");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_209_RibbonControl_SelectedTab;
                 xamlMember.Setter = set_209_RibbonControl_SelectedTab;
                 break;
             case "DevExpress.UI.Xaml.Ribbon.RibbonControl.SelectedTabCaption":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.RibbonControl");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "SelectedTabCaption", "String");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.RibbonControl");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "SelectedTabCaption", "String");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_210_RibbonControl_SelectedTabCaption;
                 xamlMember.Setter = set_210_RibbonControl_SelectedTabCaption;
                 break;
             case "DevExpress.UI.Xaml.Ribbon.RibbonControl.BackstageView":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.RibbonControl");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "BackstageView", "DevExpress.UI.Xaml.Ribbon.BackstageView");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.RibbonControl");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "BackstageView", "DevExpress.UI.Xaml.Ribbon.BackstageView");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_211_RibbonControl_BackstageView;
                 xamlMember.Setter = set_211_RibbonControl_BackstageView;
                 break;
             case "DevExpress.UI.Xaml.Ribbon.RibbonControl.HelpPane":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.RibbonControl");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "HelpPane", "DevExpress.UI.Xaml.Ribbon.HelpPane");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.RibbonControl");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "HelpPane", "DevExpress.UI.Xaml.Ribbon.HelpPane");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_212_RibbonControl_HelpPane;
                 xamlMember.Setter = set_212_RibbonControl_HelpPane;
                 break;
             case "DevExpress.UI.Xaml.Ribbon.RibbonControl.Title":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.RibbonControl");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "Title", "String");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.RibbonControl");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "Title", "String");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_213_RibbonControl_Title;
                 xamlMember.Setter = set_213_RibbonControl_Title;
                 break;
             case "DevExpress.UI.Xaml.Ribbon.RibbonControl.IsTitleEditable":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.RibbonControl");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "IsTitleEditable", "Boolean");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.RibbonControl");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "IsTitleEditable", "Boolean");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_214_RibbonControl_IsTitleEditable;
                 xamlMember.Setter = set_214_RibbonControl_IsTitleEditable;
                 break;
             case "DevExpress.UI.Xaml.Ribbon.RibbonControl.TitleSettings":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.RibbonControl");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "TitleSettings", "DevExpress.UI.Xaml.TitleSettings");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.RibbonControl");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "TitleSettings", "DevExpress.UI.Xaml.TitleSettings");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_215_RibbonControl_TitleSettings;
                 xamlMember.Setter = set_215_RibbonControl_TitleSettings;
                 break;
             case "DevExpress.UI.Xaml.Ribbon.RibbonControl.EmbedRibbonInWindowTitle":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.RibbonControl");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "EmbedRibbonInWindowTitle", "Boolean");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.RibbonControl");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "EmbedRibbonInWindowTitle", "Boolean");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_216_RibbonControl_EmbedRibbonInWindowTitle;
                 xamlMember.Setter = set_216_RibbonControl_EmbedRibbonInWindowTitle;
                 break;
             case "DevExpress.UI.Xaml.Ribbon.RibbonControl.ViewMode":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.RibbonControl");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ViewMode", "DevExpress.UI.Xaml.Ribbon.RibbonViewMode");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.RibbonControl");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ViewMode", "DevExpress.UI.Xaml.Ribbon.RibbonViewMode");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_217_RibbonControl_ViewMode;
                 xamlMember.Setter = set_217_RibbonControl_ViewMode;
                 break;
             case "DevExpress.UI.Xaml.Ribbon.RibbonControl.State":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.RibbonControl");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "State", "DevExpress.UI.Xaml.Ribbon.RibbonState");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.RibbonControl");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "State", "DevExpress.UI.Xaml.Ribbon.RibbonState");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_218_RibbonControl_State;
                 xamlMember.Setter = set_218_RibbonControl_State;
                 break;
             case "DevExpress.UI.Xaml.Ribbon.RibbonControl.CanMinimize":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.RibbonControl");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "CanMinimize", "Boolean");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.RibbonControl");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "CanMinimize", "Boolean");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_219_RibbonControl_CanMinimize;
                 xamlMember.Setter = set_219_RibbonControl_CanMinimize;
                 break;
             case "DevExpress.UI.Xaml.Ribbon.RibbonControl.HeaderItemTemplate":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.RibbonControl");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "HeaderItemTemplate", "Windows.UI.Xaml.DataTemplate");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.RibbonControl");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "HeaderItemTemplate", "Windows.UI.Xaml.DataTemplate");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_220_RibbonControl_HeaderItemTemplate;
                 xamlMember.Setter = set_220_RibbonControl_HeaderItemTemplate;
                 break;
             case "DevExpress.UI.Xaml.Ribbon.RibbonControl.HeaderItemContainerStyle":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.RibbonControl");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "HeaderItemContainerStyle", "Windows.UI.Xaml.Style");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.RibbonControl");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "HeaderItemContainerStyle", "Windows.UI.Xaml.Style");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_221_RibbonControl_HeaderItemContainerStyle;
                 xamlMember.Setter = set_221_RibbonControl_HeaderItemContainerStyle;
                 break;
             case "DevExpress.UI.Xaml.Ribbon.RibbonControl.ContextualHeaderItemTemplate":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.RibbonControl");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ContextualHeaderItemTemplate", "Windows.UI.Xaml.DataTemplate");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.RibbonControl");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ContextualHeaderItemTemplate", "Windows.UI.Xaml.DataTemplate");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_222_RibbonControl_ContextualHeaderItemTemplate;
                 xamlMember.Setter = set_222_RibbonControl_ContextualHeaderItemTemplate;
                 break;
             case "DevExpress.UI.Xaml.Ribbon.RibbonControl.ContextualHeaderItemContainerStyle":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.RibbonControl");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ContextualHeaderItemContainerStyle", "Windows.UI.Xaml.Style");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.RibbonControl");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ContextualHeaderItemContainerStyle", "Windows.UI.Xaml.Style");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_223_RibbonControl_ContextualHeaderItemContainerStyle;
                 xamlMember.Setter = set_223_RibbonControl_ContextualHeaderItemContainerStyle;
                 break;
             case "DevExpress.UI.Xaml.Ribbon.RibbonControl.ChangeRibbonStateCommand":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.RibbonControl");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ChangeRibbonStateCommand", "System.Windows.Input.ICommand");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.RibbonControl");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ChangeRibbonStateCommand", "System.Windows.Input.ICommand");
                 xamlMember.Getter = get_224_RibbonControl_ChangeRibbonStateCommand;
                 xamlMember.SetIsReadOnly();
                 break;
             case "DevExpress.UI.Xaml.Ribbon.RibbonControl.ChangeRibbonViewModeCommand":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.RibbonControl");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ChangeRibbonViewModeCommand", "System.Windows.Input.ICommand");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.RibbonControl");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ChangeRibbonViewModeCommand", "System.Windows.Input.ICommand");
                 xamlMember.Getter = get_225_RibbonControl_ChangeRibbonViewModeCommand;
                 xamlMember.SetIsReadOnly();
                 break;
             case "DevExpress.UI.Xaml.Ribbon.RibbonControl.IsNestedWindowTitleCustomizer":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.RibbonControl");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "IsNestedWindowTitleCustomizer", "Boolean");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.RibbonControl");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "IsNestedWindowTitleCustomizer", "Boolean");
                 xamlMember.Getter = get_226_RibbonControl_IsNestedWindowTitleCustomizer;
                 xamlMember.SetIsReadOnly();
                 break;
             case "DevExpress.UI.Xaml.Ribbon.RibbonMenuButton.Items":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.RibbonMenuButton");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "Items", "DevExpress.UI.Xaml.Ribbon.RibbonItemCollection");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.RibbonMenuButton");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "Items", "DevExpress.UI.Xaml.Ribbon.RibbonItemCollection");
                 xamlMember.Getter = get_227_RibbonMenuButton_Items;
                 xamlMember.SetIsReadOnly();
                 break;
             case "DevExpress.UI.Xaml.Ribbon.RibbonMenuButton.ItemsSource":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.RibbonMenuButton");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ItemsSource", "System.Collections.Generic.IList`1<DevExpress.UI.Xaml.Ribbon.IRibbonItem>");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.RibbonMenuButton");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ItemsSource", "System.Collections.Generic.IList`1<DevExpress.UI.Xaml.Ribbon.IRibbonItem>");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_228_RibbonMenuButton_ItemsSource;
                 xamlMember.Setter = set_228_RibbonMenuButton_ItemsSource;
                 break;
             case "DevExpress.UI.Xaml.Ribbon.Internal.RibbonMenuButtonBase.ItemTemplate":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.RibbonMenuButtonBase");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ItemTemplate", "Windows.UI.Xaml.DataTemplate");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.RibbonMenuButtonBase");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ItemTemplate", "Windows.UI.Xaml.DataTemplate");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_229_RibbonMenuButtonBase_ItemTemplate;
                 xamlMember.Setter = set_229_RibbonMenuButtonBase_ItemTemplate;
                 break;
             case "DevExpress.UI.Xaml.Ribbon.Internal.RibbonMenuButtonBase.ItemTemplateSelector":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.RibbonMenuButtonBase");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ItemTemplateSelector", "Windows.UI.Xaml.Controls.DataTemplateSelector");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.RibbonMenuButtonBase");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ItemTemplateSelector", "Windows.UI.Xaml.Controls.DataTemplateSelector");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_230_RibbonMenuButtonBase_ItemTemplateSelector;
                 xamlMember.Setter = set_230_RibbonMenuButtonBase_ItemTemplateSelector;
                 break;
             case "DevExpress.UI.Xaml.Ribbon.Internal.RibbonMenuButtonBase.FlyoutColumnCount":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.RibbonMenuButtonBase");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "FlyoutColumnCount", "Int32");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.RibbonMenuButtonBase");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "FlyoutColumnCount", "Int32");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_231_RibbonMenuButtonBase_FlyoutColumnCount;
                 xamlMember.Setter = set_231_RibbonMenuButtonBase_FlyoutColumnCount;
                 break;
             case "DevExpress.UI.Xaml.Ribbon.Internal.RibbonMenuItemBase.FlyoutCaption":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.RibbonMenuItemBase");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "FlyoutCaption", "String");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.RibbonMenuItemBase");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "FlyoutCaption", "String");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_232_RibbonMenuItemBase_FlyoutCaption;
                 xamlMember.Setter = set_232_RibbonMenuItemBase_FlyoutCaption;
                 break;
             case "DevExpress.UI.Xaml.Ribbon.Internal.RibbonMenuItemBase.IsOpen":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.RibbonMenuItemBase");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "IsOpen", "Boolean");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.RibbonMenuItemBase");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "IsOpen", "Boolean");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_233_RibbonMenuItemBase_IsOpen;
                 xamlMember.Setter = set_233_RibbonMenuItemBase_IsOpen;
                 break;
             case "DevExpress.UI.Xaml.Ribbon.Internal.RibbonMenuItemBase.FlyoutSettings":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.RibbonMenuItemBase");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "FlyoutSettings", "DevExpress.UI.Xaml.FlyoutSettingsBase");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.RibbonMenuItemBase");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "FlyoutSettings", "DevExpress.UI.Xaml.FlyoutSettingsBase");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_234_RibbonMenuItemBase_FlyoutSettings;
                 xamlMember.Setter = set_234_RibbonMenuItemBase_FlyoutSettings;
                 break;
             case "DevExpress.UI.Xaml.Ribbon.RibbonSplitButton.FlyoutContent":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.RibbonSplitButton");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "FlyoutContent", "Object");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.RibbonSplitButton");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "FlyoutContent", "Object");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_235_RibbonSplitButton_FlyoutContent;
                 xamlMember.Setter = set_235_RibbonSplitButton_FlyoutContent;
                 break;
             case "DevExpress.UI.Xaml.Ribbon.RibbonSplitButton.Command":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.RibbonSplitButton");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "Command", "System.Windows.Input.ICommand");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.RibbonSplitButton");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "Command", "System.Windows.Input.ICommand");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_236_RibbonSplitButton_Command;
                 xamlMember.Setter = set_236_RibbonSplitButton_Command;
                 break;
             case "DevExpress.UI.Xaml.Ribbon.RibbonSplitButton.CommandParameter":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.RibbonSplitButton");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "CommandParameter", "Object");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.RibbonSplitButton");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "CommandParameter", "Object");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_237_RibbonSplitButton_CommandParameter;
                 xamlMember.Setter = set_237_RibbonSplitButton_CommandParameter;
                 break;
             case "DevExpress.UI.Xaml.Ribbon.RibbonSplitButton.ActAsDropDown":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.RibbonSplitButton");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ActAsDropDown", "Boolean");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.RibbonSplitButton");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ActAsDropDown", "Boolean");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_238_RibbonSplitButton_ActAsDropDown;
                 xamlMember.Setter = set_238_RibbonSplitButton_ActAsDropDown;
                 break;
             case "DevExpress.UI.Xaml.Ribbon.RibbonSplitButton.ShowPopupCommand":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.RibbonSplitButton");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ShowPopupCommand", "System.Windows.Input.ICommand");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.RibbonSplitButton");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ShowPopupCommand", "System.Windows.Input.ICommand");
                 xamlMember.Getter = get_239_RibbonSplitButton_ShowPopupCommand;
                 xamlMember.SetIsReadOnly();
                 break;
             case "DevExpress.UI.Xaml.Ribbon.Internal.FlyoutCalculator.VisibleItems":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.FlyoutCalculator");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "VisibleItems", "System.Collections.Generic.IEnumerable`1<DevExpress.UI.Xaml.Ribbon.IRibbonItem>");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.FlyoutCalculator");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "VisibleItems", "System.Collections.Generic.IEnumerable`1<DevExpress.UI.Xaml.Ribbon.IRibbonItem>");
                 xamlMember.Setter = set_240_FlyoutCalculator_VisibleItems;
                 break;
             case "DevExpress.UI.Xaml.Ribbon.Internal.FlyoutCalculator.ColumnCount":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.FlyoutCalculator");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ColumnCount", "Int32");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.FlyoutCalculator");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ColumnCount", "Int32");
                 xamlMember.Getter = get_241_FlyoutCalculator_ColumnCount;
                 xamlMember.Setter = set_241_FlyoutCalculator_ColumnCount;
                 break;
             case "DevExpress.UI.Xaml.Ribbon.Internal.FlyoutCalculator.SeparatorManager":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.FlyoutCalculator");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "SeparatorManager", "DevExpress.UI.Xaml.Ribbon.Internal.ISeparatorManager");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.FlyoutCalculator");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "SeparatorManager", "DevExpress.UI.Xaml.Ribbon.Internal.ISeparatorManager");
                 xamlMember.Getter = get_242_FlyoutCalculator_SeparatorManager;
                 xamlMember.Setter = set_242_FlyoutCalculator_SeparatorManager;
                 break;
             case "DevExpress.UI.Xaml.Ribbon.Internal.StackedFlyoutControl.Caption":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.StackedFlyoutControl");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "Caption", "String");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.StackedFlyoutControl");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "Caption", "String");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_243_StackedFlyoutControl_Caption;
                 xamlMember.Setter = set_243_StackedFlyoutControl_Caption;
                 break;
             case "DevExpress.UI.Xaml.Ribbon.Internal.StackedFlyoutControl.IsHeaderVisible":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.StackedFlyoutControl");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "IsHeaderVisible", "Boolean");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.StackedFlyoutControl");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "IsHeaderVisible", "Boolean");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_244_StackedFlyoutControl_IsHeaderVisible;
                 xamlMember.SetIsReadOnly();
                 break;
             case "DevExpress.UI.Xaml.Ribbon.Internal.StackedFlyoutControl.BackButtonEnabledMode":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.StackedFlyoutControl");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "BackButtonEnabledMode", "DevExpress.UI.Xaml.Ribbon.Internal.EnabledMode");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.StackedFlyoutControl");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "BackButtonEnabledMode", "DevExpress.UI.Xaml.Ribbon.Internal.EnabledMode");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_245_StackedFlyoutControl_BackButtonEnabledMode;
                 xamlMember.Setter = set_245_StackedFlyoutControl_BackButtonEnabledMode;
                 break;
             case "DevExpress.UI.Xaml.Ribbon.Internal.StackedFlyoutControl.HeaderEnabledMode":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.StackedFlyoutControl");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "HeaderEnabledMode", "DevExpress.UI.Xaml.Ribbon.Internal.EnabledMode");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.StackedFlyoutControl");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "HeaderEnabledMode", "DevExpress.UI.Xaml.Ribbon.Internal.EnabledMode");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_246_StackedFlyoutControl_HeaderEnabledMode;
                 xamlMember.Setter = set_246_StackedFlyoutControl_HeaderEnabledMode;
                 break;
             case "DevExpress.UI.Xaml.Ribbon.Internal.StackedFlyoutControl.BackCommand":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.StackedFlyoutControl");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "BackCommand", "System.Windows.Input.ICommand");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.StackedFlyoutControl");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "BackCommand", "System.Windows.Input.ICommand");
                 xamlMember.Getter = get_247_StackedFlyoutControl_BackCommand;
                 xamlMember.SetIsReadOnly();
                 break;
             case "DevExpress.UI.Xaml.Native.FlyoutBase.ActualSettings":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Native.FlyoutBase");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ActualSettings", "DevExpress.UI.Xaml.FlyoutSettingsBase");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Native.FlyoutBase");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ActualSettings", "DevExpress.UI.Xaml.FlyoutSettingsBase");
                 xamlMember.Getter = get_248_FlyoutBase_ActualSettings;
                 xamlMember.SetIsReadOnly();
                 break;
             case "DevExpress.UI.Xaml.Native.FlyoutBase.IndicatorDirection":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Native.FlyoutBase");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "IndicatorDirection", "DevExpress.UI.Xaml.Native.IndicatorDirection");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Native.FlyoutBase");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "IndicatorDirection", "DevExpress.UI.Xaml.Native.IndicatorDirection");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_249_FlyoutBase_IndicatorDirection;
                 xamlMember.SetIsReadOnly();
                 break;
             case "DevExpress.UI.Xaml.Native.FlyoutBase.AnimationDuration":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Native.FlyoutBase");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "AnimationDuration", "Windows.UI.Xaml.Duration");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Native.FlyoutBase");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "AnimationDuration", "Windows.UI.Xaml.Duration");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_250_FlyoutBase_AnimationDuration;
                 xamlMember.Setter = set_250_FlyoutBase_AnimationDuration;
                 break;
             case "DevExpress.UI.Xaml.Native.FlyoutBase.Settings":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Native.FlyoutBase");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "Settings", "DevExpress.UI.Xaml.FlyoutSettingsBase");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Native.FlyoutBase");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "Settings", "DevExpress.UI.Xaml.FlyoutSettingsBase");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_251_FlyoutBase_Settings;
                 xamlMember.Setter = set_251_FlyoutBase_Settings;
                 break;
             case "DevExpress.UI.Xaml.Native.FlyoutBase.ContainerStyle":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Native.FlyoutBase");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ContainerStyle", "Windows.UI.Xaml.Style");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Native.FlyoutBase");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ContainerStyle", "Windows.UI.Xaml.Style");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_252_FlyoutBase_ContainerStyle;
                 xamlMember.Setter = set_252_FlyoutBase_ContainerStyle;
                 break;
             case "DevExpress.UI.Xaml.Native.FlyoutBase.ActualIsOpen":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Native.FlyoutBase");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ActualIsOpen", "Boolean");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Native.FlyoutBase");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ActualIsOpen", "Boolean");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_253_FlyoutBase_ActualIsOpen;
                 xamlMember.Setter = set_253_FlyoutBase_ActualIsOpen;
                 break;
             case "DevExpress.UI.Xaml.Native.FlyoutBase.TargetBounds":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Native.FlyoutBase");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "TargetBounds", "Windows.Foundation.Rect");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Native.FlyoutBase");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "TargetBounds", "Windows.Foundation.Rect");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_254_FlyoutBase_TargetBounds;
                 xamlMember.Setter = set_254_FlyoutBase_TargetBounds;
                 break;
             case "DevExpress.UI.Xaml.Native.FlyoutBase.AllowMoveAnimation":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Native.FlyoutBase");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "AllowMoveAnimation", "Boolean");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Native.FlyoutBase");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "AllowMoveAnimation", "Boolean");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_255_FlyoutBase_AllowMoveAnimation;
                 xamlMember.Setter = set_255_FlyoutBase_AllowMoveAnimation;
                 break;
             case "DevExpress.UI.Xaml.Native.FlyoutBase.IsInitialized":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Native.FlyoutBase");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "IsInitialized", "Boolean");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Native.FlyoutBase");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "IsInitialized", "Boolean");
                 xamlMember.Getter = get_256_FlyoutBase_IsInitialized;
                 xamlMember.SetIsReadOnly();
                 break;
             case "DevExpress.UI.Xaml.Native.FlyoutBase.CurrentAnimation":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Native.FlyoutBase");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "CurrentAnimation", "Windows.UI.Xaml.Media.Animation.Storyboard");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Native.FlyoutBase");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "CurrentAnimation", "Windows.UI.Xaml.Media.Animation.Storyboard");
                 xamlMember.Getter = get_257_FlyoutBase_CurrentAnimation;
                 xamlMember.SetIsReadOnly();
                 break;
             case "DevExpress.UI.Xaml.Native.FlyoutBase.AnimationInProgress":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Native.FlyoutBase");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "AnimationInProgress", "Boolean");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Native.FlyoutBase");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "AnimationInProgress", "Boolean");
                 xamlMember.Getter = get_258_FlyoutBase_AnimationInProgress;
                 xamlMember.SetIsReadOnly();
                 break;
             case "DevExpress.UI.Xaml.Native.FlyoutBase.AllowRecreateContent":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Native.FlyoutBase");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "AllowRecreateContent", "Boolean");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Native.FlyoutBase");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "AllowRecreateContent", "Boolean");
                 xamlMember.Getter = get_259_FlyoutBase_AllowRecreateContent;
                 xamlMember.Setter = set_259_FlyoutBase_AllowRecreateContent;
                 break;
             case "DevExpress.UI.Xaml.Native.FlyoutBase.CloseCommand":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Native.FlyoutBase");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "CloseCommand", "System.Windows.Input.ICommand");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Native.FlyoutBase");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "CloseCommand", "System.Windows.Input.ICommand");
                 xamlMember.Getter = get_260_FlyoutBase_CloseCommand;
                 xamlMember.SetIsReadOnly();
                 break;
             case "DevExpress.UI.Xaml.Native.FlyoutBase.OpenCommand":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Native.FlyoutBase");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "OpenCommand", "System.Windows.Input.ICommand");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Native.FlyoutBase");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "OpenCommand", "System.Windows.Input.ICommand");
                 xamlMember.Getter = get_261_FlyoutBase_OpenCommand;
                 xamlMember.SetIsReadOnly();
                 break;
             case "DevExpress.UI.Xaml.Native.FlyoutBase.RenderGrid":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Native.FlyoutBase");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "RenderGrid", "Windows.UI.Xaml.FrameworkElement");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Native.FlyoutBase");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "RenderGrid", "Windows.UI.Xaml.FrameworkElement");
                 xamlMember.Getter = get_262_FlyoutBase_RenderGrid;
                 xamlMember.SetIsReadOnly();
                 break;
             case "DevExpress.UI.Xaml.Native.PopupBase.Child":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Native.PopupBase");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "Child", "Windows.UI.Xaml.FrameworkElement");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Native.PopupBase");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "Child", "Windows.UI.Xaml.FrameworkElement");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_263_PopupBase_Child;
                 xamlMember.Setter = set_263_PopupBase_Child;
                 break;
             case "DevExpress.UI.Xaml.Native.PopupBase.HorizontalOffset":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Native.PopupBase");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "HorizontalOffset", "Double");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Native.PopupBase");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "HorizontalOffset", "Double");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_264_PopupBase_HorizontalOffset;
                 xamlMember.Setter = set_264_PopupBase_HorizontalOffset;
                 break;
             case "DevExpress.UI.Xaml.Native.PopupBase.VerticalOffset":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Native.PopupBase");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "VerticalOffset", "Double");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Native.PopupBase");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "VerticalOffset", "Double");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_265_PopupBase_VerticalOffset;
                 xamlMember.Setter = set_265_PopupBase_VerticalOffset;
                 break;
             case "DevExpress.UI.Xaml.Native.PopupBase.IsOpen":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Native.PopupBase");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "IsOpen", "Boolean");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Native.PopupBase");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "IsOpen", "Boolean");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_266_PopupBase_IsOpen;
                 xamlMember.Setter = set_266_PopupBase_IsOpen;
                 break;
             case "DevExpress.UI.Xaml.Native.PopupBase.Placement":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Native.PopupBase");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "Placement", "DevExpress.UI.Xaml.Native.PlacementMode");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Native.PopupBase");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "Placement", "DevExpress.UI.Xaml.Native.PlacementMode");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_267_PopupBase_Placement;
                 xamlMember.Setter = set_267_PopupBase_Placement;
                 break;
             case "DevExpress.UI.Xaml.Native.PopupBase.PlacementTarget":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Native.PopupBase");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "PlacementTarget", "Windows.UI.Xaml.UIElement");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Native.PopupBase");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "PlacementTarget", "Windows.UI.Xaml.UIElement");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_268_PopupBase_PlacementTarget;
                 xamlMember.Setter = set_268_PopupBase_PlacementTarget;
                 break;
             case "DevExpress.UI.Xaml.Native.PopupBase.StaysOpen":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Native.PopupBase");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "StaysOpen", "Boolean");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Native.PopupBase");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "StaysOpen", "Boolean");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_269_PopupBase_StaysOpen;
                 xamlMember.Setter = set_269_PopupBase_StaysOpen;
                 break;
             case "DevExpress.UI.Xaml.Native.PopupBase.AllowOutOfScreen":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Native.PopupBase");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "AllowOutOfScreen", "Boolean");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Native.PopupBase");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "AllowOutOfScreen", "Boolean");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_270_PopupBase_AllowOutOfScreen;
                 xamlMember.Setter = set_270_PopupBase_AllowOutOfScreen;
                 break;
             case "DevExpress.UI.Xaml.Native.PopupBase.ChildContainer":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Native.PopupBase");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ChildContainer", "Windows.UI.Xaml.FrameworkElement");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Native.PopupBase");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ChildContainer", "Windows.UI.Xaml.FrameworkElement");
                 xamlMember.Getter = get_271_PopupBase_ChildContainer;
                 xamlMember.SetIsReadOnly();
                 break;
             case "DevExpress.UI.Xaml.Native.PopupBase.IsLoaded":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Native.PopupBase");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "IsLoaded", "Boolean");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Native.PopupBase");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "IsLoaded", "Boolean");
                 xamlMember.Getter = get_272_PopupBase_IsLoaded;
                 xamlMember.SetIsReadOnly();
                 break;
             case "DevExpress.UI.Xaml.Ribbon.Internal.RibbonTabsControl.ItemsSource":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.RibbonTabsControl");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ItemsSource", "DevExpress.UI.Xaml.Ribbon.RibbonTabCollection");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.RibbonTabsControl");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ItemsSource", "DevExpress.UI.Xaml.Ribbon.RibbonTabCollection");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_273_RibbonTabsControl_ItemsSource;
                 xamlMember.Setter = set_273_RibbonTabsControl_ItemsSource;
                 break;
             case "DevExpress.UI.Xaml.Ribbon.Internal.RibbonTabsControl.HeaderItemTemplate":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.RibbonTabsControl");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "HeaderItemTemplate", "Windows.UI.Xaml.DataTemplate");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.RibbonTabsControl");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "HeaderItemTemplate", "Windows.UI.Xaml.DataTemplate");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_274_RibbonTabsControl_HeaderItemTemplate;
                 xamlMember.Setter = set_274_RibbonTabsControl_HeaderItemTemplate;
                 break;
             case "DevExpress.UI.Xaml.Ribbon.Internal.RibbonTabsControl.HeaderItemContainerStyle":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.RibbonTabsControl");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "HeaderItemContainerStyle", "Windows.UI.Xaml.Style");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.RibbonTabsControl");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "HeaderItemContainerStyle", "Windows.UI.Xaml.Style");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_275_RibbonTabsControl_HeaderItemContainerStyle;
                 xamlMember.Setter = set_275_RibbonTabsControl_HeaderItemContainerStyle;
                 break;
             case "DevExpress.UI.Xaml.Ribbon.Internal.RibbonTabsControl.ContextualHeaderItemTemplate":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.RibbonTabsControl");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ContextualHeaderItemTemplate", "Windows.UI.Xaml.DataTemplate");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.RibbonTabsControl");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ContextualHeaderItemTemplate", "Windows.UI.Xaml.DataTemplate");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_276_RibbonTabsControl_ContextualHeaderItemTemplate;
                 xamlMember.Setter = set_276_RibbonTabsControl_ContextualHeaderItemTemplate;
                 break;
             case "DevExpress.UI.Xaml.Ribbon.Internal.RibbonTabsControl.ContextualHeaderItemContainerStyle":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.RibbonTabsControl");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ContextualHeaderItemContainerStyle", "Windows.UI.Xaml.Style");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.RibbonTabsControl");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ContextualHeaderItemContainerStyle", "Windows.UI.Xaml.Style");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_277_RibbonTabsControl_ContextualHeaderItemContainerStyle;
                 xamlMember.Setter = set_277_RibbonTabsControl_ContextualHeaderItemContainerStyle;
                 break;
             case "DevExpress.UI.Xaml.Ribbon.Internal.RibbonTabsControl.BackstageView":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.RibbonTabsControl");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "BackstageView", "DevExpress.UI.Xaml.Ribbon.BackstageView");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.RibbonTabsControl");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "BackstageView", "DevExpress.UI.Xaml.Ribbon.BackstageView");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Setter = set_278_RibbonTabsControl_BackstageView;
                 break;
             case "DevExpress.UI.Xaml.Ribbon.Internal.RibbonTabsControl.SelectedTab":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.RibbonTabsControl");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "SelectedTab", "DevExpress.UI.Xaml.Ribbon.RibbonTab");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.RibbonTabsControl");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "SelectedTab", "DevExpress.UI.Xaml.Ribbon.RibbonTab");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_279_RibbonTabsControl_SelectedTab;
                 xamlMember.Setter = set_279_RibbonTabsControl_SelectedTab;
                 break;
             case "DevExpress.UI.Xaml.Ribbon.Internal.RibbonTabsControl.Tabs":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.RibbonTabsControl");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "Tabs", "DevExpress.UI.Xaml.Ribbon.TabHeaderItemCollection");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.RibbonTabsControl");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "Tabs", "DevExpress.UI.Xaml.Ribbon.TabHeaderItemCollection");
                 xamlMember.Getter = get_280_RibbonTabsControl_Tabs;
                 xamlMember.SetIsReadOnly();
                 break;
             case "DevExpress.UI.Xaml.TitleSettings.ButtonInactiveForeground":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.TitleSettings");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ButtonInactiveForeground", "Windows.UI.Xaml.Media.SolidColorBrush");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.TitleSettings");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ButtonInactiveForeground", "Windows.UI.Xaml.Media.SolidColorBrush");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_281_TitleSettings_ButtonInactiveForeground;
                 xamlMember.Setter = set_281_TitleSettings_ButtonInactiveForeground;
                 break;
             case "DevExpress.UI.Xaml.TitleSettings.ButtonInactiveBackground":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.TitleSettings");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ButtonInactiveBackground", "Windows.UI.Xaml.Media.SolidColorBrush");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.TitleSettings");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ButtonInactiveBackground", "Windows.UI.Xaml.Media.SolidColorBrush");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_282_TitleSettings_ButtonInactiveBackground;
                 xamlMember.Setter = set_282_TitleSettings_ButtonInactiveBackground;
                 break;
             case "DevExpress.UI.Xaml.TitleSettings.ButtonPressedForeground":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.TitleSettings");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ButtonPressedForeground", "Windows.UI.Xaml.Media.SolidColorBrush");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.TitleSettings");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ButtonPressedForeground", "Windows.UI.Xaml.Media.SolidColorBrush");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_283_TitleSettings_ButtonPressedForeground;
                 xamlMember.Setter = set_283_TitleSettings_ButtonPressedForeground;
                 break;
             case "DevExpress.UI.Xaml.TitleSettings.ButtonPressedBackground":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.TitleSettings");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ButtonPressedBackground", "Windows.UI.Xaml.Media.SolidColorBrush");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.TitleSettings");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ButtonPressedBackground", "Windows.UI.Xaml.Media.SolidColorBrush");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_284_TitleSettings_ButtonPressedBackground;
                 xamlMember.Setter = set_284_TitleSettings_ButtonPressedBackground;
                 break;
             case "DevExpress.UI.Xaml.TitleSettings.ButtonHoverForeground":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.TitleSettings");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ButtonHoverForeground", "Windows.UI.Xaml.Media.SolidColorBrush");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.TitleSettings");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ButtonHoverForeground", "Windows.UI.Xaml.Media.SolidColorBrush");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_285_TitleSettings_ButtonHoverForeground;
                 xamlMember.Setter = set_285_TitleSettings_ButtonHoverForeground;
                 break;
             case "DevExpress.UI.Xaml.TitleSettings.ButtonHoverBackground":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.TitleSettings");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ButtonHoverBackground", "Windows.UI.Xaml.Media.SolidColorBrush");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.TitleSettings");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ButtonHoverBackground", "Windows.UI.Xaml.Media.SolidColorBrush");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_286_TitleSettings_ButtonHoverBackground;
                 xamlMember.Setter = set_286_TitleSettings_ButtonHoverBackground;
                 break;
             case "DevExpress.UI.Xaml.TitleSettings.ButtonBackground":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.TitleSettings");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ButtonBackground", "Windows.UI.Xaml.Media.SolidColorBrush");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.TitleSettings");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ButtonBackground", "Windows.UI.Xaml.Media.SolidColorBrush");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_287_TitleSettings_ButtonBackground;
                 xamlMember.Setter = set_287_TitleSettings_ButtonBackground;
                 break;
             case "DevExpress.UI.Xaml.TitleSettings.ButtonForeground":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.TitleSettings");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ButtonForeground", "Windows.UI.Xaml.Media.SolidColorBrush");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.TitleSettings");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "ButtonForeground", "Windows.UI.Xaml.Media.SolidColorBrush");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_288_TitleSettings_ButtonForeground;
                 xamlMember.Setter = set_288_TitleSettings_ButtonForeground;
                 break;
             case "DevExpress.UI.Xaml.TitleSettings.InactiveForeground":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.TitleSettings");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "InactiveForeground", "Windows.UI.Xaml.Media.SolidColorBrush");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.TitleSettings");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "InactiveForeground", "Windows.UI.Xaml.Media.SolidColorBrush");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_289_TitleSettings_InactiveForeground;
                 xamlMember.Setter = set_289_TitleSettings_InactiveForeground;
                 break;
             case "DevExpress.UI.Xaml.TitleSettings.InactiveBackground":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.TitleSettings");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "InactiveBackground", "Windows.UI.Xaml.Media.SolidColorBrush");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.TitleSettings");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "InactiveBackground", "Windows.UI.Xaml.Media.SolidColorBrush");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_290_TitleSettings_InactiveBackground;
                 xamlMember.Setter = set_290_TitleSettings_InactiveBackground;
                 break;
             case "DevExpress.UI.Xaml.TitleSettings.Foreground":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.TitleSettings");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "Foreground", "Windows.UI.Xaml.Media.SolidColorBrush");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.TitleSettings");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "Foreground", "Windows.UI.Xaml.Media.SolidColorBrush");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_291_TitleSettings_Foreground;
                 xamlMember.Setter = set_291_TitleSettings_Foreground;
                 break;
             case "DevExpress.UI.Xaml.TitleSettings.Background":
-                userType = (global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.TitleSettings");
-                xamlMember = new global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "Background", "Windows.UI.Xaml.Media.SolidColorBrush");
+                userType = (global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DevExpress.UI.Xaml.TitleSettings");
+                xamlMember = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlMember(this, "Background", "Windows.UI.Xaml.Media.SolidColorBrush");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_292_TitleSettings_Background;
                 xamlMember.Setter = set_292_TitleSettings_Background;
@@ -6457,9 +6461,9 @@ namespace Assistence_Control.Assistence_Control_XamlTypeInfo
 
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 14.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-    internal class XamlUserType : global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlSystemBaseType
+    internal class XamlUserType : global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlSystemBaseType
     {
-        global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlTypeInfoProvider _provider;
+        global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlTypeInfoProvider _provider;
         global::Windows.UI.Xaml.Markup.IXamlType _baseType;
         bool _isArray;
         bool _isMarkupExtension;
@@ -6473,7 +6477,7 @@ namespace Assistence_Control.Assistence_Control_XamlTypeInfo
         global::System.Collections.Generic.Dictionary<string, string> _memberNames;
         global::System.Collections.Generic.Dictionary<string, object> _enumValues;
 
-        public XamlUserType(global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlTypeInfoProvider provider, string fullName, global::System.Type fullType, global::Windows.UI.Xaml.Markup.IXamlType baseType)
+        public XamlUserType(global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlTypeInfoProvider provider, string fullName, global::System.Type fullType, global::Windows.UI.Xaml.Markup.IXamlType baseType)
             :base(fullName, fullType)
         {
             _provider = provider;
@@ -6665,7 +6669,7 @@ namespace Assistence_Control.Assistence_Control_XamlTypeInfo
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     internal class XamlMember : global::Windows.UI.Xaml.Markup.IXamlMember
     {
-        global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlTypeInfoProvider _provider;
+        global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlTypeInfoProvider _provider;
         string _name;
         bool _isAttachable;
         bool _isDependencyProperty;
@@ -6674,7 +6678,7 @@ namespace Assistence_Control.Assistence_Control_XamlTypeInfo
         string _typeName;
         string _targetTypeName;
 
-        public XamlMember(global::Assistence_Control.Assistence_Control_XamlTypeInfo.XamlTypeInfoProvider provider, string name, string typeName)
+        public XamlMember(global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlTypeInfoProvider provider, string name, string typeName)
         {
             _name = name;
             _typeName = typeName;

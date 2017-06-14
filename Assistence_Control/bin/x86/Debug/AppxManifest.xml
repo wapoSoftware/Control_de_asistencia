@@ -21,8 +21,8 @@
     <Resource Language="EN-US" />
   </Resources>
   <Applications>
-    <Application Id="App" Executable="Assistence_Control.exe" EntryPoint="Assistence_Control.App">
-      <uap:VisualElements DisplayName="Assistence_Control" Square150x150Logo="Assets\Square150x150Logo.png" Square44x44Logo="Assets\Square44x44Logo.png" Description="Assistence_Control" BackgroundColor="transparent">
+    <Application Id="App" Executable="Assistance_Control.exe" EntryPoint="Assistance_Control.App">
+      <uap:VisualElements DisplayName="Assistance_Control" Square150x150Logo="Assets\Square150x150Logo.png" Square44x44Logo="Assets\Square44x44Logo.png" Description="Assistance Control system" BackgroundColor="transparent">
         <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png" ShortName="70ad47"></uap:DefaultTile>
         <uap:SplashScreen Image="Assets\SplashScreen.png" BackgroundColor="#70ad47" />
       </uap:VisualElements>
@@ -43,6 +43,6 @@
     <build:Item Name="Microsoft.Windows.UI.Xaml.Build.Tasks.dll" Version="14.0.25527.1" />
     <build:Item Name="DevExpress.Controls" Version="15.2" />
     <build:Item Name="DevExpress.Core" Version="15.2" />
-    <build:Item Name="MakePri.exe" Version="10.0.14393.33 (rs1_release_sec.160727-1952)" />
+    <build:Item Name="MakePri.exe" Version="10.0.14393.795 (rs1_release_sec.170105-1850)" />
   </build:Metadata>
 </Package>

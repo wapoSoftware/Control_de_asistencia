@@ -9,8 +9,8 @@
     <UserControl.Resources>
         <DataTemplate x:Key="NavLinkItemTemplate"                           >
             <StackPanel x:ConnectionId='2' Orientation="Horizontal"  Margin="2,0,0,0">
-                <SymbolIcon x:ConnectionId='3'                          Foreground="White"/>
-                <TextBlock x:ConnectionId='4'                       Margin="24,0,0,0" VerticalAlignment="Center" Foreground="White"/>
+                <Image Source="{Binding Source}" Height="30" Width="30" />
+                <TextBlock x:ConnectionId='3'                       Margin="24,0,0,0" VerticalAlignment="Center" Foreground="White" FontSize="25"/>
             </StackPanel>
         </DataTemplate>
     </UserControl.Resources>
@@ -20,13 +20,13 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <RelativePanel x:ConnectionId='5' x:Name="headerRoot" Background="#FF70AD47" >
-            <Button x:ConnectionId='9' x:Name="splitViewToggle" Style="{StaticResource SplitViewTogglePaneButtonStyle}"                               Foreground="White">
+        <RelativePanel x:ConnectionId='4' x:Name="headerRoot" Background="#FF70AD47" >
+            <Button x:ConnectionId='8' x:Name="splitViewToggle" Style="{StaticResource SplitViewTogglePaneButtonStyle}"                               Foreground="White">
                 <Button.Background>
                     <SolidColorBrush Color="{StaticResource MainColor}"/>
                 </Button.Background>
             </Button>
-            <ContentPresenter x:ConnectionId='10' x:Name="pageTitle" Content="Control de Asistencia" FontSize="24" FontWeight="Light" Foreground="White"
+            <ContentPresenter x:ConnectionId='9' x:Name="pageTitle" Content="Control de Asistencia" FontSize="24" FontWeight="Light" Foreground="White"
                           IsHitTestVisible="false" TextWrapping="NoWrap" Margin="8,0,0,0" Height="48" VerticalContentAlignment="Center"  
                           VerticalAlignment="Top"
                           RelativePanel.RightOf="splitViewToggle" >
@@ -36,14 +36,14 @@
             </ContentPresenter>
             <VisualStateManager.VisualStateGroups>
                 <VisualStateGroup>
-                    <VisualState x:ConnectionId='11' x:Name="WideLayout">
+                    <VisualState x:ConnectionId='10' x:Name="WideLayout">
                         <VisualState.StateTriggers>
-                            <AdaptiveTrigger x:ConnectionId='13' x:Name="WideLayoutTrigger" MinWindowWidth="600" />
+                            <AdaptiveTrigger x:ConnectionId='12' x:Name="WideLayoutTrigger" MinWindowWidth="600" />
                         </VisualState.StateTriggers>
                         <VisualState.Setters>
                         </VisualState.Setters>
                     </VisualState>
-                    <VisualState x:ConnectionId='12' x:Name="NarrowLayout">
+                    <VisualState x:ConnectionId='11' x:Name="NarrowLayout">
                         <VisualState.StateTriggers>
                             <AdaptiveTrigger MinWindowWidth="0" />
                         </VisualState.StateTriggers>
@@ -54,7 +54,7 @@
                 </VisualStateGroup>
             </VisualStateManager.VisualStateGroups>
         </RelativePanel>
-        <SplitView x:ConnectionId='6' x:Name="splitView" Grid.Row="1" IsPaneOpen="False" OpenPaneLength="256" CompactPaneLength="48" DisplayMode="CompactInline" Background="Black" >
+        <SplitView x:ConnectionId='5' x:Name="splitView" Grid.Row="1" IsPaneOpen="False" OpenPaneLength="256" CompactPaneLength="48" DisplayMode="CompactInline" Background="Black" >
             <SplitView.PaneBackground>
                 <SolidColorBrush Color="{StaticResource MainColor}"/>
             </SplitView.PaneBackground>
@@ -63,13 +63,13 @@
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
-                    <ListView x:ConnectionId='7' x:Name="NavLinksList" Margin="0,12,0,0" SelectionMode="None" Grid.Row="1" VerticalAlignment="Stretch"
+                    <ListView x:ConnectionId='6' x:Name="NavLinksList" Margin="0,12,0,0" SelectionMode="None" Grid.Row="1" VerticalAlignment="Stretch"
                                                                  IsItemClickEnabled="True"
                                                               ItemTemplate="{StaticResource NavLinkItemTemplate}"/>
                 </Grid>
             </SplitView.Pane>
             <Grid>
-                <Frame x:ConnectionId='8' x:Name="fPrincipal" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                <Frame x:ConnectionId='7' x:Name="fPrincipal" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
                     <Frame.Background>
                         <SolidColorBrush Color="{StaticResource MainBackground}"/>
                     </Frame.Background>

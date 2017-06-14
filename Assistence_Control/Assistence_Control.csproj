@@ -7,8 +7,8 @@
     <ProjectGuid>{743D3DEC-3994-4DCC-A63B-1C94D9DF2CCD}</ProjectGuid>
     <OutputType>AppContainerExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Assistence_Control</RootNamespace>
-    <AssemblyName>Assistence_Control</AssemblyName>
+    <RootNamespace>Assistance_Control</RootNamespace>
+    <AssemblyName>Assistance_Control</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <TargetPlatformVersion>10.0.14393.0</TargetPlatformVersion>
@@ -112,6 +112,9 @@
     <Compile Include="TemplateSelectors\MenuTemplateSelector.cs" />
     <Compile Include="Utilerias\Items\DatosMenu.cs" />
     <Compile Include="Utilerias\Items\EmpleadoItem.cs" />
+    <Compile Include="Views\Areas\abcAreas.xaml.cs">
+      <DependentUpon>abcAreas.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Empleados\abcEmpleado.xaml.cs">
       <DependentUpon>abcEmpleado.xaml</DependentUpon>
     </Compile>
@@ -123,6 +126,13 @@
     <None Include="Assistence_Control_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\calendar.png" />
+    <Content Include="Assets\employee.png" />
+    <Content Include="Assets\field.png" />
+    <Content Include="Assets\home.png" />
+    <Content Include="Assets\padnote.png" />
+    <Content Include="Assets\exit.png" />
+    <Content Include="Assets\users.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -153,6 +163,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\Areas\abcAreas.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\Empleados\abcEmpleado.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -165,6 +179,9 @@
     <SDKReference Include="DevExpress.Core, version=15.2">
       <Name>DevExpress.Core</Name>
     </SDKReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>

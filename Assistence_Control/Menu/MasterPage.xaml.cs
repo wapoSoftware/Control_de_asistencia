@@ -1,4 +1,7 @@
-﻿using Assistence_Control.Menu;
+﻿using Assistence_Control.Inicio;
+using Assistence_Control.Menu;
+using Assistence_Control.Views;
+using Assistence_Control.Views.Areas;
 using Assistence_Control.Views.Empleados;
 using System;
 using System.Collections.Generic;
@@ -24,8 +27,14 @@ namespace Assistence_Control.Menu
     {
         private ObservableCollection<NavLink> _navLinks = new ObservableCollection<NavLink>()
         {
-            new NavLink() { Label = "Inicio", Symbol = Symbol.Home, Title = "Inicio" },
-             new NavLink() { Label = "Empleados", Symbol = Symbol.OtherUser, Title = "Empleados" }
+            new NavLink() { Label = "Inicio",  Title = "Inicio", Source = "ms-appx://Assistence_Control/Assets/home.png" },
+             new NavLink() { Label = "Empleados", Title = "Empleados", Source = "ms-appx://Assistence_Control/Assets/employee.png" },
+             new NavLink() { Label = "Areas", Title = "Areas", Source = "ms-appx://Assistence_Control/Assets/field.png" },
+             new NavLink() { Label = "Reportes", Title = "Reportes", Source = "ms-appx://Assistence_Control/Assets/padnote.png" },
+             new NavLink() { Label = "Horarios", Title = "Horarios", Source = "ms-appx://Assistence_Control/Assets/calendar.png" },
+             new NavLink() { Label = "Usuarios", Title = "Usuarios", Source = "ms-appx://Assistence_Control/Assets/users.png" },
+             new NavLink() {Label = "Salir", Title = "Salir", Source = "ms-appx://Assistence_Control/Assets/exit.png" }
+             
         };
         public ObservableCollection<NavLink> NavLinks
         {
@@ -35,9 +44,16 @@ namespace Assistence_Control.Menu
         public MasterPage()
         {
             this.InitializeComponent();
-            fPrincipal.Navigate(typeof(Main));
-
+            fPrincipal.Navigate(typeof(Main),fPrincipal);
+            splitView.IsPaneOpen = false;
+            fPrincipal.Navigating += FPrincipal_Navigating;
         }
+
+        private void FPrincipal_Navigating(object sender, NavigatingCancelEventArgs e)
+        {
+            splitView.IsPaneOpen = !splitView.IsPaneOpen;
+        }
+
         private void NavLinksList_ItemClick(object sender, ItemClickEventArgs e)
         {
             NavLink navLinkSeleccionado = e.ClickedItem as NavLink;
@@ -45,11 +61,23 @@ namespace Assistence_Control.Menu
             switch (navLinkSeleccionado.Title)
             {
                 case "Inicio":
-                    fPrincipal.Navigate(typeof(Main),this);
+                    fPrincipal.Navigate(typeof(Main), fPrincipal);
+                    splitView.IsPaneOpen = false;
                     break;
 
                 case "Empleados":
                     fPrincipal.Navigate(typeof(abcEmpleado));
+                    splitView.IsPaneOpen = true;
+                    break;
+
+                case "Areas":
+                    fPrincipal.Navigate(typeof(abcAreas));
+                    splitView.IsPaneOpen = true;
+                    break;
+
+                case "Salir":
+                    Frame rootFrame = (Window.Current.Content as Frame);
+                    rootFrame.Navigate(typeof(Login), this);
                     break;
             }
         }
@@ -57,6 +85,7 @@ namespace Assistence_Control.Menu
         {
             splitView.IsPaneOpen = !splitView.IsPaneOpen;
         }
+       
 
 
     }
@@ -64,7 +93,7 @@ namespace Assistence_Control.Menu
     {
         public string Title { get; set; }
         public string Label { get; set; }
-        public Symbol Symbol { get; set; }
+        public string Source { get; set; }
     }
 
 }

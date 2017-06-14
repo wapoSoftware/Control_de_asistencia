@@ -4,9 +4,6 @@ C:\Assistence_Control\Assistence_Control\bin\x86\Debug\Menu\MasterPage.xbf
 C:\Assistence_Control\Assistence_Control\bin\x86\Debug\Menu\Main.xbf
 C:\Assistence_Control\Assistence_Control\bin\x86\Debug\Menu\pMasterPage.xbf
 C:\Assistence_Control\Assistence_Control\bin\x86\Debug\Views\Empleados\abcEmpleado.xbf
-C:\Assistence_Control\Assistence_Control\bin\x86\Debug\Assistence_Control.xr.xml
-C:\Assistence_Control\Assistence_Control\bin\x86\Debug\Assistence_Control.exe
-C:\Assistence_Control\Assistence_Control\bin\x86\Debug\Assistence_Control.pdb
 C:\Assistence_Control\Assistence_Control\bin\x86\Debug\resources.pri
 C:\Assistence_Control\Assistence_Control\bin\x86\Debug\AppxManifest.xml
 C:\Assistence_Control\Assistence_Control\bin\x86\Debug\Microsoft.CSharp.dll
@@ -138,8 +135,6 @@ C:\Assistence_Control\Assistence_Control\obj\x86\Debug\App.xbf
 C:\Assistence_Control\Assistence_Control\obj\x86\Debug\Menu\MasterPage.xbf
 C:\Assistence_Control\Assistence_Control\obj\x86\Debug\Menu\pMasterPage.xbf
 C:\Assistence_Control\Assistence_Control\obj\x86\Debug\XamlSaveStateFile.xml
-C:\Assistence_Control\Assistence_Control\obj\x86\Debug\Assistence_Control.exe
-C:\Assistence_Control\Assistence_Control\obj\x86\Debug\Assistence_Control.pdb
 C:\Assistence_Control\Assistence_Control\obj\x86\Debug\ResourceHandlingTask.state
 C:\Assistence_Control\Assistence_Control\obj\x86\Debug\FxResources.Microsoft.CSharp.SR.resw
 C:\Assistence_Control\Assistence_Control\obj\x86\Debug\FxResources.Microsoft.VisualBasic.SR.resw
@@ -223,3 +218,14 @@ C:\Assistence_Control\Assistence_Control\bin\x86\Debug\MyToolkit.dll
 C:\Assistence_Control\Assistence_Control\bin\x86\Debug\MyToolkit.Extended.dll
 C:\Assistence_Control\Assistence_Control\obj\x86\Debug\Assistence_Control.csprojResolveAssemblyReference.cache
 C:\Assistence_Control\Assistence_Control\obj\x86\Debug\MyToolkit.Extended.pri.xml
+C:\Assistence_Control\Assistence_Control\bin\x86\Debug\Views\Areas\abcAreas.xbf
+C:\Assistence_Control\Assistence_Control\obj\x86\Debug\Views\Areas\abcAreas.g.i.cs
+C:\Assistence_Control\Assistence_Control\obj\x86\Debug\Views\Areas\abcAreas.g.cs
+C:\Assistence_Control\Assistence_Control\obj\x86\Debug\Views\Areas\abcAreas.xaml
+C:\Assistence_Control\Assistence_Control\obj\x86\Debug\Views\Areas\abcAreas.xbf
+C:\Assistence_Control\Assistence_Control\bin\x86\Debug\Assistance_Control.xr.xml
+C:\Assistence_Control\Assistence_Control\bin\x86\Debug\Assistance_Control.exe
+C:\Assistence_Control\Assistence_Control\bin\x86\Debug\Assistance_Control.pdb
+C:\Assistence_Control\Assistence_Control\bin\x86\Debug\Core\Assistance_Control.exe
+C:\Assistence_Control\Assistence_Control\obj\x86\Debug\Assistance_Control.exe
+C:\Assistence_Control\Assistence_Control\obj\x86\Debug\Assistance_Control.pdb
