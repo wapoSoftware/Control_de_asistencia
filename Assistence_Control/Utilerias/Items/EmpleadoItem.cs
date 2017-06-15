@@ -8,12 +8,12 @@ namespace Assistence_Control.Utilerias.Items
 {
     public class EmpleadoItem
     {
-        private string _noEmpleado;
-        private string _nombre;
-        private string _apellidoPaterno;
-        private string _apellidoMaterno;
-        private int _edad;
-        private DateTime _fechaAlta;
+        string _noEmpleado;
+        string _nombre;
+        string _apellidoPaterno;
+        string _apellidoMaterno;
+        int _edad;
+        DateTime _fechaAlta;
 
         public string NoEmpleado
         {

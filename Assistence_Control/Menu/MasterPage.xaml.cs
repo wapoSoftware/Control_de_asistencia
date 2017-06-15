@@ -1,4 +1,5 @@
-﻿using Assistence_Control.Inicio;
+﻿using Assistance_Control.Views.Horarios;
+using Assistence_Control.Inicio;
 using Assistence_Control.Menu;
 using Assistence_Control.Views;
 using Assistence_Control.Views.Areas;
@@ -72,6 +73,11 @@ namespace Assistence_Control.Menu
 
                 case "Areas":
                     fPrincipal.Navigate(typeof(abcAreas));
+                    splitView.IsPaneOpen = true;
+                    break;
+
+                case "Horarios":
+                    fPrincipal.Navigate(typeof(MasterHorarios));
                     splitView.IsPaneOpen = true;
                     break;
 

@@ -110,13 +110,19 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TemplateSelectors\MenuCheckListTemplateSelector.cs" />
     <Compile Include="TemplateSelectors\MenuTemplateSelector.cs" />
+    <Compile Include="Utilerias\Items\AreaItem.cs" />
     <Compile Include="Utilerias\Items\DatosMenu.cs" />
     <Compile Include="Utilerias\Items\EmpleadoItem.cs" />
+    <Compile Include="Utilerias\Items\HorarioItem.cs" />
+    <Compile Include="Utilerias\Utils.cs" />
     <Compile Include="Views\Areas\abcAreas.xaml.cs">
       <DependentUpon>abcAreas.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Empleados\abcEmpleado.xaml.cs">
       <DependentUpon>abcEmpleado.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Horarios\MasterHorarios.xaml.cs">
+      <DependentUpon>MasterHorarios.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -168,6 +174,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\Empleados\abcEmpleado.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Horarios\MasterHorarios.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

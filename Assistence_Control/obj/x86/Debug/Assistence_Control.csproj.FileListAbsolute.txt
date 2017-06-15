@@ -229,3 +229,8 @@ C:\Assistence_Control\Assistence_Control\bin\x86\Debug\Assistance_Control.pdb
 C:\Assistence_Control\Assistence_Control\bin\x86\Debug\Core\Assistance_Control.exe
 C:\Assistence_Control\Assistence_Control\obj\x86\Debug\Assistance_Control.exe
 C:\Assistence_Control\Assistence_Control\obj\x86\Debug\Assistance_Control.pdb
+C:\Assistence_Control\Assistence_Control\obj\x86\Debug\Views\Horarios\MasterHorarios.g.i.cs
+C:\Assistence_Control\Assistence_Control\obj\x86\Debug\Views\Horarios\MasterHorarios.g.cs
+C:\Assistence_Control\Assistence_Control\obj\x86\Debug\Views\Horarios\MasterHorarios.xaml
+C:\Assistence_Control\Assistence_Control\obj\x86\Debug\Views\Horarios\MasterHorarios.xbf
+C:\Assistence_Control\Assistence_Control\bin\x86\Debug\Views\Horarios\MasterHorarios.xbf

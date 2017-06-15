@@ -28,13 +28,13 @@
     <AppXManifest Include="C:\Assistence_Control\Assistence_Control\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-06-14T02:44:37.977</Modified>
+      <Modified>2017-06-15T06:26:29.333</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Assistence_Control\Assistence_Control\bin\x86\Debug\Assistance_Control.exe">
       <PackagePath>entrypoint\Assistance_Control.exe</PackagePath>
-      <Modified>2017-06-14T02:44:35.836</Modified>
+      <Modified>2017-06-15T06:26:28.207</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\DevExpress 15.2\Components\System\UAP\SDK\15.2.10\DevExpress.Core\15.2\References\CommonConfiguration\neutral\DevExpress.Core.v15.2.dll">
       <PackagePath>DevExpress.Core.v15.2.dll</PackagePath>
@@ -560,7 +560,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Assistence_Control\Assistence_Control\bin\x86\Debug\Assistance_Control.xr.xml">
       <PackagePath>Assistance_Control.xr.xml</PackagePath>
-      <Modified>2017-06-14T02:44:34.383</Modified>
+      <Modified>2017-06-15T06:26:27.648</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -573,11 +573,11 @@
     <AppxPackagedFile Include="C:\Assistence_Control\Assistence_Control\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-06-14T02:44:37.305</Modified>
+      <Modified>2017-06-15T06:26:29.035</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Assistence_Control\Assistence_Control\bin\x86\Debug\Core\Assistance_Control.exe">
       <PackagePath>Assistance_Control.exe</PackagePath>
-      <Modified>2017-06-14T02:44:37.961</Modified>
+      <Modified>2017-06-15T06:26:29.326</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

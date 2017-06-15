@@ -91,6 +91,7 @@
             <Setter Property="FontSize" Value="20" />
             <Setter Property="Template" Value="{StaticResource SplitViewTogglePaneButtonTemplate}" />
         </Style>
+        <Color x:Key="btnCancel">#FFE06666</Color>
 
     </Application.Resources>
 
