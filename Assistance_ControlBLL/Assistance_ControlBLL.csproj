@@ -30,6 +30,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Data.Edm, Version=5.6.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Data.Edm.5.6.4\lib\net40\Microsoft.Data.Edm.dll</HintPath>
       <Private>True</Private>
@@ -43,8 +49,10 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.ServiceModel" />
     <Reference Include="System.Spatial, Version=5.6.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Spatial.5.6.4\lib\net40\System.Spatial.dll</HintPath>
@@ -58,12 +66,58 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="Area.cs">
+      <DependentUpon>AssistanceControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Asistencia.cs">
+      <DependentUpon>AssistanceControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AssistanceControlModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AssistanceControlModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AssistanceControlModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AssistanceControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AssistanceControlModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AssistanceControlModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="TablesClasses\tcArea.cs" />
+    <Compile Include="TablesClasses\tcAsistencia.cs" />
+    <Compile Include="TablesClasses\tcEmpleado.cs" />
+    <Compile Include="Empleado.cs">
+      <DependentUpon>AssistanceControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EmpleadoArea.cs">
+      <DependentUpon>AssistanceControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EmpleadoPermiso.cs">
+      <DependentUpon>AssistanceControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Horario.cs">
+      <DependentUpon>AssistanceControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HorarioArea.cs">
+      <DependentUpon>AssistanceControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Permiso.cs">
+      <DependentUpon>AssistanceControlModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service References\ODataService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.datasvcmap</DependentUpon>
+    </Compile>
+    <Compile Include="TablesClasses\tcEmpleadoArea.cs" />
+    <Compile Include="TablesClasses\tcUsuario.cs" />
+    <Compile Include="Usuario.cs">
+      <DependentUpon>AssistanceControlModel.tt</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -75,6 +129,14 @@
     </ServiceReferenceMetadataStorage>
   </ItemGroup>
   <ItemGroup>
+    <EntityDeploy Include="AssistanceControlModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>AssistanceControlModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="App.Config" />
+    <None Include="AssistanceControlModel.edmx.diagram">
+      <DependentUpon>AssistanceControlModel.edmx</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Service References\ODataService\service.edmx" />
   </ItemGroup>
@@ -84,6 +146,22 @@
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="AssistanceControlModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>AssistanceControlModel.Context.cs</LastGenOutput>
+      <DependentUpon>AssistanceControlModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="AssistanceControlModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>AssistanceControlModel.edmx</DependentUpon>
+      <LastGenOutput>AssistanceControlModel.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
