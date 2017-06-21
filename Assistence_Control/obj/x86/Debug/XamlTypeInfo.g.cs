@@ -156,7 +156,7 @@ namespace Assistance_Control.Assistence_Control_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[147];
+            _typeNameTable = new string[148];
             _typeNameTable[0] = "Windows.UI.Color";
             _typeNameTable[1] = "System.ValueType";
             _typeNameTable[2] = "Object";
@@ -174,138 +174,139 @@ namespace Assistance_Control.Assistence_Control_XamlTypeInfo
             _typeNameTable[14] = "Windows.UI.Xaml.DataTemplate";
             _typeNameTable[15] = "Assistence_Control.Menu.Main";
             _typeNameTable[16] = "Assistence_Control.Menu.pMasterPage";
-            _typeNameTable[17] = "Assistence_Control.Views.Areas.abcAreas";
-            _typeNameTable[18] = "MyToolkit.Controls.DataGrid";
-            _typeNameTable[19] = "Windows.UI.Xaml.Controls.Control";
-            _typeNameTable[20] = "Windows.UI.Xaml.Controls.SelectionMode";
-            _typeNameTable[21] = "Windows.UI.Xaml.Media.Brush";
-            _typeNameTable[22] = "MyToolkit.Controls.DataGridColumnCollection";
-            _typeNameTable[23] = "System.Collections.ObjectModel.ObservableCollection`1<MyToolkit.Controls.DataGridColumnBase>";
-            _typeNameTable[24] = "System.Collections.ObjectModel.Collection`1<MyToolkit.Controls.DataGridColumnBase>";
-            _typeNameTable[25] = "MyToolkit.Controls.DataGridColumnBase";
-            _typeNameTable[26] = "Windows.UI.Xaml.DependencyObject";
-            _typeNameTable[27] = "Boolean";
-            _typeNameTable[28] = "Windows.UI.Xaml.GridLength";
-            _typeNameTable[29] = "Windows.UI.Xaml.PropertyPath";
-            _typeNameTable[30] = "System.Collections.Generic.IList`1<Object>";
-            _typeNameTable[31] = "MyToolkit.Collections.IObservableCollectionView";
-            _typeNameTable[32] = "Int32";
-            _typeNameTable[33] = "Windows.UI.Xaml.Style";
-            _typeNameTable[34] = "MyToolkit.Controls.DataGridTextColumn";
-            _typeNameTable[35] = "MyToolkit.Controls.DataGridBoundColumn";
-            _typeNameTable[36] = "Windows.UI.Xaml.Data.Binding";
-            _typeNameTable[37] = "Double";
-            _typeNameTable[38] = "Windows.UI.Text.FontStyle";
-            _typeNameTable[39] = "System.Enum";
+            _typeNameTable[17] = "MyToolkit.Controls.DataGrid";
+            _typeNameTable[18] = "Windows.UI.Xaml.Controls.Control";
+            _typeNameTable[19] = "Windows.UI.Xaml.Controls.SelectionMode";
+            _typeNameTable[20] = "Windows.UI.Xaml.Media.Brush";
+            _typeNameTable[21] = "MyToolkit.Controls.DataGridColumnCollection";
+            _typeNameTable[22] = "System.Collections.ObjectModel.ObservableCollection`1<MyToolkit.Controls.DataGridColumnBase>";
+            _typeNameTable[23] = "System.Collections.ObjectModel.Collection`1<MyToolkit.Controls.DataGridColumnBase>";
+            _typeNameTable[24] = "MyToolkit.Controls.DataGridColumnBase";
+            _typeNameTable[25] = "Windows.UI.Xaml.DependencyObject";
+            _typeNameTable[26] = "Boolean";
+            _typeNameTable[27] = "Windows.UI.Xaml.GridLength";
+            _typeNameTable[28] = "Windows.UI.Xaml.PropertyPath";
+            _typeNameTable[29] = "System.Collections.Generic.IList`1<Object>";
+            _typeNameTable[30] = "MyToolkit.Collections.IObservableCollectionView";
+            _typeNameTable[31] = "Int32";
+            _typeNameTable[32] = "Windows.UI.Xaml.Style";
+            _typeNameTable[33] = "MyToolkit.Controls.DataGridTextColumn";
+            _typeNameTable[34] = "MyToolkit.Controls.DataGridBoundColumn";
+            _typeNameTable[35] = "Windows.UI.Xaml.Data.Binding";
+            _typeNameTable[36] = "Double";
+            _typeNameTable[37] = "Windows.UI.Text.FontStyle";
+            _typeNameTable[38] = "System.Enum";
+            _typeNameTable[39] = "Assistence_Control.Views.Areas.abcAreas";
             _typeNameTable[40] = "Assistence_Control.Views.Empleados.abcEmpleado";
-            _typeNameTable[41] = "DevExpress.UI.Xaml.Controls.PdfViewerControl";
-            _typeNameTable[42] = "System.Uri";
-            _typeNameTable[43] = "DevExpress.UI.Xaml.Controls.PdfViewMode";
-            _typeNameTable[44] = "Windows.Graphics.Printing.IPrintDocumentSource";
-            _typeNameTable[45] = "Windows.UI.Xaml.Thickness";
-            _typeNameTable[46] = "DevExpress.UI.Xaml.Controls.PdfZoomMode";
-            _typeNameTable[47] = "Single";
-            _typeNameTable[48] = "DevExpress.UI.Xaml.Controls.PdfDocumentContainer";
-            _typeNameTable[49] = "DevExpress.Mvvm.BindableBase";
-            _typeNameTable[50] = "Windows.UI.Xaml.CornerRadius";
-            _typeNameTable[51] = "System.Windows.Input.ICommand";
-            _typeNameTable[52] = "System.Collections.Generic.IEnumerable`1<DevExpress.UI.Xaml.Controls.IPdfPageBookmark>";
-            _typeNameTable[53] = "DevExpress.UI.Xaml.Controls.SettingsBarItemCollection";
-            _typeNameTable[54] = "System.Collections.ObjectModel.ObservableCollection`1<DevExpress.UI.Xaml.Controls.ISettingsBarItem>";
-            _typeNameTable[55] = "System.Collections.ObjectModel.Collection`1<DevExpress.UI.Xaml.Controls.ISettingsBarItem>";
-            _typeNameTable[56] = "DevExpress.UI.Xaml.Controls.ISettingsBarItem";
-            _typeNameTable[57] = "DevExpress.UI.Xaml.Controls.PdfViewerErrorWrapper";
-            _typeNameTable[58] = "DevExpress.UI.Xaml.Controls.RadialContextMenuCommandBase";
-            _typeNameTable[59] = "DevExpress.Core.Native.DXControl";
-            _typeNameTable[60] = "Windows.Foundation.Point";
-            _typeNameTable[61] = "DevExpress.UI.Xaml.Controls.Internal.ViewInfo";
-            _typeNameTable[62] = "DevExpress.UI.Xaml.Controls.RadialMenuControlBase";
-            _typeNameTable[63] = "Windows.UI.Xaml.Controls.ContentControl";
-            _typeNameTable[64] = "DevExpress.UI.Xaml.Ribbon.BackstageTabItem";
-            _typeNameTable[65] = "DevExpress.UI.Xaml.Ribbon.Internal.RibbonSelectorItemBase";
-            _typeNameTable[66] = "DevExpress.UI.Xaml.Ribbon.Internal.RibbonItemBaseEx";
-            _typeNameTable[67] = "DevExpress.UI.Xaml.Ribbon.Internal.RibbonItemBase";
-            _typeNameTable[68] = "DevExpress.UI.Xaml.Ribbon.Internal.PointerItemBase";
-            _typeNameTable[69] = "DevExpress.UI.Xaml.Internal.ContentControlEx";
-            _typeNameTable[70] = "DevExpress.UI.Xaml.Ribbon.ControlPaneShowMode";
-            _typeNameTable[71] = "Windows.UI.Xaml.Controls.IconElement";
-            _typeNameTable[72] = "Windows.UI.Xaml.Media.SolidColorBrush";
-            _typeNameTable[73] = "Windows.UI.Xaml.Media.Stretch";
-            _typeNameTable[74] = "DevExpress.UI.Xaml.IconSizeUnit";
-            _typeNameTable[75] = "DevExpress.UI.Xaml.Ribbon.RibbonItemStyle";
-            _typeNameTable[76] = "DevExpress.UI.Xaml.Ribbon.CollapsePriority";
-            _typeNameTable[77] = "DevExpress.UI.Xaml.Ribbon.ControlTemplateSelector";
-            _typeNameTable[78] = "Windows.UI.Xaml.Controls.ClickMode";
-            _typeNameTable[79] = "DevExpress.UI.Xaml.Ribbon.BackstageView";
-            _typeNameTable[80] = "DevExpress.UI.Xaml.Ribbon.Internal.RibbonHeaderedContainerBase";
-            _typeNameTable[81] = "DevExpress.UI.Xaml.Internal.ControlEx";
-            _typeNameTable[82] = "DevExpress.UI.Xaml.Ribbon.BackstageItemCollection";
-            _typeNameTable[83] = "DevExpress.UI.Xaml.Internal.TemplatedCollectionWithOwner`2<DevExpress.UI.Xaml.Ribbon.IBackstageItem, DevExpress.UI.Xaml.Ribbon.BackstageView>";
-            _typeNameTable[84] = "DevExpress.UI.Xaml.Internal.TemplatedCollection`1<DevExpress.UI.Xaml.Ribbon.IBackstageItem>";
-            _typeNameTable[85] = "DevExpress.Core.Native.ObservableCollectionView`1<DevExpress.UI.Xaml.Ribbon.IBackstageItem>";
-            _typeNameTable[86] = "DevExpress.UI.Xaml.Ribbon.IBackstageItem";
-            _typeNameTable[87] = "DevExpress.UI.Xaml.Ribbon.IBackstageTabItem";
-            _typeNameTable[88] = "DevExpress.UI.Xaml.TitleSettings";
-            _typeNameTable[89] = "Windows.UI.Xaml.UIElement";
-            _typeNameTable[90] = "DevExpress.UI.Xaml.Ribbon.BackstageButtonItem";
-            _typeNameTable[91] = "DevExpress.UI.Xaml.Ribbon.Internal.RibbonButtonItemBase";
-            _typeNameTable[92] = "DevExpress.UI.Xaml.Ribbon.RibbonGalleryItemGroup";
-            _typeNameTable[93] = "DevExpress.UI.Xaml.Ribbon.RibbonGalleryItemCollection";
-            _typeNameTable[94] = "DevExpress.Core.Native.ObservableCollectionView`1<Object>";
-            _typeNameTable[95] = "DevExpress.UI.Xaml.Ribbon.HelpPane";
-            _typeNameTable[96] = "DevExpress.UI.Xaml.Ribbon.HelpPaneItemCollection";
-            _typeNameTable[97] = "DevExpress.UI.Xaml.Internal.TemplatedCollection`1<DevExpress.UI.Xaml.Ribbon.IHelpPaneItem>";
-            _typeNameTable[98] = "DevExpress.Core.Native.ObservableCollectionView`1<DevExpress.UI.Xaml.Ribbon.IHelpPaneItem>";
-            _typeNameTable[99] = "DevExpress.UI.Xaml.Ribbon.IHelpPaneItem";
-            _typeNameTable[100] = "DevExpress.Mvvm.Native.DeviceFamily";
-            _typeNameTable[101] = "DevExpress.UI.Xaml.Ribbon.HelpPaneItemPlacement";
-            _typeNameTable[102] = "DevExpress.UI.Xaml.Ribbon.RibbonControl";
-            _typeNameTable[103] = "DevExpress.UI.Xaml.Ribbon.RibbonTabCollection";
-            _typeNameTable[104] = "DevExpress.UI.Xaml.Internal.TemplatedCollectionWithOwner`2<DevExpress.UI.Xaml.Ribbon.RibbonTab, DevExpress.UI.Xaml.Ribbon.RibbonControl>";
-            _typeNameTable[105] = "DevExpress.UI.Xaml.Internal.TemplatedCollection`1<DevExpress.UI.Xaml.Ribbon.RibbonTab>";
-            _typeNameTable[106] = "DevExpress.Core.Native.ObservableCollectionView`1<DevExpress.UI.Xaml.Ribbon.RibbonTab>";
-            _typeNameTable[107] = "DevExpress.UI.Xaml.Ribbon.RibbonTab";
-            _typeNameTable[108] = "DevExpress.UI.Xaml.Ribbon.RibbonGroupCollection";
-            _typeNameTable[109] = "DevExpress.UI.Xaml.Internal.TemplatedCollection`1<DevExpress.UI.Xaml.Ribbon.RibbonGroup>";
-            _typeNameTable[110] = "DevExpress.Core.Native.ObservableCollectionView`1<DevExpress.UI.Xaml.Ribbon.RibbonGroup>";
-            _typeNameTable[111] = "DevExpress.UI.Xaml.Ribbon.RibbonGroup";
-            _typeNameTable[112] = "DevExpress.UI.Xaml.Ribbon.Internal.RibbonGroupPanelBase";
-            _typeNameTable[113] = "DevExpress.UI.Xaml.Internal.ItemsPanelBase`1<DevExpress.UI.Xaml.Ribbon.IRibbonItem>";
-            _typeNameTable[114] = "Windows.UI.Xaml.Controls.Panel";
-            _typeNameTable[115] = "DevExpress.UI.Xaml.Ribbon.RibbonItemCollection";
-            _typeNameTable[116] = "DevExpress.UI.Xaml.Internal.TemplatedCollection`1<DevExpress.UI.Xaml.Ribbon.IRibbonItem>";
-            _typeNameTable[117] = "DevExpress.Core.Native.ObservableCollectionView`1<DevExpress.UI.Xaml.Ribbon.IRibbonItem>";
-            _typeNameTable[118] = "DevExpress.UI.Xaml.Ribbon.IRibbonItem";
-            _typeNameTable[119] = "DevExpress.UI.Xaml.Ribbon.Internal.MeasureState";
-            _typeNameTable[120] = "DevExpress.UI.Xaml.Ribbon.Internal.IFlyoutCalculator";
-            _typeNameTable[121] = "Windows.Foundation.Size";
-            _typeNameTable[122] = "DevExpress.UI.Xaml.Ribbon.RibbonViewMode";
-            _typeNameTable[123] = "DevExpress.UI.Xaml.Ribbon.RibbonState";
-            _typeNameTable[124] = "DevExpress.UI.Xaml.Ribbon.RibbonMenuButton";
-            _typeNameTable[125] = "DevExpress.UI.Xaml.Ribbon.Internal.RibbonMenuButtonBase";
-            _typeNameTable[126] = "DevExpress.UI.Xaml.Ribbon.Internal.RibbonMenuItemBase";
-            _typeNameTable[127] = "System.Collections.Generic.IList`1<DevExpress.UI.Xaml.Ribbon.IRibbonItem>";
-            _typeNameTable[128] = "DevExpress.UI.Xaml.FlyoutSettingsBase";
-            _typeNameTable[129] = "DevExpress.UI.Xaml.Ribbon.RibbonSplitButton";
-            _typeNameTable[130] = "DevExpress.UI.Xaml.Ribbon.Internal.FlyoutCalculator";
-            _typeNameTable[131] = "System.Collections.Generic.IEnumerable`1<DevExpress.UI.Xaml.Ribbon.IRibbonItem>";
-            _typeNameTable[132] = "DevExpress.UI.Xaml.Ribbon.Internal.ISeparatorManager";
-            _typeNameTable[133] = "DevExpress.UI.Xaml.Ribbon.Internal.StackedFlyoutControl";
-            _typeNameTable[134] = "DevExpress.UI.Xaml.Ribbon.Internal.RibbonFlyoutControl";
-            _typeNameTable[135] = "DevExpress.UI.Xaml.FlyoutControl";
-            _typeNameTable[136] = "DevExpress.UI.Xaml.Native.FlyoutBase";
-            _typeNameTable[137] = "DevExpress.UI.Xaml.Native.PopupBase";
-            _typeNameTable[138] = "DevExpress.UI.Xaml.Ribbon.Internal.EnabledMode";
-            _typeNameTable[139] = "DevExpress.UI.Xaml.Native.IndicatorDirection";
-            _typeNameTable[140] = "Windows.UI.Xaml.Duration";
-            _typeNameTable[141] = "Windows.Foundation.Rect";
-            _typeNameTable[142] = "Windows.UI.Xaml.Media.Animation.Storyboard";
-            _typeNameTable[143] = "Windows.UI.Xaml.FrameworkElement";
-            _typeNameTable[144] = "DevExpress.UI.Xaml.Native.PlacementMode";
-            _typeNameTable[145] = "DevExpress.UI.Xaml.Ribbon.Internal.RibbonTabsControl";
-            _typeNameTable[146] = "DevExpress.UI.Xaml.Ribbon.TabHeaderItemCollection";
+            _typeNameTable[41] = "Assistance_Control.Views.Horarios.MasterHorarios";
+            _typeNameTable[42] = "DevExpress.UI.Xaml.Controls.PdfViewerControl";
+            _typeNameTable[43] = "System.Uri";
+            _typeNameTable[44] = "DevExpress.UI.Xaml.Controls.PdfViewMode";
+            _typeNameTable[45] = "Windows.Graphics.Printing.IPrintDocumentSource";
+            _typeNameTable[46] = "Windows.UI.Xaml.Thickness";
+            _typeNameTable[47] = "DevExpress.UI.Xaml.Controls.PdfZoomMode";
+            _typeNameTable[48] = "Single";
+            _typeNameTable[49] = "DevExpress.UI.Xaml.Controls.PdfDocumentContainer";
+            _typeNameTable[50] = "DevExpress.Mvvm.BindableBase";
+            _typeNameTable[51] = "Windows.UI.Xaml.CornerRadius";
+            _typeNameTable[52] = "System.Windows.Input.ICommand";
+            _typeNameTable[53] = "System.Collections.Generic.IEnumerable`1<DevExpress.UI.Xaml.Controls.IPdfPageBookmark>";
+            _typeNameTable[54] = "DevExpress.UI.Xaml.Controls.SettingsBarItemCollection";
+            _typeNameTable[55] = "System.Collections.ObjectModel.ObservableCollection`1<DevExpress.UI.Xaml.Controls.ISettingsBarItem>";
+            _typeNameTable[56] = "System.Collections.ObjectModel.Collection`1<DevExpress.UI.Xaml.Controls.ISettingsBarItem>";
+            _typeNameTable[57] = "DevExpress.UI.Xaml.Controls.ISettingsBarItem";
+            _typeNameTable[58] = "DevExpress.UI.Xaml.Controls.PdfViewerErrorWrapper";
+            _typeNameTable[59] = "DevExpress.UI.Xaml.Controls.RadialContextMenuCommandBase";
+            _typeNameTable[60] = "DevExpress.Core.Native.DXControl";
+            _typeNameTable[61] = "Windows.Foundation.Point";
+            _typeNameTable[62] = "DevExpress.UI.Xaml.Controls.Internal.ViewInfo";
+            _typeNameTable[63] = "DevExpress.UI.Xaml.Controls.RadialMenuControlBase";
+            _typeNameTable[64] = "Windows.UI.Xaml.Controls.ContentControl";
+            _typeNameTable[65] = "DevExpress.UI.Xaml.Ribbon.BackstageTabItem";
+            _typeNameTable[66] = "DevExpress.UI.Xaml.Ribbon.Internal.RibbonSelectorItemBase";
+            _typeNameTable[67] = "DevExpress.UI.Xaml.Ribbon.Internal.RibbonItemBaseEx";
+            _typeNameTable[68] = "DevExpress.UI.Xaml.Ribbon.Internal.RibbonItemBase";
+            _typeNameTable[69] = "DevExpress.UI.Xaml.Ribbon.Internal.PointerItemBase";
+            _typeNameTable[70] = "DevExpress.UI.Xaml.Internal.ContentControlEx";
+            _typeNameTable[71] = "DevExpress.UI.Xaml.Ribbon.ControlPaneShowMode";
+            _typeNameTable[72] = "Windows.UI.Xaml.Controls.IconElement";
+            _typeNameTable[73] = "Windows.UI.Xaml.Media.SolidColorBrush";
+            _typeNameTable[74] = "Windows.UI.Xaml.Media.Stretch";
+            _typeNameTable[75] = "DevExpress.UI.Xaml.IconSizeUnit";
+            _typeNameTable[76] = "DevExpress.UI.Xaml.Ribbon.RibbonItemStyle";
+            _typeNameTable[77] = "DevExpress.UI.Xaml.Ribbon.CollapsePriority";
+            _typeNameTable[78] = "DevExpress.UI.Xaml.Ribbon.ControlTemplateSelector";
+            _typeNameTable[79] = "Windows.UI.Xaml.Controls.ClickMode";
+            _typeNameTable[80] = "DevExpress.UI.Xaml.Ribbon.BackstageView";
+            _typeNameTable[81] = "DevExpress.UI.Xaml.Ribbon.Internal.RibbonHeaderedContainerBase";
+            _typeNameTable[82] = "DevExpress.UI.Xaml.Internal.ControlEx";
+            _typeNameTable[83] = "DevExpress.UI.Xaml.Ribbon.BackstageItemCollection";
+            _typeNameTable[84] = "DevExpress.UI.Xaml.Internal.TemplatedCollectionWithOwner`2<DevExpress.UI.Xaml.Ribbon.IBackstageItem, DevExpress.UI.Xaml.Ribbon.BackstageView>";
+            _typeNameTable[85] = "DevExpress.UI.Xaml.Internal.TemplatedCollection`1<DevExpress.UI.Xaml.Ribbon.IBackstageItem>";
+            _typeNameTable[86] = "DevExpress.Core.Native.ObservableCollectionView`1<DevExpress.UI.Xaml.Ribbon.IBackstageItem>";
+            _typeNameTable[87] = "DevExpress.UI.Xaml.Ribbon.IBackstageItem";
+            _typeNameTable[88] = "DevExpress.UI.Xaml.Ribbon.IBackstageTabItem";
+            _typeNameTable[89] = "DevExpress.UI.Xaml.TitleSettings";
+            _typeNameTable[90] = "Windows.UI.Xaml.UIElement";
+            _typeNameTable[91] = "DevExpress.UI.Xaml.Ribbon.BackstageButtonItem";
+            _typeNameTable[92] = "DevExpress.UI.Xaml.Ribbon.Internal.RibbonButtonItemBase";
+            _typeNameTable[93] = "DevExpress.UI.Xaml.Ribbon.RibbonGalleryItemGroup";
+            _typeNameTable[94] = "DevExpress.UI.Xaml.Ribbon.RibbonGalleryItemCollection";
+            _typeNameTable[95] = "DevExpress.Core.Native.ObservableCollectionView`1<Object>";
+            _typeNameTable[96] = "DevExpress.UI.Xaml.Ribbon.HelpPane";
+            _typeNameTable[97] = "DevExpress.UI.Xaml.Ribbon.HelpPaneItemCollection";
+            _typeNameTable[98] = "DevExpress.UI.Xaml.Internal.TemplatedCollection`1<DevExpress.UI.Xaml.Ribbon.IHelpPaneItem>";
+            _typeNameTable[99] = "DevExpress.Core.Native.ObservableCollectionView`1<DevExpress.UI.Xaml.Ribbon.IHelpPaneItem>";
+            _typeNameTable[100] = "DevExpress.UI.Xaml.Ribbon.IHelpPaneItem";
+            _typeNameTable[101] = "DevExpress.Mvvm.Native.DeviceFamily";
+            _typeNameTable[102] = "DevExpress.UI.Xaml.Ribbon.HelpPaneItemPlacement";
+            _typeNameTable[103] = "DevExpress.UI.Xaml.Ribbon.RibbonControl";
+            _typeNameTable[104] = "DevExpress.UI.Xaml.Ribbon.RibbonTabCollection";
+            _typeNameTable[105] = "DevExpress.UI.Xaml.Internal.TemplatedCollectionWithOwner`2<DevExpress.UI.Xaml.Ribbon.RibbonTab, DevExpress.UI.Xaml.Ribbon.RibbonControl>";
+            _typeNameTable[106] = "DevExpress.UI.Xaml.Internal.TemplatedCollection`1<DevExpress.UI.Xaml.Ribbon.RibbonTab>";
+            _typeNameTable[107] = "DevExpress.Core.Native.ObservableCollectionView`1<DevExpress.UI.Xaml.Ribbon.RibbonTab>";
+            _typeNameTable[108] = "DevExpress.UI.Xaml.Ribbon.RibbonTab";
+            _typeNameTable[109] = "DevExpress.UI.Xaml.Ribbon.RibbonGroupCollection";
+            _typeNameTable[110] = "DevExpress.UI.Xaml.Internal.TemplatedCollection`1<DevExpress.UI.Xaml.Ribbon.RibbonGroup>";
+            _typeNameTable[111] = "DevExpress.Core.Native.ObservableCollectionView`1<DevExpress.UI.Xaml.Ribbon.RibbonGroup>";
+            _typeNameTable[112] = "DevExpress.UI.Xaml.Ribbon.RibbonGroup";
+            _typeNameTable[113] = "DevExpress.UI.Xaml.Ribbon.Internal.RibbonGroupPanelBase";
+            _typeNameTable[114] = "DevExpress.UI.Xaml.Internal.ItemsPanelBase`1<DevExpress.UI.Xaml.Ribbon.IRibbonItem>";
+            _typeNameTable[115] = "Windows.UI.Xaml.Controls.Panel";
+            _typeNameTable[116] = "DevExpress.UI.Xaml.Ribbon.RibbonItemCollection";
+            _typeNameTable[117] = "DevExpress.UI.Xaml.Internal.TemplatedCollection`1<DevExpress.UI.Xaml.Ribbon.IRibbonItem>";
+            _typeNameTable[118] = "DevExpress.Core.Native.ObservableCollectionView`1<DevExpress.UI.Xaml.Ribbon.IRibbonItem>";
+            _typeNameTable[119] = "DevExpress.UI.Xaml.Ribbon.IRibbonItem";
+            _typeNameTable[120] = "DevExpress.UI.Xaml.Ribbon.Internal.MeasureState";
+            _typeNameTable[121] = "DevExpress.UI.Xaml.Ribbon.Internal.IFlyoutCalculator";
+            _typeNameTable[122] = "Windows.Foundation.Size";
+            _typeNameTable[123] = "DevExpress.UI.Xaml.Ribbon.RibbonViewMode";
+            _typeNameTable[124] = "DevExpress.UI.Xaml.Ribbon.RibbonState";
+            _typeNameTable[125] = "DevExpress.UI.Xaml.Ribbon.RibbonMenuButton";
+            _typeNameTable[126] = "DevExpress.UI.Xaml.Ribbon.Internal.RibbonMenuButtonBase";
+            _typeNameTable[127] = "DevExpress.UI.Xaml.Ribbon.Internal.RibbonMenuItemBase";
+            _typeNameTable[128] = "System.Collections.Generic.IList`1<DevExpress.UI.Xaml.Ribbon.IRibbonItem>";
+            _typeNameTable[129] = "DevExpress.UI.Xaml.FlyoutSettingsBase";
+            _typeNameTable[130] = "DevExpress.UI.Xaml.Ribbon.RibbonSplitButton";
+            _typeNameTable[131] = "DevExpress.UI.Xaml.Ribbon.Internal.FlyoutCalculator";
+            _typeNameTable[132] = "System.Collections.Generic.IEnumerable`1<DevExpress.UI.Xaml.Ribbon.IRibbonItem>";
+            _typeNameTable[133] = "DevExpress.UI.Xaml.Ribbon.Internal.ISeparatorManager";
+            _typeNameTable[134] = "DevExpress.UI.Xaml.Ribbon.Internal.StackedFlyoutControl";
+            _typeNameTable[135] = "DevExpress.UI.Xaml.Ribbon.Internal.RibbonFlyoutControl";
+            _typeNameTable[136] = "DevExpress.UI.Xaml.FlyoutControl";
+            _typeNameTable[137] = "DevExpress.UI.Xaml.Native.FlyoutBase";
+            _typeNameTable[138] = "DevExpress.UI.Xaml.Native.PopupBase";
+            _typeNameTable[139] = "DevExpress.UI.Xaml.Ribbon.Internal.EnabledMode";
+            _typeNameTable[140] = "DevExpress.UI.Xaml.Native.IndicatorDirection";
+            _typeNameTable[141] = "Windows.UI.Xaml.Duration";
+            _typeNameTable[142] = "Windows.Foundation.Rect";
+            _typeNameTable[143] = "Windows.UI.Xaml.Media.Animation.Storyboard";
+            _typeNameTable[144] = "Windows.UI.Xaml.FrameworkElement";
+            _typeNameTable[145] = "DevExpress.UI.Xaml.Native.PlacementMode";
+            _typeNameTable[146] = "DevExpress.UI.Xaml.Ribbon.Internal.RibbonTabsControl";
+            _typeNameTable[147] = "DevExpress.UI.Xaml.Ribbon.TabHeaderItemCollection";
 
-            _typeTable = new global::System.Type[147];
+            _typeTable = new global::System.Type[148];
             _typeTable[0] = typeof(global::Windows.UI.Color);
             _typeTable[1] = typeof(global::System.ValueType);
             _typeTable[2] = typeof(global::System.Object);
@@ -323,136 +324,137 @@ namespace Assistance_Control.Assistence_Control_XamlTypeInfo
             _typeTable[14] = typeof(global::Windows.UI.Xaml.DataTemplate);
             _typeTable[15] = typeof(global::Assistence_Control.Menu.Main);
             _typeTable[16] = typeof(global::Assistence_Control.Menu.pMasterPage);
-            _typeTable[17] = typeof(global::Assistence_Control.Views.Areas.abcAreas);
-            _typeTable[18] = typeof(global::MyToolkit.Controls.DataGrid);
-            _typeTable[19] = typeof(global::Windows.UI.Xaml.Controls.Control);
-            _typeTable[20] = typeof(global::Windows.UI.Xaml.Controls.SelectionMode);
-            _typeTable[21] = typeof(global::Windows.UI.Xaml.Media.Brush);
-            _typeTable[22] = typeof(global::MyToolkit.Controls.DataGridColumnCollection);
-            _typeTable[23] = typeof(global::System.Collections.ObjectModel.ObservableCollection<global::MyToolkit.Controls.DataGridColumnBase>);
-            _typeTable[24] = typeof(global::System.Collections.ObjectModel.Collection<global::MyToolkit.Controls.DataGridColumnBase>);
-            _typeTable[25] = typeof(global::MyToolkit.Controls.DataGridColumnBase);
-            _typeTable[26] = typeof(global::Windows.UI.Xaml.DependencyObject);
-            _typeTable[27] = typeof(global::System.Boolean);
-            _typeTable[28] = typeof(global::Windows.UI.Xaml.GridLength);
-            _typeTable[29] = typeof(global::Windows.UI.Xaml.PropertyPath);
-            _typeTable[30] = typeof(global::System.Collections.Generic.IList<global::System.Object>);
-            _typeTable[31] = typeof(global::MyToolkit.Collections.IObservableCollectionView);
-            _typeTable[32] = typeof(global::System.Int32);
-            _typeTable[33] = typeof(global::Windows.UI.Xaml.Style);
-            _typeTable[34] = typeof(global::MyToolkit.Controls.DataGridTextColumn);
-            _typeTable[35] = typeof(global::MyToolkit.Controls.DataGridBoundColumn);
-            _typeTable[36] = typeof(global::Windows.UI.Xaml.Data.Binding);
-            _typeTable[37] = typeof(global::System.Double);
-            _typeTable[38] = typeof(global::Windows.UI.Text.FontStyle);
-            _typeTable[39] = typeof(global::System.Enum);
+            _typeTable[17] = typeof(global::MyToolkit.Controls.DataGrid);
+            _typeTable[18] = typeof(global::Windows.UI.Xaml.Controls.Control);
+            _typeTable[19] = typeof(global::Windows.UI.Xaml.Controls.SelectionMode);
+            _typeTable[20] = typeof(global::Windows.UI.Xaml.Media.Brush);
+            _typeTable[21] = typeof(global::MyToolkit.Controls.DataGridColumnCollection);
+            _typeTable[22] = typeof(global::System.Collections.ObjectModel.ObservableCollection<global::MyToolkit.Controls.DataGridColumnBase>);
+            _typeTable[23] = typeof(global::System.Collections.ObjectModel.Collection<global::MyToolkit.Controls.DataGridColumnBase>);
+            _typeTable[24] = typeof(global::MyToolkit.Controls.DataGridColumnBase);
+            _typeTable[25] = typeof(global::Windows.UI.Xaml.DependencyObject);
+            _typeTable[26] = typeof(global::System.Boolean);
+            _typeTable[27] = typeof(global::Windows.UI.Xaml.GridLength);
+            _typeTable[28] = typeof(global::Windows.UI.Xaml.PropertyPath);
+            _typeTable[29] = typeof(global::System.Collections.Generic.IList<global::System.Object>);
+            _typeTable[30] = typeof(global::MyToolkit.Collections.IObservableCollectionView);
+            _typeTable[31] = typeof(global::System.Int32);
+            _typeTable[32] = typeof(global::Windows.UI.Xaml.Style);
+            _typeTable[33] = typeof(global::MyToolkit.Controls.DataGridTextColumn);
+            _typeTable[34] = typeof(global::MyToolkit.Controls.DataGridBoundColumn);
+            _typeTable[35] = typeof(global::Windows.UI.Xaml.Data.Binding);
+            _typeTable[36] = typeof(global::System.Double);
+            _typeTable[37] = typeof(global::Windows.UI.Text.FontStyle);
+            _typeTable[38] = typeof(global::System.Enum);
+            _typeTable[39] = typeof(global::Assistence_Control.Views.Areas.abcAreas);
             _typeTable[40] = typeof(global::Assistence_Control.Views.Empleados.abcEmpleado);
-            _typeTable[41] = typeof(global::DevExpress.UI.Xaml.Controls.PdfViewerControl);
-            _typeTable[42] = typeof(global::System.Uri);
-            _typeTable[43] = typeof(global::DevExpress.UI.Xaml.Controls.PdfViewMode);
-            _typeTable[44] = typeof(global::Windows.Graphics.Printing.IPrintDocumentSource);
-            _typeTable[45] = typeof(global::Windows.UI.Xaml.Thickness);
-            _typeTable[46] = typeof(global::DevExpress.UI.Xaml.Controls.PdfZoomMode);
-            _typeTable[47] = typeof(global::System.Single);
-            _typeTable[48] = typeof(global::DevExpress.UI.Xaml.Controls.PdfDocumentContainer);
-            _typeTable[49] = typeof(global::DevExpress.Mvvm.BindableBase);
-            _typeTable[50] = typeof(global::Windows.UI.Xaml.CornerRadius);
-            _typeTable[51] = typeof(global::System.Windows.Input.ICommand);
-            _typeTable[52] = typeof(global::System.Collections.Generic.IEnumerable<global::DevExpress.UI.Xaml.Controls.IPdfPageBookmark>);
-            _typeTable[53] = typeof(global::DevExpress.UI.Xaml.Controls.SettingsBarItemCollection);
-            _typeTable[54] = typeof(global::System.Collections.ObjectModel.ObservableCollection<global::DevExpress.UI.Xaml.Controls.ISettingsBarItem>);
-            _typeTable[55] = typeof(global::System.Collections.ObjectModel.Collection<global::DevExpress.UI.Xaml.Controls.ISettingsBarItem>);
-            _typeTable[56] = typeof(global::DevExpress.UI.Xaml.Controls.ISettingsBarItem);
-            _typeTable[57] = typeof(global::DevExpress.UI.Xaml.Controls.PdfViewerErrorWrapper);
-            _typeTable[58] = typeof(global::DevExpress.UI.Xaml.Controls.RadialContextMenuCommandBase);
-            _typeTable[59] = typeof(global::DevExpress.Core.Native.DXControl);
-            _typeTable[60] = typeof(global::Windows.Foundation.Point);
-            _typeTable[61] = typeof(global::DevExpress.UI.Xaml.Controls.Internal.ViewInfo);
-            _typeTable[62] = typeof(global::DevExpress.UI.Xaml.Controls.RadialMenuControlBase);
-            _typeTable[63] = typeof(global::Windows.UI.Xaml.Controls.ContentControl);
-            _typeTable[64] = typeof(global::DevExpress.UI.Xaml.Ribbon.BackstageTabItem);
-            _typeTable[65] = typeof(global::DevExpress.UI.Xaml.Ribbon.Internal.RibbonSelectorItemBase);
-            _typeTable[66] = typeof(global::DevExpress.UI.Xaml.Ribbon.Internal.RibbonItemBaseEx);
-            _typeTable[67] = typeof(global::DevExpress.UI.Xaml.Ribbon.Internal.RibbonItemBase);
-            _typeTable[68] = typeof(global::DevExpress.UI.Xaml.Ribbon.Internal.PointerItemBase);
-            _typeTable[69] = typeof(global::DevExpress.UI.Xaml.Internal.ContentControlEx);
-            _typeTable[70] = typeof(global::DevExpress.UI.Xaml.Ribbon.ControlPaneShowMode);
-            _typeTable[71] = typeof(global::Windows.UI.Xaml.Controls.IconElement);
-            _typeTable[72] = typeof(global::Windows.UI.Xaml.Media.SolidColorBrush);
-            _typeTable[73] = typeof(global::Windows.UI.Xaml.Media.Stretch);
-            _typeTable[74] = typeof(global::DevExpress.UI.Xaml.IconSizeUnit);
-            _typeTable[75] = typeof(global::DevExpress.UI.Xaml.Ribbon.RibbonItemStyle);
-            _typeTable[76] = typeof(global::DevExpress.UI.Xaml.Ribbon.CollapsePriority);
-            _typeTable[77] = typeof(global::DevExpress.UI.Xaml.Ribbon.ControlTemplateSelector);
-            _typeTable[78] = typeof(global::Windows.UI.Xaml.Controls.ClickMode);
-            _typeTable[79] = typeof(global::DevExpress.UI.Xaml.Ribbon.BackstageView);
-            _typeTable[80] = typeof(global::DevExpress.UI.Xaml.Ribbon.Internal.RibbonHeaderedContainerBase);
-            _typeTable[81] = typeof(global::DevExpress.UI.Xaml.Internal.ControlEx);
-            _typeTable[82] = typeof(global::DevExpress.UI.Xaml.Ribbon.BackstageItemCollection);
-            _typeTable[83] = typeof(global::DevExpress.UI.Xaml.Internal.TemplatedCollectionWithOwner<global::DevExpress.UI.Xaml.Ribbon.IBackstageItem, global::DevExpress.UI.Xaml.Ribbon.BackstageView>);
-            _typeTable[84] = typeof(global::DevExpress.UI.Xaml.Internal.TemplatedCollection<global::DevExpress.UI.Xaml.Ribbon.IBackstageItem>);
-            _typeTable[85] = typeof(global::DevExpress.Core.Native.ObservableCollectionView<global::DevExpress.UI.Xaml.Ribbon.IBackstageItem>);
-            _typeTable[86] = typeof(global::DevExpress.UI.Xaml.Ribbon.IBackstageItem);
-            _typeTable[87] = typeof(global::DevExpress.UI.Xaml.Ribbon.IBackstageTabItem);
-            _typeTable[88] = typeof(global::DevExpress.UI.Xaml.TitleSettings);
-            _typeTable[89] = typeof(global::Windows.UI.Xaml.UIElement);
-            _typeTable[90] = typeof(global::DevExpress.UI.Xaml.Ribbon.BackstageButtonItem);
-            _typeTable[91] = typeof(global::DevExpress.UI.Xaml.Ribbon.Internal.RibbonButtonItemBase);
-            _typeTable[92] = typeof(global::DevExpress.UI.Xaml.Ribbon.RibbonGalleryItemGroup);
-            _typeTable[93] = typeof(global::DevExpress.UI.Xaml.Ribbon.RibbonGalleryItemCollection);
-            _typeTable[94] = typeof(global::DevExpress.Core.Native.ObservableCollectionView<global::System.Object>);
-            _typeTable[95] = typeof(global::DevExpress.UI.Xaml.Ribbon.HelpPane);
-            _typeTable[96] = typeof(global::DevExpress.UI.Xaml.Ribbon.HelpPaneItemCollection);
-            _typeTable[97] = typeof(global::DevExpress.UI.Xaml.Internal.TemplatedCollection<global::DevExpress.UI.Xaml.Ribbon.IHelpPaneItem>);
-            _typeTable[98] = typeof(global::DevExpress.Core.Native.ObservableCollectionView<global::DevExpress.UI.Xaml.Ribbon.IHelpPaneItem>);
-            _typeTable[99] = typeof(global::DevExpress.UI.Xaml.Ribbon.IHelpPaneItem);
-            _typeTable[100] = typeof(global::DevExpress.Mvvm.Native.DeviceFamily);
-            _typeTable[101] = typeof(global::DevExpress.UI.Xaml.Ribbon.HelpPaneItemPlacement);
-            _typeTable[102] = typeof(global::DevExpress.UI.Xaml.Ribbon.RibbonControl);
-            _typeTable[103] = typeof(global::DevExpress.UI.Xaml.Ribbon.RibbonTabCollection);
-            _typeTable[104] = typeof(global::DevExpress.UI.Xaml.Internal.TemplatedCollectionWithOwner<global::DevExpress.UI.Xaml.Ribbon.RibbonTab, global::DevExpress.UI.Xaml.Ribbon.RibbonControl>);
-            _typeTable[105] = typeof(global::DevExpress.UI.Xaml.Internal.TemplatedCollection<global::DevExpress.UI.Xaml.Ribbon.RibbonTab>);
-            _typeTable[106] = typeof(global::DevExpress.Core.Native.ObservableCollectionView<global::DevExpress.UI.Xaml.Ribbon.RibbonTab>);
-            _typeTable[107] = typeof(global::DevExpress.UI.Xaml.Ribbon.RibbonTab);
-            _typeTable[108] = typeof(global::DevExpress.UI.Xaml.Ribbon.RibbonGroupCollection);
-            _typeTable[109] = typeof(global::DevExpress.UI.Xaml.Internal.TemplatedCollection<global::DevExpress.UI.Xaml.Ribbon.RibbonGroup>);
-            _typeTable[110] = typeof(global::DevExpress.Core.Native.ObservableCollectionView<global::DevExpress.UI.Xaml.Ribbon.RibbonGroup>);
-            _typeTable[111] = typeof(global::DevExpress.UI.Xaml.Ribbon.RibbonGroup);
-            _typeTable[112] = typeof(global::DevExpress.UI.Xaml.Ribbon.Internal.RibbonGroupPanelBase);
-            _typeTable[113] = typeof(global::DevExpress.UI.Xaml.Internal.ItemsPanelBase<global::DevExpress.UI.Xaml.Ribbon.IRibbonItem>);
-            _typeTable[114] = typeof(global::Windows.UI.Xaml.Controls.Panel);
-            _typeTable[115] = typeof(global::DevExpress.UI.Xaml.Ribbon.RibbonItemCollection);
-            _typeTable[116] = typeof(global::DevExpress.UI.Xaml.Internal.TemplatedCollection<global::DevExpress.UI.Xaml.Ribbon.IRibbonItem>);
-            _typeTable[117] = typeof(global::DevExpress.Core.Native.ObservableCollectionView<global::DevExpress.UI.Xaml.Ribbon.IRibbonItem>);
-            _typeTable[118] = typeof(global::DevExpress.UI.Xaml.Ribbon.IRibbonItem);
-            _typeTable[119] = typeof(global::DevExpress.UI.Xaml.Ribbon.Internal.MeasureState);
-            _typeTable[120] = typeof(global::DevExpress.UI.Xaml.Ribbon.Internal.IFlyoutCalculator);
-            _typeTable[121] = typeof(global::Windows.Foundation.Size);
-            _typeTable[122] = typeof(global::DevExpress.UI.Xaml.Ribbon.RibbonViewMode);
-            _typeTable[123] = typeof(global::DevExpress.UI.Xaml.Ribbon.RibbonState);
-            _typeTable[124] = typeof(global::DevExpress.UI.Xaml.Ribbon.RibbonMenuButton);
-            _typeTable[125] = typeof(global::DevExpress.UI.Xaml.Ribbon.Internal.RibbonMenuButtonBase);
-            _typeTable[126] = typeof(global::DevExpress.UI.Xaml.Ribbon.Internal.RibbonMenuItemBase);
-            _typeTable[127] = typeof(global::System.Collections.Generic.IList<global::DevExpress.UI.Xaml.Ribbon.IRibbonItem>);
-            _typeTable[128] = typeof(global::DevExpress.UI.Xaml.FlyoutSettingsBase);
-            _typeTable[129] = typeof(global::DevExpress.UI.Xaml.Ribbon.RibbonSplitButton);
-            _typeTable[130] = typeof(global::DevExpress.UI.Xaml.Ribbon.Internal.FlyoutCalculator);
-            _typeTable[131] = typeof(global::System.Collections.Generic.IEnumerable<global::DevExpress.UI.Xaml.Ribbon.IRibbonItem>);
-            _typeTable[132] = typeof(global::DevExpress.UI.Xaml.Ribbon.Internal.ISeparatorManager);
-            _typeTable[133] = typeof(global::DevExpress.UI.Xaml.Ribbon.Internal.StackedFlyoutControl);
-            _typeTable[134] = typeof(global::DevExpress.UI.Xaml.Ribbon.Internal.RibbonFlyoutControl);
-            _typeTable[135] = typeof(global::DevExpress.UI.Xaml.FlyoutControl);
-            _typeTable[136] = typeof(global::DevExpress.UI.Xaml.Native.FlyoutBase);
-            _typeTable[137] = typeof(global::DevExpress.UI.Xaml.Native.PopupBase);
-            _typeTable[138] = typeof(global::DevExpress.UI.Xaml.Ribbon.Internal.EnabledMode);
-            _typeTable[139] = typeof(global::DevExpress.UI.Xaml.Native.IndicatorDirection);
-            _typeTable[140] = typeof(global::Windows.UI.Xaml.Duration);
-            _typeTable[141] = typeof(global::Windows.Foundation.Rect);
-            _typeTable[142] = typeof(global::Windows.UI.Xaml.Media.Animation.Storyboard);
-            _typeTable[143] = typeof(global::Windows.UI.Xaml.FrameworkElement);
-            _typeTable[144] = typeof(global::DevExpress.UI.Xaml.Native.PlacementMode);
-            _typeTable[145] = typeof(global::DevExpress.UI.Xaml.Ribbon.Internal.RibbonTabsControl);
-            _typeTable[146] = typeof(global::DevExpress.UI.Xaml.Ribbon.TabHeaderItemCollection);
+            _typeTable[41] = typeof(global::Assistance_Control.Views.Horarios.MasterHorarios);
+            _typeTable[42] = typeof(global::DevExpress.UI.Xaml.Controls.PdfViewerControl);
+            _typeTable[43] = typeof(global::System.Uri);
+            _typeTable[44] = typeof(global::DevExpress.UI.Xaml.Controls.PdfViewMode);
+            _typeTable[45] = typeof(global::Windows.Graphics.Printing.IPrintDocumentSource);
+            _typeTable[46] = typeof(global::Windows.UI.Xaml.Thickness);
+            _typeTable[47] = typeof(global::DevExpress.UI.Xaml.Controls.PdfZoomMode);
+            _typeTable[48] = typeof(global::System.Single);
+            _typeTable[49] = typeof(global::DevExpress.UI.Xaml.Controls.PdfDocumentContainer);
+            _typeTable[50] = typeof(global::DevExpress.Mvvm.BindableBase);
+            _typeTable[51] = typeof(global::Windows.UI.Xaml.CornerRadius);
+            _typeTable[52] = typeof(global::System.Windows.Input.ICommand);
+            _typeTable[53] = typeof(global::System.Collections.Generic.IEnumerable<global::DevExpress.UI.Xaml.Controls.IPdfPageBookmark>);
+            _typeTable[54] = typeof(global::DevExpress.UI.Xaml.Controls.SettingsBarItemCollection);
+            _typeTable[55] = typeof(global::System.Collections.ObjectModel.ObservableCollection<global::DevExpress.UI.Xaml.Controls.ISettingsBarItem>);
+            _typeTable[56] = typeof(global::System.Collections.ObjectModel.Collection<global::DevExpress.UI.Xaml.Controls.ISettingsBarItem>);
+            _typeTable[57] = typeof(global::DevExpress.UI.Xaml.Controls.ISettingsBarItem);
+            _typeTable[58] = typeof(global::DevExpress.UI.Xaml.Controls.PdfViewerErrorWrapper);
+            _typeTable[59] = typeof(global::DevExpress.UI.Xaml.Controls.RadialContextMenuCommandBase);
+            _typeTable[60] = typeof(global::DevExpress.Core.Native.DXControl);
+            _typeTable[61] = typeof(global::Windows.Foundation.Point);
+            _typeTable[62] = typeof(global::DevExpress.UI.Xaml.Controls.Internal.ViewInfo);
+            _typeTable[63] = typeof(global::DevExpress.UI.Xaml.Controls.RadialMenuControlBase);
+            _typeTable[64] = typeof(global::Windows.UI.Xaml.Controls.ContentControl);
+            _typeTable[65] = typeof(global::DevExpress.UI.Xaml.Ribbon.BackstageTabItem);
+            _typeTable[66] = typeof(global::DevExpress.UI.Xaml.Ribbon.Internal.RibbonSelectorItemBase);
+            _typeTable[67] = typeof(global::DevExpress.UI.Xaml.Ribbon.Internal.RibbonItemBaseEx);
+            _typeTable[68] = typeof(global::DevExpress.UI.Xaml.Ribbon.Internal.RibbonItemBase);
+            _typeTable[69] = typeof(global::DevExpress.UI.Xaml.Ribbon.Internal.PointerItemBase);
+            _typeTable[70] = typeof(global::DevExpress.UI.Xaml.Internal.ContentControlEx);
+            _typeTable[71] = typeof(global::DevExpress.UI.Xaml.Ribbon.ControlPaneShowMode);
+            _typeTable[72] = typeof(global::Windows.UI.Xaml.Controls.IconElement);
+            _typeTable[73] = typeof(global::Windows.UI.Xaml.Media.SolidColorBrush);
+            _typeTable[74] = typeof(global::Windows.UI.Xaml.Media.Stretch);
+            _typeTable[75] = typeof(global::DevExpress.UI.Xaml.IconSizeUnit);
+            _typeTable[76] = typeof(global::DevExpress.UI.Xaml.Ribbon.RibbonItemStyle);
+            _typeTable[77] = typeof(global::DevExpress.UI.Xaml.Ribbon.CollapsePriority);
+            _typeTable[78] = typeof(global::DevExpress.UI.Xaml.Ribbon.ControlTemplateSelector);
+            _typeTable[79] = typeof(global::Windows.UI.Xaml.Controls.ClickMode);
+            _typeTable[80] = typeof(global::DevExpress.UI.Xaml.Ribbon.BackstageView);
+            _typeTable[81] = typeof(global::DevExpress.UI.Xaml.Ribbon.Internal.RibbonHeaderedContainerBase);
+            _typeTable[82] = typeof(global::DevExpress.UI.Xaml.Internal.ControlEx);
+            _typeTable[83] = typeof(global::DevExpress.UI.Xaml.Ribbon.BackstageItemCollection);
+            _typeTable[84] = typeof(global::DevExpress.UI.Xaml.Internal.TemplatedCollectionWithOwner<global::DevExpress.UI.Xaml.Ribbon.IBackstageItem, global::DevExpress.UI.Xaml.Ribbon.BackstageView>);
+            _typeTable[85] = typeof(global::DevExpress.UI.Xaml.Internal.TemplatedCollection<global::DevExpress.UI.Xaml.Ribbon.IBackstageItem>);
+            _typeTable[86] = typeof(global::DevExpress.Core.Native.ObservableCollectionView<global::DevExpress.UI.Xaml.Ribbon.IBackstageItem>);
+            _typeTable[87] = typeof(global::DevExpress.UI.Xaml.Ribbon.IBackstageItem);
+            _typeTable[88] = typeof(global::DevExpress.UI.Xaml.Ribbon.IBackstageTabItem);
+            _typeTable[89] = typeof(global::DevExpress.UI.Xaml.TitleSettings);
+            _typeTable[90] = typeof(global::Windows.UI.Xaml.UIElement);
+            _typeTable[91] = typeof(global::DevExpress.UI.Xaml.Ribbon.BackstageButtonItem);
+            _typeTable[92] = typeof(global::DevExpress.UI.Xaml.Ribbon.Internal.RibbonButtonItemBase);
+            _typeTable[93] = typeof(global::DevExpress.UI.Xaml.Ribbon.RibbonGalleryItemGroup);
+            _typeTable[94] = typeof(global::DevExpress.UI.Xaml.Ribbon.RibbonGalleryItemCollection);
+            _typeTable[95] = typeof(global::DevExpress.Core.Native.ObservableCollectionView<global::System.Object>);
+            _typeTable[96] = typeof(global::DevExpress.UI.Xaml.Ribbon.HelpPane);
+            _typeTable[97] = typeof(global::DevExpress.UI.Xaml.Ribbon.HelpPaneItemCollection);
+            _typeTable[98] = typeof(global::DevExpress.UI.Xaml.Internal.TemplatedCollection<global::DevExpress.UI.Xaml.Ribbon.IHelpPaneItem>);
+            _typeTable[99] = typeof(global::DevExpress.Core.Native.ObservableCollectionView<global::DevExpress.UI.Xaml.Ribbon.IHelpPaneItem>);
+            _typeTable[100] = typeof(global::DevExpress.UI.Xaml.Ribbon.IHelpPaneItem);
+            _typeTable[101] = typeof(global::DevExpress.Mvvm.Native.DeviceFamily);
+            _typeTable[102] = typeof(global::DevExpress.UI.Xaml.Ribbon.HelpPaneItemPlacement);
+            _typeTable[103] = typeof(global::DevExpress.UI.Xaml.Ribbon.RibbonControl);
+            _typeTable[104] = typeof(global::DevExpress.UI.Xaml.Ribbon.RibbonTabCollection);
+            _typeTable[105] = typeof(global::DevExpress.UI.Xaml.Internal.TemplatedCollectionWithOwner<global::DevExpress.UI.Xaml.Ribbon.RibbonTab, global::DevExpress.UI.Xaml.Ribbon.RibbonControl>);
+            _typeTable[106] = typeof(global::DevExpress.UI.Xaml.Internal.TemplatedCollection<global::DevExpress.UI.Xaml.Ribbon.RibbonTab>);
+            _typeTable[107] = typeof(global::DevExpress.Core.Native.ObservableCollectionView<global::DevExpress.UI.Xaml.Ribbon.RibbonTab>);
+            _typeTable[108] = typeof(global::DevExpress.UI.Xaml.Ribbon.RibbonTab);
+            _typeTable[109] = typeof(global::DevExpress.UI.Xaml.Ribbon.RibbonGroupCollection);
+            _typeTable[110] = typeof(global::DevExpress.UI.Xaml.Internal.TemplatedCollection<global::DevExpress.UI.Xaml.Ribbon.RibbonGroup>);
+            _typeTable[111] = typeof(global::DevExpress.Core.Native.ObservableCollectionView<global::DevExpress.UI.Xaml.Ribbon.RibbonGroup>);
+            _typeTable[112] = typeof(global::DevExpress.UI.Xaml.Ribbon.RibbonGroup);
+            _typeTable[113] = typeof(global::DevExpress.UI.Xaml.Ribbon.Internal.RibbonGroupPanelBase);
+            _typeTable[114] = typeof(global::DevExpress.UI.Xaml.Internal.ItemsPanelBase<global::DevExpress.UI.Xaml.Ribbon.IRibbonItem>);
+            _typeTable[115] = typeof(global::Windows.UI.Xaml.Controls.Panel);
+            _typeTable[116] = typeof(global::DevExpress.UI.Xaml.Ribbon.RibbonItemCollection);
+            _typeTable[117] = typeof(global::DevExpress.UI.Xaml.Internal.TemplatedCollection<global::DevExpress.UI.Xaml.Ribbon.IRibbonItem>);
+            _typeTable[118] = typeof(global::DevExpress.Core.Native.ObservableCollectionView<global::DevExpress.UI.Xaml.Ribbon.IRibbonItem>);
+            _typeTable[119] = typeof(global::DevExpress.UI.Xaml.Ribbon.IRibbonItem);
+            _typeTable[120] = typeof(global::DevExpress.UI.Xaml.Ribbon.Internal.MeasureState);
+            _typeTable[121] = typeof(global::DevExpress.UI.Xaml.Ribbon.Internal.IFlyoutCalculator);
+            _typeTable[122] = typeof(global::Windows.Foundation.Size);
+            _typeTable[123] = typeof(global::DevExpress.UI.Xaml.Ribbon.RibbonViewMode);
+            _typeTable[124] = typeof(global::DevExpress.UI.Xaml.Ribbon.RibbonState);
+            _typeTable[125] = typeof(global::DevExpress.UI.Xaml.Ribbon.RibbonMenuButton);
+            _typeTable[126] = typeof(global::DevExpress.UI.Xaml.Ribbon.Internal.RibbonMenuButtonBase);
+            _typeTable[127] = typeof(global::DevExpress.UI.Xaml.Ribbon.Internal.RibbonMenuItemBase);
+            _typeTable[128] = typeof(global::System.Collections.Generic.IList<global::DevExpress.UI.Xaml.Ribbon.IRibbonItem>);
+            _typeTable[129] = typeof(global::DevExpress.UI.Xaml.FlyoutSettingsBase);
+            _typeTable[130] = typeof(global::DevExpress.UI.Xaml.Ribbon.RibbonSplitButton);
+            _typeTable[131] = typeof(global::DevExpress.UI.Xaml.Ribbon.Internal.FlyoutCalculator);
+            _typeTable[132] = typeof(global::System.Collections.Generic.IEnumerable<global::DevExpress.UI.Xaml.Ribbon.IRibbonItem>);
+            _typeTable[133] = typeof(global::DevExpress.UI.Xaml.Ribbon.Internal.ISeparatorManager);
+            _typeTable[134] = typeof(global::DevExpress.UI.Xaml.Ribbon.Internal.StackedFlyoutControl);
+            _typeTable[135] = typeof(global::DevExpress.UI.Xaml.Ribbon.Internal.RibbonFlyoutControl);
+            _typeTable[136] = typeof(global::DevExpress.UI.Xaml.FlyoutControl);
+            _typeTable[137] = typeof(global::DevExpress.UI.Xaml.Native.FlyoutBase);
+            _typeTable[138] = typeof(global::DevExpress.UI.Xaml.Native.PopupBase);
+            _typeTable[139] = typeof(global::DevExpress.UI.Xaml.Ribbon.Internal.EnabledMode);
+            _typeTable[140] = typeof(global::DevExpress.UI.Xaml.Native.IndicatorDirection);
+            _typeTable[141] = typeof(global::Windows.UI.Xaml.Duration);
+            _typeTable[142] = typeof(global::Windows.Foundation.Rect);
+            _typeTable[143] = typeof(global::Windows.UI.Xaml.Media.Animation.Storyboard);
+            _typeTable[144] = typeof(global::Windows.UI.Xaml.FrameworkElement);
+            _typeTable[145] = typeof(global::DevExpress.UI.Xaml.Native.PlacementMode);
+            _typeTable[146] = typeof(global::DevExpress.UI.Xaml.Ribbon.Internal.RibbonTabsControl);
+            _typeTable[147] = typeof(global::DevExpress.UI.Xaml.Ribbon.TabHeaderItemCollection);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -495,51 +497,52 @@ namespace Assistance_Control.Assistence_Control_XamlTypeInfo
         private object Activate_12_MenuTemplateSelector() { return new global::Assistence_Control.TemplateSelectors.MenuTemplateSelector(); }
         private object Activate_15_Main() { return new global::Assistence_Control.Menu.Main(); }
         private object Activate_16_pMasterPage() { return new global::Assistence_Control.Menu.pMasterPage(); }
-        private object Activate_17_abcAreas() { return new global::Assistence_Control.Views.Areas.abcAreas(); }
-        private object Activate_18_DataGrid() { return new global::MyToolkit.Controls.DataGrid(); }
-        private object Activate_22_DataGridColumnCollection() { return new global::MyToolkit.Controls.DataGridColumnCollection(); }
-        private object Activate_23_ObservableCollection() { return new global::System.Collections.ObjectModel.ObservableCollection<global::MyToolkit.Controls.DataGridColumnBase>(); }
-        private object Activate_24_Collection() { return new global::System.Collections.ObjectModel.Collection<global::MyToolkit.Controls.DataGridColumnBase>(); }
-        private object Activate_34_DataGridTextColumn() { return new global::MyToolkit.Controls.DataGridTextColumn(); }
+        private object Activate_17_DataGrid() { return new global::MyToolkit.Controls.DataGrid(); }
+        private object Activate_21_DataGridColumnCollection() { return new global::MyToolkit.Controls.DataGridColumnCollection(); }
+        private object Activate_22_ObservableCollection() { return new global::System.Collections.ObjectModel.ObservableCollection<global::MyToolkit.Controls.DataGridColumnBase>(); }
+        private object Activate_23_Collection() { return new global::System.Collections.ObjectModel.Collection<global::MyToolkit.Controls.DataGridColumnBase>(); }
+        private object Activate_33_DataGridTextColumn() { return new global::MyToolkit.Controls.DataGridTextColumn(); }
+        private object Activate_39_abcAreas() { return new global::Assistence_Control.Views.Areas.abcAreas(); }
         private object Activate_40_abcEmpleado() { return new global::Assistence_Control.Views.Empleados.abcEmpleado(); }
-        private object Activate_41_PdfViewerControl() { return new global::DevExpress.UI.Xaml.Controls.PdfViewerControl(); }
-        private object Activate_53_SettingsBarItemCollection() { return new global::DevExpress.UI.Xaml.Controls.SettingsBarItemCollection(); }
-        private object Activate_54_ObservableCollection() { return new global::System.Collections.ObjectModel.ObservableCollection<global::DevExpress.UI.Xaml.Controls.ISettingsBarItem>(); }
-        private object Activate_55_Collection() { return new global::System.Collections.ObjectModel.Collection<global::DevExpress.UI.Xaml.Controls.ISettingsBarItem>(); }
-        private object Activate_57_PdfViewerErrorWrapper() { return new global::DevExpress.UI.Xaml.Controls.PdfViewerErrorWrapper(); }
-        private object Activate_58_RadialContextMenuCommandBase() { return new global::DevExpress.UI.Xaml.Controls.RadialContextMenuCommandBase(); }
-        private object Activate_59_DXControl() { return new global::DevExpress.Core.Native.DXControl(); }
-        private object Activate_61_ViewInfo() { return new global::DevExpress.UI.Xaml.Controls.Internal.ViewInfo(); }
-        private object Activate_62_RadialMenuControlBase() { return new global::DevExpress.UI.Xaml.Controls.RadialMenuControlBase(); }
-        private object Activate_64_BackstageTabItem() { return new global::DevExpress.UI.Xaml.Ribbon.BackstageTabItem(); }
-        private object Activate_65_RibbonSelectorItemBase() { return new global::DevExpress.UI.Xaml.Ribbon.Internal.RibbonSelectorItemBase(); }
-        private object Activate_79_BackstageView() { return new global::DevExpress.UI.Xaml.Ribbon.BackstageView(); }
-        private object Activate_84_TemplatedCollection() { return new global::DevExpress.UI.Xaml.Internal.TemplatedCollection<global::DevExpress.UI.Xaml.Ribbon.IBackstageItem>(); }
-        private object Activate_88_TitleSettings() { return new global::DevExpress.UI.Xaml.TitleSettings(); }
-        private object Activate_90_BackstageButtonItem() { return new global::DevExpress.UI.Xaml.Ribbon.BackstageButtonItem(); }
-        private object Activate_92_RibbonGalleryItemGroup() { return new global::DevExpress.UI.Xaml.Ribbon.RibbonGalleryItemGroup(); }
-        private object Activate_93_RibbonGalleryItemCollection() { return new global::DevExpress.UI.Xaml.Ribbon.RibbonGalleryItemCollection(); }
-        private object Activate_95_HelpPane() { return new global::DevExpress.UI.Xaml.Ribbon.HelpPane(); }
-        private object Activate_96_HelpPaneItemCollection() { return new global::DevExpress.UI.Xaml.Ribbon.HelpPaneItemCollection(); }
-        private object Activate_97_TemplatedCollection() { return new global::DevExpress.UI.Xaml.Internal.TemplatedCollection<global::DevExpress.UI.Xaml.Ribbon.IHelpPaneItem>(); }
-        private object Activate_102_RibbonControl() { return new global::DevExpress.UI.Xaml.Ribbon.RibbonControl(); }
-        private object Activate_105_TemplatedCollection() { return new global::DevExpress.UI.Xaml.Internal.TemplatedCollection<global::DevExpress.UI.Xaml.Ribbon.RibbonTab>(); }
-        private object Activate_107_RibbonTab() { return new global::DevExpress.UI.Xaml.Ribbon.RibbonTab(); }
-        private object Activate_108_RibbonGroupCollection() { return new global::DevExpress.UI.Xaml.Ribbon.RibbonGroupCollection(); }
-        private object Activate_109_TemplatedCollection() { return new global::DevExpress.UI.Xaml.Internal.TemplatedCollection<global::DevExpress.UI.Xaml.Ribbon.RibbonGroup>(); }
-        private object Activate_111_RibbonGroup() { return new global::DevExpress.UI.Xaml.Ribbon.RibbonGroup(); }
-        private object Activate_115_RibbonItemCollection() { return new global::DevExpress.UI.Xaml.Ribbon.RibbonItemCollection(); }
-        private object Activate_116_TemplatedCollection() { return new global::DevExpress.UI.Xaml.Internal.TemplatedCollection<global::DevExpress.UI.Xaml.Ribbon.IRibbonItem>(); }
-        private object Activate_124_RibbonMenuButton() { return new global::DevExpress.UI.Xaml.Ribbon.RibbonMenuButton(); }
-        private object Activate_129_RibbonSplitButton() { return new global::DevExpress.UI.Xaml.Ribbon.RibbonSplitButton(); }
-        private object Activate_130_FlyoutCalculator() { return new global::DevExpress.UI.Xaml.Ribbon.Internal.FlyoutCalculator(); }
-        private object Activate_133_StackedFlyoutControl() { return new global::DevExpress.UI.Xaml.Ribbon.Internal.StackedFlyoutControl(); }
-        private object Activate_134_RibbonFlyoutControl() { return new global::DevExpress.UI.Xaml.Ribbon.Internal.RibbonFlyoutControl(); }
-        private object Activate_135_FlyoutControl() { return new global::DevExpress.UI.Xaml.FlyoutControl(); }
-        private object Activate_136_FlyoutBase() { return new global::DevExpress.UI.Xaml.Native.FlyoutBase(); }
-        private object Activate_137_PopupBase() { return new global::DevExpress.UI.Xaml.Native.PopupBase(); }
-        private object Activate_145_RibbonTabsControl() { return new global::DevExpress.UI.Xaml.Ribbon.Internal.RibbonTabsControl(); }
-        private object Activate_146_TabHeaderItemCollection() { return new global::DevExpress.UI.Xaml.Ribbon.TabHeaderItemCollection(); }
+        private object Activate_41_MasterHorarios() { return new global::Assistance_Control.Views.Horarios.MasterHorarios(); }
+        private object Activate_42_PdfViewerControl() { return new global::DevExpress.UI.Xaml.Controls.PdfViewerControl(); }
+        private object Activate_54_SettingsBarItemCollection() { return new global::DevExpress.UI.Xaml.Controls.SettingsBarItemCollection(); }
+        private object Activate_55_ObservableCollection() { return new global::System.Collections.ObjectModel.ObservableCollection<global::DevExpress.UI.Xaml.Controls.ISettingsBarItem>(); }
+        private object Activate_56_Collection() { return new global::System.Collections.ObjectModel.Collection<global::DevExpress.UI.Xaml.Controls.ISettingsBarItem>(); }
+        private object Activate_58_PdfViewerErrorWrapper() { return new global::DevExpress.UI.Xaml.Controls.PdfViewerErrorWrapper(); }
+        private object Activate_59_RadialContextMenuCommandBase() { return new global::DevExpress.UI.Xaml.Controls.RadialContextMenuCommandBase(); }
+        private object Activate_60_DXControl() { return new global::DevExpress.Core.Native.DXControl(); }
+        private object Activate_62_ViewInfo() { return new global::DevExpress.UI.Xaml.Controls.Internal.ViewInfo(); }
+        private object Activate_63_RadialMenuControlBase() { return new global::DevExpress.UI.Xaml.Controls.RadialMenuControlBase(); }
+        private object Activate_65_BackstageTabItem() { return new global::DevExpress.UI.Xaml.Ribbon.BackstageTabItem(); }
+        private object Activate_66_RibbonSelectorItemBase() { return new global::DevExpress.UI.Xaml.Ribbon.Internal.RibbonSelectorItemBase(); }
+        private object Activate_80_BackstageView() { return new global::DevExpress.UI.Xaml.Ribbon.BackstageView(); }
+        private object Activate_85_TemplatedCollection() { return new global::DevExpress.UI.Xaml.Internal.TemplatedCollection<global::DevExpress.UI.Xaml.Ribbon.IBackstageItem>(); }
+        private object Activate_89_TitleSettings() { return new global::DevExpress.UI.Xaml.TitleSettings(); }
+        private object Activate_91_BackstageButtonItem() { return new global::DevExpress.UI.Xaml.Ribbon.BackstageButtonItem(); }
+        private object Activate_93_RibbonGalleryItemGroup() { return new global::DevExpress.UI.Xaml.Ribbon.RibbonGalleryItemGroup(); }
+        private object Activate_94_RibbonGalleryItemCollection() { return new global::DevExpress.UI.Xaml.Ribbon.RibbonGalleryItemCollection(); }
+        private object Activate_96_HelpPane() { return new global::DevExpress.UI.Xaml.Ribbon.HelpPane(); }
+        private object Activate_97_HelpPaneItemCollection() { return new global::DevExpress.UI.Xaml.Ribbon.HelpPaneItemCollection(); }
+        private object Activate_98_TemplatedCollection() { return new global::DevExpress.UI.Xaml.Internal.TemplatedCollection<global::DevExpress.UI.Xaml.Ribbon.IHelpPaneItem>(); }
+        private object Activate_103_RibbonControl() { return new global::DevExpress.UI.Xaml.Ribbon.RibbonControl(); }
+        private object Activate_106_TemplatedCollection() { return new global::DevExpress.UI.Xaml.Internal.TemplatedCollection<global::DevExpress.UI.Xaml.Ribbon.RibbonTab>(); }
+        private object Activate_108_RibbonTab() { return new global::DevExpress.UI.Xaml.Ribbon.RibbonTab(); }
+        private object Activate_109_RibbonGroupCollection() { return new global::DevExpress.UI.Xaml.Ribbon.RibbonGroupCollection(); }
+        private object Activate_110_TemplatedCollection() { return new global::DevExpress.UI.Xaml.Internal.TemplatedCollection<global::DevExpress.UI.Xaml.Ribbon.RibbonGroup>(); }
+        private object Activate_112_RibbonGroup() { return new global::DevExpress.UI.Xaml.Ribbon.RibbonGroup(); }
+        private object Activate_116_RibbonItemCollection() { return new global::DevExpress.UI.Xaml.Ribbon.RibbonItemCollection(); }
+        private object Activate_117_TemplatedCollection() { return new global::DevExpress.UI.Xaml.Internal.TemplatedCollection<global::DevExpress.UI.Xaml.Ribbon.IRibbonItem>(); }
+        private object Activate_125_RibbonMenuButton() { return new global::DevExpress.UI.Xaml.Ribbon.RibbonMenuButton(); }
+        private object Activate_130_RibbonSplitButton() { return new global::DevExpress.UI.Xaml.Ribbon.RibbonSplitButton(); }
+        private object Activate_131_FlyoutCalculator() { return new global::DevExpress.UI.Xaml.Ribbon.Internal.FlyoutCalculator(); }
+        private object Activate_134_StackedFlyoutControl() { return new global::DevExpress.UI.Xaml.Ribbon.Internal.StackedFlyoutControl(); }
+        private object Activate_135_RibbonFlyoutControl() { return new global::DevExpress.UI.Xaml.Ribbon.Internal.RibbonFlyoutControl(); }
+        private object Activate_136_FlyoutControl() { return new global::DevExpress.UI.Xaml.FlyoutControl(); }
+        private object Activate_137_FlyoutBase() { return new global::DevExpress.UI.Xaml.Native.FlyoutBase(); }
+        private object Activate_138_PopupBase() { return new global::DevExpress.UI.Xaml.Native.PopupBase(); }
+        private object Activate_146_RibbonTabsControl() { return new global::DevExpress.UI.Xaml.Ribbon.Internal.RibbonTabsControl(); }
+        private object Activate_147_TabHeaderItemCollection() { return new global::DevExpress.UI.Xaml.Ribbon.TabHeaderItemCollection(); }
         private void VectorAdd_8_ObservableCollection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::Assistence_Control.Menu.NavLink>)instance;
@@ -552,169 +555,169 @@ namespace Assistance_Control.Assistence_Control_XamlTypeInfo
             var newItem = (global::Assistence_Control.Menu.NavLink)item;
             collection.Add(newItem);
         }
-        private void VectorAdd_22_DataGridColumnCollection(object instance, object item)
+        private void VectorAdd_21_DataGridColumnCollection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::MyToolkit.Controls.DataGridColumnBase>)instance;
             var newItem = (global::MyToolkit.Controls.DataGridColumnBase)item;
             collection.Add(newItem);
         }
-        private void VectorAdd_23_ObservableCollection(object instance, object item)
+        private void VectorAdd_22_ObservableCollection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::MyToolkit.Controls.DataGridColumnBase>)instance;
             var newItem = (global::MyToolkit.Controls.DataGridColumnBase)item;
             collection.Add(newItem);
         }
-        private void VectorAdd_24_Collection(object instance, object item)
+        private void VectorAdd_23_Collection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::MyToolkit.Controls.DataGridColumnBase>)instance;
             var newItem = (global::MyToolkit.Controls.DataGridColumnBase)item;
             collection.Add(newItem);
         }
-        private void VectorAdd_30_IList(object instance, object item)
+        private void VectorAdd_29_IList(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::System.Object>)instance;
             var newItem = (global::System.Object)item;
             collection.Add(newItem);
         }
-        private void VectorAdd_53_SettingsBarItemCollection(object instance, object item)
+        private void VectorAdd_54_SettingsBarItemCollection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::DevExpress.UI.Xaml.Controls.ISettingsBarItem>)instance;
             var newItem = (global::DevExpress.UI.Xaml.Controls.ISettingsBarItem)item;
             collection.Add(newItem);
         }
-        private void VectorAdd_54_ObservableCollection(object instance, object item)
+        private void VectorAdd_55_ObservableCollection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::DevExpress.UI.Xaml.Controls.ISettingsBarItem>)instance;
             var newItem = (global::DevExpress.UI.Xaml.Controls.ISettingsBarItem)item;
             collection.Add(newItem);
         }
-        private void VectorAdd_55_Collection(object instance, object item)
+        private void VectorAdd_56_Collection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::DevExpress.UI.Xaml.Controls.ISettingsBarItem>)instance;
             var newItem = (global::DevExpress.UI.Xaml.Controls.ISettingsBarItem)item;
             collection.Add(newItem);
         }
-        private void VectorAdd_82_BackstageItemCollection(object instance, object item)
+        private void VectorAdd_83_BackstageItemCollection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::DevExpress.UI.Xaml.Ribbon.IBackstageItem>)instance;
             var newItem = (global::DevExpress.UI.Xaml.Ribbon.IBackstageItem)item;
             collection.Add(newItem);
         }
-        private void VectorAdd_83_TemplatedCollectionWithOwner(object instance, object item)
+        private void VectorAdd_84_TemplatedCollectionWithOwner(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::DevExpress.UI.Xaml.Ribbon.IBackstageItem>)instance;
             var newItem = (global::DevExpress.UI.Xaml.Ribbon.IBackstageItem)item;
             collection.Add(newItem);
         }
-        private void VectorAdd_84_TemplatedCollection(object instance, object item)
+        private void VectorAdd_85_TemplatedCollection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::DevExpress.UI.Xaml.Ribbon.IBackstageItem>)instance;
             var newItem = (global::DevExpress.UI.Xaml.Ribbon.IBackstageItem)item;
             collection.Add(newItem);
         }
-        private void VectorAdd_85_ObservableCollectionView(object instance, object item)
+        private void VectorAdd_86_ObservableCollectionView(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::DevExpress.UI.Xaml.Ribbon.IBackstageItem>)instance;
             var newItem = (global::DevExpress.UI.Xaml.Ribbon.IBackstageItem)item;
             collection.Add(newItem);
         }
-        private void VectorAdd_93_RibbonGalleryItemCollection(object instance, object item)
+        private void VectorAdd_94_RibbonGalleryItemCollection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::System.Object>)instance;
             var newItem = (global::System.Object)item;
             collection.Add(newItem);
         }
-        private void VectorAdd_94_ObservableCollectionView(object instance, object item)
+        private void VectorAdd_95_ObservableCollectionView(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::System.Object>)instance;
             var newItem = (global::System.Object)item;
             collection.Add(newItem);
         }
-        private void VectorAdd_96_HelpPaneItemCollection(object instance, object item)
+        private void VectorAdd_97_HelpPaneItemCollection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::DevExpress.UI.Xaml.Ribbon.IHelpPaneItem>)instance;
             var newItem = (global::DevExpress.UI.Xaml.Ribbon.IHelpPaneItem)item;
             collection.Add(newItem);
         }
-        private void VectorAdd_97_TemplatedCollection(object instance, object item)
+        private void VectorAdd_98_TemplatedCollection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::DevExpress.UI.Xaml.Ribbon.IHelpPaneItem>)instance;
             var newItem = (global::DevExpress.UI.Xaml.Ribbon.IHelpPaneItem)item;
             collection.Add(newItem);
         }
-        private void VectorAdd_98_ObservableCollectionView(object instance, object item)
+        private void VectorAdd_99_ObservableCollectionView(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::DevExpress.UI.Xaml.Ribbon.IHelpPaneItem>)instance;
             var newItem = (global::DevExpress.UI.Xaml.Ribbon.IHelpPaneItem)item;
             collection.Add(newItem);
         }
-        private void VectorAdd_103_RibbonTabCollection(object instance, object item)
+        private void VectorAdd_104_RibbonTabCollection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::DevExpress.UI.Xaml.Ribbon.RibbonTab>)instance;
             var newItem = (global::DevExpress.UI.Xaml.Ribbon.RibbonTab)item;
             collection.Add(newItem);
         }
-        private void VectorAdd_104_TemplatedCollectionWithOwner(object instance, object item)
+        private void VectorAdd_105_TemplatedCollectionWithOwner(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::DevExpress.UI.Xaml.Ribbon.RibbonTab>)instance;
             var newItem = (global::DevExpress.UI.Xaml.Ribbon.RibbonTab)item;
             collection.Add(newItem);
         }
-        private void VectorAdd_105_TemplatedCollection(object instance, object item)
+        private void VectorAdd_106_TemplatedCollection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::DevExpress.UI.Xaml.Ribbon.RibbonTab>)instance;
             var newItem = (global::DevExpress.UI.Xaml.Ribbon.RibbonTab)item;
             collection.Add(newItem);
         }
-        private void VectorAdd_106_ObservableCollectionView(object instance, object item)
+        private void VectorAdd_107_ObservableCollectionView(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::DevExpress.UI.Xaml.Ribbon.RibbonTab>)instance;
             var newItem = (global::DevExpress.UI.Xaml.Ribbon.RibbonTab)item;
             collection.Add(newItem);
         }
-        private void VectorAdd_108_RibbonGroupCollection(object instance, object item)
+        private void VectorAdd_109_RibbonGroupCollection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::DevExpress.UI.Xaml.Ribbon.RibbonGroup>)instance;
             var newItem = (global::DevExpress.UI.Xaml.Ribbon.RibbonGroup)item;
             collection.Add(newItem);
         }
-        private void VectorAdd_109_TemplatedCollection(object instance, object item)
+        private void VectorAdd_110_TemplatedCollection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::DevExpress.UI.Xaml.Ribbon.RibbonGroup>)instance;
             var newItem = (global::DevExpress.UI.Xaml.Ribbon.RibbonGroup)item;
             collection.Add(newItem);
         }
-        private void VectorAdd_110_ObservableCollectionView(object instance, object item)
+        private void VectorAdd_111_ObservableCollectionView(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::DevExpress.UI.Xaml.Ribbon.RibbonGroup>)instance;
             var newItem = (global::DevExpress.UI.Xaml.Ribbon.RibbonGroup)item;
             collection.Add(newItem);
         }
-        private void VectorAdd_115_RibbonItemCollection(object instance, object item)
+        private void VectorAdd_116_RibbonItemCollection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::DevExpress.UI.Xaml.Ribbon.IRibbonItem>)instance;
             var newItem = (global::DevExpress.UI.Xaml.Ribbon.IRibbonItem)item;
             collection.Add(newItem);
         }
-        private void VectorAdd_116_TemplatedCollection(object instance, object item)
+        private void VectorAdd_117_TemplatedCollection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::DevExpress.UI.Xaml.Ribbon.IRibbonItem>)instance;
             var newItem = (global::DevExpress.UI.Xaml.Ribbon.IRibbonItem)item;
             collection.Add(newItem);
         }
-        private void VectorAdd_117_ObservableCollectionView(object instance, object item)
+        private void VectorAdd_118_ObservableCollectionView(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::DevExpress.UI.Xaml.Ribbon.IRibbonItem>)instance;
             var newItem = (global::DevExpress.UI.Xaml.Ribbon.IRibbonItem)item;
             collection.Add(newItem);
         }
-        private void VectorAdd_127_IList(object instance, object item)
+        private void VectorAdd_128_IList(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::DevExpress.UI.Xaml.Ribbon.IRibbonItem>)instance;
             var newItem = (global::DevExpress.UI.Xaml.Ribbon.IRibbonItem)item;
             collection.Add(newItem);
         }
-        private void VectorAdd_146_TabHeaderItemCollection(object instance, object item)
+        private void VectorAdd_147_TabHeaderItemCollection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::DevExpress.UI.Xaml.Ribbon.IRibbonItem>)instance;
             var newItem = (global::DevExpress.UI.Xaml.Ribbon.IRibbonItem)item;
@@ -839,16 +842,9 @@ namespace Assistance_Control.Assistence_Control_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 17:   //  Assistence_Control.Views.Areas.abcAreas
-                userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_17_abcAreas;
-                userType.SetIsLocalType();
-                xamlType = userType;
-                break;
-
-            case 18:   //  MyToolkit.Controls.DataGrid
+            case 17:   //  MyToolkit.Controls.DataGrid
                 userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Control"));
-                userType.Activator = Activate_18_DataGrid;
+                userType.Activator = Activate_17_DataGrid;
                 userType.AddMemberName("SelectionMode");
                 userType.AddMemberName("ItemsSource");
                 userType.AddMemberName("HeaderBackground");
@@ -867,40 +863,40 @@ namespace Assistance_Control.Assistence_Control_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 19:   //  Windows.UI.Xaml.Controls.Control
+            case 18:   //  Windows.UI.Xaml.Controls.Control
                 xamlType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 20:   //  Windows.UI.Xaml.Controls.SelectionMode
+            case 19:   //  Windows.UI.Xaml.Controls.SelectionMode
                 xamlType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 21:   //  Windows.UI.Xaml.Media.Brush
+            case 20:   //  Windows.UI.Xaml.Media.Brush
                 xamlType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 22:   //  MyToolkit.Controls.DataGridColumnCollection
+            case 21:   //  MyToolkit.Controls.DataGridColumnCollection
                 userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Collections.ObjectModel.ObservableCollection`1<MyToolkit.Controls.DataGridColumnBase>"));
-                userType.CollectionAdd = VectorAdd_22_DataGridColumnCollection;
+                userType.CollectionAdd = VectorAdd_21_DataGridColumnCollection;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 23:   //  System.Collections.ObjectModel.ObservableCollection`1<MyToolkit.Controls.DataGridColumnBase>
+            case 22:   //  System.Collections.ObjectModel.ObservableCollection`1<MyToolkit.Controls.DataGridColumnBase>
                 userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Collections.ObjectModel.Collection`1<MyToolkit.Controls.DataGridColumnBase>"));
-                userType.Activator = Activate_23_ObservableCollection;
-                userType.CollectionAdd = VectorAdd_23_ObservableCollection;
+                userType.Activator = Activate_22_ObservableCollection;
+                userType.CollectionAdd = VectorAdd_22_ObservableCollection;
                 xamlType = userType;
                 break;
 
-            case 24:   //  System.Collections.ObjectModel.Collection`1<MyToolkit.Controls.DataGridColumnBase>
+            case 23:   //  System.Collections.ObjectModel.Collection`1<MyToolkit.Controls.DataGridColumnBase>
                 userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.Activator = Activate_24_Collection;
-                userType.CollectionAdd = VectorAdd_24_Collection;
+                userType.Activator = Activate_23_Collection;
+                userType.CollectionAdd = VectorAdd_23_Collection;
                 xamlType = userType;
                 break;
 
-            case 25:   //  MyToolkit.Controls.DataGridColumnBase
+            case 24:   //  MyToolkit.Controls.DataGridColumnBase
                 userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.DependencyObject"));
                 userType.AddMemberName("CanSort");
                 userType.AddMemberName("IsSelected");
@@ -912,46 +908,46 @@ namespace Assistance_Control.Assistence_Control_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 26:   //  Windows.UI.Xaml.DependencyObject
+            case 25:   //  Windows.UI.Xaml.DependencyObject
                 xamlType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 27:   //  Boolean
+            case 26:   //  Boolean
                 xamlType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 28:   //  Windows.UI.Xaml.GridLength
+            case 27:   //  Windows.UI.Xaml.GridLength
                 xamlType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 29:   //  Windows.UI.Xaml.PropertyPath
+            case 28:   //  Windows.UI.Xaml.PropertyPath
                 xamlType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 30:   //  System.Collections.Generic.IList`1<Object>
+            case 29:   //  System.Collections.Generic.IList`1<Object>
                 userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, null);
-                userType.CollectionAdd = VectorAdd_30_IList;
+                userType.CollectionAdd = VectorAdd_29_IList;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 31:   //  MyToolkit.Collections.IObservableCollectionView
+            case 30:   //  MyToolkit.Collections.IObservableCollectionView
                 userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, null);
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 32:   //  Int32
+            case 31:   //  Int32
                 xamlType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 33:   //  Windows.UI.Xaml.Style
+            case 32:   //  Windows.UI.Xaml.Style
                 xamlType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 34:   //  MyToolkit.Controls.DataGridTextColumn
+            case 33:   //  MyToolkit.Controls.DataGridTextColumn
                 userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("MyToolkit.Controls.DataGridBoundColumn"));
-                userType.Activator = Activate_34_DataGridTextColumn;
+                userType.Activator = Activate_33_DataGridTextColumn;
                 userType.AddMemberName("Style");
                 userType.AddMemberName("FontSize");
                 userType.AddMemberName("FontStyle");
@@ -959,22 +955,22 @@ namespace Assistance_Control.Assistence_Control_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 35:   //  MyToolkit.Controls.DataGridBoundColumn
+            case 34:   //  MyToolkit.Controls.DataGridBoundColumn
                 userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("MyToolkit.Controls.DataGridColumnBase"));
                 userType.AddMemberName("Binding");
                 userType.AddMemberName("OrderPropertyPath");
                 xamlType = userType;
                 break;
 
-            case 36:   //  Windows.UI.Xaml.Data.Binding
+            case 35:   //  Windows.UI.Xaml.Data.Binding
                 xamlType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 37:   //  Double
+            case 36:   //  Double
                 xamlType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 38:   //  Windows.UI.Text.FontStyle
+            case 37:   //  Windows.UI.Text.FontStyle
                 userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("Normal", global::Windows.UI.Text.FontStyle.Normal);
                 userType.AddEnumValue("Oblique", global::Windows.UI.Text.FontStyle.Oblique);
@@ -982,8 +978,15 @@ namespace Assistance_Control.Assistence_Control_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 39:   //  System.Enum
+            case 38:   //  System.Enum
                 userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.ValueType"));
+                xamlType = userType;
+                break;
+
+            case 39:   //  Assistence_Control.Views.Areas.abcAreas
+                userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_39_abcAreas;
+                userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
@@ -994,9 +997,16 @@ namespace Assistance_Control.Assistence_Control_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 41:   //  DevExpress.UI.Xaml.Controls.PdfViewerControl
+            case 41:   //  Assistance_Control.Views.Horarios.MasterHorarios
+                userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_41_MasterHorarios;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 42:   //  DevExpress.UI.Xaml.Controls.PdfViewerControl
                 userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Control"));
-                userType.Activator = Activate_41_PdfViewerControl;
+                userType.Activator = Activate_42_PdfViewerControl;
                 userType.AddMemberName("DocumentSource");
                 userType.AddMemberName("DocumentUri");
                 userType.AddMemberName("PdfViewMode");
@@ -1068,30 +1078,30 @@ namespace Assistance_Control.Assistence_Control_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 42:   //  System.Uri
+            case 43:   //  System.Uri
                 userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 43:   //  DevExpress.UI.Xaml.Controls.PdfViewMode
+            case 44:   //  DevExpress.UI.Xaml.Controls.PdfViewMode
                 userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("SinglePage", global::DevExpress.UI.Xaml.Controls.PdfViewMode.SinglePage);
                 userType.AddEnumValue("Continuous", global::DevExpress.UI.Xaml.Controls.PdfViewMode.Continuous);
                 xamlType = userType;
                 break;
 
-            case 44:   //  Windows.Graphics.Printing.IPrintDocumentSource
+            case 45:   //  Windows.Graphics.Printing.IPrintDocumentSource
                 userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, null);
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 45:   //  Windows.UI.Xaml.Thickness
+            case 46:   //  Windows.UI.Xaml.Thickness
                 xamlType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 46:   //  DevExpress.UI.Xaml.Controls.PdfZoomMode
+            case 47:   //  DevExpress.UI.Xaml.Controls.PdfZoomMode
                 userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("FitPageLevel", global::DevExpress.UI.Xaml.Controls.PdfZoomMode.FitPageLevel);
                 userType.AddEnumValue("FitWidth", global::DevExpress.UI.Xaml.Controls.PdfZoomMode.FitWidth);
@@ -1102,72 +1112,72 @@ namespace Assistance_Control.Assistence_Control_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 47:   //  Single
+            case 48:   //  Single
                 xamlType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 48:   //  DevExpress.UI.Xaml.Controls.PdfDocumentContainer
+            case 49:   //  DevExpress.UI.Xaml.Controls.PdfDocumentContainer
                 userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.Mvvm.BindableBase"));
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 49:   //  DevExpress.Mvvm.BindableBase
+            case 50:   //  DevExpress.Mvvm.BindableBase
                 userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 xamlType = userType;
                 break;
 
-            case 50:   //  Windows.UI.Xaml.CornerRadius
+            case 51:   //  Windows.UI.Xaml.CornerRadius
                 xamlType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 51:   //  System.Windows.Input.ICommand
+            case 52:   //  System.Windows.Input.ICommand
                 userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, null);
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 52:   //  System.Collections.Generic.IEnumerable`1<DevExpress.UI.Xaml.Controls.IPdfPageBookmark>
+            case 53:   //  System.Collections.Generic.IEnumerable`1<DevExpress.UI.Xaml.Controls.IPdfPageBookmark>
                 userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, null);
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 53:   //  DevExpress.UI.Xaml.Controls.SettingsBarItemCollection
+            case 54:   //  DevExpress.UI.Xaml.Controls.SettingsBarItemCollection
                 userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Collections.ObjectModel.ObservableCollection`1<DevExpress.UI.Xaml.Controls.ISettingsBarItem>"));
-                userType.CollectionAdd = VectorAdd_53_SettingsBarItemCollection;
+                userType.CollectionAdd = VectorAdd_54_SettingsBarItemCollection;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 54:   //  System.Collections.ObjectModel.ObservableCollection`1<DevExpress.UI.Xaml.Controls.ISettingsBarItem>
+            case 55:   //  System.Collections.ObjectModel.ObservableCollection`1<DevExpress.UI.Xaml.Controls.ISettingsBarItem>
                 userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Collections.ObjectModel.Collection`1<DevExpress.UI.Xaml.Controls.ISettingsBarItem>"));
-                userType.Activator = Activate_54_ObservableCollection;
-                userType.CollectionAdd = VectorAdd_54_ObservableCollection;
+                userType.Activator = Activate_55_ObservableCollection;
+                userType.CollectionAdd = VectorAdd_55_ObservableCollection;
                 xamlType = userType;
                 break;
 
-            case 55:   //  System.Collections.ObjectModel.Collection`1<DevExpress.UI.Xaml.Controls.ISettingsBarItem>
+            case 56:   //  System.Collections.ObjectModel.Collection`1<DevExpress.UI.Xaml.Controls.ISettingsBarItem>
                 userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.Activator = Activate_55_Collection;
-                userType.CollectionAdd = VectorAdd_55_Collection;
+                userType.Activator = Activate_56_Collection;
+                userType.CollectionAdd = VectorAdd_56_Collection;
                 xamlType = userType;
                 break;
 
-            case 56:   //  DevExpress.UI.Xaml.Controls.ISettingsBarItem
+            case 57:   //  DevExpress.UI.Xaml.Controls.ISettingsBarItem
                 userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, null);
                 xamlType = userType;
                 break;
 
-            case 57:   //  DevExpress.UI.Xaml.Controls.PdfViewerErrorWrapper
+            case 58:   //  DevExpress.UI.Xaml.Controls.PdfViewerErrorWrapper
                 userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.Mvvm.BindableBase"));
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 58:   //  DevExpress.UI.Xaml.Controls.RadialContextMenuCommandBase
+            case 59:   //  DevExpress.UI.Xaml.Controls.RadialContextMenuCommandBase
                 userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.Core.Native.DXControl"));
-                userType.Activator = Activate_58_RadialContextMenuCommandBase;
+                userType.Activator = Activate_59_RadialContextMenuCommandBase;
                 userType.AddMemberName("Content");
                 userType.AddMemberName("ActualIndex");
                 userType.AddMemberName("Index");
@@ -1181,9 +1191,9 @@ namespace Assistance_Control.Assistence_Control_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 59:   //  DevExpress.Core.Native.DXControl
+            case 60:   //  DevExpress.Core.Native.DXControl
                 userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Control"));
-                userType.Activator = Activate_59_DXControl;
+                userType.Activator = Activate_60_DXControl;
                 userType.AddMemberName("IsFocused");
                 userType.AddMemberName("IsKeyboardFocusWithin");
                 userType.AddMemberName("IsLoaded");
@@ -1191,32 +1201,32 @@ namespace Assistance_Control.Assistence_Control_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 60:   //  Windows.Foundation.Point
+            case 61:   //  Windows.Foundation.Point
                 xamlType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 61:   //  DevExpress.UI.Xaml.Controls.Internal.ViewInfo
+            case 62:   //  DevExpress.UI.Xaml.Controls.Internal.ViewInfo
                 userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.Mvvm.BindableBase"));
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 62:   //  DevExpress.UI.Xaml.Controls.RadialMenuControlBase
+            case 63:   //  DevExpress.UI.Xaml.Controls.RadialMenuControlBase
                 userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.ContentControl"));
-                userType.Activator = Activate_62_RadialMenuControlBase;
+                userType.Activator = Activate_63_RadialMenuControlBase;
                 userType.AddMemberName("DefaultActionCommand");
                 userType.AddMemberName("NavigateCommand");
                 userType.SetIsBindable();
                 xamlType = userType;
                 break;
 
-            case 63:   //  Windows.UI.Xaml.Controls.ContentControl
+            case 64:   //  Windows.UI.Xaml.Controls.ContentControl
                 xamlType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 64:   //  DevExpress.UI.Xaml.Ribbon.BackstageTabItem
+            case 65:   //  DevExpress.UI.Xaml.Ribbon.BackstageTabItem
                 userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.RibbonSelectorItemBase"));
-                userType.Activator = Activate_64_BackstageTabItem;
+                userType.Activator = Activate_65_BackstageTabItem;
                 userType.SetContentPropertyName("DevExpress.UI.Xaml.Ribbon.BackstageTabItem.ControlPane");
                 userType.AddMemberName("ControlPane");
                 userType.AddMemberName("ControlPaneShowMode");
@@ -1225,19 +1235,19 @@ namespace Assistance_Control.Assistence_Control_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 65:   //  DevExpress.UI.Xaml.Ribbon.Internal.RibbonSelectorItemBase
+            case 66:   //  DevExpress.UI.Xaml.Ribbon.Internal.RibbonSelectorItemBase
                 userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.RibbonItemBaseEx"));
-                userType.Activator = Activate_65_RibbonSelectorItemBase;
+                userType.Activator = Activate_66_RibbonSelectorItemBase;
                 userType.AddMemberName("IsSelected");
                 xamlType = userType;
                 break;
 
-            case 66:   //  DevExpress.UI.Xaml.Ribbon.Internal.RibbonItemBaseEx
+            case 67:   //  DevExpress.UI.Xaml.Ribbon.Internal.RibbonItemBaseEx
                 userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.RibbonItemBase"));
                 xamlType = userType;
                 break;
 
-            case 67:   //  DevExpress.UI.Xaml.Ribbon.Internal.RibbonItemBase
+            case 68:   //  DevExpress.UI.Xaml.Ribbon.Internal.RibbonItemBase
                 userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.PointerItemBase"));
                 userType.AddMemberName("Icon");
                 userType.AddMemberName("IconSource");
@@ -1259,7 +1269,7 @@ namespace Assistance_Control.Assistence_Control_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 68:   //  DevExpress.UI.Xaml.Ribbon.Internal.PointerItemBase
+            case 69:   //  DevExpress.UI.Xaml.Ribbon.Internal.PointerItemBase
                 userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.UI.Xaml.Internal.ContentControlEx"));
                 userType.AddMemberName("ClickMode");
                 userType.AddMemberName("IsPointerOver");
@@ -1267,39 +1277,39 @@ namespace Assistance_Control.Assistence_Control_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 69:   //  DevExpress.UI.Xaml.Internal.ContentControlEx
+            case 70:   //  DevExpress.UI.Xaml.Internal.ContentControlEx
                 userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.ContentControl"));
                 userType.AddMemberName("IsLoaded");
                 xamlType = userType;
                 break;
 
-            case 70:   //  DevExpress.UI.Xaml.Ribbon.ControlPaneShowMode
+            case 71:   //  DevExpress.UI.Xaml.Ribbon.ControlPaneShowMode
                 userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("Inline", global::DevExpress.UI.Xaml.Ribbon.ControlPaneShowMode.Inline);
                 userType.AddEnumValue("Flyout", global::DevExpress.UI.Xaml.Ribbon.ControlPaneShowMode.Flyout);
                 xamlType = userType;
                 break;
 
-            case 71:   //  Windows.UI.Xaml.Controls.IconElement
+            case 72:   //  Windows.UI.Xaml.Controls.IconElement
                 xamlType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 72:   //  Windows.UI.Xaml.Media.SolidColorBrush
+            case 73:   //  Windows.UI.Xaml.Media.SolidColorBrush
                 xamlType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 73:   //  Windows.UI.Xaml.Media.Stretch
+            case 74:   //  Windows.UI.Xaml.Media.Stretch
                 xamlType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 74:   //  DevExpress.UI.Xaml.IconSizeUnit
+            case 75:   //  DevExpress.UI.Xaml.IconSizeUnit
                 userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("px", global::DevExpress.UI.Xaml.IconSizeUnit.px);
                 userType.AddEnumValue("pt", global::DevExpress.UI.Xaml.IconSizeUnit.pt);
                 xamlType = userType;
                 break;
 
-            case 75:   //  DevExpress.UI.Xaml.Ribbon.RibbonItemStyle
+            case 76:   //  DevExpress.UI.Xaml.Ribbon.RibbonItemStyle
                 userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("Default", global::DevExpress.UI.Xaml.Ribbon.RibbonItemStyle.Default);
                 userType.AddEnumValue("GlyphWithText", global::DevExpress.UI.Xaml.Ribbon.RibbonItemStyle.GlyphWithText);
@@ -1308,7 +1318,7 @@ namespace Assistance_Control.Assistence_Control_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 76:   //  DevExpress.UI.Xaml.Ribbon.CollapsePriority
+            case 77:   //  DevExpress.UI.Xaml.Ribbon.CollapsePriority
                 userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("Low", global::DevExpress.UI.Xaml.Ribbon.CollapsePriority.Low);
                 userType.AddEnumValue("Normal", global::DevExpress.UI.Xaml.Ribbon.CollapsePriority.Normal);
@@ -1316,19 +1326,19 @@ namespace Assistance_Control.Assistence_Control_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 77:   //  DevExpress.UI.Xaml.Ribbon.ControlTemplateSelector
+            case 78:   //  DevExpress.UI.Xaml.Ribbon.ControlTemplateSelector
                 userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 78:   //  Windows.UI.Xaml.Controls.ClickMode
+            case 79:   //  Windows.UI.Xaml.Controls.ClickMode
                 xamlType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 79:   //  DevExpress.UI.Xaml.Ribbon.BackstageView
+            case 80:   //  DevExpress.UI.Xaml.Ribbon.BackstageView
                 userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.RibbonHeaderedContainerBase"));
-                userType.Activator = Activate_79_BackstageView;
+                userType.Activator = Activate_80_BackstageView;
                 userType.SetContentPropertyName("DevExpress.UI.Xaml.Ribbon.BackstageView.Items");
                 userType.AddMemberName("Items");
                 userType.AddMemberName("ItemsSource");
@@ -1348,59 +1358,59 @@ namespace Assistance_Control.Assistence_Control_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 80:   //  DevExpress.UI.Xaml.Ribbon.Internal.RibbonHeaderedContainerBase
+            case 81:   //  DevExpress.UI.Xaml.Ribbon.Internal.RibbonHeaderedContainerBase
                 userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.UI.Xaml.Internal.ControlEx"));
                 userType.AddMemberName("Caption");
                 xamlType = userType;
                 break;
 
-            case 81:   //  DevExpress.UI.Xaml.Internal.ControlEx
+            case 82:   //  DevExpress.UI.Xaml.Internal.ControlEx
                 userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Control"));
                 userType.AddMemberName("IsLoaded");
                 xamlType = userType;
                 break;
 
-            case 82:   //  DevExpress.UI.Xaml.Ribbon.BackstageItemCollection
+            case 83:   //  DevExpress.UI.Xaml.Ribbon.BackstageItemCollection
                 userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.UI.Xaml.Internal.TemplatedCollectionWithOwner`2<DevExpress.UI.Xaml.Ribbon.IBackstageItem, DevExpress.UI.Xaml.Ribbon.BackstageView>"));
-                userType.CollectionAdd = VectorAdd_82_BackstageItemCollection;
+                userType.CollectionAdd = VectorAdd_83_BackstageItemCollection;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 83:   //  DevExpress.UI.Xaml.Internal.TemplatedCollectionWithOwner`2<DevExpress.UI.Xaml.Ribbon.IBackstageItem, DevExpress.UI.Xaml.Ribbon.BackstageView>
+            case 84:   //  DevExpress.UI.Xaml.Internal.TemplatedCollectionWithOwner`2<DevExpress.UI.Xaml.Ribbon.IBackstageItem, DevExpress.UI.Xaml.Ribbon.BackstageView>
                 userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.UI.Xaml.Internal.TemplatedCollection`1<DevExpress.UI.Xaml.Ribbon.IBackstageItem>"));
-                userType.CollectionAdd = VectorAdd_83_TemplatedCollectionWithOwner;
+                userType.CollectionAdd = VectorAdd_84_TemplatedCollectionWithOwner;
                 xamlType = userType;
                 break;
 
-            case 84:   //  DevExpress.UI.Xaml.Internal.TemplatedCollection`1<DevExpress.UI.Xaml.Ribbon.IBackstageItem>
+            case 85:   //  DevExpress.UI.Xaml.Internal.TemplatedCollection`1<DevExpress.UI.Xaml.Ribbon.IBackstageItem>
                 userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.Core.Native.ObservableCollectionView`1<DevExpress.UI.Xaml.Ribbon.IBackstageItem>"));
-                userType.Activator = Activate_84_TemplatedCollection;
-                userType.CollectionAdd = VectorAdd_84_TemplatedCollection;
+                userType.Activator = Activate_85_TemplatedCollection;
+                userType.CollectionAdd = VectorAdd_85_TemplatedCollection;
                 xamlType = userType;
                 break;
 
-            case 85:   //  DevExpress.Core.Native.ObservableCollectionView`1<DevExpress.UI.Xaml.Ribbon.IBackstageItem>
+            case 86:   //  DevExpress.Core.Native.ObservableCollectionView`1<DevExpress.UI.Xaml.Ribbon.IBackstageItem>
                 userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.Mvvm.BindableBase"));
-                userType.CollectionAdd = VectorAdd_85_ObservableCollectionView;
+                userType.CollectionAdd = VectorAdd_86_ObservableCollectionView;
                 xamlType = userType;
                 break;
 
-            case 86:   //  DevExpress.UI.Xaml.Ribbon.IBackstageItem
+            case 87:   //  DevExpress.UI.Xaml.Ribbon.IBackstageItem
                 userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, null);
                 userType.AddMemberName("ClosePopupOnClick");
                 xamlType = userType;
                 break;
 
-            case 87:   //  DevExpress.UI.Xaml.Ribbon.IBackstageTabItem
+            case 88:   //  DevExpress.UI.Xaml.Ribbon.IBackstageTabItem
                 userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, null);
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 88:   //  DevExpress.UI.Xaml.TitleSettings
+            case 89:   //  DevExpress.UI.Xaml.TitleSettings
                 userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.DependencyObject"));
-                userType.Activator = Activate_88_TitleSettings;
+                userType.Activator = Activate_89_TitleSettings;
                 userType.AddMemberName("ButtonInactiveForeground");
                 userType.AddMemberName("ButtonInactiveBackground");
                 userType.AddMemberName("ButtonPressedForeground");
@@ -1417,27 +1427,27 @@ namespace Assistance_Control.Assistence_Control_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 89:   //  Windows.UI.Xaml.UIElement
+            case 90:   //  Windows.UI.Xaml.UIElement
                 xamlType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 90:   //  DevExpress.UI.Xaml.Ribbon.BackstageButtonItem
+            case 91:   //  DevExpress.UI.Xaml.Ribbon.BackstageButtonItem
                 userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.RibbonButtonItemBase"));
-                userType.Activator = Activate_90_BackstageButtonItem;
+                userType.Activator = Activate_91_BackstageButtonItem;
                 userType.SetIsBindable();
                 xamlType = userType;
                 break;
 
-            case 91:   //  DevExpress.UI.Xaml.Ribbon.Internal.RibbonButtonItemBase
+            case 92:   //  DevExpress.UI.Xaml.Ribbon.Internal.RibbonButtonItemBase
                 userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.RibbonItemBase"));
                 userType.AddMemberName("Command");
                 userType.AddMemberName("CommandParameter");
                 xamlType = userType;
                 break;
 
-            case 92:   //  DevExpress.UI.Xaml.Ribbon.RibbonGalleryItemGroup
+            case 93:   //  DevExpress.UI.Xaml.Ribbon.RibbonGalleryItemGroup
                 userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.DependencyObject"));
-                userType.Activator = Activate_92_RibbonGalleryItemGroup;
+                userType.Activator = Activate_93_RibbonGalleryItemGroup;
                 userType.SetContentPropertyName("DevExpress.UI.Xaml.Ribbon.RibbonGalleryItemGroup.Items");
                 userType.AddMemberName("Items");
                 userType.AddMemberName("Title");
@@ -1445,22 +1455,22 @@ namespace Assistance_Control.Assistence_Control_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 93:   //  DevExpress.UI.Xaml.Ribbon.RibbonGalleryItemCollection
+            case 94:   //  DevExpress.UI.Xaml.Ribbon.RibbonGalleryItemCollection
                 userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.Core.Native.ObservableCollectionView`1<Object>"));
-                userType.CollectionAdd = VectorAdd_93_RibbonGalleryItemCollection;
+                userType.CollectionAdd = VectorAdd_94_RibbonGalleryItemCollection;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 94:   //  DevExpress.Core.Native.ObservableCollectionView`1<Object>
+            case 95:   //  DevExpress.Core.Native.ObservableCollectionView`1<Object>
                 userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.Mvvm.BindableBase"));
-                userType.CollectionAdd = VectorAdd_94_ObservableCollectionView;
+                userType.CollectionAdd = VectorAdd_95_ObservableCollectionView;
                 xamlType = userType;
                 break;
 
-            case 95:   //  DevExpress.UI.Xaml.Ribbon.HelpPane
+            case 96:   //  DevExpress.UI.Xaml.Ribbon.HelpPane
                 userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.DependencyObject"));
-                userType.Activator = Activate_95_HelpPane;
+                userType.Activator = Activate_96_HelpPane;
                 userType.SetContentPropertyName("DevExpress.UI.Xaml.Ribbon.HelpPane.Items");
                 userType.AddMemberName("Items");
                 userType.AddMemberName("ItemsSource");
@@ -1472,34 +1482,34 @@ namespace Assistance_Control.Assistence_Control_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 96:   //  DevExpress.UI.Xaml.Ribbon.HelpPaneItemCollection
+            case 97:   //  DevExpress.UI.Xaml.Ribbon.HelpPaneItemCollection
                 userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.UI.Xaml.Internal.TemplatedCollection`1<DevExpress.UI.Xaml.Ribbon.IHelpPaneItem>"));
-                userType.CollectionAdd = VectorAdd_96_HelpPaneItemCollection;
+                userType.CollectionAdd = VectorAdd_97_HelpPaneItemCollection;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 97:   //  DevExpress.UI.Xaml.Internal.TemplatedCollection`1<DevExpress.UI.Xaml.Ribbon.IHelpPaneItem>
+            case 98:   //  DevExpress.UI.Xaml.Internal.TemplatedCollection`1<DevExpress.UI.Xaml.Ribbon.IHelpPaneItem>
                 userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.Core.Native.ObservableCollectionView`1<DevExpress.UI.Xaml.Ribbon.IHelpPaneItem>"));
-                userType.Activator = Activate_97_TemplatedCollection;
-                userType.CollectionAdd = VectorAdd_97_TemplatedCollection;
+                userType.Activator = Activate_98_TemplatedCollection;
+                userType.CollectionAdd = VectorAdd_98_TemplatedCollection;
                 xamlType = userType;
                 break;
 
-            case 98:   //  DevExpress.Core.Native.ObservableCollectionView`1<DevExpress.UI.Xaml.Ribbon.IHelpPaneItem>
+            case 99:   //  DevExpress.Core.Native.ObservableCollectionView`1<DevExpress.UI.Xaml.Ribbon.IHelpPaneItem>
                 userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.Mvvm.BindableBase"));
-                userType.CollectionAdd = VectorAdd_98_ObservableCollectionView;
+                userType.CollectionAdd = VectorAdd_99_ObservableCollectionView;
                 xamlType = userType;
                 break;
 
-            case 99:   //  DevExpress.UI.Xaml.Ribbon.IHelpPaneItem
+            case 100:   //  DevExpress.UI.Xaml.Ribbon.IHelpPaneItem
                 userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, null);
                 userType.AddMemberName("PlatformVisibility");
                 userType.AddMemberName("Placement");
                 xamlType = userType;
                 break;
 
-            case 100:   //  DevExpress.Mvvm.Native.DeviceFamily
+            case 101:   //  DevExpress.Mvvm.Native.DeviceFamily
                 userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("Unknown", global::DevExpress.Mvvm.Native.DeviceFamily.Unknown);
                 userType.AddEnumValue("Desktop", global::DevExpress.Mvvm.Native.DeviceFamily.Desktop);
@@ -1508,7 +1518,7 @@ namespace Assistance_Control.Assistence_Control_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 101:   //  DevExpress.UI.Xaml.Ribbon.HelpPaneItemPlacement
+            case 102:   //  DevExpress.UI.Xaml.Ribbon.HelpPaneItemPlacement
                 userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("Default", global::DevExpress.UI.Xaml.Ribbon.HelpPaneItemPlacement.Default);
                 userType.AddEnumValue("Header", global::DevExpress.UI.Xaml.Ribbon.HelpPaneItemPlacement.Header);
@@ -1516,9 +1526,9 @@ namespace Assistance_Control.Assistence_Control_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 102:   //  DevExpress.UI.Xaml.Ribbon.RibbonControl
+            case 103:   //  DevExpress.UI.Xaml.Ribbon.RibbonControl
                 userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.UI.Xaml.Internal.ContentControlEx"));
-                userType.Activator = Activate_102_RibbonControl;
+                userType.Activator = Activate_103_RibbonControl;
                 userType.SetContentPropertyName("DevExpress.UI.Xaml.Ribbon.RibbonControl.Tabs");
                 userType.AddMemberName("Tabs");
                 userType.AddMemberName("ActualSize");
@@ -1547,35 +1557,35 @@ namespace Assistance_Control.Assistence_Control_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 103:   //  DevExpress.UI.Xaml.Ribbon.RibbonTabCollection
+            case 104:   //  DevExpress.UI.Xaml.Ribbon.RibbonTabCollection
                 userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.UI.Xaml.Internal.TemplatedCollectionWithOwner`2<DevExpress.UI.Xaml.Ribbon.RibbonTab, DevExpress.UI.Xaml.Ribbon.RibbonControl>"));
-                userType.CollectionAdd = VectorAdd_103_RibbonTabCollection;
+                userType.CollectionAdd = VectorAdd_104_RibbonTabCollection;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 104:   //  DevExpress.UI.Xaml.Internal.TemplatedCollectionWithOwner`2<DevExpress.UI.Xaml.Ribbon.RibbonTab, DevExpress.UI.Xaml.Ribbon.RibbonControl>
+            case 105:   //  DevExpress.UI.Xaml.Internal.TemplatedCollectionWithOwner`2<DevExpress.UI.Xaml.Ribbon.RibbonTab, DevExpress.UI.Xaml.Ribbon.RibbonControl>
                 userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.UI.Xaml.Internal.TemplatedCollection`1<DevExpress.UI.Xaml.Ribbon.RibbonTab>"));
-                userType.CollectionAdd = VectorAdd_104_TemplatedCollectionWithOwner;
+                userType.CollectionAdd = VectorAdd_105_TemplatedCollectionWithOwner;
                 xamlType = userType;
                 break;
 
-            case 105:   //  DevExpress.UI.Xaml.Internal.TemplatedCollection`1<DevExpress.UI.Xaml.Ribbon.RibbonTab>
+            case 106:   //  DevExpress.UI.Xaml.Internal.TemplatedCollection`1<DevExpress.UI.Xaml.Ribbon.RibbonTab>
                 userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.Core.Native.ObservableCollectionView`1<DevExpress.UI.Xaml.Ribbon.RibbonTab>"));
-                userType.Activator = Activate_105_TemplatedCollection;
-                userType.CollectionAdd = VectorAdd_105_TemplatedCollection;
+                userType.Activator = Activate_106_TemplatedCollection;
+                userType.CollectionAdd = VectorAdd_106_TemplatedCollection;
                 xamlType = userType;
                 break;
 
-            case 106:   //  DevExpress.Core.Native.ObservableCollectionView`1<DevExpress.UI.Xaml.Ribbon.RibbonTab>
+            case 107:   //  DevExpress.Core.Native.ObservableCollectionView`1<DevExpress.UI.Xaml.Ribbon.RibbonTab>
                 userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.Mvvm.BindableBase"));
-                userType.CollectionAdd = VectorAdd_106_ObservableCollectionView;
+                userType.CollectionAdd = VectorAdd_107_ObservableCollectionView;
                 xamlType = userType;
                 break;
 
-            case 107:   //  DevExpress.UI.Xaml.Ribbon.RibbonTab
+            case 108:   //  DevExpress.UI.Xaml.Ribbon.RibbonTab
                 userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.RibbonHeaderedContainerBase"));
-                userType.Activator = Activate_107_RibbonTab;
+                userType.Activator = Activate_108_RibbonTab;
                 userType.SetContentPropertyName("DevExpress.UI.Xaml.Ribbon.RibbonTab.Groups");
                 userType.AddMemberName("Groups");
                 userType.AddMemberName("GroupsSource");
@@ -1585,29 +1595,29 @@ namespace Assistance_Control.Assistence_Control_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 108:   //  DevExpress.UI.Xaml.Ribbon.RibbonGroupCollection
+            case 109:   //  DevExpress.UI.Xaml.Ribbon.RibbonGroupCollection
                 userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.UI.Xaml.Internal.TemplatedCollection`1<DevExpress.UI.Xaml.Ribbon.RibbonGroup>"));
-                userType.CollectionAdd = VectorAdd_108_RibbonGroupCollection;
+                userType.CollectionAdd = VectorAdd_109_RibbonGroupCollection;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 109:   //  DevExpress.UI.Xaml.Internal.TemplatedCollection`1<DevExpress.UI.Xaml.Ribbon.RibbonGroup>
+            case 110:   //  DevExpress.UI.Xaml.Internal.TemplatedCollection`1<DevExpress.UI.Xaml.Ribbon.RibbonGroup>
                 userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.Core.Native.ObservableCollectionView`1<DevExpress.UI.Xaml.Ribbon.RibbonGroup>"));
-                userType.Activator = Activate_109_TemplatedCollection;
-                userType.CollectionAdd = VectorAdd_109_TemplatedCollection;
+                userType.Activator = Activate_110_TemplatedCollection;
+                userType.CollectionAdd = VectorAdd_110_TemplatedCollection;
                 xamlType = userType;
                 break;
 
-            case 110:   //  DevExpress.Core.Native.ObservableCollectionView`1<DevExpress.UI.Xaml.Ribbon.RibbonGroup>
+            case 111:   //  DevExpress.Core.Native.ObservableCollectionView`1<DevExpress.UI.Xaml.Ribbon.RibbonGroup>
                 userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.Mvvm.BindableBase"));
-                userType.CollectionAdd = VectorAdd_110_ObservableCollectionView;
+                userType.CollectionAdd = VectorAdd_111_ObservableCollectionView;
                 xamlType = userType;
                 break;
 
-            case 111:   //  DevExpress.UI.Xaml.Ribbon.RibbonGroup
+            case 112:   //  DevExpress.UI.Xaml.Ribbon.RibbonGroup
                 userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.RibbonGroupPanelBase"));
-                userType.Activator = Activate_111_RibbonGroup;
+                userType.Activator = Activate_112_RibbonGroup;
                 userType.SetContentPropertyName("DevExpress.UI.Xaml.Ribbon.RibbonGroup.Items");
                 userType.AddMemberName("Items");
                 userType.AddMemberName("ItemsSource");
@@ -1626,7 +1636,7 @@ namespace Assistance_Control.Assistence_Control_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 112:   //  DevExpress.UI.Xaml.Ribbon.Internal.RibbonGroupPanelBase
+            case 113:   //  DevExpress.UI.Xaml.Ribbon.Internal.RibbonGroupPanelBase
                 userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.UI.Xaml.Internal.ItemsPanelBase`1<DevExpress.UI.Xaml.Ribbon.IRibbonItem>"));
                 userType.AddMemberName("Caption");
                 userType.AddMemberName("DropDownControl");
@@ -1635,36 +1645,36 @@ namespace Assistance_Control.Assistence_Control_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 113:   //  DevExpress.UI.Xaml.Internal.ItemsPanelBase`1<DevExpress.UI.Xaml.Ribbon.IRibbonItem>
+            case 114:   //  DevExpress.UI.Xaml.Internal.ItemsPanelBase`1<DevExpress.UI.Xaml.Ribbon.IRibbonItem>
                 userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Panel"));
                 xamlType = userType;
                 break;
 
-            case 114:   //  Windows.UI.Xaml.Controls.Panel
+            case 115:   //  Windows.UI.Xaml.Controls.Panel
                 xamlType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 115:   //  DevExpress.UI.Xaml.Ribbon.RibbonItemCollection
+            case 116:   //  DevExpress.UI.Xaml.Ribbon.RibbonItemCollection
                 userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.UI.Xaml.Internal.TemplatedCollection`1<DevExpress.UI.Xaml.Ribbon.IRibbonItem>"));
-                userType.Activator = Activate_115_RibbonItemCollection;
-                userType.CollectionAdd = VectorAdd_115_RibbonItemCollection;
+                userType.Activator = Activate_116_RibbonItemCollection;
+                userType.CollectionAdd = VectorAdd_116_RibbonItemCollection;
                 xamlType = userType;
                 break;
 
-            case 116:   //  DevExpress.UI.Xaml.Internal.TemplatedCollection`1<DevExpress.UI.Xaml.Ribbon.IRibbonItem>
+            case 117:   //  DevExpress.UI.Xaml.Internal.TemplatedCollection`1<DevExpress.UI.Xaml.Ribbon.IRibbonItem>
                 userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.Core.Native.ObservableCollectionView`1<DevExpress.UI.Xaml.Ribbon.IRibbonItem>"));
-                userType.Activator = Activate_116_TemplatedCollection;
-                userType.CollectionAdd = VectorAdd_116_TemplatedCollection;
+                userType.Activator = Activate_117_TemplatedCollection;
+                userType.CollectionAdd = VectorAdd_117_TemplatedCollection;
                 xamlType = userType;
                 break;
 
-            case 117:   //  DevExpress.Core.Native.ObservableCollectionView`1<DevExpress.UI.Xaml.Ribbon.IRibbonItem>
+            case 118:   //  DevExpress.Core.Native.ObservableCollectionView`1<DevExpress.UI.Xaml.Ribbon.IRibbonItem>
                 userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.Mvvm.BindableBase"));
-                userType.CollectionAdd = VectorAdd_117_ObservableCollectionView;
+                userType.CollectionAdd = VectorAdd_118_ObservableCollectionView;
                 xamlType = userType;
                 break;
 
-            case 118:   //  DevExpress.UI.Xaml.Ribbon.IRibbonItem
+            case 119:   //  DevExpress.UI.Xaml.Ribbon.IRibbonItem
                 userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, null);
                 userType.AddMemberName("ItemStyle");
                 userType.AddMemberName("CollapsePriority");
@@ -1674,7 +1684,7 @@ namespace Assistance_Control.Assistence_Control_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 119:   //  DevExpress.UI.Xaml.Ribbon.Internal.MeasureState
+            case 120:   //  DevExpress.UI.Xaml.Ribbon.Internal.MeasureState
                 userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("Finished", global::DevExpress.UI.Xaml.Ribbon.Internal.MeasureState.Finished);
                 userType.AddEnumValue("Items", global::DevExpress.UI.Xaml.Ribbon.Internal.MeasureState.Items);
@@ -1682,24 +1692,24 @@ namespace Assistance_Control.Assistence_Control_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 120:   //  DevExpress.UI.Xaml.Ribbon.Internal.IFlyoutCalculator
+            case 121:   //  DevExpress.UI.Xaml.Ribbon.Internal.IFlyoutCalculator
                 userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, null);
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 121:   //  Windows.Foundation.Size
+            case 122:   //  Windows.Foundation.Size
                 xamlType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 122:   //  DevExpress.UI.Xaml.Ribbon.RibbonViewMode
+            case 123:   //  DevExpress.UI.Xaml.Ribbon.RibbonViewMode
                 userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("Normal", global::DevExpress.UI.Xaml.Ribbon.RibbonViewMode.Normal);
                 userType.AddEnumValue("AutoHide", global::DevExpress.UI.Xaml.Ribbon.RibbonViewMode.AutoHide);
                 xamlType = userType;
                 break;
 
-            case 123:   //  DevExpress.UI.Xaml.Ribbon.RibbonState
+            case 124:   //  DevExpress.UI.Xaml.Ribbon.RibbonState
                 userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("Normal", global::DevExpress.UI.Xaml.Ribbon.RibbonState.Normal);
                 userType.AddEnumValue("Minimized", global::DevExpress.UI.Xaml.Ribbon.RibbonState.Minimized);
@@ -1708,9 +1718,9 @@ namespace Assistance_Control.Assistence_Control_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 124:   //  DevExpress.UI.Xaml.Ribbon.RibbonMenuButton
+            case 125:   //  DevExpress.UI.Xaml.Ribbon.RibbonMenuButton
                 userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.RibbonMenuButtonBase"));
-                userType.Activator = Activate_124_RibbonMenuButton;
+                userType.Activator = Activate_125_RibbonMenuButton;
                 userType.SetContentPropertyName("DevExpress.UI.Xaml.Ribbon.RibbonMenuButton.Items");
                 userType.AddMemberName("Items");
                 userType.AddMemberName("ItemsSource");
@@ -1718,7 +1728,7 @@ namespace Assistance_Control.Assistence_Control_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 125:   //  DevExpress.UI.Xaml.Ribbon.Internal.RibbonMenuButtonBase
+            case 126:   //  DevExpress.UI.Xaml.Ribbon.Internal.RibbonMenuButtonBase
                 userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.RibbonMenuItemBase"));
                 userType.AddMemberName("ItemTemplate");
                 userType.AddMemberName("ItemTemplateSelector");
@@ -1726,7 +1736,7 @@ namespace Assistance_Control.Assistence_Control_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 126:   //  DevExpress.UI.Xaml.Ribbon.Internal.RibbonMenuItemBase
+            case 127:   //  DevExpress.UI.Xaml.Ribbon.Internal.RibbonMenuItemBase
                 userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.RibbonItemBaseEx"));
                 userType.AddMemberName("FlyoutCaption");
                 userType.AddMemberName("IsOpen");
@@ -1734,22 +1744,22 @@ namespace Assistance_Control.Assistence_Control_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 127:   //  System.Collections.Generic.IList`1<DevExpress.UI.Xaml.Ribbon.IRibbonItem>
+            case 128:   //  System.Collections.Generic.IList`1<DevExpress.UI.Xaml.Ribbon.IRibbonItem>
                 userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, null);
-                userType.CollectionAdd = VectorAdd_127_IList;
+                userType.CollectionAdd = VectorAdd_128_IList;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 128:   //  DevExpress.UI.Xaml.FlyoutSettingsBase
+            case 129:   //  DevExpress.UI.Xaml.FlyoutSettingsBase
                 userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.DependencyObject"));
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 129:   //  DevExpress.UI.Xaml.Ribbon.RibbonSplitButton
+            case 130:   //  DevExpress.UI.Xaml.Ribbon.RibbonSplitButton
                 userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.RibbonMenuItemBase"));
-                userType.Activator = Activate_129_RibbonSplitButton;
+                userType.Activator = Activate_130_RibbonSplitButton;
                 userType.SetContentPropertyName("DevExpress.UI.Xaml.Ribbon.RibbonSplitButton.FlyoutContent");
                 userType.AddMemberName("FlyoutContent");
                 userType.AddMemberName("Command");
@@ -1760,9 +1770,9 @@ namespace Assistance_Control.Assistence_Control_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 130:   //  DevExpress.UI.Xaml.Ribbon.Internal.FlyoutCalculator
+            case 131:   //  DevExpress.UI.Xaml.Ribbon.Internal.FlyoutCalculator
                 userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.Activator = Activate_130_FlyoutCalculator;
+                userType.Activator = Activate_131_FlyoutCalculator;
                 userType.AddMemberName("VisibleItems");
                 userType.AddMemberName("ColumnCount");
                 userType.AddMemberName("SeparatorManager");
@@ -1770,21 +1780,21 @@ namespace Assistance_Control.Assistence_Control_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 131:   //  System.Collections.Generic.IEnumerable`1<DevExpress.UI.Xaml.Ribbon.IRibbonItem>
+            case 132:   //  System.Collections.Generic.IEnumerable`1<DevExpress.UI.Xaml.Ribbon.IRibbonItem>
                 userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, null);
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 132:   //  DevExpress.UI.Xaml.Ribbon.Internal.ISeparatorManager
+            case 133:   //  DevExpress.UI.Xaml.Ribbon.Internal.ISeparatorManager
                 userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, null);
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 133:   //  DevExpress.UI.Xaml.Ribbon.Internal.StackedFlyoutControl
+            case 134:   //  DevExpress.UI.Xaml.Ribbon.Internal.StackedFlyoutControl
                 userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.Internal.RibbonFlyoutControl"));
-                userType.Activator = Activate_133_StackedFlyoutControl;
+                userType.Activator = Activate_134_StackedFlyoutControl;
                 userType.AddMemberName("Caption");
                 userType.AddMemberName("IsHeaderVisible");
                 userType.AddMemberName("BackButtonEnabledMode");
@@ -1794,21 +1804,21 @@ namespace Assistance_Control.Assistence_Control_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 134:   //  DevExpress.UI.Xaml.Ribbon.Internal.RibbonFlyoutControl
+            case 135:   //  DevExpress.UI.Xaml.Ribbon.Internal.RibbonFlyoutControl
                 userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.UI.Xaml.FlyoutControl"));
-                userType.Activator = Activate_134_RibbonFlyoutControl;
+                userType.Activator = Activate_135_RibbonFlyoutControl;
                 xamlType = userType;
                 break;
 
-            case 135:   //  DevExpress.UI.Xaml.FlyoutControl
+            case 136:   //  DevExpress.UI.Xaml.FlyoutControl
                 userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.UI.Xaml.Native.FlyoutBase"));
-                userType.Activator = Activate_135_FlyoutControl;
+                userType.Activator = Activate_136_FlyoutControl;
                 xamlType = userType;
                 break;
 
-            case 136:   //  DevExpress.UI.Xaml.Native.FlyoutBase
+            case 137:   //  DevExpress.UI.Xaml.Native.FlyoutBase
                 userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.UI.Xaml.Native.PopupBase"));
-                userType.Activator = Activate_136_FlyoutBase;
+                userType.Activator = Activate_137_FlyoutBase;
                 userType.AddMemberName("ActualSettings");
                 userType.AddMemberName("IndicatorDirection");
                 userType.AddMemberName("AnimationDuration");
@@ -1827,9 +1837,9 @@ namespace Assistance_Control.Assistence_Control_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 137:   //  DevExpress.UI.Xaml.Native.PopupBase
+            case 138:   //  DevExpress.UI.Xaml.Native.PopupBase
                 userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.ContentControl"));
-                userType.Activator = Activate_137_PopupBase;
+                userType.Activator = Activate_138_PopupBase;
                 userType.AddMemberName("Child");
                 userType.AddMemberName("HorizontalOffset");
                 userType.AddMemberName("VerticalOffset");
@@ -1843,7 +1853,7 @@ namespace Assistance_Control.Assistence_Control_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 138:   //  DevExpress.UI.Xaml.Ribbon.Internal.EnabledMode
+            case 139:   //  DevExpress.UI.Xaml.Ribbon.Internal.EnabledMode
                 userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("Auto", global::DevExpress.UI.Xaml.Ribbon.Internal.EnabledMode.Auto);
                 userType.AddEnumValue("Always", global::DevExpress.UI.Xaml.Ribbon.Internal.EnabledMode.Always);
@@ -1851,7 +1861,7 @@ namespace Assistance_Control.Assistence_Control_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 139:   //  DevExpress.UI.Xaml.Native.IndicatorDirection
+            case 140:   //  DevExpress.UI.Xaml.Native.IndicatorDirection
                 userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("None", global::DevExpress.UI.Xaml.Native.IndicatorDirection.None);
                 userType.AddEnumValue("Left", global::DevExpress.UI.Xaml.Native.IndicatorDirection.Left);
@@ -1861,23 +1871,23 @@ namespace Assistance_Control.Assistence_Control_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 140:   //  Windows.UI.Xaml.Duration
+            case 141:   //  Windows.UI.Xaml.Duration
                 xamlType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 141:   //  Windows.Foundation.Rect
+            case 142:   //  Windows.Foundation.Rect
                 xamlType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 142:   //  Windows.UI.Xaml.Media.Animation.Storyboard
+            case 143:   //  Windows.UI.Xaml.Media.Animation.Storyboard
                 xamlType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 143:   //  Windows.UI.Xaml.FrameworkElement
+            case 144:   //  Windows.UI.Xaml.FrameworkElement
                 xamlType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 144:   //  DevExpress.UI.Xaml.Native.PlacementMode
+            case 145:   //  DevExpress.UI.Xaml.Native.PlacementMode
                 userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("Bottom", global::DevExpress.UI.Xaml.Native.PlacementMode.Bottom);
                 userType.AddEnumValue("Right", global::DevExpress.UI.Xaml.Native.PlacementMode.Right);
@@ -1888,9 +1898,9 @@ namespace Assistance_Control.Assistence_Control_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 145:   //  DevExpress.UI.Xaml.Ribbon.Internal.RibbonTabsControl
+            case 146:   //  DevExpress.UI.Xaml.Ribbon.Internal.RibbonTabsControl
                 userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.UI.Xaml.Internal.ControlEx"));
-                userType.Activator = Activate_145_RibbonTabsControl;
+                userType.Activator = Activate_146_RibbonTabsControl;
                 userType.AddMemberName("ItemsSource");
                 userType.AddMemberName("HeaderItemTemplate");
                 userType.AddMemberName("HeaderItemContainerStyle");
@@ -1903,9 +1913,9 @@ namespace Assistance_Control.Assistence_Control_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 146:   //  DevExpress.UI.Xaml.Ribbon.TabHeaderItemCollection
+            case 147:   //  DevExpress.UI.Xaml.Ribbon.TabHeaderItemCollection
                 userType = new global::Assistance_Control.Assistence_Control_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DevExpress.UI.Xaml.Ribbon.RibbonItemCollection"));
-                userType.CollectionAdd = VectorAdd_146_TabHeaderItemCollection;
+                userType.CollectionAdd = VectorAdd_147_TabHeaderItemCollection;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;

@@ -1,4 +1,5 @@
-﻿using Assistence_Control.TemplateSelectors;
+﻿using Assistance_Control.Views.Horarios;
+using Assistence_Control.TemplateSelectors;
 using Assistence_Control.Utilerias.Items;
 using Assistence_Control.Views.Areas;
 using Assistence_Control.Views.Empleados;
@@ -95,6 +96,7 @@ namespace Assistence_Control.Menu
                 case "Reportes":
                     break;
                 case "Horarios":
+                    rootFrame.Navigate(typeof(MasterHorarios));
                     break;
                 case "Usuarios":
                     break;

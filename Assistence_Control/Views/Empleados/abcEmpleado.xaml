@@ -21,7 +21,14 @@
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
-                <TextBlock Text="Empleados" Margin="30,0,0,0" FontSize="50"></TextBlock>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Text="Empleados" Margin="30,0,0,0" FontSize="50" VerticalAlignment="Bottom"></TextBlock>
+                    <AutoSuggestBox Grid.Column="1" PlaceholderText="Search" DisplayMemberPath="Nombre" QueryIcon="Find" Width="200" TextChanged="AutoSuggestBox_TextChanged" QuerySubmitted="AutoSuggestBox_QuerySubmitted" SuggestionChosen="AutoSuggestBox_SuggestionChosen" VerticalAlignment="Bottom" FontSize="25" Height="32" HorizontalAlignment="Right" Margin="0,0,30,10"/>
+                </Grid>
                 <controls:DataGrid MaxHeight="360" x:Name="DataGrid" SelectionMode="Single" Margin="30,0,30,10" Grid.Row="1" ItemsSource="{Binding EmpleadoITem}" HeaderBackground="#FF8B8383" >
                     <controls:DataGrid.Foreground>
                         <SolidColorBrush Color="White"/>
@@ -34,23 +41,14 @@
                         <controls:DataGridTextColumn Width="200" Header="Edad" Binding="{Binding Edad}"/>
                         <controls:DataGridTextColumn Width="200" Header="Fecha Alta" Binding="{Binding FechaAlta}"/>
                     </controls:DataGrid.Columns>
-                    <!--<controls:DataGrid.ItemDetailsTemplate>
-                        <DataTemplate>
-                            <StackPanel Margin="10,10,10,5">
-                                <TextBlock Text="Details: " FontWeight="Bold" />
-                                <TextBlock Text="{Binding Firstname}" />
-                                <TextBlock Text="{Binding Lastname}" />
-                            </StackPanel>
-                        </DataTemplate>
-                    </controls:DataGrid.ItemDetailsTemplate>-->
                 </controls:DataGrid>
-                <StackPanel Orientation="Horizontal" Grid.Row="2" Margin="30,0">
-                    <Button Name="btnEditar" VerticalAlignment="Top" Content="Editar" Foreground="#FF0F06C7">
+                <StackPanel Orientation="Horizontal" Grid.Row="2" Margin="18,0">
+                    <Button Name="btnEditar" VerticalAlignment="Top" Content="Editar" Foreground="#FF0F06C7" Click="btnEditar_Click">
                         <Button.Background>
                             <SolidColorBrush Color="{StaticResource MainBackground}"/>
                         </Button.Background>
                     </Button>
-                    <Button Name="btnEliminar" VerticalAlignment="Top" Content="Eliminar" Foreground="#FF0F06C7">
+                    <Button Name="btnEliminar" VerticalAlignment="Top" Content="Eliminar" Foreground="#FF0F06C7" Click="btnEliminar_Click">
                         <Button.Background>
                             <SolidColorBrush Color="{StaticResource MainBackground}"/>
                         </Button.Background>
@@ -63,7 +61,7 @@
                     </Button>
 
                 </StackPanel>
-                <Grid Name="gridAgregar" Visibility="Collapsed" Grid.Row="3" Margin="30,0">
+                <Grid Name="gridAgregar" Visibility="Visible" Grid.Row="3" Margin="30,0">
                     <Grid.RowDefinitions>
                         <RowDefinition/>
                         <RowDefinition/>
@@ -76,18 +74,32 @@
                         <ColumnDefinition/>
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
-                    <TextBox Header="Numero de empleado"></TextBox>
-                    <TextBox Header="Nombre(s)" Grid.Row="1"></TextBox>
-                    <TextBox Header="Apellido Paterno" Grid.Row="2"></TextBox>
-                    <TextBox Header="Apellido Materno" Grid.Row="3"></TextBox>
-                    <Button Content="Guardar" Grid.Row="4" Margin="0,10" Width="185" Height="60" FontSize="20">
-                        <Button.Foreground>
-                            <SolidColorBrush Color="{StaticResource MainBackground}"/>
-                        </Button.Foreground>
-                        <Button.Background>
-                            <SolidColorBrush Color="{StaticResource MainColor}"/>
-                        </Button.Background>
-                    </Button>
+                    <TextBox Name="tbNumeroEmpleado" Header="Numero de empleado"></TextBox>
+                    <TextBox Name="tbNombre" Header="Nombre(s)" Grid.Row="1"></TextBox>
+                    <TextBox Name="tbApellidoPaterno" Header="Apellido Paterno" Grid.Row="2"></TextBox>
+                    <TextBox Name="tbApellidoMaterno" Header="Apellido Materno" Grid.Row="3"></TextBox>
+                    <Grid Grid.Row="4">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Button Name="btnGuardar" Content="Guardar" Margin="0,10,10,10" Height="60" FontSize="25" Click="btnGuardar_Click" HorizontalAlignment="Stretch">
+                            <Button.Foreground>
+                                <SolidColorBrush Color="{StaticResource MainBackground}"/>
+                            </Button.Foreground>
+                            <Button.Background>
+                                <SolidColorBrush Color="#FF70AD47"/>
+                            </Button.Background>
+                        </Button>
+                        <Button Name="btnCancelar" Content="Cancelar" Grid.Column="2" Margin="10,10,0,10" Height="60" FontSize="25" Click="btnCancelar_Click" HorizontalAlignment="Stretch">
+                            <Button.Background>
+                                <SolidColorBrush Color="{StaticResource btnCancel}"/>
+                            </Button.Background>
+                            <Button.Foreground>
+                                <SolidColorBrush Color="{StaticResource MainBackground}"/>
+                            </Button.Foreground>
+                        </Button>
+                    </Grid>
                 </Grid>
             </Grid>
         </ScrollViewer>

@@ -25,7 +25,7 @@
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
                 <TextBlock Text="Areas" Margin="30,0,0,0" FontSize="50"></TextBlock>
-                <controls:DataGrid MaxHeight="360" x:Name="DataGrid" SelectionMode="Single" Margin="30,0,30,10" Grid.Row="1" ItemsSource="{Binding AreaItem}" HeaderBackground="#FF8B8383" >
+                <controls:DataGrid x:ConnectionId='1' MaxHeight="360" x:Name="DataGrid" SelectionMode="Single" Margin="30,0,30,10" Grid.Row="1" ItemsSource="{Binding AreaItem}" HeaderBackground="#FF8B8383" >
                     <controls:DataGrid.Foreground>
                         <SolidColorBrush Color="White"/>
                     </controls:DataGrid.Foreground>
@@ -35,25 +35,25 @@
                     </controls:DataGrid.Columns>
                 </controls:DataGrid>
                 <StackPanel Orientation="Horizontal" Grid.Row="2" Margin="18,0">
-                    <Button Name="btnEditar" VerticalAlignment="Top" Content="Editar" Foreground="#FF0F06C7" Click="btnEditar_Click">
+                    <Button x:ConnectionId='7' Name="btnEditar" VerticalAlignment="Top" Content="Editar" Foreground="#FF0F06C7"                        >
                         <Button.Background>
                             <SolidColorBrush Color="{StaticResource MainBackground}"/>
                         </Button.Background>
                     </Button>
-                    <Button Name="btnEliminar" VerticalAlignment="Top" Content="Eliminar" Foreground="#FF0F06C7" Click="btnEliminar_Click">
+                    <Button x:ConnectionId='8' Name="btnEliminar" VerticalAlignment="Top" Content="Eliminar" Foreground="#FF0F06C7"                          >
                         <Button.Background>
                             <SolidColorBrush Color="{StaticResource MainBackground}"/>
                         </Button.Background>
                     </Button>
 
-                    <Button Name="btnAgregar" Click="btnAgregar_Click" VerticalAlignment="Top" Content="Agregar Nueva" Foreground="#FF0F06C7">
+                    <Button x:ConnectionId='9' Name="btnAgregar"                          VerticalAlignment="Top" Content="Agregar Nueva" Foreground="#FF0F06C7">
                         <Button.Background>
                             <SolidColorBrush Color="{StaticResource MainBackground}"/>
                         </Button.Background>
                     </Button>
 
                 </StackPanel>
-                <Grid Name="gridAgregar" Visibility="Collapsed" Grid.Row="3" Margin="30,0">
+                <Grid x:ConnectionId='2' Name="gridAgregar" Visibility="Collapsed" Grid.Row="3" Margin="30,0">
                     <Grid.RowDefinitions>
                         <RowDefinition/>
                         <RowDefinition/>
@@ -66,9 +66,9 @@
                         <ColumnDefinition/>
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
-                    <TextBox Name="tbClave" Header="Clave" IsReadOnly="True" Grid.ColumnSpan="2"></TextBox>
-                    <TextBox Name="tbNombreArea" Grid.Row="1" Header="Nombre del area" KeyUp="tbNombreArea_KeyUp" MaxLength="20" Grid.ColumnSpan="2"></TextBox>
-                        <Button Name="btnGuardar" Content="Guardar" Margin="0,10,10,10" Height="60" FontSize="25" Click="btnGuardar_Click" HorizontalAlignment="Stretch" Grid.Row="4">
+                    <TextBox x:ConnectionId='3' Name="tbClave" Header="Clave" IsReadOnly="True" Grid.ColumnSpan="2"></TextBox>
+                    <TextBox x:ConnectionId='4' Name="tbNombreArea" Grid.Row="1" Header="Nombre del area"                            MaxLength="20" Grid.ColumnSpan="2"></TextBox>
+                        <Button x:ConnectionId='5' Name="btnGuardar" Content="Guardar" Margin="0,10,10,10" Height="60" FontSize="25"                          HorizontalAlignment="Stretch" Grid.Row="4">
                             <Button.Foreground>
                                 <SolidColorBrush Color="{StaticResource MainBackground}"/>
                             </Button.Foreground>
@@ -76,7 +76,7 @@
                                 <SolidColorBrush Color="#FF70AD47"/>
                             </Button.Background>
                         </Button>
-                        <Button Name="btnCancelar" Content="Cancelar" Grid.Column="1" Margin="10,10,0,10" Height="60" FontSize="25" Click="btnCancelar_Click" HorizontalAlignment="Stretch" Background="#FFE06666" Grid.Row="4">
+                        <Button x:ConnectionId='6' Name="btnCancelar" Content="Cancelar" Grid.Column="1" Margin="10,10,0,10" Height="60" FontSize="25"                           HorizontalAlignment="Stretch" Background="#FFE06666" Grid.Row="4">
                             <Button.Foreground>
                                 <SolidColorBrush Color="{StaticResource MainBackground}"/>
                             </Button.Foreground>
@@ -86,3 +86,4 @@
         </ScrollViewer>
     </Grid>
 </Page>
+
