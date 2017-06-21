@@ -115,6 +115,10 @@
       <DependentUpon>Reference.datasvcmap</DependentUpon>
     </Compile>
     <Compile Include="TablesClasses\tcEmpleadoArea.cs" />
+    <Compile Include="TablesClasses\tcEmpleadoPermiso.cs" />
+    <Compile Include="TablesClasses\tcHorario.cs" />
+    <Compile Include="TablesClasses\tcHorarioArea.cs" />
+    <Compile Include="TablesClasses\tcPermiso.cs" />
     <Compile Include="TablesClasses\tcUsuario.cs" />
     <Compile Include="Usuario.cs">
       <DependentUpon>AssistanceControlModel.tt</DependentUpon>
