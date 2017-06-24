@@ -1,9 +1,12 @@
-﻿using Assistence_Control.Utilerias.Items;
+﻿using AssistanceControl_BLL;
+using AssistanceControl_BLL.AssistanceService;
+using Assistence_Control.Utilerias.Items;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Threading.Tasks;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Popups;
@@ -25,35 +28,37 @@ namespace Assistence_Control.Views.Empleados
     public sealed partial class abcEmpleado : Page
     {
         //Variables Globales
-        EmpleadoItem empleadoSeleccionado = null;
-        List<EmpleadoItem> empleados = null;
+        Empleado empleadoSeleccionado = null;
+        Empleado nuevoEmpleado = null;
+        enum ACCION { INSERTAR = 1, ACTUALIZAR = 2, ELIMINAR = 3 };
+        int estado = 0;
+        List<Empleado> empleados = null;
+        tcEmpleado empDAO;
+
         //Constructor
         public abcEmpleado()
         {
             this.InitializeComponent();
+            empDAO = new tcEmpleado(App.uriServicio);
             cargarEmpleados();
         }
         //Metodos de carga
-        private void cargarEmpleados()
+        private async void cargarEmpleados()
         {
-             empleados = new List<EmpleadoItem>();
-            int length = 100;
-            for (int i = 0; i < length; i++)
+            try
             {
-                empleados.Add(new EmpleadoItem {
-                    Nombre = "Luis Alonso",
-                    NoEmpleado = "12490092",
-                    ApellidoPaterno = "Duenas",
-                    ApellidoMaterno = "Manroquez",
-                    Edad = i,
-                    FechaAlta = DateTime.Today
-                });
+                empleados = await empDAO.getAllEmpleados();
+                DataGrid.ItemsSource = empleados;
+
             }
-            DataGrid.ItemsSource = empleados;
-        }
+            catch (Exception ex)
+            {
+                await new MessageDialog("Error al obtener empleados.").ShowAsync();
+            }        }
         //Eventos
         private void btnAgregar_Click(object sender, RoutedEventArgs e)
         {
+            estado =(int)ACCION.INSERTAR;
             if (gridAgregar.Visibility == Visibility.Collapsed)
             {
                 gridAgregar.Visibility = Visibility.Visible;
@@ -65,14 +70,15 @@ namespace Assistence_Control.Views.Empleados
         }
         private async void btnEditar_Click(object sender, RoutedEventArgs e)
         {
-            empleadoSeleccionado = (EmpleadoItem)DataGrid.SelectedItem;
+            estado = (int)ACCION.ACTUALIZAR;
+            empleadoSeleccionado = (Empleado)DataGrid.SelectedItem;
             if (empleadoSeleccionado != null)
             {
                 gridAgregar.Visibility = Visibility.Visible;
-                tbNumeroEmpleado.Text = empleadoSeleccionado.NoEmpleado;
+                tbNumeroEmpleado.Text = empleadoSeleccionado.EmpleadoId.ToString();
                 tbNombre.Text = empleadoSeleccionado.Nombre;
-                tbApellidoPaterno.Text = empleadoSeleccionado.ApellidoPaterno;
-                tbApellidoMaterno.Text = empleadoSeleccionado.ApellidoMaterno;
+                tbApellidoPaterno.Text = empleadoSeleccionado.Apellido1;
+                tbApellidoMaterno.Text = empleadoSeleccionado.Apellido2;
             }
             else
             {
@@ -81,27 +87,38 @@ namespace Assistence_Control.Views.Empleados
         }
         private void btnEliminar_Click(object sender, RoutedEventArgs e)
         {
-
+            estado = (int)ACCION.ELIMINAR;
         }
         private async void btnGuardar_Click(object sender, RoutedEventArgs e)
         {
-            if (empleadoSeleccionado != null)//Actualizar
+            try
             {
-                int selectedIndex = empleados.IndexOf(empleadoSeleccionado);
-                empleados[selectedIndex].NoEmpleado = tbNumeroEmpleado.Text;
-                empleados[selectedIndex].Nombre = tbNombre.Text;
-                empleados[selectedIndex].ApellidoMaterno = tbApellidoMaterno.Text;
-                empleados[selectedIndex].ApellidoPaterno = tbApellidoPaterno.Text;
-                DataGrid.ItemsSource = null;
-                DataGrid.ItemsSource = empleados;
-                DataGrid.SelectedItem = empleadoSeleccionado; 
+                switch (estado)
+                {
+                    case (int)ACCION.ACTUALIZAR:
+                        int selectedIndex = empleados.IndexOf(empleadoSeleccionado);
+                        empleados[selectedIndex].EmpleadoId = int.Parse(tbNumeroEmpleado.Text);
+                        empleados[selectedIndex].Nombre = tbNombre.Text;
+                        empleados[selectedIndex].Apellido1 = tbApellidoMaterno.Text;
+                        empleados[selectedIndex].Apellido2 = tbApellidoPaterno.Text;
+                        DataGrid.ItemsSource = null;
+                        DataGrid.ItemsSource = empleados;
+                        DataGrid.SelectedItem = empleadoSeleccionado;
+                        await new MessageDialog("Empleado actualizado correctamente!", "").ShowAsync();
+                        break;
+                    case (int)ACCION.INSERTAR:
+                        obtenerDatosVista();
+                        empDAO.Insertar(nuevoEmpleado);
+                        await new MessageDialog("El empleado fue dado de alta correctamente.", "").ShowAsync();
+                        break;
+                }
+                limpiarCampos();
             }
-            else
+            catch (Exception ex)
             {
-                //InsertarNuevo
+
+                throw;
             }
-            limpiarCampos();
-            await new MessageDialog("Empleado actualizado correctamente!", "").ShowAsync();
         }
         private void btnCancelar_Click(object sender, RoutedEventArgs e)
         {
@@ -116,22 +133,18 @@ namespace Assistence_Control.Views.Empleados
             {
                 //Set the ItemsSource to be your filtered dataset
                 //sender.ItemsSource = dataset;
-                var matchingEmployees = Assistance_Control.Utilerias.Utils.obtenerEmpleadosBusqueda(empleados,sender.Text);
+                var matchingEmployees = Assistance_Control.Utilerias.Utils.obtenerEmpleadosBusqueda(empleados, sender.Text);
                 sender.ItemsSource = matchingEmployees.ToList();
                 DataGrid.ItemsSource = null;
                 DataGrid.ItemsSource = matchingEmployees.ToList();
             }
         }
-
-
         private void AutoSuggestBox_SuggestionChosen(AutoSuggestBox sender, AutoSuggestBoxSuggestionChosenEventArgs args)
         {
             EmpleadoItem empleado = (EmpleadoItem)args.SelectedItem;
             DataGrid.SelectedItem = empleado;
             sender.Text = empleado.Nombre;
         }
-
-
         private void AutoSuggestBox_QuerySubmitted(AutoSuggestBox sender, AutoSuggestBoxQuerySubmittedEventArgs args)
         {
             if (args.ChosenSuggestion != null)
@@ -151,6 +164,54 @@ namespace Assistence_Control.Views.Empleados
             tbApellidoPaterno.Text = string.Empty;
             tbApellidoMaterno.Text = string.Empty;
             empleadoSeleccionado = null;
+        }
+        private async void obtenerDatosVista()
+        {
+            if (await validarCampos())
+            {
+                nuevoEmpleado = new Empleado()
+                {
+                    Nombre = tbNombre.Text,
+                    Apellido1 = tbApellidoPaterno.Text,
+                    Apellido2 = tbApellidoMaterno.Text,
+                    EmpleadoId = int.Parse(tbNumeroEmpleado.Text),
+                    Asistencia = null,
+                    Edad = "25",
+                    EmpleadoArea = null,
+                    EmpleadoPermiso = null,
+                    FechaHoraRegistro = DateTime.Now,
+                    UsuarioRegistro = 1
+                    
+                };
+            }
+        }
+        private async Task<bool> validarCampos()
+        {
+            if (string.IsNullOrWhiteSpace(tbNumeroEmpleado.Text))
+            {
+                await new MessageDialog("Capture el numero de empleado.").ShowAsync();
+                tbNumeroEmpleado.Focus(FocusState.Programmatic);
+                return false;
+            }
+            else if (string.IsNullOrWhiteSpace(tbNombre.Text))
+            {
+                await new MessageDialog("Capture el nombre.").ShowAsync();
+                tbNombre.Focus(FocusState.Programmatic);
+                return false;
+            }
+            else if (string.IsNullOrWhiteSpace(tbApellidoPaterno.Text))
+            {
+                await new MessageDialog("Capture el apellido paterno.").ShowAsync();
+                tbApellidoPaterno.Focus(FocusState.Programmatic);
+                return false;
+            }
+            else if (string.IsNullOrWhiteSpace(tbApellidoMaterno.Text))
+            {
+                await new MessageDialog("Capture el apellido materno.").ShowAsync();
+                tbApellidoMaterno.Focus(FocusState.Programmatic);
+                return false;
+            }
+            return true;
         }
     }
 }

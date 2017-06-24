@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="AssistanceControlModelStoreContainer" CdmEntityContainer="AssistanceControlEntities">
+    <EntitySetMapping Name="Areas">
+      <EntityTypeMapping TypeName="AssistanceControlModel.Area">
+        <MappingFragment StoreEntitySet="Area">
+          <ScalarProperty Name="AreaId" ColumnName="AreaId" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="UsuarioRegistro" ColumnName="UsuarioRegistro" />
+          <ScalarProperty Name="FechaHoraRegistro" ColumnName="FechaHoraRegistro" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Asistencias">
+      <EntityTypeMapping TypeName="AssistanceControlModel.Asistencia">
+        <MappingFragment StoreEntitySet="Asistencia">
+          <ScalarProperty Name="AsistenciaId" ColumnName="AsistenciaId" />
+          <ScalarProperty Name="EmpleadoId" ColumnName="EmpleadoId" />
+          <ScalarProperty Name="FechaHora" ColumnName="FechaHora" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Empleadoes">
+      <EntityTypeMapping TypeName="AssistanceControlModel.Empleado">
+        <MappingFragment StoreEntitySet="Empleado">
+          <ScalarProperty Name="EmpleadoId" ColumnName="EmpleadoId" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Apellido1" ColumnName="Apellido1" />
+          <ScalarProperty Name="Apellido2" ColumnName="Apellido2" />
+          <ScalarProperty Name="Edad" ColumnName="Edad" />
+          <ScalarProperty Name="UsuarioRegistro" ColumnName="UsuarioRegistro" />
+          <ScalarProperty Name="FechaHoraRegistro" ColumnName="FechaHoraRegistro" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EmpleadoAreas">
+      <EntityTypeMapping TypeName="AssistanceControlModel.EmpleadoArea">
+        <MappingFragment StoreEntitySet="EmpleadoArea">
+          <ScalarProperty Name="EmpleadoId" ColumnName="EmpleadoId" />
+          <ScalarProperty Name="AreaId" ColumnName="AreaId" />
+          <ScalarProperty Name="FechaInicio" ColumnName="FechaInicio" />
+          <ScalarProperty Name="FechaFinal" ColumnName="FechaFinal" />
+          <ScalarProperty Name="UsuarioRegistro" ColumnName="UsuarioRegistro" />
+          <ScalarProperty Name="FechaHoraRegistro" ColumnName="FechaHoraRegistro" />
+          <ScalarProperty Name="Estatus" ColumnName="Estatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EmpleadoPermisoes">
+      <EntityTypeMapping TypeName="AssistanceControlModel.EmpleadoPermiso">
+        <MappingFragment StoreEntitySet="EmpleadoPermiso">
+          <ScalarProperty Name="EmpleadoId" ColumnName="EmpleadoId" />
+          <ScalarProperty Name="PermisoId" ColumnName="PermisoId" />
+          <ScalarProperty Name="FechaInicio" ColumnName="FechaInicio" />
+          <ScalarProperty Name="FechaFinal" ColumnName="FechaFinal" />
+          <ScalarProperty Name="UsuarioRegistro" ColumnName="UsuarioRegistro" />
+          <ScalarProperty Name="FechaHoraRegistro" ColumnName="FechaHoraRegistro" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Horarios">
+      <EntityTypeMapping TypeName="AssistanceControlModel.Horario">
+        <MappingFragment StoreEntitySet="Horario">
+          <ScalarProperty Name="HorarioId" ColumnName="HorarioId" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="HoraEntrada" ColumnName="HoraEntrada" />
+          <ScalarProperty Name="HoraSalida" ColumnName="HoraSalida" />
+          <ScalarProperty Name="UsuarioRegistro" ColumnName="UsuarioRegistro" />
+          <ScalarProperty Name="FechaHoraRegistro" ColumnName="FechaHoraRegistro" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HorarioAreas">
+      <EntityTypeMapping TypeName="AssistanceControlModel.HorarioArea">
+        <MappingFragment StoreEntitySet="HorarioArea">
+          <ScalarProperty Name="HorarioId" ColumnName="HorarioId" />
+          <ScalarProperty Name="AreaId" ColumnName="AreaId" />
+          <ScalarProperty Name="FechaInicio" ColumnName="FechaInicio" />
+          <ScalarProperty Name="FechaFinal" ColumnName="FechaFinal" />
+          <ScalarProperty Name="UsuarioRegistro" ColumnName="UsuarioRegistro" />
+          <ScalarProperty Name="FechaHoraRegistro" ColumnName="FechaHoraRegistro" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Permisoes">
+      <EntityTypeMapping TypeName="AssistanceControlModel.Permiso">
+        <MappingFragment StoreEntitySet="Permiso">
+          <ScalarProperty Name="PermisoId" ColumnName="PermisoId" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="UsuarioRegistro" ColumnName="UsuarioRegistro" />
+          <ScalarProperty Name="FechaHoraRegistro" ColumnName="FechaHoraRegistro" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Usuarios">
+      <EntityTypeMapping TypeName="AssistanceControlModel.Usuario">
+        <MappingFragment StoreEntitySet="Usuario">
+          <ScalarProperty Name="UsuarioId" ColumnName="UsuarioId" />
+          <ScalarProperty Name="EmpleadoId" ColumnName="EmpleadoId" />
+          <ScalarProperty Name="Contrasena" ColumnName="Contrasena" />
+          <ScalarProperty Name="Nivel" ColumnName="Nivel" />
+          <ScalarProperty Name="UsuarioRegistro" ColumnName="UsuarioRegistro" />
+          <ScalarProperty Name="FechaHoraRegistro" ColumnName="FechaHoraRegistro" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

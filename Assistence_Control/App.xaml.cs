@@ -1,36 +1,43 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
+﻿using AssistanceControl_BLL.AssistanceService;
+using System;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
+using Windows.Storage;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Data;
-using Windows.UI.Xaml.Input;
-using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
 namespace Assistence_Control
 {
-    /// <summary>
-    /// Provides application-specific behavior to supplement the default Application class.
-    /// </summary>
+
     sealed partial class App : Application
     {
-        /// <summary>
-        /// Initializes the singleton application object.  This is the first line of authored code
-        /// executed, and as such is the logical equivalent of main() or WinMain().
-        /// </summary>
+
+        public static Usuario usuarioAutentificado = null;
+        public static Uri uriServicio;
+        public static ApplicationDataContainer settings = ApplicationData.Current.LocalSettings;
+        public static ApplicationDataContainer container = settings.CreateContainer("Configuracion", ApplicationDataCreateDisposition.Always);
+
         public App()
         {
             this.InitializeComponent();
             this.Suspending += OnSuspending;
+            this.inicializaConfiguracion();
+
         }
+        private void inicializaConfiguracion()
+        {
+
+            settings.CreateContainer("Configuracion", ApplicationDataCreateDisposition.Always);
+            if (settings.Containers["Configuracion"].Values.Count == 0)
+            {
+                settings.Containers["Configuracion"].Values["uriServicio"] = "http://localhost/wsAssistanceControl/DataService.svc";
+            }
+
+            uriServicio = new Uri(settings.Containers["Configuracion"].Values["uriServicio"].ToString());
+
+        }
+
 
         /// <summary>
         /// Invoked when the application is launched normally by the end user.  Other entry points

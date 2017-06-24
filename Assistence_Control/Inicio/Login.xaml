@@ -39,8 +39,8 @@
                 <RowDefinition/>
                 <RowDefinition Height=".5*"/>
             </Grid.RowDefinitions>
-            <TextBox Grid.Column="1" Grid.Row="2" Header="Usuario" FontSize="40" Foreground="#FF70AD47" Margin="0,0,0,30"/>
-            <TextBox Grid.Column="1" Grid.Row="3" Header="Contraseña" FontSize="40" Margin="0,0,0,30"/>
+            <TextBox Name="tbUsuario" Grid.Column="1" Grid.Row="2" Header="Numero Empleado" TextChanged="numeric_TextChanged" FontSize="40" Margin="0,0,0,30"/>
+            <PasswordBox Name="tbPassword"  Grid.Column="1" KeyUp="tbPassword_KeyUp" Grid.Row="3" Header="Contraseña" FontSize="40" Margin="0,0,0,30"/>
             <Grid Grid.Column="1" Grid.Row="4">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition/>
@@ -50,5 +50,6 @@
                 <Button Name="btnCancelar" Click="btnCancelar_Click" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Content="Cancelar" Grid.Column="1" Margin="10,35,0,35" FontSize="40" Foreground="White" Background="Red"></Button>
             </Grid>
         </Grid>
+        <ProgressRing Name="prLoading" Grid.RowSpan="3" Grid.ColumnSpan="3" Height="100" Width="100"/>
     </Grid>
 </Page>

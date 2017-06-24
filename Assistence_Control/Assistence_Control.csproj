@@ -193,6 +193,12 @@
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AssistanceControl_BLL\AssistanceControl_BLL.csproj">
+      <Project>{39804530-49b6-4127-86bf-15cf2762a488}</Project>
+      <Name>AssistanceControl_BLL</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>

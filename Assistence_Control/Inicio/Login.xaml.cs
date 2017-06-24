@@ -1,19 +1,13 @@
-﻿using Assistence_Control.Menu;
+﻿using AssistanceControl_BLL.AssistanceService;
+using AssistanceControl_BLL.TablesClasses;
+using Assistence_Control.Menu;
 using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
+using System.Threading.Tasks;
+using Windows.System;
 using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
-using Windows.UI.Xaml.Media;
-using Windows.UI.Xaml.Navigation;
 
 namespace Assistence_Control.Inicio
 {
@@ -27,10 +21,89 @@ namespace Assistence_Control.Inicio
 
         private async void btnEntrar_Click(object sender, RoutedEventArgs e)
         {
+            accesar();
+        }
+        private async Task<bool> validaCampos()
+        {
+            if (string.IsNullOrWhiteSpace(tbUsuario.Text))
+            {
+                await new MessageDialog("Falta ingresar usuario").ShowAsync();
+                tbUsuario.Focus(FocusState.Programmatic);
+                return false;
+            }
+            else if(string.IsNullOrWhiteSpace(tbPassword.Password))
+            {
+                await new MessageDialog("Falta ingresar contraseña.").ShowAsync();
+                tbUsuario.Focus(FocusState.Programmatic);
+                return false;
+            }
+            return true;
+        }
+
+        private async void btnCancelar_Click(object sender, RoutedEventArgs e)
+        {
+            limpiarCampos();
             try
             {
-                Frame rootFrame = (Window.Current.Content as Frame);
-                rootFrame.Navigate(typeof(pMasterPage),this);
+                Usuario user = new Usuario
+                {
+                    EmpleadoId = 14490224,
+                    Contrasena = "potter13",
+                    Nivel = 1,
+                    UsuarioRegistro = 0,
+                    FechaHoraRegistro = DateTime.Now,
+                    UsuarioId = "2"
+                };
+                tcUsuario usDAO = new tcUsuario(App.uriServicio);
+                usDAO.Insertar(user);
+                await new MessageDialog("correcto").ShowAsync();
+
+            }
+            catch (Exception ex)
+            {
+                await new MessageDialog("Error al insertar usuario" + ex.Message).ShowAsync();
+            }
+        }
+
+        private void tbPassword_KeyUp(object sender, KeyRoutedEventArgs e)
+        {
+            if (e.Key == VirtualKey.Enter)
+            {
+                accesar();
+            }
+        }
+        private async void accesar()
+        {
+            prLoading.IsActive = true;
+            try
+            {
+                prLoading.IsActive = true;
+                if (await validaCampos())
+                {
+                    tcUsuario usDAO = new tcUsuario(App.uriServicio);
+                    App.usuarioAutentificado = await usDAO.getUsuarioByEmpleadoId(tbUsuario.Text);
+                    if (App.usuarioAutentificado != null)
+                    {
+                        if (tbPassword.Password != App.usuarioAutentificado.Contrasena)
+                        {
+                            await new MessageDialog("La contraseña es incorrecta.").ShowAsync();
+                            tbPassword.Focus(FocusState.Programmatic);
+                            tbPassword.SelectAll();
+                            return;
+                        }
+                        else
+                        {
+                            Frame rootFrame = (Window.Current.Content as Frame);
+                            rootFrame.Navigate(typeof(pMasterPage), this);
+                        }
+                    }
+                    else
+                    {
+                        await new MessageDialog("El usuario es incorrecto.").ShowAsync();
+                        tbUsuario.Focus(FocusState.Programmatic);
+                        tbUsuario.SelectAll();
+                    }
+                }
             }
             catch (Exception ex)
             {
@@ -39,13 +112,41 @@ namespace Assistence_Control.Inicio
                 messageDialog.DefaultCommandIndex = 0;
                 await messageDialog.ShowAsync();
             }
+            finally
+            {
+                prLoading.IsActive = false;
+            }
         }
 
-        private void btnCancelar_Click(object sender, RoutedEventArgs e)
+        private void limpiarCampos()
         {
-
+            tbPassword.Password = string.Empty;
+            tbUsuario.Text = string.Empty;
         }
 
-
+        private async void numeric_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            TextBox txt = sender as TextBox;
+            string val = txt.Text;
+            double aux = 0.0;
+            if (string.IsNullOrEmpty(val))
+            {
+                return;
+            }
+            if (!double.TryParse(val, out aux))
+            {
+                if (!char.IsNumber(val[val.Length - 1]))
+                {
+                    val = val.Remove(val.Length - 1);
+                }
+                else if (!char.IsNumber(val[0]))
+                {
+                    val = val.Remove(0, 1);
+                }
+                txt.Text = val;
+                txt.SelectionStart = val.Length;
+                await new MessageDialog("Solo se permiten numeros.", "Aviso").ShowAsync();
+            }
+        }
     }
 }

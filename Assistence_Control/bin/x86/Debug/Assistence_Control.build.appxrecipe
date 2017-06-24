@@ -55,6 +55,96 @@
     <AppxPackagedFile Include="C:\Users\Luis Dueñas\.nuget\packages\Microsoft.CSharp\4.0.0\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Luis Dueñas\.nuget\packages\Microsoft.Data.Edm\5.6.4\lib\portable-net45+wp8+win8+wpa\Microsoft.Data.Edm.dll">
+      <PackagePath>Microsoft.Data.Edm.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Luis Dueñas\.nuget\packages\Microsoft.Data.Edm\5.6.4\lib\portable-net45+wp8+win8+wpa\de\Microsoft.Data.Edm.resources.dll">
+      <PackagePath>de\Microsoft.Data.Edm.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Luis Dueñas\.nuget\packages\Microsoft.Data.Edm\5.6.4\lib\portable-net45+wp8+win8+wpa\es\Microsoft.Data.Edm.resources.dll">
+      <PackagePath>es\Microsoft.Data.Edm.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Luis Dueñas\.nuget\packages\Microsoft.Data.Edm\5.6.4\lib\portable-net45+wp8+win8+wpa\fr\Microsoft.Data.Edm.resources.dll">
+      <PackagePath>fr\Microsoft.Data.Edm.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Luis Dueñas\.nuget\packages\Microsoft.Data.Edm\5.6.4\lib\portable-net45+wp8+win8+wpa\it\Microsoft.Data.Edm.resources.dll">
+      <PackagePath>it\Microsoft.Data.Edm.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Luis Dueñas\.nuget\packages\Microsoft.Data.Edm\5.6.4\lib\portable-net45+wp8+win8+wpa\ja\Microsoft.Data.Edm.resources.dll">
+      <PackagePath>ja\Microsoft.Data.Edm.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Luis Dueñas\.nuget\packages\Microsoft.Data.Edm\5.6.4\lib\portable-net45+wp8+win8+wpa\ko\Microsoft.Data.Edm.resources.dll">
+      <PackagePath>ko\Microsoft.Data.Edm.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Luis Dueñas\.nuget\packages\Microsoft.Data.Edm\5.6.4\lib\portable-net45+wp8+win8+wpa\ru\Microsoft.Data.Edm.resources.dll">
+      <PackagePath>ru\Microsoft.Data.Edm.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Luis Dueñas\.nuget\packages\Microsoft.Data.Edm\5.6.4\lib\portable-net45+wp8+win8+wpa\zh-Hans\Microsoft.Data.Edm.resources.dll">
+      <PackagePath>zh-Hans\Microsoft.Data.Edm.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Luis Dueñas\.nuget\packages\Microsoft.Data.Edm\5.6.4\lib\portable-net45+wp8+win8+wpa\zh-Hant\Microsoft.Data.Edm.resources.dll">
+      <PackagePath>zh-Hant\Microsoft.Data.Edm.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Luis Dueñas\.nuget\packages\Microsoft.Data.OData\5.6.4\lib\portable-net45+wp8+win8+wpa\Microsoft.Data.OData.dll">
+      <PackagePath>Microsoft.Data.OData.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Luis Dueñas\.nuget\packages\Microsoft.Data.OData\5.6.4\lib\portable-net45+wp8+win8+wpa\de\Microsoft.Data.OData.resources.dll">
+      <PackagePath>de\Microsoft.Data.OData.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Luis Dueñas\.nuget\packages\Microsoft.Data.OData\5.6.4\lib\portable-net45+wp8+win8+wpa\es\Microsoft.Data.OData.resources.dll">
+      <PackagePath>es\Microsoft.Data.OData.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Luis Dueñas\.nuget\packages\Microsoft.Data.OData\5.6.4\lib\portable-net45+wp8+win8+wpa\fr\Microsoft.Data.OData.resources.dll">
+      <PackagePath>fr\Microsoft.Data.OData.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Luis Dueñas\.nuget\packages\Microsoft.Data.OData\5.6.4\lib\portable-net45+wp8+win8+wpa\it\Microsoft.Data.OData.resources.dll">
+      <PackagePath>it\Microsoft.Data.OData.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Luis Dueñas\.nuget\packages\Microsoft.Data.OData\5.6.4\lib\portable-net45+wp8+win8+wpa\ja\Microsoft.Data.OData.resources.dll">
+      <PackagePath>ja\Microsoft.Data.OData.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Luis Dueñas\.nuget\packages\Microsoft.Data.OData\5.6.4\lib\portable-net45+wp8+win8+wpa\ko\Microsoft.Data.OData.resources.dll">
+      <PackagePath>ko\Microsoft.Data.OData.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Luis Dueñas\.nuget\packages\Microsoft.Data.OData\5.6.4\lib\portable-net45+wp8+win8+wpa\ru\Microsoft.Data.OData.resources.dll">
+      <PackagePath>ru\Microsoft.Data.OData.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Luis Dueñas\.nuget\packages\Microsoft.Data.OData\5.6.4\lib\portable-net45+wp8+win8+wpa\zh-Hans\Microsoft.Data.OData.resources.dll">
+      <PackagePath>zh-Hans\Microsoft.Data.OData.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Luis Dueñas\.nuget\packages\Microsoft.Data.OData\5.6.4\lib\portable-net45+wp8+win8+wpa\zh-Hant\Microsoft.Data.OData.resources.dll">
+      <PackagePath>zh-Hant\Microsoft.Data.OData.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Luis Dueñas\.nuget\packages\Microsoft.Data.Services.Client\5.6.4\lib\portable-net45+wp8+win8+wpa\Microsoft.Data.Services.Client.dll">
+      <PackagePath>Microsoft.Data.Services.Client.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Luis Dueñas\.nuget\packages\Microsoft.Data.Services.Client\5.6.4\lib\portable-net45+wp8+win8+wpa\de\Microsoft.Data.Services.Client.resources.dll">
+      <PackagePath>de\Microsoft.Data.Services.Client.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Luis Dueñas\.nuget\packages\Microsoft.Data.Services.Client\5.6.4\lib\portable-net45+wp8+win8+wpa\es\Microsoft.Data.Services.Client.resources.dll">
+      <PackagePath>es\Microsoft.Data.Services.Client.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Luis Dueñas\.nuget\packages\Microsoft.Data.Services.Client\5.6.4\lib\portable-net45+wp8+win8+wpa\fr\Microsoft.Data.Services.Client.resources.dll">
+      <PackagePath>fr\Microsoft.Data.Services.Client.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Luis Dueñas\.nuget\packages\Microsoft.Data.Services.Client\5.6.4\lib\portable-net45+wp8+win8+wpa\it\Microsoft.Data.Services.Client.resources.dll">
+      <PackagePath>it\Microsoft.Data.Services.Client.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Luis Dueñas\.nuget\packages\Microsoft.Data.Services.Client\5.6.4\lib\portable-net45+wp8+win8+wpa\ja\Microsoft.Data.Services.Client.resources.dll">
+      <PackagePath>ja\Microsoft.Data.Services.Client.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Luis Dueñas\.nuget\packages\Microsoft.Data.Services.Client\5.6.4\lib\portable-net45+wp8+win8+wpa\ko\Microsoft.Data.Services.Client.resources.dll">
+      <PackagePath>ko\Microsoft.Data.Services.Client.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Luis Dueñas\.nuget\packages\Microsoft.Data.Services.Client\5.6.4\lib\portable-net45+wp8+win8+wpa\ru\Microsoft.Data.Services.Client.resources.dll">
+      <PackagePath>ru\Microsoft.Data.Services.Client.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Luis Dueñas\.nuget\packages\Microsoft.Data.Services.Client\5.6.4\lib\portable-net45+wp8+win8+wpa\zh-Hans\Microsoft.Data.Services.Client.resources.dll">
+      <PackagePath>zh-Hans\Microsoft.Data.Services.Client.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Luis Dueñas\.nuget\packages\Microsoft.Data.Services.Client\5.6.4\lib\portable-net45+wp8+win8+wpa\zh-Hant\Microsoft.Data.Services.Client.resources.dll">
+      <PackagePath>zh-Hant\Microsoft.Data.Services.Client.resources.dll</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Luis Dueñas\.nuget\packages\Microsoft.NETCore.Portable.Compatibility\1.0.0\lib\netcore50\System.ComponentModel.DataAnnotations.dll">
       <PackagePath>System.ComponentModel.DataAnnotations.dll</PackagePath>
     </AppxPackagedFile>
@@ -325,6 +415,36 @@
     <AppxPackagedFile Include="C:\Users\Luis Dueñas\.nuget\packages\System.ServiceModel.Security\4.0.0\lib\netcore50\System.ServiceModel.Security.dll">
       <PackagePath>System.ServiceModel.Security.dll</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Luis Dueñas\.nuget\packages\System.Spatial\5.6.4\lib\portable-net45+wp8+win8+wpa\System.Spatial.dll">
+      <PackagePath>System.Spatial.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Luis Dueñas\.nuget\packages\System.Spatial\5.6.4\lib\portable-net45+wp8+win8+wpa\de\System.Spatial.resources.dll">
+      <PackagePath>de\System.Spatial.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Luis Dueñas\.nuget\packages\System.Spatial\5.6.4\lib\portable-net45+wp8+win8+wpa\es\System.Spatial.resources.dll">
+      <PackagePath>es\System.Spatial.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Luis Dueñas\.nuget\packages\System.Spatial\5.6.4\lib\portable-net45+wp8+win8+wpa\fr\System.Spatial.resources.dll">
+      <PackagePath>fr\System.Spatial.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Luis Dueñas\.nuget\packages\System.Spatial\5.6.4\lib\portable-net45+wp8+win8+wpa\it\System.Spatial.resources.dll">
+      <PackagePath>it\System.Spatial.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Luis Dueñas\.nuget\packages\System.Spatial\5.6.4\lib\portable-net45+wp8+win8+wpa\ja\System.Spatial.resources.dll">
+      <PackagePath>ja\System.Spatial.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Luis Dueñas\.nuget\packages\System.Spatial\5.6.4\lib\portable-net45+wp8+win8+wpa\ko\System.Spatial.resources.dll">
+      <PackagePath>ko\System.Spatial.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Luis Dueñas\.nuget\packages\System.Spatial\5.6.4\lib\portable-net45+wp8+win8+wpa\ru\System.Spatial.resources.dll">
+      <PackagePath>ru\System.Spatial.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Luis Dueñas\.nuget\packages\System.Spatial\5.6.4\lib\portable-net45+wp8+win8+wpa\zh-Hans\System.Spatial.resources.dll">
+      <PackagePath>zh-Hans\System.Spatial.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Luis Dueñas\.nuget\packages\System.Spatial\5.6.4\lib\portable-net45+wp8+win8+wpa\zh-Hant\System.Spatial.resources.dll">
+      <PackagePath>zh-Hant\System.Spatial.resources.dll</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Luis Dueñas\.nuget\packages\System.Text.Encoding\4.0.10\lib\netcore50\System.Text.Encoding.dll">
       <PackagePath>System.Text.Encoding.dll</PackagePath>
     </AppxPackagedFile>
@@ -366,6 +486,12 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Luis Dueñas\.nuget\packages\System.Xml.XmlSerializer\4.0.10\lib\netcore50\System.Xml.XmlSerializer.dll">
       <PackagePath>System.Xml.XmlSerializer.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Assistence_Control\AssistanceControl_BLL\bin\Debug\AssistanceControl_BLL.dll">
+      <PackagePath>AssistanceControl_BLL.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Assistence_Control\AssistanceControl_BLL\bin\Debug\Newtonsoft.Json.dll">
+      <PackagePath>Newtonsoft.Json.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Assistence_Control\Assistence_Control\Assets\calendar.png">
       <PackagePath>Assets\calendar.png</PackagePath>

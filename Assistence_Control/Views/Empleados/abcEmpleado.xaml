@@ -61,7 +61,7 @@
                     </Button>
 
                 </StackPanel>
-                <Grid Name="gridAgregar" Visibility="Visible" Grid.Row="3" Margin="30,0">
+                <Grid Name="gridAgregar" Visibility="Collapsed" Grid.Row="3" Margin="30,0">
                     <Grid.RowDefinitions>
                         <RowDefinition/>
                         <RowDefinition/>
