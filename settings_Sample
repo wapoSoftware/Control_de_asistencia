@@ -1,0 +1,181 @@
+    public class Settings
+    {
+        string wsCommerciaNet;
+        public string WsCommerciaNet
+        {
+            get
+            {
+                return App.settingsContainer.Containers["CommerciaCATTLE"].Values["WsCommerciaNet"].ToString();
+            }
+
+            set
+            {
+                wsCommerciaNet = value;
+                App.settingsContainer.Containers["CommerciaCATTLE"].Values["WsCommerciaNet"] = value;
+            }
+        }
+
+        string wsMobile;
+        public string WsMobile
+        {
+            get
+            {
+                return App.settingsContainer.Containers["CommerciaCATTLE"].Values["WsMobile"].ToString();
+            }
+
+            set
+            {
+                wsMobile = value;
+                App.settingsContainer.Containers["CommerciaCATTLE"].Values["WsMobile"] = value;
+            }
+        }
+
+        string wsCattleCommerciaNet;
+        public string WsCattleCommerciaNet
+        {
+            get
+            {
+                return App.settingsContainer.Containers["CommerciaCATTLE"].Values["WsCattleCommerciaNet"].ToString();
+            }
+
+            set
+            {
+                wsCattleCommerciaNet = value;
+                App.settingsContainer.Containers["CommerciaCATTLE"].Values["WsCattleCommerciaNet"] = value;
+            }
+        }
+
+        string wsEysGanadera;
+        public string WsEysGanadera
+        {
+            get
+            {
+                return App.settingsContainer.Containers["CommerciaCATTLE"].Values["WsEysGanadera"].ToString();
+            }
+
+            set
+            {
+                wsEysGanadera = value;
+                App.settingsContainer.Containers["CommerciaCATTLE"].Values["WsEysGanadera"] = value;
+            }
+        }
+
+        string wsMobileTablet;
+        public string WsMobileTablet
+        {
+            get
+            {
+                return App.settingsContainer.Containers["CommerciaCATTLE"].Values["WsMobileTablet"].ToString();
+            }
+
+            set
+            {
+                wsMobileTablet = value;
+                App.settingsContainer.Containers["CommerciaCATTLE"].Values["WsMobileTablet"] = value;
+            }
+        }
+
+        string wsCommerciaNetTablet;
+        public string WsCommerciaNetTablet
+        {
+            get
+            {
+                return App.settingsContainer.Containers["CommerciaCATTLE"].Values["WsCommerciaNetTablet"].ToString();
+            }
+
+            set
+            {
+                wsCommerciaNetTablet = value;
+                App.settingsContainer.Containers["CommerciaCATTLE"].Values["WsCommerciaNetTablet"] = value;
+            }
+        }
+
+        string wsEysGanaderaTablet;
+        public string WsEysGanaderaTablet
+        {
+            get
+            {
+                return App.settingsContainer.Containers["CommerciaCATTLE"].Values["WsEysGanaderaTablet"].ToString();
+            }
+
+            set
+            {
+                wsEysGanaderaTablet = value;
+                App.settingsContainer.Containers["CommerciaCATTLE"].Values["WsEysGanaderaTablet"] = value;
+            }
+        }
+
+        string wsExcelComederos;
+        public string WsExcelComederos
+        {
+            get
+            {
+                return App.settingsContainer.Containers["CommerciaCATTLE"].Values["WsExcelComederos"].ToString();
+            }
+
+            set
+            {
+                wsExcelComederos = value;
+                App.settingsContainer.Containers["CommerciaCATTLE"].Values["WsExcelComederos"] = value;
+            }
+        }
+        int empresaIndex;
+        public int EmpresaIndex
+        {
+            get
+            {
+                return Convert.ToInt32(App.settingsContainer.Containers["CommerciaCATTLE"].Values["EmpresaIndex"]);
+            }
+
+            set
+            {
+                empresaIndex = value;
+                App.settingsContainer.Containers["CommerciaCATTLE"].Values["EmpresaIndex"] = value;
+            }
+        }
+
+        int cantidadEspinas;
+        public int CantidadEspinas
+        {
+            get
+            {
+                return Convert.ToInt32(App.settingsContainer.Containers["CommerciaCATTLE"].Values["CantidadEspinas"]);
+            }
+
+            set
+            {
+                cantidadEspinas = value;
+                App.settingsContainer.Containers["CommerciaCATTLE"].Values["CantidadEspinas"] = value;
+            }
+        }
+
+        string empresa;
+        public string Empresa
+        {
+            get
+            {
+                return App.settingsContainer.Containers["CommerciaCATTLE"].Values["Empresa"].ToString();
+            }
+
+            set
+            {
+                empresa = value;
+                App.settingsContainer.Containers["CommerciaCATTLE"].Values["Empresa"] = value;
+            }
+        }
+
+        int sucursalIndex;
+        public int SucursalIndex
+        {
+            get
+            {
+                return Convert.ToInt32(App.settingsContainer.Containers["CommerciaCATTLE"].Values["SucursalIndex"]);
+            }
+
+            set
+            {
+                sucursalIndex = value;
+                App.settingsContainer.Containers["CommerciaCATTLE"].Values["SucursalIndex"] = value;
+            }
+        }
+    }
