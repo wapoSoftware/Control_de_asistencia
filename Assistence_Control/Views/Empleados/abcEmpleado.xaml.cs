@@ -48,20 +48,22 @@ namespace Assistence_Control.Views.Empleados
             try
             {
                 empleados = await empDAO.getAllEmpleados();
-                DataGrid.ItemsSource = empleados;
-
+                DataGrid.ItemsSource = null;
+                DataGrid.ItemsSource = empleados.OrderBy(o => o.Apellido1).ThenBy(o => o.Apellido2).ThenBy(o => o.Nombre).ToList();
             }
             catch (Exception ex)
             {
                 await new MessageDialog("Error al obtener empleados.").ShowAsync();
-            }        }
+            }
+        }
         //Eventos
         private void btnAgregar_Click(object sender, RoutedEventArgs e)
         {
-            estado =(int)ACCION.INSERTAR;
+            estado = (int)ACCION.INSERTAR;
             if (gridAgregar.Visibility == Visibility.Collapsed)
             {
                 gridAgregar.Visibility = Visibility.Visible;
+                tbNumeroEmpleado.Focus(FocusState.Programmatic);
             }
             else
             {
@@ -85,39 +87,74 @@ namespace Assistence_Control.Views.Empleados
                 await new MessageDialog("Seleccione un empleado para editar", "Atención").ShowAsync();
             }
         }
-        private void btnEliminar_Click(object sender, RoutedEventArgs e)
+        private async void btnEliminar_Click(object sender, RoutedEventArgs e)
         {
-            estado = (int)ACCION.ELIMINAR;
+            prLoading.IsActive = true;
+            try
+            {
+                if (empleadoSeleccionado != null)
+                {
+                    estado = (int)ACCION.ELIMINAR;
+                    MessageDialog messageDialog = new MessageDialog("Esta seguro de que desea eliminar a este empleado?", "Aviso");
+                    messageDialog.Commands.Add(new UICommand("Si", (command) =>
+                    {
+                        empDAO.Eliminar(empleadoSeleccionado);
+                    }));
+                    messageDialog.Commands.Add(new UICommand("No", (command) =>
+                    {
+                        return;
+                    }));
+                    await messageDialog.ShowAsync();
+                }
+                else
+                {
+                    await new MessageDialog("Seleccione un empleado.").ShowAsync();
+                }
+
+            }
+            catch (Exception ex)
+            {
+                await new MessageDialog(ex.Message).ShowAsync();
+            }
+            finally
+            {
+                prLoading.IsActive = false;
+            }
         }
         private async void btnGuardar_Click(object sender, RoutedEventArgs e)
         {
             try
             {
+                prLoading.IsActive = true;
                 switch (estado)
                 {
                     case (int)ACCION.ACTUALIZAR:
-                        int selectedIndex = empleados.IndexOf(empleadoSeleccionado);
-                        empleados[selectedIndex].EmpleadoId = int.Parse(tbNumeroEmpleado.Text);
-                        empleados[selectedIndex].Nombre = tbNombre.Text;
-                        empleados[selectedIndex].Apellido1 = tbApellidoMaterno.Text;
-                        empleados[selectedIndex].Apellido2 = tbApellidoPaterno.Text;
-                        DataGrid.ItemsSource = null;
-                        DataGrid.ItemsSource = empleados;
-                        DataGrid.SelectedItem = empleadoSeleccionado;
-                        await new MessageDialog("Empleado actualizado correctamente!", "").ShowAsync();
+                        if (await obtenerDatosVista())
+                        {
+                            await empDAO.Actualizar(nuevoEmpleado);
+                            cargarEmpleados();
+                            DataGrid.SelectedItem = empleadoSeleccionado;
+                            await new MessageDialog("Empleado actualizado correctamente!", "").ShowAsync();
+                        }
                         break;
                     case (int)ACCION.INSERTAR:
-                        obtenerDatosVista();
-                        empDAO.Insertar(nuevoEmpleado);
-                        await new MessageDialog("El empleado fue dado de alta correctamente.", "").ShowAsync();
+                        if (await obtenerDatosVista())
+                        {
+                            await empDAO.Insertar(nuevoEmpleado);
+                            cargarEmpleados();
+                            await new MessageDialog("El empleado fue dado de alta correctamente.", "").ShowAsync();
+                        }
                         break;
                 }
                 limpiarCampos();
             }
             catch (Exception ex)
             {
-
-                throw;
+                await new MessageDialog(ex.Message).ShowAsync();
+            }
+            finally
+            {
+                prLoading.IsActive = false;
             }
         }
         private void btnCancelar_Click(object sender, RoutedEventArgs e)
@@ -136,12 +173,20 @@ namespace Assistence_Control.Views.Empleados
                 var matchingEmployees = Assistance_Control.Utilerias.Utils.obtenerEmpleadosBusqueda(empleados, sender.Text);
                 sender.ItemsSource = matchingEmployees.ToList();
                 DataGrid.ItemsSource = null;
-                DataGrid.ItemsSource = matchingEmployees.ToList();
+                if (matchingEmployees.ToList().Count > 1)
+                {
+                    DataGrid.ItemsSource = matchingEmployees.OrderBy(o => o.Apellido1).ThenBy(o => o.Apellido2).ThenBy(o => o.Nombre).ToList();
+                }
+                else if (matchingEmployees.ToList().Count == 1)
+                {
+                    DataGrid.ItemsSource = matchingEmployees.OrderBy(o => o.Apellido1).ThenBy(o => o.Apellido2).ThenBy(o => o.Nombre).ToList();
+                    DataGrid.SelectedItem = matchingEmployees.ToList().FirstOrDefault();
+                }
             }
         }
         private void AutoSuggestBox_SuggestionChosen(AutoSuggestBox sender, AutoSuggestBoxSuggestionChosenEventArgs args)
         {
-            EmpleadoItem empleado = (EmpleadoItem)args.SelectedItem;
+            Empleado empleado = (Empleado)args.SelectedItem;
             DataGrid.SelectedItem = empleado;
             sender.Text = empleado.Nombre;
         }
@@ -156,6 +201,35 @@ namespace Assistence_Control.Views.Empleados
                 // Use args.QueryText to determine what to do.
             }
         }
+        private void numeric_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            TextBox txt = sender as TextBox;
+            string val = txt.Text;
+            double aux = 0.0;
+            if (string.IsNullOrEmpty(val))
+            {
+                return;
+            }
+            if (!double.TryParse(val, out aux))
+            {
+                if (!char.IsNumber(val[val.Length - 1]))
+                {
+                    val = val.Remove(val.Length - 1);
+                }
+                else if (!char.IsNumber(val[0]))
+                {
+                    val = val.Remove(0, 1);
+                }
+                txt.Text = val;
+                txt.SelectionStart = val.Length;
+                //TODO: AGEGAR ETIQUETA "SOLO SE PERMITEN NUMEROS"
+            }
+        }
+        private void DataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            MyToolkit.Controls.DataGrid dg = (MyToolkit.Controls.DataGrid)sender;
+            empleadoSeleccionado = (Empleado)dg.SelectedItem;
+        }
         //Administracion
         private void limpiarCampos()
         {
@@ -164,16 +238,17 @@ namespace Assistence_Control.Views.Empleados
             tbApellidoPaterno.Text = string.Empty;
             tbApellidoMaterno.Text = string.Empty;
             empleadoSeleccionado = null;
+            DataGrid.SelectedItem = null;
         }
-        private async void obtenerDatosVista()
+        private async Task<bool> obtenerDatosVista()
         {
             if (await validarCampos())
             {
                 nuevoEmpleado = new Empleado()
                 {
-                    Nombre = tbNombre.Text,
-                    Apellido1 = tbApellidoPaterno.Text,
-                    Apellido2 = tbApellidoMaterno.Text,
+                    Nombre = tbNombre.Text.ToUpper(),
+                    Apellido1 = tbApellidoPaterno.Text.ToUpper(),
+                    Apellido2 = tbApellidoMaterno.Text.ToUpper(),
                     EmpleadoId = int.Parse(tbNumeroEmpleado.Text),
                     Asistencia = null,
                     Edad = "25",
@@ -181,9 +256,10 @@ namespace Assistence_Control.Views.Empleados
                     EmpleadoPermiso = null,
                     FechaHoraRegistro = DateTime.Now,
                     UsuarioRegistro = 1
-                    
                 };
+                return true;
             }
+            return false;
         }
         private async Task<bool> validarCampos()
         {

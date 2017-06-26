@@ -25,13 +25,14 @@
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
                 <TextBlock Text="Areas" Margin="30,0,0,0" FontSize="50"></TextBlock>
-                <controls:DataGrid MaxHeight="360" x:Name="DataGrid" SelectionMode="Single" Margin="30,0,30,10" Grid.Row="1" ItemsSource="{Binding AreaItem}" HeaderBackground="#FF8B8383" >
+                <controls:DataGrid MaxHeight="360" SelectionChanged="DataGrid_SelectionChanged" x:Name="DataGrid" SelectionMode="Single" Margin="30,0,30,10" Grid.Row="1" ItemsSource="{Binding AreaItem}" HeaderBackground="#FF8B8383" >
                     <controls:DataGrid.Foreground>
                         <SolidColorBrush Color="White"/>
                     </controls:DataGrid.Foreground>
                     <controls:DataGrid.Columns>
-                        <controls:DataGridTextColumn Width="200" Header="Clave" Binding="{Binding Clave}"/>
+                        <controls:DataGridTextColumn Width="100" Header="Clave" Binding="{Binding AreaId}"/>
                         <controls:DataGridTextColumn Width="200" Header=" Nombre" Binding="{Binding Nombre}"/>
+                        <controls:DataGridTextColumn Width="250" Header=" Descripcion" Binding="{Binding Descripcion}"/>
                     </controls:DataGrid.Columns>
                 </controls:DataGrid>
                 <StackPanel Orientation="Horizontal" Grid.Row="2" Margin="18,0">
@@ -68,7 +69,8 @@
                     </Grid.ColumnDefinitions>
                     <TextBox Name="tbClave" Header="Clave" IsReadOnly="True" Grid.ColumnSpan="2"></TextBox>
                     <TextBox Name="tbNombreArea" Grid.Row="1" Header="Nombre del area" KeyUp="tbNombreArea_KeyUp" MaxLength="20" Grid.ColumnSpan="2"></TextBox>
-                        <Button Name="btnGuardar" Content="Guardar" Margin="0,10,10,10" Height="60" FontSize="25" Click="btnGuardar_Click" HorizontalAlignment="Stretch" Grid.Row="4">
+                    <TextBox Name="tbDescripcion" Header="Descripcion" Grid.Row="2" Grid.ColumnSpan="2"/>
+                    <Button Name="btnGuardar" Content="Guardar" Margin="0,10,10,10" Height="60" FontSize="25" Click="btnGuardar_Click" HorizontalAlignment="Stretch" Grid.Row="4">
                             <Button.Foreground>
                                 <SolidColorBrush Color="{StaticResource MainBackground}"/>
                             </Button.Foreground>
@@ -76,12 +78,13 @@
                                 <SolidColorBrush Color="#FF70AD47"/>
                             </Button.Background>
                         </Button>
-                        <Button Name="btnCancelar" Content="Cancelar" Grid.Column="1" Margin="10,10,0,10" Height="60" FontSize="25" Click="btnCancelar_Click" HorizontalAlignment="Stretch" Background="#FFE06666" Grid.Row="4">
-                            <Button.Foreground>
-                                <SolidColorBrush Color="{StaticResource MainBackground}"/>
-                            </Button.Foreground>
-                        </Button>
+                    <Button Name="btnCancelar" Content="Cancelar" Grid.Column="1" Margin="10,10,0,10" Height="60" FontSize="25" Click="btnCancelar_Click" HorizontalAlignment="Stretch" Background="#FFE06666" Grid.Row="4">
+                        <Button.Foreground>
+                            <SolidColorBrush Color="{StaticResource MainBackground}"/>
+                        </Button.Foreground>
+                    </Button>
                 </Grid>
+                <ProgressRing Name="prLoading" Grid.RowSpan="4" Visibility="Visible" Width="200" Height="200" Grid.ColumnSpan="2"/>
             </Grid>
         </ScrollViewer>
     </Grid>

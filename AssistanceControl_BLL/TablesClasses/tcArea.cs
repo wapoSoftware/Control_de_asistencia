@@ -1,4 +1,6 @@
-﻿using System;
+﻿using AssistanceControl_BLL.AssistanceService;
+using AssistanceControl_BLL.TablesClasses;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,83 +8,69 @@ using System.Threading.Tasks;
 
 namespace Assistance_ControlBLL.TablesClasses
 {
-    public class tcArea
+    public class tcArea : tcGenerico<Area>
     {
-        public void Insertar(Area entArea)
+        private Uri _uriServicio;
+
+        public tcArea(Uri uriServicio)
+        {
+            _uriServicio = uriServicio;
+        }
+        public async Task<List<Area>> getAllAreas()
+        {
+            String URL = _uriServicio.AbsoluteUri;
+            URL += "/Area";
+            return await getDataList(URL);
+        }
+        public async Task<int> getNextId()
+        {
+            List<Area> areas = null;
+            String URL = _uriServicio.AbsoluteUri;
+            URL += "/Area";
+            areas = await getDataList(URL);
+            areas = areas.OrderBy(o => o.AreaId).ToList();
+            if(areas != null && areas.Count > 0)
+            {
+                return areas.LastOrDefault().AreaId + 1;
+            }
+            else
+            {
+                return 1;
+            }
+        }
+
+        public async Task Insertar(Area entidad)
         {
             try
             {
-                Area area = null;
-                using (AssistanceControlEntities entidad = new AssistanceControlEntities())
-                {
-                    area = new Area
-                    {
-                        AreaId = entArea.AreaId,
-                        Descripcion = entArea.Descripcion,
-                        Nombre = entArea.Nombre,
-                        UsuarioRegistro = entArea.UsuarioRegistro,
-                        FechaHoraRegistro = entArea.FechaHoraRegistro                        
-                    };
-                    entidad.Areas.Add(area);
-                    entidad.SaveChanges();
-                }
+                await base.insert(_uriServicio, entidad);
             }
             catch (Exception)
             {
                 throw new Exception("Error al insertar area.");
             }
         }
-        public void Eliminar(Area entArea)
+        public async Task Actualizar(Area entidad)
         {
             try
             {
-                List<Area> areas = null;
-                using (AssistanceControlEntities entidad = new AssistanceControlEntities())
-                {
-                    var consulta = from c in entidad.Areas
-                                   where c.AreaId == entArea.AreaId
-                                   select c;
-                    areas = consulta.ToList();
-                    if (areas.Count > 0)
-                    {
-                        foreach (Area area in areas)
-                        {
-                            //Cambiar estatus
-                        }
-                    }
-                    entidad.SaveChanges();
-                }
+                await base.update(_uriServicio, entidad);
             }
-            catch (Exception)
-            {
-                throw new Exception("Error al eliminar area.");
-            }
-        }
-        public void Actualizar(Area entArea)
-        {
-            try
-            {
-                List<Area> areas = null;
-                using (AssistanceControlEntities entidad = new AssistanceControlEntities())
-                {
-                    var consulta = from c in entidad.Areas
-                                   where c.AreaId == entArea.AreaId
-                                   select c;
-                    areas = consulta.ToList();
-                    if (areas.Count > 0)
-                    {
-                        foreach (Area area in areas)
-                        {
-                            area.Nombre = entArea.Nombre;
-                            area.Descripcion = entArea.Descripcion;
-                        }
-                    }
-                    entidad.SaveChanges();
-                }
-            }
-            catch (Exception)
+            catch (Exception ex)
             {
                 throw new Exception("Error al actualizar area.");
+            }
+        }
+        public async Task Eliminar(Area entidad)
+        {
+            try
+            {
+                //entidad.Estatus = 0;
+                await base.update(_uriServicio, entidad);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al eliminar area.");
             }
         }
     }

@@ -24,20 +24,39 @@ namespace AssistanceControl_BLL
             return await getDataList(URL);
         }
 
-        public async void Insertar(Empleado user)
+        public async Task Insertar(Empleado entidad)
         {
             try
             {
-                //using (AssistanceControlEntities entidad = new AssistanceControlEntities())
-                //{
-                //    entidad.EmpleadoPermisoes.Add(entEmpleadoPermiso);
-                //    entidad.SaveChanges();
-                //}
-                await base.insert(_uriServicio, user);
+                await base.insert(_uriServicio, entidad);
             }
             catch (Exception)
             {
-                throw new Exception("Error al insertar empleadoPermiso.");
+                throw new Exception("Error al insertar empleado.");
+            }
+        }
+        public async Task Actualizar(Empleado entidad)
+        {
+            try
+            {
+                await base.update(_uriServicio, entidad);
+            }
+            catch(Exception ex)
+            {
+                throw new Exception("Error al actualizar empleado.");
+            }
+        }
+        public async Task Eliminar(Empleado entidad)
+        {
+            try
+            {
+                //entidad.Estatus = 0;
+                entidad.Nombre = "Eliminado";
+                await base.update(_uriServicio, entidad);
+            }
+            catch(Exception ex)
+            {
+                throw new Exception("Error al eliminar empleado.");
             }
         }
 

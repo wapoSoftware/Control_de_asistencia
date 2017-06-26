@@ -1,0 +1,2 @@
+C:\Assistence_Control\AssistanceControl_BLL\AssistanceControl_BLL.csproj;neutral
+C:\Assistence_Control\Assistence_Control\Assistence_Control.csproj;x64

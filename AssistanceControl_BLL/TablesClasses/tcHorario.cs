@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AssistanceControl_BLL.AssistanceService;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,73 +7,67 @@ using System.Threading.Tasks;
 
 namespace AssistanceControl_BLL.TablesClasses
 {
-    public class tcHorario
+    public class tcHorario : tcGenerico<Horario>
     {
-        public void Insertar(Horario entHorario)
+        private Uri _uriServicio;
+        public tcHorario(Uri uriServicio)
         {
-            try
+            _uriServicio = uriServicio;
+        }
+        public async Task<List<Horario>> getAllHorarios()
+        {
+            String URL = _uriServicio.AbsoluteUri;
+            URL += "/Horario";
+            return await getDataList(URL);
+        }
+        public async Task<int> getNextId()
+        {
+            List<Horario> areas = null;
+            String URL = _uriServicio.AbsoluteUri;
+            URL += "/Horario";
+            areas = await getDataList(URL);
+            areas = areas.OrderBy(o => o.HorarioId).ToList();
+            if (areas != null && areas.Count > 0)
             {
-                using (AssistanceControlEntities entidad = new AssistanceControlEntities())
-                {
-                    entidad.Horarios.Add(entHorario);
-                    entidad.SaveChanges();
-                }
+                return areas.LastOrDefault().HorarioId + 1;
             }
-            catch (Exception)
+            else
             {
-                throw new Exception("Error al insertar Horario.");
+                return 1;
             }
         }
-        public void Eliminar(Horario entHorario)
+        public async Task Insertar(Horario entidad)
         {
             try
             {
-                List<Horario> horarios = null;
-                using (AssistanceControlEntities entidad = new AssistanceControlEntities())
-                {
-                    var consulta = from c in entidad.Horarios
-                                   where c.HorarioId == entHorario.HorarioId
-                                   select c;
-                    horarios = consulta.ToList();
-                    if (horarios.Count > 0)
-                    {
-                        foreach (Horario horario in horarios)
-                        {
-                            //Cambiar estatus
-                        }
-                    }
-                    entidad.SaveChanges();
-                }
+                await base.insert(_uriServicio, entidad);
             }
             catch (Exception)
             {
-                throw new Exception("Error al eliminar Horario.");
+                throw new Exception("Error al insertar area.");
             }
         }
-        public void Actualizar(Horario entHorario)
+        public async Task Actualizar(Horario entidad)
         {
             try
             {
-                List<Horario> horarios = null;
-                using (AssistanceControlEntities entidad = new AssistanceControlEntities())
-                {
-                    var consulta = from c in entidad.Horarios
-                                   where c.HorarioId == entHorario.HorarioId
-                                   select c;
-                    horarios = consulta.ToList();
-                    if (horarios.Count > 0)
-                    {
-                        foreach (Horario horario in horarios)
-                        {
-                            //
-                        }
-                    }
-                    entidad.SaveChanges();
-                }
+                await base.update(_uriServicio, entidad);
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw new Exception("Error al actualizar Horario.");
+                throw new Exception("Error al actualizar area.");
+            }
+        }
+        public async Task Eliminar(Horario entidad)
+        {
+            try
+            {
+                //entidad.Estatus = 0;
+                await base.update(_uriServicio, entidad);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al eliminar horario.");
             }
         }
     }

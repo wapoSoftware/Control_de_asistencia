@@ -13,12 +13,15 @@ namespace Assistance_Control.Utilerias
     {
         public static IEnumerable<Empleado> obtenerEmpleadosBusqueda(List<Empleado> empleados, string query)
         {
-            return empleados.Where(c => c.Nombre.IndexOf(query, StringComparison.CurrentCultureIgnoreCase) > -1 ||
-                            c.Apellido1.IndexOf(query, StringComparison.CurrentCultureIgnoreCase) > -1 ||
-                            c.Apellido2.IndexOf(query, StringComparison.CurrentCultureIgnoreCase) > -1)
+            return empleados.Where(
+                c => c.Nombre.IndexOf(query, StringComparison.CurrentCultureIgnoreCase) > -1 ||
+                c.Apellido1.IndexOf(query, StringComparison.CurrentCultureIgnoreCase) > -1 ||
+                c.Apellido2.IndexOf(query, StringComparison.CurrentCultureIgnoreCase) > -1 || 
+                c.EmpleadoId.ToString().IndexOf(query, StringComparison.CurrentCultureIgnoreCase) > -1)
                 .OrderByDescending(c => c.Nombre.StartsWith(query, StringComparison.CurrentCultureIgnoreCase))
                 .ThenByDescending(c => c.Apellido1.StartsWith(query, StringComparison.CurrentCultureIgnoreCase))
-                .ThenByDescending(c => c.Apellido2.StartsWith(query, StringComparison.CurrentCultureIgnoreCase));
+                .ThenByDescending(c => c.Apellido2.StartsWith(query, StringComparison.CurrentCultureIgnoreCase))
+                .ThenByDescending(c => c.EmpleadoId.ToString().IndexOf(query, StringComparison.CurrentCultureIgnoreCase));
         }
 
     }

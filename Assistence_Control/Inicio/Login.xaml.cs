@@ -13,33 +13,17 @@ namespace Assistence_Control.Inicio
 {
     public sealed partial class Login : Page
     {
+        //Constructor
         public Login()
         {
             this.InitializeComponent();
             
         }
-
+        //Eventos
         private async void btnEntrar_Click(object sender, RoutedEventArgs e)
         {
             accesar();
         }
-        private async Task<bool> validaCampos()
-        {
-            if (string.IsNullOrWhiteSpace(tbUsuario.Text))
-            {
-                await new MessageDialog("Falta ingresar usuario").ShowAsync();
-                tbUsuario.Focus(FocusState.Programmatic);
-                return false;
-            }
-            else if(string.IsNullOrWhiteSpace(tbPassword.Password))
-            {
-                await new MessageDialog("Falta ingresar contraseña.").ShowAsync();
-                tbUsuario.Focus(FocusState.Programmatic);
-                return false;
-            }
-            return true;
-        }
-
         private async void btnCancelar_Click(object sender, RoutedEventArgs e)
         {
             limpiarCampos();
@@ -64,13 +48,53 @@ namespace Assistence_Control.Inicio
                 await new MessageDialog("Error al insertar usuario" + ex.Message).ShowAsync();
             }
         }
-
         private void tbPassword_KeyUp(object sender, KeyRoutedEventArgs e)
         {
             if (e.Key == VirtualKey.Enter)
             {
                 accesar();
             }
+        }
+        private async void numeric_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            TextBox txt = sender as TextBox;
+            string val = txt.Text;
+            double aux = 0.0;
+            if (string.IsNullOrEmpty(val))
+            {
+                return;
+            }
+            if (!double.TryParse(val, out aux))
+            {
+                if (!char.IsNumber(val[val.Length - 1]))
+                {
+                    val = val.Remove(val.Length - 1);
+                }
+                else if (!char.IsNumber(val[0]))
+                {
+                    val = val.Remove(0, 1);
+                }
+                txt.Text = val;
+                txt.SelectionStart = val.Length;
+                //TODO: AGEGAR ETIQUETA "SOLO SE PERMITEN NUMEROS"
+            }
+        }
+        //Administracion
+        private async Task<bool> validaCampos()
+        {
+            if (string.IsNullOrWhiteSpace(tbUsuario.Text))
+            {
+                await new MessageDialog("Falta ingresar usuario").ShowAsync();
+                tbUsuario.Focus(FocusState.Programmatic);
+                return false;
+            }
+            else if (string.IsNullOrWhiteSpace(tbPassword.Password))
+            {
+                await new MessageDialog("Falta ingresar contraseña.").ShowAsync();
+                tbUsuario.Focus(FocusState.Programmatic);
+                return false;
+            }
+            return true;
         }
         private async void accesar()
         {
@@ -117,36 +141,10 @@ namespace Assistence_Control.Inicio
                 prLoading.IsActive = false;
             }
         }
-
         private void limpiarCampos()
         {
             tbPassword.Password = string.Empty;
             tbUsuario.Text = string.Empty;
-        }
-
-        private async void numeric_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            TextBox txt = sender as TextBox;
-            string val = txt.Text;
-            double aux = 0.0;
-            if (string.IsNullOrEmpty(val))
-            {
-                return;
-            }
-            if (!double.TryParse(val, out aux))
-            {
-                if (!char.IsNumber(val[val.Length - 1]))
-                {
-                    val = val.Remove(val.Length - 1);
-                }
-                else if (!char.IsNumber(val[0]))
-                {
-                    val = val.Remove(0, 1);
-                }
-                txt.Text = val;
-                txt.SelectionStart = val.Length;
-                await new MessageDialog("Solo se permiten numeros.", "Aviso").ShowAsync();
-            }
         }
     }
 }

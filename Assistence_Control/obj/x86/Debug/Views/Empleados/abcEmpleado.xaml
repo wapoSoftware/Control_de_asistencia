@@ -34,12 +34,12 @@
                         <SolidColorBrush Color="White"/>
                     </controls:DataGrid.Foreground>
                     <controls:DataGrid.Columns>
-                        <controls:DataGridTextColumn Width="200" Header="Numero de empleado" Binding="{Binding NoEmpleado}"/>
+                        <controls:DataGridTextColumn Width="200" Header="Numero de empleado" Binding="{Binding EmpleadoId}"/>
                         <controls:DataGridTextColumn Width="200" Header="Nombre" Binding="{Binding Nombre}"/>
-                        <controls:DataGridTextColumn Width="200" Header="Apellido Paterno" Binding="{Binding ApellidoPaterno}" />
-                        <controls:DataGridTextColumn Width="200" Header="Apellido Materno" Binding="{Binding ApellidoMaterno}"/>
+                        <controls:DataGridTextColumn Width="200" Header="Apellido Paterno" Binding="{Binding Apellido1}" />
+                        <controls:DataGridTextColumn Width="200" Header="Apellido Materno" Binding="{Binding Apellido2}"/>
                         <controls:DataGridTextColumn Width="200" Header="Edad" Binding="{Binding Edad}"/>
-                        <controls:DataGridTextColumn Width="200" Header="Fecha Alta" Binding="{Binding FechaAlta}"/>
+                        <controls:DataGridTextColumn Width="200" Header="Fecha Alta" Binding="{Binding FechaHoraRegistro}"/>
                     </controls:DataGrid.Columns>
                 </controls:DataGrid>
                 <StackPanel Orientation="Horizontal" Grid.Row="2" Margin="18,0">

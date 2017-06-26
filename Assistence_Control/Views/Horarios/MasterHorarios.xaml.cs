@@ -1,4 +1,7 @@
-﻿using Assistance_Control.Utilerias.Items;
+﻿using Assistance_ControlBLL.TablesClasses;
+using AssistanceControl_BLL.AssistanceService;
+using AssistanceControl_BLL.TablesClasses;
+using Assistence_Control;
 using Assistence_Control.TemplateSelectors;
 using Assistence_Control.Utilerias.Items;
 using System;
@@ -9,6 +12,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -26,16 +30,28 @@ namespace Assistance_Control.Views.Horarios
     /// </summary>
     public sealed partial class MasterHorarios : Page
     {
+        //Variables Globales
         Frame thisFrame = Window.Current.Content as Frame;
-        ObservableCollection<AreaItem> listAreas = new ObservableCollection<AreaItem>();
-        ObservableCollection<HorarioItem> listHorarios = new ObservableCollection<HorarioItem>();
+        List<Area> listAreas = new List<Area>();
+        List<Horario> listHorarios = new List<Horario>();
+        tcHorario horarioDAO;
+        tcArea areaDAO;
+        enum ACCION { INSERTAR = 1, ACTUALIZAR = 2, ELIMINAR = 3 };
+        int estado = 0;
+        Horario horarioSeleccionado = null;
+        Horario nuevoHorario = null;
+
+        //Constructos
         public MasterHorarios()
         {
             this.InitializeComponent();
             thisFrame.SizeChanged += RootFrame_SizeChanged;
+            horarioDAO = new tcHorario(App.uriServicio);
+            areaDAO = new tcArea(App.uriServicio);
             cargarMenus();
             cargarCombos();
         }
+        //Metodos de carga
         private void cargarMenus()
         {
             List<DatosMenu> menus = new List<DatosMenu>();
@@ -65,6 +81,21 @@ namespace Assistance_Control.Views.Horarios
             });
             gvMenu.ItemsSource = menus;
         }
+        private async void cargarCombos()
+        {
+            try
+            {
+                listAreas = await areaDAO.getAllAreas();
+                cbAreas.ItemsSource = listAreas;
+                listHorarios = await horarioDAO.getAllHorarios();
+                cbHorarios.ItemsSource = listHorarios;
+            }
+            catch (Exception ex)
+            {
+                await new MessageDialog(ex.Message).ShowAsync();
+            }
+        }
+        //Eventos
         private void RootFrame_SizeChanged(object sender, SizeChangedEventArgs e)
         {
             MenuTemplateSelector mts = new MenuTemplateSelector();
@@ -86,43 +117,29 @@ namespace Assistance_Control.Views.Horarios
                     mainPivot.SelectedIndex = 2;
                     break;
                 case "Permisos":
-                   // mainPivot.SelectedIndex = 3;
+                    // mainPivot.SelectedIndex = 3;
                     break;
 
 
             }
         }
-        private void cargarCombos()
-        {
-            listAreas.Add(new AreaItem() { Clave = 1, Nombre = "Area 1" });
-            listAreas.Add(new AreaItem() { Clave = 2, Nombre = "Area 2" });
-            listAreas.Add(new AreaItem() { Clave = 3, Nombre = "Area 3" });
-            listAreas.Add(new AreaItem() { Clave = 4, Nombre = "Area 4" });
-            //listHorarios = new ObservableCollection<string> { "Horario 1", "Horario 2", "Horario 3", "Horario 4" };
-            cbAreas.ItemsSource = listAreas;
-            //cbHorarios.DataContext = listHorarios;
-        }
-
         private void cbAreas_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             ComboBox cb = (ComboBox)sender;
-            AreaItem item = (AreaItem)cb.SelectedItem;
+            Area item = (Area)cb.SelectedItem;
             //TODO: Buscar si el area seleccionada ya fue asignada y cargar datos
             lblAreaSeleccionada.Text = item.Nombre;
         }
-
         private void cbHorarios_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             ComboBox cb = (ComboBox)sender;
-            AreaItem item = (AreaItem)cb.SelectedItem;
+            Area item = (Area)cb.SelectedItem;
             lblHorario.Text = item.Nombre;
         }
-
         private void btnEliminar_Click(object sender, RoutedEventArgs e)
         {
 
         }
-
         private void btnAgregar_Click(object sender, RoutedEventArgs e)
         {
             if (gridAgregar.Visibility == Visibility.Collapsed)
@@ -134,7 +151,6 @@ namespace Assistance_Control.Views.Horarios
                 limpiarCampos();
             }
         }
-
         private void btnGuardarHorario_Click(object sender, RoutedEventArgs e)
         {
             //if (empleadoSeleccionado != null)//Actualizar
@@ -155,28 +171,29 @@ namespace Assistance_Control.Views.Horarios
             //limpiarCampos();
             //await new MessageDialog("Empleado actualizado correctamente!", "").ShowAsync();
         }
-
         private void btnCancelar_Click(object sender, RoutedEventArgs e)
         {
             gridAgregar.Visibility = Visibility.Collapsed;
         }
-
-        private void btnEditar_Click(object sender, RoutedEventArgs e)
+        private async void btnEditar_Click(object sender, RoutedEventArgs e)
         {
-            //empleadoSeleccionado = (EmpleadoItem)DataGrid.SelectedItem;
-            //if (empleadoSeleccionado != null)
-            //{
-            //    gridAgregar.Visibility = Visibility.Visible;
-            //    tbNumeroEmpleado.Text = empleadoSeleccionado.NoEmpleado;
-            //    tbNombre.Text = empleadoSeleccionado.Nombre;
-            //    tbApellidoPaterno.Text = empleadoSeleccionado.ApellidoPaterno;
-            //    tbApellidoMaterno.Text = empleadoSeleccionado.ApellidoMaterno;
-            //}
-            //else
-            //{
-            //    await new MessageDialog("Seleccione un empleado para editar", "Atención").ShowAsync();
-            //}
+            estado = (int)ACCION.ACTUALIZAR;
+            horarioSeleccionado = (Horario)DataGrid.SelectedItem;
+            if (horarioSeleccionado != null)
+            {
+                gridAgregar.Visibility = Visibility.Visible;
+                tbNombreHorario.Text = horarioSeleccionado.Nombre.ToUpper();
+                //dpEntrada.Time = horarioSeleccionado.HoraEntrada,
+
+                //= areaSeleccionada.Nombre;
+                //    tbDescripcion.Text = areaSeleccionada.Descripcion;
+            }
+            else
+            {
+                await new MessageDialog("Seleccione un area para editar", "Atención").ShowAsync();
+            }
         }
+        //Administracion
         private void limpiarCampos()
         {
             //tbNumeroEmpleado.Text = string.Empty;
@@ -185,6 +202,5 @@ namespace Assistance_Control.Views.Horarios
             //tbApellidoMaterno.Text = string.Empty;
             //empleadoSeleccionado = null;
         }
-
     }
 }

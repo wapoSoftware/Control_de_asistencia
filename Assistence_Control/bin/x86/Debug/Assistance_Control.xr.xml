@@ -9,11 +9,11 @@
     <RootPropertyPathName Name="Nombre" />
     <RootPropertyPathName Name="Clave" />
     <RootPropertyPathName Name="EmpleadoITem" />
-    <RootPropertyPathName Name="FechaAlta" />
+    <RootPropertyPathName Name="FechaHoraRegistro" />
     <RootPropertyPathName Name="Edad" />
-    <RootPropertyPathName Name="ApellidoMaterno" />
-    <RootPropertyPathName Name="ApellidoPaterno" />
-    <RootPropertyPathName Name="NoEmpleado" />
+    <RootPropertyPathName Name="Apellido2" />
+    <RootPropertyPathName Name="Apellido1" />
+    <RootPropertyPathName Name="EmpleadoId" />
     <RootPropertyPathName Name="Salida" />
     <RootPropertyPathName Name="Entrada" />
     <RootPropertyPathName Name="listHorarios" />
