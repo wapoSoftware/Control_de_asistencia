@@ -36,8 +36,8 @@
                     </controls:DataGrid.Foreground>
                     <controls:DataGrid.Columns>
                         <controls:DataGridTextColumn Width="200" Header="Numero de empleado" Binding="{Binding EmpleadoId}"/>
-                        <controls:DataGridTextColumn Width="200" Header="Apellido Paterno" Binding="{Binding Apellido1}" />
-                        <controls:DataGridTextColumn Width="200" Header="Apellido Materno" Binding="{Binding Apellido2}"/>
+                        <controls:DataGridTextColumn Width="200" Header="Apellido Paterno" Binding="{Binding  ApellidoPaterno}" />
+                        <controls:DataGridTextColumn Width="200" Header="Apellido Materno" Binding="{Binding ApellidoMaterno}"/>
                         <controls:DataGridTextColumn Width="200" Header="Nombre" Binding="{Binding Nombre}"/>
                         <controls:DataGridTextColumn Width="200" Header="Edad" Binding="{Binding Edad}"/>
                         <controls:DataGridTextColumn Width="200" Header="Fecha Alta" Binding="{Binding FechaHoraRegistro}"/>
@@ -62,7 +62,7 @@
                     </Button>
 
                 </StackPanel>
-                <Grid Name="gridAgregar" Visibility="Collapsed" Grid.Row="3" Margin="30,0">
+                <Grid Name="gridAgregar" Visibility="Visible" Grid.Row="3" Margin="30,0">
                     <Grid.RowDefinitions>
                         <RowDefinition/>
                         <RowDefinition/>
@@ -75,11 +75,11 @@
                         <ColumnDefinition/>
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
-                    <TextBox Name="tbNumeroEmpleado" Header="Numero de empleado" TextChanged="numeric_TextChanged"></TextBox>
-                    <TextBox Name="tbNombre" Header="Nombre(s)" Grid.Row="1"></TextBox>
-                    <TextBox Name="tbApellidoPaterno" Header="Apellido Paterno" Grid.Row="2"></TextBox>
-                    <TextBox Name="tbApellidoMaterno" Header="Apellido Materno" Grid.Row="3"></TextBox>
-                    <Grid Grid.Row="4">
+                    <TextBox Name="tbNumeroEmpleado" Header="Numero de empleado" TextChanged="numeric_TextChanged" Margin="0,0,10,0"></TextBox>
+                    <TextBox Name="tbNombre" Header="Nombre(s)" Grid.Row="1" Margin="0,0,10,0"></TextBox>
+                    <TextBox Name="tbApellidoPaterno" Header="Apellido Paterno" Grid.Row="2" Margin="0,0,10,0"></TextBox>
+                    <TextBox Name="tbApellidoMaterno" Header="Apellido Materno" Grid.Row="3" Margin="0,0,10,0"></TextBox>
+                    <Grid Grid.Row="4" Margin="0,0,10,0">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition/>
                             <ColumnDefinition/>
@@ -101,6 +101,8 @@
                             </Button.Foreground>
                         </Button>
                     </Grid>
+                    <TextBox Name="tbCurp" Header="CURP" Grid.Row="0" Grid.Column="1" Margin="10,0"></TextBox>
+                    <TextBox Name="tbRfc" Header="RFC" Grid.Row="1" Grid.Column="1" Margin="10,0"></TextBox>
                 </Grid>
             </Grid>
         </ScrollViewer>

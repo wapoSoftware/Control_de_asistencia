@@ -28,7 +28,6 @@ namespace Assistance_ControlDLL
         public DbSet<Area> Area { get; set; }
         public DbSet<Asistencia> Asistencia { get; set; }
         public DbSet<Empleado> Empleado { get; set; }
-        public DbSet<EmpleadoArea> EmpleadoArea { get; set; }
         public DbSet<EmpleadoPermiso> EmpleadoPermiso { get; set; }
         public DbSet<Horario> Horario { get; set; }
         public DbSet<HorarioArea> HorarioArea { get; set; }

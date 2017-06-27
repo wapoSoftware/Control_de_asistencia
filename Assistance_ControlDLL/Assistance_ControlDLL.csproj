@@ -172,9 +172,6 @@
     <Compile Include="Empleado.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
-    <Compile Include="EmpleadoArea.cs">
-      <DependentUpon>Model.tt</DependentUpon>
-    </Compile>
     <Compile Include="EmpleadoPermiso.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>

@@ -16,17 +16,17 @@ namespace Assistance_ControlDLL
     {
         public Area()
         {
-            this.EmpleadoArea = new HashSet<EmpleadoArea>();
+            this.Empleado = new HashSet<Empleado>();
             this.HorarioArea = new HashSet<HorarioArea>();
         }
     
         public int AreaId { get; set; }
         public string Nombre { get; set; }
-        public string Descripcion { get; set; }
-        public int UsuarioRegistro { get; set; }
+        public int Estatus { get; set; }
+        public string UsuarioRegistro { get; set; }
         public System.DateTime FechaHoraRegistro { get; set; }
     
-        public virtual ICollection<EmpleadoArea> EmpleadoArea { get; set; }
+        public virtual ICollection<Empleado> Empleado { get; set; }
         public virtual ICollection<HorarioArea> HorarioArea { get; set; }
     }
 }

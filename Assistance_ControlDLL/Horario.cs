@@ -21,9 +21,10 @@ namespace Assistance_ControlDLL
     
         public int HorarioId { get; set; }
         public string Nombre { get; set; }
-        public System.DateTime HoraEntrada { get; set; }
-        public System.DateTime HoraSalida { get; set; }
-        public int UsuarioRegistro { get; set; }
+        public string HoraEntrada { get; set; }
+        public string HoraSalida { get; set; }
+        public int Estatus { get; set; }
+        public string UsuarioRegistro { get; set; }
         public System.DateTime FechaHoraRegistro { get; set; }
     
         public virtual ICollection<HorarioArea> HorarioArea { get; set; }

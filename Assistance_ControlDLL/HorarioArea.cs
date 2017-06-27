@@ -18,7 +18,7 @@ namespace Assistance_ControlDLL
         public int AreaId { get; set; }
         public System.DateTime FechaInicio { get; set; }
         public System.DateTime FechaFinal { get; set; }
-        public int UsuarioRegistro { get; set; }
+        public string UsuarioRegistro { get; set; }
         public System.DateTime FechaHoraRegistro { get; set; }
     
         public virtual Area Area { get; set; }

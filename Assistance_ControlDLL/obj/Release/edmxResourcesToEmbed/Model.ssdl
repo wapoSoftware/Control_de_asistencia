@@ -5,9 +5,9 @@
       <PropertyRef Name="AreaId" />
     </Key>
     <Property Name="AreaId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Nombre" Type="varchar" MaxLength="20" Nullable="false" />
-    <Property Name="Descripcion" Type="varchar" MaxLength="30" Nullable="false" />
-    <Property Name="UsuarioRegistro" Type="int" Nullable="false" />
+    <Property Name="Nombre" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Estatus" Type="int" Nullable="false" />
+    <Property Name="UsuarioRegistro" Type="varchar" MaxLength="15" Nullable="false" />
     <Property Name="FechaHoraRegistro" Type="datetime" Nullable="false" />
   </EntityType>
   <EntityType Name="Asistencia">
@@ -25,24 +25,16 @@
     </Key>
     <Property Name="EmpleadoId" Type="int" Nullable="false" />
     <Property Name="Nombre" Type="varchar" MaxLength="30" Nullable="false" />
-    <Property Name="Apellido1" Type="varchar" MaxLength="30" Nullable="false" />
-    <Property Name="Apellido2" Type="varchar" MaxLength="30" Nullable="false" />
-    <Property Name="Edad" Type="varchar" MaxLength="30" Nullable="false" />
-    <Property Name="UsuarioRegistro" Type="int" Nullable="false" />
-    <Property Name="FechaHoraRegistro" Type="datetime" Nullable="false" />
-  </EntityType>
-  <EntityType Name="EmpleadoArea">
-    <Key>
-      <PropertyRef Name="EmpleadoId" />
-      <PropertyRef Name="AreaId" />
-    </Key>
-    <Property Name="EmpleadoId" Type="int" Nullable="false" />
-    <Property Name="AreaId" Type="int" Nullable="false" />
-    <Property Name="FechaInicio" Type="datetime" Nullable="false" />
-    <Property Name="FechaFinal" Type="datetime" Nullable="false" />
-    <Property Name="UsuarioRegistro" Type="int" Nullable="false" />
-    <Property Name="FechaHoraRegistro" Type="datetime" Nullable="false" />
+    <Property Name="ApellidoPaterno" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="ApellidoMaterno" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="FechaNacimiento" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="RFC" Type="varchar" MaxLength="12" Nullable="false" />
+    <Property Name="CURP" Type="varchar" MaxLength="18" Nullable="false" />
+    <Property Name="FechaIngreso" Type="datetime" Nullable="false" />
     <Property Name="Estatus" Type="int" Nullable="false" />
+    <Property Name="AreaId" Type="int" Nullable="false" />
+    <Property Name="UsuarioRegistro" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="FechaHoraRegistro" Type="datetime" Nullable="false" />
   </EntityType>
   <EntityType Name="EmpleadoPermiso">
     <Key>
@@ -53,7 +45,7 @@
     <Property Name="PermisoId" Type="int" Nullable="false" />
     <Property Name="FechaInicio" Type="datetime" Nullable="false" />
     <Property Name="FechaFinal" Type="datetime" Nullable="false" />
-    <Property Name="UsuarioRegistro" Type="int" Nullable="false" />
+    <Property Name="UsuarioRegistro" Type="varchar" MaxLength="15" Nullable="false" />
     <Property Name="FechaHoraRegistro" Type="datetime" />
   </EntityType>
   <EntityType Name="Horario">
@@ -62,9 +54,10 @@
     </Key>
     <Property Name="HorarioId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Nombre" Type="varchar" MaxLength="30" Nullable="false" />
-    <Property Name="HoraEntrada" Type="datetime" Nullable="false" />
-    <Property Name="HoraSalida" Type="datetime" Nullable="false" />
-    <Property Name="UsuarioRegistro" Type="int" Nullable="false" />
+    <Property Name="HoraEntrada" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="HoraSalida" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Estatus" Type="int" Nullable="false" />
+    <Property Name="UsuarioRegistro" Type="varchar" MaxLength="15" Nullable="false" />
     <Property Name="FechaHoraRegistro" Type="datetime" Nullable="false" />
   </EntityType>
   <EntityType Name="HorarioArea">
@@ -76,7 +69,7 @@
     <Property Name="AreaId" Type="int" Nullable="false" />
     <Property Name="FechaInicio" Type="datetime" Nullable="false" />
     <Property Name="FechaFinal" Type="datetime" Nullable="false" />
-    <Property Name="UsuarioRegistro" Type="int" Nullable="false" />
+    <Property Name="UsuarioRegistro" Type="varchar" MaxLength="15" Nullable="false" />
     <Property Name="FechaHoraRegistro" Type="datetime" Nullable="false" />
   </EntityType>
   <EntityType Name="Permiso">
@@ -85,19 +78,21 @@
     </Key>
     <Property Name="PermisoId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Nombre" Type="varchar" MaxLength="15" Nullable="false" />
-    <Property Name="Descripcion" Type="varchar" MaxLength="50" Nullable="false" />
-    <Property Name="UsuarioRegistro" Type="int" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Estatus" Type="int" Nullable="false" />
+    <Property Name="UsuarioRegistro" Type="varchar" MaxLength="15" Nullable="false" />
     <Property Name="FechaHoraRegistro" Type="datetime" Nullable="false" />
   </EntityType>
   <EntityType Name="Usuario">
     <Key>
       <PropertyRef Name="UsuarioId" />
     </Key>
-    <Property Name="UsuarioId" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="UsuarioId" Type="varchar" MaxLength="15" Nullable="false" />
     <Property Name="EmpleadoId" Type="int" Nullable="false" />
-    <Property Name="Contrasena" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Contrasena" Type="varchar" MaxLength="20" Nullable="false" />
     <Property Name="Nivel" Type="int" Nullable="false" />
-    <Property Name="UsuarioRegistro" Type="int" Nullable="false" />
+    <Property Name="Estatus" Type="int" Nullable="false" />
+    <Property Name="UsuarioRegistro" Type="varchar" MaxLength="15" Nullable="false" />
     <Property Name="FechaHoraRegistro" Type="datetime" Nullable="false" />
   </EntityType>
   <Association Name="FK_Asistencia_Empleado">
@@ -114,31 +109,17 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_EmpleadoArea_Area">
+  <Association Name="FK_EmpleadoArea">
     <End Role="Area" Type="Self.Area" Multiplicity="1">
       <OnDelete Action="Cascade" />
     </End>
-    <End Role="EmpleadoArea" Type="Self.EmpleadoArea" Multiplicity="*" />
+    <End Role="Empleado" Type="Self.Empleado" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Area">
         <PropertyRef Name="AreaId" />
       </Principal>
-      <Dependent Role="EmpleadoArea">
+      <Dependent Role="Empleado">
         <PropertyRef Name="AreaId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_EmpleadoArea_Empleado">
-    <End Role="Empleado" Type="Self.Empleado" Multiplicity="1">
-      <OnDelete Action="Cascade" />
-    </End>
-    <End Role="EmpleadoArea" Type="Self.EmpleadoArea" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Empleado">
-        <PropertyRef Name="EmpleadoId" />
-      </Principal>
-      <Dependent Role="EmpleadoArea">
-        <PropertyRef Name="EmpleadoId" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -202,7 +183,6 @@
     <EntitySet Name="Area" EntityType="Self.Area" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Asistencia" EntityType="Self.Asistencia" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Empleado" EntityType="Self.Empleado" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="EmpleadoArea" EntityType="Self.EmpleadoArea" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="EmpleadoPermiso" EntityType="Self.EmpleadoPermiso" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Horario" EntityType="Self.Horario" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="HorarioArea" EntityType="Self.HorarioArea" Schema="dbo" store:Type="Tables" />
@@ -212,13 +192,9 @@
       <End Role="Empleado" EntitySet="Empleado" />
       <End Role="Asistencia" EntitySet="Asistencia" />
     </AssociationSet>
-    <AssociationSet Name="FK_EmpleadoArea_Area" Association="Self.FK_EmpleadoArea_Area">
+    <AssociationSet Name="FK_EmpleadoArea" Association="Self.FK_EmpleadoArea">
       <End Role="Area" EntitySet="Area" />
-      <End Role="EmpleadoArea" EntitySet="EmpleadoArea" />
-    </AssociationSet>
-    <AssociationSet Name="FK_EmpleadoArea_Empleado" Association="Self.FK_EmpleadoArea_Empleado">
       <End Role="Empleado" EntitySet="Empleado" />
-      <End Role="EmpleadoArea" EntitySet="EmpleadoArea" />
     </AssociationSet>
     <AssociationSet Name="FK_EmpleadoPermiso_Empleado" Association="Self.FK_EmpleadoPermiso_Empleado">
       <End Role="Empleado" EntitySet="Empleado" />

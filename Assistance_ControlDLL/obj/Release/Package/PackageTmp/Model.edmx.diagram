@@ -4,23 +4,21 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="e36939416aac4bc194862325e3ff9ae9" Name="Diagram1">
-        <EntityTypeShape EntityType="AssistanceControlModel.Area" Width="1.5" PointX="3.75" PointY="7.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="AssistanceControlModel.Asistencia" Width="1.5" PointX="3" PointY="4.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="AssistanceControlModel.Empleado" Width="1.5" PointX="0.75" PointY="4.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="AssistanceControlModel.EmpleadoArea" Width="1.5" PointX="6" PointY="4.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="AssistanceControlModel.EmpleadoPermiso" Width="1.5" PointX="3" PointY="1.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="AssistanceControlModel.Horario" Width="1.5" PointX="3.75" PointY="11.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="AssistanceControlModel.HorarioArea" Width="1.5" PointX="6" PointY="8.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="AssistanceControlModel.Permiso" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="AssistanceControlModel.Usuario" Width="1.5" PointX="5.75" PointY="0.875" IsExpanded="true" />
-        <AssociationConnector Association="AssistanceControlModel.FK_EmpleadoArea_Area" ManuallyRouted="false" />
-        <AssociationConnector Association="AssistanceControlModel.FK_HorarioArea_Area" ManuallyRouted="false" />
-        <AssociationConnector Association="AssistanceControlModel.FK_Asistencia_Empleado" ManuallyRouted="false" />
-        <AssociationConnector Association="AssistanceControlModel.FK_EmpleadoArea_Empleado" ManuallyRouted="false" />
-        <AssociationConnector Association="AssistanceControlModel.FK_EmpleadoPermiso_Empleado" ManuallyRouted="false" />
-        <AssociationConnector Association="AssistanceControlModel.FK_EmpleadoPermiso_Permiso" ManuallyRouted="false" />
-        <AssociationConnector Association="AssistanceControlModel.FK_HorarioArea_Horario" ManuallyRouted="false" />
+      <Diagram DiagramId="e36939416aac4bc194862325e3ff9ae9" Name="Diagram1" ZoomLevel="83">
+        <EntityTypeShape EntityType="AssistanceControlModel.Area" Width="1.5" PointX="0.75" PointY="4.875" />
+        <EntityTypeShape EntityType="AssistanceControlModel.Asistencia" Width="1.5" PointX="5.25" PointY="11.625" />
+        <EntityTypeShape EntityType="AssistanceControlModel.Empleado" Width="1.5" PointX="3" PointY="7.375" />
+        <EntityTypeShape EntityType="AssistanceControlModel.EmpleadoPermiso" Width="1.5" PointX="5.25" PointY="8" />
+        <EntityTypeShape EntityType="AssistanceControlModel.Horario" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="AssistanceControlModel.HorarioArea" Width="1.5" PointX="3" PointY="3.75" />
+        <EntityTypeShape EntityType="AssistanceControlModel.Permiso" Width="1.5" PointX="3" PointY="12.125" />
+        <EntityTypeShape EntityType="AssistanceControlModel.Usuario" Width="1.5" PointX="5.75" PointY="1.25" />
+        <AssociationConnector Association="AssistanceControlModel.FK_EmpleadoArea" />
+        <AssociationConnector Association="AssistanceControlModel.FK_HorarioArea_Area" />
+        <AssociationConnector Association="AssistanceControlModel.FK_Asistencia_Empleado" />
+        <AssociationConnector Association="AssistanceControlModel.FK_EmpleadoPermiso_Empleado" />
+        <AssociationConnector Association="AssistanceControlModel.FK_EmpleadoPermiso_Permiso" />
+        <AssociationConnector Association="AssistanceControlModel.FK_HorarioArea_Horario" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

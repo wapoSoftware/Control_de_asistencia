@@ -18,7 +18,7 @@ namespace Assistance_ControlDLL
         public int PermisoId { get; set; }
         public System.DateTime FechaInicio { get; set; }
         public System.DateTime FechaFinal { get; set; }
-        public int UsuarioRegistro { get; set; }
+        public string UsuarioRegistro { get; set; }
         public Nullable<System.DateTime> FechaHoraRegistro { get; set; }
     
         public virtual Empleado Empleado { get; set; }

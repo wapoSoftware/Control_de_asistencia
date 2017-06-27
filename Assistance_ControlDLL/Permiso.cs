@@ -22,7 +22,8 @@ namespace Assistance_ControlDLL
         public int PermisoId { get; set; }
         public string Nombre { get; set; }
         public string Descripcion { get; set; }
-        public int UsuarioRegistro { get; set; }
+        public int Estatus { get; set; }
+        public string UsuarioRegistro { get; set; }
         public System.DateTime FechaHoraRegistro { get; set; }
     
         public virtual ICollection<EmpleadoPermiso> EmpleadoPermiso { get; set; }

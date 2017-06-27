@@ -18,7 +18,8 @@ namespace Assistance_ControlDLL
         public int EmpleadoId { get; set; }
         public string Contrasena { get; set; }
         public int Nivel { get; set; }
-        public int UsuarioRegistro { get; set; }
+        public int Estatus { get; set; }
+        public string UsuarioRegistro { get; set; }
         public System.DateTime FechaHoraRegistro { get; set; }
     }
 }

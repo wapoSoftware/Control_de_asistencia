@@ -49,7 +49,7 @@ namespace Assistence_Control.Views.Empleados
             {
                 empleados = await empDAO.getAllEmpleados();
                 DataGrid.ItemsSource = null;
-                DataGrid.ItemsSource = empleados.OrderBy(o => o.Apellido1).ThenBy(o => o.Apellido2).ThenBy(o => o.Nombre).ToList();
+                DataGrid.ItemsSource = empleados.OrderBy(o => o. ApellidoPaterno).ThenBy(o => o.ApellidoMaterno).ThenBy(o => o.Nombre).ToList();
             }
             catch (Exception ex)
             {
@@ -79,8 +79,8 @@ namespace Assistence_Control.Views.Empleados
                 gridAgregar.Visibility = Visibility.Visible;
                 tbNumeroEmpleado.Text = empleadoSeleccionado.EmpleadoId.ToString();
                 tbNombre.Text = empleadoSeleccionado.Nombre;
-                tbApellidoPaterno.Text = empleadoSeleccionado.Apellido1;
-                tbApellidoMaterno.Text = empleadoSeleccionado.Apellido2;
+                tbApellidoPaterno.Text = empleadoSeleccionado.ApellidoPaterno;
+                tbApellidoMaterno.Text = empleadoSeleccionado.ApellidoMaterno;
             }
             else
             {
@@ -175,11 +175,11 @@ namespace Assistence_Control.Views.Empleados
                 DataGrid.ItemsSource = null;
                 if (matchingEmployees.ToList().Count > 1)
                 {
-                    DataGrid.ItemsSource = matchingEmployees.OrderBy(o => o.Apellido1).ThenBy(o => o.Apellido2).ThenBy(o => o.Nombre).ToList();
+                    DataGrid.ItemsSource = matchingEmployees.OrderBy(o => o. ApellidoPaterno).ThenBy(o => o.ApellidoMaterno).ThenBy(o => o.Nombre).ToList();
                 }
                 else if (matchingEmployees.ToList().Count == 1)
                 {
-                    DataGrid.ItemsSource = matchingEmployees.OrderBy(o => o.Apellido1).ThenBy(o => o.Apellido2).ThenBy(o => o.Nombre).ToList();
+                    DataGrid.ItemsSource = matchingEmployees.OrderBy(o => o. ApellidoPaterno).ThenBy(o => o.ApellidoMaterno).ThenBy(o => o.Nombre).ToList();
                     DataGrid.SelectedItem = matchingEmployees.ToList().FirstOrDefault();
                 }
             }
@@ -247,15 +247,15 @@ namespace Assistence_Control.Views.Empleados
                 nuevoEmpleado = new Empleado()
                 {
                     Nombre = tbNombre.Text.ToUpper(),
-                    Apellido1 = tbApellidoPaterno.Text.ToUpper(),
-                    Apellido2 = tbApellidoMaterno.Text.ToUpper(),
+                    ApellidoPaterno = tbApellidoPaterno.Text.ToUpper(),
+                    ApellidoMaterno = tbApellidoMaterno.Text.ToUpper(),
                     EmpleadoId = int.Parse(tbNumeroEmpleado.Text),
                     Asistencia = null,
-                    Edad = "25",
-                    EmpleadoArea = null,
+                    CURP = tbCurp.Text,
+                    RFC = tbRfc.Text,
                     EmpleadoPermiso = null,
                     FechaHoraRegistro = DateTime.Now,
-                    UsuarioRegistro = 1
+                    UsuarioRegistro = App.usuarioAutentificado.UsuarioId
                 };
                 return true;
             }

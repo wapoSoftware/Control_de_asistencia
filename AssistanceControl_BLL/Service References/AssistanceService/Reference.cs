@@ -9,7 +9,7 @@
 //------------------------------------------------------------------------------
 
 // Original file name:
-// Generation date: 6/21/2017 7:31:17 PM
+// Generation date: 6/26/2017 6:58:49 PM
 namespace AssistanceControl_BLL.AssistanceService
 {
     
@@ -111,23 +111,6 @@ namespace AssistanceControl_BLL.AssistanceService
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
         private global::System.Data.Services.Client.DataServiceQuery<Empleado> _Empleado;
-        /// <summary>
-        /// There are no comments for EmpleadoArea in the schema.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public global::System.Data.Services.Client.DataServiceQuery<EmpleadoArea> EmpleadoArea
-        {
-            get
-            {
-                if ((this._EmpleadoArea == null))
-                {
-                    this._EmpleadoArea = base.CreateQuery<EmpleadoArea>("EmpleadoArea");
-                }
-                return this._EmpleadoArea;
-            }
-        }
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private global::System.Data.Services.Client.DataServiceQuery<EmpleadoArea> _EmpleadoArea;
         /// <summary>
         /// There are no comments for EmpleadoPermiso in the schema.
         /// </summary>
@@ -238,14 +221,6 @@ namespace AssistanceControl_BLL.AssistanceService
             base.AddObject("Empleado", empleado);
         }
         /// <summary>
-        /// There are no comments for EmpleadoArea in the schema.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public void AddToEmpleadoArea(EmpleadoArea empleadoArea)
-        {
-            base.AddObject("EmpleadoArea", empleadoArea);
-        }
-        /// <summary>
         /// There are no comments for EmpleadoPermiso in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
@@ -298,160 +273,151 @@ namespace AssistanceControl_BLL.AssistanceService
                 "11/edm\"><EntityType Name=\"Area\"><Key><PropertyRef Name=\"AreaId\" /></Key><Propert" +
                 "y Name=\"AreaId\" Type=\"Edm.Int32\" Nullable=\"false\" p6:StoreGeneratedPattern=\"Iden" +
                 "tity\" xmlns:p6=\"http://schemas.microsoft.com/ado/2009/02/edm/annotation\" /><Prop" +
-                "erty Name=\"Nombre\" Type=\"Edm.String\" Nullable=\"false\" MaxLength=\"20\" FixedLength" +
-                "=\"false\" Unicode=\"false\" /><Property Name=\"Descripcion\" Type=\"Edm.String\" Nullab" +
-                "le=\"false\" MaxLength=\"30\" FixedLength=\"false\" Unicode=\"false\" /><Property Name=\"" +
-                "UsuarioRegistro\" Type=\"Edm.Int32\" Nullable=\"false\" /><Property Name=\"FechaHoraRe" +
-                "gistro\" Type=\"Edm.DateTime\" Nullable=\"false\" Precision=\"3\" /><NavigationProperty" +
-                " Name=\"EmpleadoArea\" Relationship=\"AssistanceControlModel.FK_EmpleadoArea_Area\" " +
-                "ToRole=\"EmpleadoArea\" FromRole=\"Area\" /><NavigationProperty Name=\"HorarioArea\" R" +
-                "elationship=\"AssistanceControlModel.FK_HorarioArea_Area\" ToRole=\"HorarioArea\" Fr" +
-                "omRole=\"Area\" /></EntityType><EntityType Name=\"Asistencia\"><Key><PropertyRef Nam" +
-                "e=\"AsistenciaId\" /></Key><Property Name=\"AsistenciaId\" Type=\"Edm.Int32\" Nullable" +
-                "=\"false\" p6:StoreGeneratedPattern=\"Identity\" xmlns:p6=\"http://schemas.microsoft." +
-                "com/ado/2009/02/edm/annotation\" /><Property Name=\"EmpleadoId\" Type=\"Edm.Int32\" N" +
-                "ullable=\"false\" /><Property Name=\"FechaHora\" Type=\"Edm.DateTime\" Nullable=\"false" +
-                "\" Precision=\"3\" /><Property Name=\"Estado\" Type=\"Edm.Int32\" Nullable=\"false\" /><N" +
-                "avigationProperty Name=\"Empleado\" Relationship=\"AssistanceControlModel.FK_Asiste" +
-                "ncia_Empleado\" ToRole=\"Empleado\" FromRole=\"Asistencia\" /></EntityType><EntityTyp" +
-                "e Name=\"Empleado\"><Key><PropertyRef Name=\"EmpleadoId\" /></Key><Property Name=\"Em" +
-                "pleadoId\" Type=\"Edm.Int32\" Nullable=\"false\" /><Property Name=\"Nombre\" Type=\"Edm." +
-                "String\" Nullable=\"false\" MaxLength=\"30\" FixedLength=\"false\" Unicode=\"false\" /><P" +
-                "roperty Name=\"Apellido1\" Type=\"Edm.String\" Nullable=\"false\" MaxLength=\"30\" Fixed" +
-                "Length=\"false\" Unicode=\"false\" /><Property Name=\"Apellido2\" Type=\"Edm.String\" Nu" +
-                "llable=\"false\" MaxLength=\"30\" FixedLength=\"false\" Unicode=\"false\" /><Property Na" +
-                "me=\"Edad\" Type=\"Edm.String\" Nullable=\"false\" MaxLength=\"30\" FixedLength=\"false\" " +
-                "Unicode=\"false\" /><Property Name=\"UsuarioRegistro\" Type=\"Edm.Int32\" Nullable=\"fa" +
-                "lse\" /><Property Name=\"FechaHoraRegistro\" Type=\"Edm.DateTime\" Nullable=\"false\" P" +
-                "recision=\"3\" /><NavigationProperty Name=\"Asistencia\" Relationship=\"AssistanceCon" +
-                "trolModel.FK_Asistencia_Empleado\" ToRole=\"Asistencia\" FromRole=\"Empleado\" /><Nav" +
-                "igationProperty Name=\"EmpleadoArea\" Relationship=\"AssistanceControlModel.FK_Empl" +
-                "eadoArea_Empleado\" ToRole=\"EmpleadoArea\" FromRole=\"Empleado\" /><NavigationProper" +
-                "ty Name=\"EmpleadoPermiso\" Relationship=\"AssistanceControlModel.FK_EmpleadoPermis" +
-                "o_Empleado\" ToRole=\"EmpleadoPermiso\" FromRole=\"Empleado\" /></EntityType><EntityT" +
-                "ype Name=\"EmpleadoArea\"><Key><PropertyRef Name=\"AreaId\" /><PropertyRef Name=\"Emp" +
-                "leadoId\" /></Key><Property Name=\"EmpleadoId\" Type=\"Edm.Int32\" Nullable=\"false\" /" +
-                "><Property Name=\"AreaId\" Type=\"Edm.Int32\" Nullable=\"false\" /><Property Name=\"Fec" +
-                "haInicio\" Type=\"Edm.DateTime\" Nullable=\"false\" Precision=\"3\" /><Property Name=\"F" +
-                "echaFinal\" Type=\"Edm.DateTime\" Nullable=\"false\" Precision=\"3\" /><Property Name=\"" +
-                "UsuarioRegistro\" Type=\"Edm.Int32\" Nullable=\"false\" /><Property Name=\"FechaHoraRe" +
-                "gistro\" Type=\"Edm.DateTime\" Nullable=\"false\" Precision=\"3\" /><Property Name=\"Est" +
-                "atus\" Type=\"Edm.Int32\" Nullable=\"false\" /><NavigationProperty Name=\"Area\" Relati" +
-                "onship=\"AssistanceControlModel.FK_EmpleadoArea_Area\" ToRole=\"Area\" FromRole=\"Emp" +
-                "leadoArea\" /><NavigationProperty Name=\"Empleado\" Relationship=\"AssistanceControl" +
-                "Model.FK_EmpleadoArea_Empleado\" ToRole=\"Empleado\" FromRole=\"EmpleadoArea\" /></En" +
-                "tityType><EntityType Name=\"EmpleadoPermiso\"><Key><PropertyRef Name=\"EmpleadoId\" " +
-                "/><PropertyRef Name=\"PermisoId\" /></Key><Property Name=\"EmpleadoId\" Type=\"Edm.In" +
-                "t32\" Nullable=\"false\" /><Property Name=\"PermisoId\" Type=\"Edm.Int32\" Nullable=\"fa" +
-                "lse\" /><Property Name=\"FechaInicio\" Type=\"Edm.DateTime\" Nullable=\"false\" Precisi" +
-                "on=\"3\" /><Property Name=\"FechaFinal\" Type=\"Edm.DateTime\" Nullable=\"false\" Precis" +
-                "ion=\"3\" /><Property Name=\"UsuarioRegistro\" Type=\"Edm.Int32\" Nullable=\"false\" /><" +
-                "Property Name=\"FechaHoraRegistro\" Type=\"Edm.DateTime\" Precision=\"3\" /><Navigatio" +
-                "nProperty Name=\"Empleado\" Relationship=\"AssistanceControlModel.FK_EmpleadoPermis" +
-                "o_Empleado\" ToRole=\"Empleado\" FromRole=\"EmpleadoPermiso\" /><NavigationProperty N" +
-                "ame=\"Permiso\" Relationship=\"AssistanceControlModel.FK_EmpleadoPermiso_Permiso\" T" +
-                "oRole=\"Permiso\" FromRole=\"EmpleadoPermiso\" /></EntityType><EntityType Name=\"Hora" +
-                "rio\"><Key><PropertyRef Name=\"HorarioId\" /></Key><Property Name=\"HorarioId\" Type=" +
-                "\"Edm.Int32\" Nullable=\"false\" p6:StoreGeneratedPattern=\"Identity\" xmlns:p6=\"http:" +
-                "//schemas.microsoft.com/ado/2009/02/edm/annotation\" /><Property Name=\"Nombre\" Ty" +
-                "pe=\"Edm.String\" Nullable=\"false\" MaxLength=\"30\" FixedLength=\"false\" Unicode=\"fal" +
-                "se\" /><Property Name=\"HoraEntrada\" Type=\"Edm.DateTime\" Nullable=\"false\" Precisio" +
-                "n=\"3\" /><Property Name=\"HoraSalida\" Type=\"Edm.DateTime\" Nullable=\"false\" Precisi" +
-                "on=\"3\" /><Property Name=\"UsuarioRegistro\" Type=\"Edm.Int32\" Nullable=\"false\" /><P" +
-                "roperty Name=\"FechaHoraRegistro\" Type=\"Edm.DateTime\" Nullable=\"false\" Precision=" +
-                "\"3\" /><NavigationProperty Name=\"HorarioArea\" Relationship=\"AssistanceControlMode" +
-                "l.FK_HorarioArea_Horario\" ToRole=\"HorarioArea\" FromRole=\"Horario\" /></EntityType" +
-                "><EntityType Name=\"HorarioArea\"><Key><PropertyRef Name=\"AreaId\" /><PropertyRef N" +
-                "ame=\"HorarioId\" /></Key><Property Name=\"HorarioId\" Type=\"Edm.Int32\" Nullable=\"fa" +
-                "lse\" /><Property Name=\"AreaId\" Type=\"Edm.Int32\" Nullable=\"false\" /><Property Nam" +
-                "e=\"FechaInicio\" Type=\"Edm.DateTime\" Nullable=\"false\" Precision=\"3\" /><Property N" +
-                "ame=\"FechaFinal\" Type=\"Edm.DateTime\" Nullable=\"false\" Precision=\"3\" /><Property " +
-                "Name=\"UsuarioRegistro\" Type=\"Edm.Int32\" Nullable=\"false\" /><Property Name=\"Fecha" +
-                "HoraRegistro\" Type=\"Edm.DateTime\" Nullable=\"false\" Precision=\"3\" /><NavigationPr" +
-                "operty Name=\"Area\" Relationship=\"AssistanceControlModel.FK_HorarioArea_Area\" ToR" +
-                "ole=\"Area\" FromRole=\"HorarioArea\" /><NavigationProperty Name=\"Horario\" Relations" +
-                "hip=\"AssistanceControlModel.FK_HorarioArea_Horario\" ToRole=\"Horario\" FromRole=\"H" +
-                "orarioArea\" /></EntityType><EntityType Name=\"Permiso\"><Key><PropertyRef Name=\"Pe" +
-                "rmisoId\" /></Key><Property Name=\"PermisoId\" Type=\"Edm.Int32\" Nullable=\"false\" p6" +
-                ":StoreGeneratedPattern=\"Identity\" xmlns:p6=\"http://schemas.microsoft.com/ado/200" +
-                "9/02/edm/annotation\" /><Property Name=\"Nombre\" Type=\"Edm.String\" Nullable=\"false" +
-                "\" MaxLength=\"15\" FixedLength=\"false\" Unicode=\"false\" /><Property Name=\"Descripci" +
-                "on\" Type=\"Edm.String\" Nullable=\"false\" MaxLength=\"50\" FixedLength=\"false\" Unicod" +
-                "e=\"false\" /><Property Name=\"UsuarioRegistro\" Type=\"Edm.Int32\" Nullable=\"false\" /" +
-                "><Property Name=\"FechaHoraRegistro\" Type=\"Edm.DateTime\" Nullable=\"false\" Precisi" +
-                "on=\"3\" /><NavigationProperty Name=\"EmpleadoPermiso\" Relationship=\"AssistanceCont" +
-                "rolModel.FK_EmpleadoPermiso_Permiso\" ToRole=\"EmpleadoPermiso\" FromRole=\"Permiso\"" +
-                " /></EntityType><EntityType Name=\"Usuario\"><Key><PropertyRef Name=\"UsuarioId\" />" +
-                "</Key><Property Name=\"UsuarioId\" Type=\"Edm.String\" Nullable=\"false\" MaxLength=\"1" +
-                "0\" FixedLength=\"false\" Unicode=\"false\" /><Property Name=\"EmpleadoId\" Type=\"Edm.I" +
-                "nt32\" Nullable=\"false\" /><Property Name=\"Contrasena\" Type=\"";
+                "erty Name=\"Nombre\" Type=\"Edm.String\" Nullable=\"false\" MaxLength=\"30\" FixedLength" +
+                "=\"false\" Unicode=\"false\" /><Property Name=\"Estatus\" Type=\"Edm.Int32\" Nullable=\"f" +
+                "alse\" /><Property Name=\"UsuarioRegistro\" Type=\"Edm.String\" Nullable=\"false\" MaxL" +
+                "ength=\"15\" FixedLength=\"false\" Unicode=\"false\" /><Property Name=\"FechaHoraRegist" +
+                "ro\" Type=\"Edm.DateTime\" Nullable=\"false\" Precision=\"3\" /><NavigationProperty Nam" +
+                "e=\"Empleado\" Relationship=\"AssistanceControlModel.FK_EmpleadoArea\" ToRole=\"Emple" +
+                "ado\" FromRole=\"Area\" /><NavigationProperty Name=\"HorarioArea\" Relationship=\"Assi" +
+                "stanceControlModel.FK_HorarioArea_Area\" ToRole=\"HorarioArea\" FromRole=\"Area\" /><" +
+                "/EntityType><EntityType Name=\"Asistencia\"><Key><PropertyRef Name=\"AsistenciaId\" " +
+                "/></Key><Property Name=\"AsistenciaId\" Type=\"Edm.Int32\" Nullable=\"false\" p6:Store" +
+                "GeneratedPattern=\"Identity\" xmlns:p6=\"http://schemas.microsoft.com/ado/2009/02/e" +
+                "dm/annotation\" /><Property Name=\"EmpleadoId\" Type=\"Edm.Int32\" Nullable=\"false\" /" +
+                "><Property Name=\"FechaHora\" Type=\"Edm.DateTime\" Nullable=\"false\" Precision=\"3\" /" +
+                "><Property Name=\"Estado\" Type=\"Edm.Int32\" Nullable=\"false\" /><NavigationProperty" +
+                " Name=\"Empleado\" Relationship=\"AssistanceControlModel.FK_Asistencia_Empleado\" To" +
+                "Role=\"Empleado\" FromRole=\"Asistencia\" /></EntityType><EntityType Name=\"Empleado\"" +
+                "><Key><PropertyRef Name=\"EmpleadoId\" /></Key><Property Name=\"EmpleadoId\" Type=\"E" +
+                "dm.Int32\" Nullable=\"false\" /><Property Name=\"Nombre\" Type=\"Edm.String\" Nullable=" +
+                "\"false\" MaxLength=\"30\" FixedLength=\"false\" Unicode=\"false\" /><Property Name=\"Ape" +
+                "llidoPaterno\" Type=\"Edm.String\" Nullable=\"false\" MaxLength=\"30\" FixedLength=\"fal" +
+                "se\" Unicode=\"false\" /><Property Name=\"ApellidoMaterno\" Type=\"Edm.String\" Nullabl" +
+                "e=\"false\" MaxLength=\"30\" FixedLength=\"false\" Unicode=\"false\" /><Property Name=\"F" +
+                "echaNacimiento\" Type=\"Edm.String\" Nullable=\"false\" MaxLength=\"30\" FixedLength=\"f" +
+                "alse\" Unicode=\"false\" /><Property Name=\"RFC\" Type=\"Edm.String\" Nullable=\"false\" " +
+                "MaxLength=\"12\" FixedLength=\"false\" Unicode=\"false\" /><Property Name=\"CURP\" Type=" +
+                "\"Edm.String\" Nullable=\"false\" MaxLength=\"18\" FixedLength=\"false\" Unicode=\"false\"" +
+                " /><Property Name=\"FechaIngreso\" Type=\"Edm.DateTime\" Nullable=\"false\" Precision=" +
+                "\"3\" /><Property Name=\"Estatus\" Type=\"Edm.Int32\" Nullable=\"false\" /><Property Nam" +
+                "e=\"AreaId\" Type=\"Edm.Int32\" Nullable=\"false\" /><Property Name=\"UsuarioRegistro\" " +
+                "Type=\"Edm.String\" Nullable=\"false\" MaxLength=\"15\" FixedLength=\"false\" Unicode=\"f" +
+                "alse\" /><Property Name=\"FechaHoraRegistro\" Type=\"Edm.DateTime\" Nullable=\"false\" " +
+                "Precision=\"3\" /><NavigationProperty Name=\"Area\" Relationship=\"AssistanceControlM" +
+                "odel.FK_EmpleadoArea\" ToRole=\"Area\" FromRole=\"Empleado\" /><NavigationProperty Na" +
+                "me=\"Asistencia\" Relationship=\"AssistanceControlModel.FK_Asistencia_Empleado\" ToR" +
+                "ole=\"Asistencia\" FromRole=\"Empleado\" /><NavigationProperty Name=\"EmpleadoPermiso" +
+                "\" Relationship=\"AssistanceControlModel.FK_EmpleadoPermiso_Empleado\" ToRole=\"Empl" +
+                "eadoPermiso\" FromRole=\"Empleado\" /></EntityType><EntityType Name=\"EmpleadoPermis" +
+                "o\"><Key><PropertyRef Name=\"EmpleadoId\" /><PropertyRef Name=\"PermisoId\" /></Key><" +
+                "Property Name=\"EmpleadoId\" Type=\"Edm.Int32\" Nullable=\"false\" /><Property Name=\"P" +
+                "ermisoId\" Type=\"Edm.Int32\" Nullable=\"false\" /><Property Name=\"FechaInicio\" Type=" +
+                "\"Edm.DateTime\" Nullable=\"false\" Precision=\"3\" /><Property Name=\"FechaFinal\" Type" +
+                "=\"Edm.DateTime\" Nullable=\"false\" Precision=\"3\" /><Property Name=\"UsuarioRegistro" +
+                "\" Type=\"Edm.String\" Nullable=\"false\" MaxLength=\"15\" FixedLength=\"false\" Unicode=" +
+                "\"false\" /><Property Name=\"FechaHoraRegistro\" Type=\"Edm.DateTime\" Precision=\"3\" /" +
+                "><NavigationProperty Name=\"Empleado\" Relationship=\"AssistanceControlModel.FK_Emp" +
+                "leadoPermiso_Empleado\" ToRole=\"Empleado\" FromRole=\"EmpleadoPermiso\" /><Navigatio" +
+                "nProperty Name=\"Permiso\" Relationship=\"AssistanceControlModel.FK_EmpleadoPermiso" +
+                "_Permiso\" ToRole=\"Permiso\" FromRole=\"EmpleadoPermiso\" /></EntityType><EntityType" +
+                " Name=\"Horario\"><Key><PropertyRef Name=\"HorarioId\" /></Key><Property Name=\"Horar" +
+                "ioId\" Type=\"Edm.Int32\" Nullable=\"false\" p6:StoreGeneratedPattern=\"Identity\" xmln" +
+                "s:p6=\"http://schemas.microsoft.com/ado/2009/02/edm/annotation\" /><Property Name=" +
+                "\"Nombre\" Type=\"Edm.String\" Nullable=\"false\" MaxLength=\"30\" FixedLength=\"false\" U" +
+                "nicode=\"false\" /><Property Name=\"HoraEntrada\" Type=\"Edm.String\" Nullable=\"false\"" +
+                " MaxLength=\"10\" FixedLength=\"false\" Unicode=\"false\" /><Property Name=\"HoraSalida" +
+                "\" Type=\"Edm.String\" Nullable=\"false\" MaxLength=\"10\" FixedLength=\"false\" Unicode=" +
+                "\"false\" /><Property Name=\"Estatus\" Type=\"Edm.Int32\" Nullable=\"false\" /><Property" +
+                " Name=\"UsuarioRegistro\" Type=\"Edm.String\" Nullable=\"false\" MaxLength=\"15\" FixedL" +
+                "ength=\"false\" Unicode=\"false\" /><Property Name=\"FechaHoraRegistro\" Type=\"Edm.Dat" +
+                "eTime\" Nullable=\"false\" Precision=\"3\" /><NavigationProperty Name=\"HorarioArea\" R" +
+                "elationship=\"AssistanceControlModel.FK_HorarioArea_Horario\" ToRole=\"HorarioArea\"" +
+                " FromRole=\"Horario\" /></EntityType><EntityType Name=\"HorarioArea\"><Key><Property" +
+                "Ref Name=\"AreaId\" /><PropertyRef Name=\"HorarioId\" /></Key><Property Name=\"Horari" +
+                "oId\" Type=\"Edm.Int32\" Nullable=\"false\" /><Property Name=\"AreaId\" Type=\"Edm.Int32" +
+                "\" Nullable=\"false\" /><Property Name=\"FechaInicio\" Type=\"Edm.DateTime\" Nullable=\"" +
+                "false\" Precision=\"3\" /><Property Name=\"FechaFinal\" Type=\"Edm.DateTime\" Nullable=" +
+                "\"false\" Precision=\"3\" /><Property Name=\"UsuarioRegistro\" Type=\"Edm.String\" Nulla" +
+                "ble=\"false\" MaxLength=\"15\" FixedLength=\"false\" Unicode=\"false\" /><Property Name=" +
+                "\"FechaHoraRegistro\" Type=\"Edm.DateTime\" Nullable=\"false\" Precision=\"3\" /><Naviga" +
+                "tionProperty Name=\"Area\" Relationship=\"AssistanceControlModel.FK_HorarioArea_Are" +
+                "a\" ToRole=\"Area\" FromRole=\"HorarioArea\" /><NavigationProperty Name=\"Horario\" Rel" +
+                "ationship=\"AssistanceControlModel.FK_HorarioArea_Horario\" ToRole=\"Horario\" FromR" +
+                "ole=\"HorarioArea\" /></EntityType><EntityType Name=\"Permiso\"><Key><PropertyRef Na" +
+                "me=\"PermisoId\" /></Key><Property Name=\"PermisoId\" Type=\"Edm.Int32\" Nullable=\"fal" +
+                "se\" p6:StoreGeneratedPattern=\"Identity\" xmlns:p6=\"http://schemas.microsoft.com/a" +
+                "do/2009/02/edm/annotation\" /><Property Name=\"Nombre\" Type=\"Edm.String\" Nullable=" +
+                "\"false\" MaxLength=\"15\" FixedLength=\"false\" Unicode=\"false\" /><Property Name=\"Des" +
+                "cripcion\" Type=\"Edm.String\" Nullable=\"false\" MaxLength=\"100\" FixedLength=\"false\"" +
+                " Unicode=\"false\" /><Property Name=\"Estatus\" Type=\"Edm.Int32\" Nullable=\"false\" />" +
+                "<Property Name=\"UsuarioRegistro\" Type=\"Edm.String\" Nullable=\"false\" MaxLength=\"1" +
+                "5\" FixedLength=\"false\" Unicode=\"false\" /><Property Name=\"FechaHoraRegistro\" Type" +
+                "=\"Edm.DateTime\" Nullable=\"false\" Precision=\"3\" /><NavigationProperty Name=\"Emple" +
+                "adoPermiso\" Relationship=\"AssistanceControlModel.FK_EmpleadoPermiso_Permiso\" ToR" +
+                "ole=\"EmpleadoPermiso\" FromRole=\"Permiso\" /></EntityType><EntityType Name=\"Usuari" +
+                "o\"><Key><PropertyRef Name=\"UsuarioId\" /></Key><Property Name=\"UsuarioId\" Type=\"E" +
+                "dm.String\" Nullable=\"false\" MaxLength=\"15\" FixedLength=\"false\" Unicode=\"false\" /" +
+                "><Property Name=\"EmpleadoId\" Type=\"Edm.Int32\" Nullable=\"false\" /><Property Name=" +
+                "\"Contrasena\" Type=\"Edm.String\" Nullable=\"false\" MaxLength=\"";
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-            private const string ModelPart1 = "Edm.String\" Nullable=\"false\" MaxLength=\"10\" FixedLength=\"false\" Unicode=\"false\" /" +
-                "><Property Name=\"Nivel\" Type=\"Edm.Int32\" Nullable=\"false\" /><Property Name=\"Usua" +
-                "rioRegistro\" Type=\"Edm.Int32\" Nullable=\"false\" /><Property Name=\"FechaHoraRegist" +
-                "ro\" Type=\"Edm.DateTime\" Nullable=\"false\" Precision=\"3\" /></EntityType><Associati" +
-                "on Name=\"FK_EmpleadoArea_Area\"><End Type=\"AssistanceControlModel.Area\" Role=\"Are" +
-                "a\" Multiplicity=\"1\"><OnDelete Action=\"Cascade\" /></End><End Type=\"AssistanceCont" +
-                "rolModel.EmpleadoArea\" Role=\"EmpleadoArea\" Multiplicity=\"*\" /><ReferentialConstr" +
-                "aint><Principal Role=\"Area\"><PropertyRef Name=\"AreaId\" /></Principal><Dependent " +
-                "Role=\"EmpleadoArea\"><PropertyRef Name=\"AreaId\" /></Dependent></ReferentialConstr" +
-                "aint></Association><Association Name=\"FK_HorarioArea_Area\"><End Type=\"Assistance" +
-                "ControlModel.Area\" Role=\"Area\" Multiplicity=\"1\"><OnDelete Action=\"Cascade\" /></E" +
-                "nd><End Type=\"AssistanceControlModel.HorarioArea\" Role=\"HorarioArea\" Multiplicit" +
-                "y=\"*\" /><ReferentialConstraint><Principal Role=\"Area\"><PropertyRef Name=\"AreaId\"" +
-                " /></Principal><Dependent Role=\"HorarioArea\"><PropertyRef Name=\"AreaId\" /></Depe" +
-                "ndent></ReferentialConstraint></Association><Association Name=\"FK_Asistencia_Emp" +
-                "leado\"><End Type=\"AssistanceControlModel.Empleado\" Role=\"Empleado\" Multiplicity=" +
-                "\"1\"><OnDelete Action=\"Cascade\" /></End><End Type=\"AssistanceControlModel.Asisten" +
-                "cia\" Role=\"Asistencia\" Multiplicity=\"*\" /><ReferentialConstraint><Principal Role" +
-                "=\"Empleado\"><PropertyRef Name=\"EmpleadoId\" /></Principal><Dependent Role=\"Asiste" +
-                "ncia\"><PropertyRef Name=\"EmpleadoId\" /></Dependent></ReferentialConstraint></Ass" +
-                "ociation><Association Name=\"FK_EmpleadoArea_Empleado\"><End Type=\"AssistanceContr" +
-                "olModel.Empleado\" Role=\"Empleado\" Multiplicity=\"1\"><OnDelete Action=\"Cascade\" />" +
-                "</End><End Type=\"AssistanceControlModel.EmpleadoArea\" Role=\"EmpleadoArea\" Multip" +
-                "licity=\"*\" /><ReferentialConstraint><Principal Role=\"Empleado\"><PropertyRef Name" +
-                "=\"EmpleadoId\" /></Principal><Dependent Role=\"EmpleadoArea\"><PropertyRef Name=\"Em" +
-                "pleadoId\" /></Dependent></ReferentialConstraint></Association><Association Name=" +
-                "\"FK_EmpleadoPermiso_Empleado\"><End Type=\"AssistanceControlModel.Empleado\" Role=\"" +
-                "Empleado\" Multiplicity=\"1\"><OnDelete Action=\"Cascade\" /></End><End Type=\"Assista" +
-                "nceControlModel.EmpleadoPermiso\" Role=\"EmpleadoPermiso\" Multiplicity=\"*\" /><Refe" +
-                "rentialConstraint><Principal Role=\"Empleado\"><PropertyRef Name=\"EmpleadoId\" /></" +
-                "Principal><Dependent Role=\"EmpleadoPermiso\"><PropertyRef Name=\"EmpleadoId\" /></D" +
-                "ependent></ReferentialConstraint></Association><Association Name=\"FK_EmpleadoPer" +
-                "miso_Permiso\"><End Type=\"AssistanceControlModel.Permiso\" Role=\"Permiso\" Multipli" +
-                "city=\"1\"><OnDelete Action=\"Cascade\" /></End><End Type=\"AssistanceControlModel.Em" +
-                "pleadoPermiso\" Role=\"EmpleadoPermiso\" Multiplicity=\"*\" /><ReferentialConstraint>" +
-                "<Principal Role=\"Permiso\"><PropertyRef Name=\"PermisoId\" /></Principal><Dependent" +
-                " Role=\"EmpleadoPermiso\"><PropertyRef Name=\"PermisoId\" /></Dependent></Referentia" +
-                "lConstraint></Association><Association Name=\"FK_HorarioArea_Horario\"><End Type=\"" +
-                "AssistanceControlModel.Horario\" Role=\"Horario\" Multiplicity=\"1\"><OnDelete Action" +
-                "=\"Cascade\" /></End><End Type=\"AssistanceControlModel.HorarioArea\" Role=\"HorarioA" +
-                "rea\" Multiplicity=\"*\" /><ReferentialConstraint><Principal Role=\"Horario\"><Proper" +
-                "tyRef Name=\"HorarioId\" /></Principal><Dependent Role=\"HorarioArea\"><PropertyRef " +
-                "Name=\"HorarioId\" /></Dependent></ReferentialConstraint></Association></Schema><S" +
-                "chema Namespace=\"Assistance_ControlDLL\" xmlns=\"http://schemas.microsoft.com/ado/" +
-                "2009/11/edm\"><EntityContainer Name=\"AssistanceControlEntities\" m:IsDefaultEntity" +
-                "Container=\"true\" p6:LazyLoadingEnabled=\"true\" xmlns:p6=\"http://schemas.microsoft" +
-                ".com/ado/2009/02/edm/annotation\"><EntitySet Name=\"Area\" EntityType=\"AssistanceCo" +
-                "ntrolModel.Area\" /><EntitySet Name=\"Asistencia\" EntityType=\"AssistanceControlMod" +
-                "el.Asistencia\" /><EntitySet Name=\"Empleado\" EntityType=\"AssistanceControlModel.E" +
-                "mpleado\" /><EntitySet Name=\"EmpleadoArea\" EntityType=\"AssistanceControlModel.Emp" +
-                "leadoArea\" /><EntitySet Name=\"EmpleadoPermiso\" EntityType=\"AssistanceControlMode" +
-                "l.EmpleadoPermiso\" /><EntitySet Name=\"Horario\" EntityType=\"AssistanceControlMode" +
-                "l.Horario\" /><EntitySet Name=\"HorarioArea\" EntityType=\"AssistanceControlModel.Ho" +
-                "rarioArea\" /><EntitySet Name=\"Permiso\" EntityType=\"AssistanceControlModel.Permis" +
-                "o\" /><EntitySet Name=\"Usuario\" EntityType=\"AssistanceControlModel.Usuario\" /><As" +
-                "sociationSet Name=\"FK_EmpleadoArea_Area\" Association=\"AssistanceControlModel.FK_" +
-                "EmpleadoArea_Area\"><End Role=\"Area\" EntitySet=\"Area\" /><End Role=\"EmpleadoArea\" " +
-                "EntitySet=\"EmpleadoArea\" /></AssociationSet><AssociationSet Name=\"FK_HorarioArea" +
-                "_Area\" Association=\"AssistanceControlModel.FK_HorarioArea_Area\"><End Role=\"Area\"" +
-                " EntitySet=\"Area\" /><End Role=\"HorarioArea\" EntitySet=\"HorarioArea\" /></Associat" +
-                "ionSet><AssociationSet Name=\"FK_Asistencia_Empleado\" Association=\"AssistanceCont" +
-                "rolModel.FK_Asistencia_Empleado\"><End Role=\"Asistencia\" EntitySet=\"Asistencia\" /" +
-                "><End Role=\"Empleado\" EntitySet=\"Empleado\" /></AssociationSet><AssociationSet Na" +
-                "me=\"FK_EmpleadoArea_Empleado\" Association=\"AssistanceControlModel.FK_EmpleadoAre" +
-                "a_Empleado\"><End Role=\"Empleado\" EntitySet=\"Empleado\" /><End Role=\"EmpleadoArea\"" +
-                " EntitySet=\"EmpleadoArea\" /></AssociationSet><AssociationSet Name=\"FK_EmpleadoPe" +
+            private const string ModelPart1 = "20\" FixedLength=\"false\" Unicode=\"false\" /><Property Name=\"Nivel\" Type=\"Edm.Int32\"" +
+                " Nullable=\"false\" /><Property Name=\"Estatus\" Type=\"Edm.Int32\" Nullable=\"false\" /" +
+                "><Property Name=\"UsuarioRegistro\" Type=\"Edm.String\" Nullable=\"false\" MaxLength=\"" +
+                "15\" FixedLength=\"false\" Unicode=\"false\" /><Property Name=\"FechaHoraRegistro\" Typ" +
+                "e=\"Edm.DateTime\" Nullable=\"false\" Precision=\"3\" /></EntityType><Association Name" +
+                "=\"FK_EmpleadoArea\"><End Type=\"AssistanceControlModel.Area\" Role=\"Area\" Multiplic" +
+                "ity=\"1\"><OnDelete Action=\"Cascade\" /></End><End Type=\"AssistanceControlModel.Emp" +
+                "leado\" Role=\"Empleado\" Multiplicity=\"*\" /><ReferentialConstraint><Principal Role" +
+                "=\"Area\"><PropertyRef Name=\"AreaId\" /></Principal><Dependent Role=\"Empleado\"><Pro" +
+                "pertyRef Name=\"AreaId\" /></Dependent></ReferentialConstraint></Association><Asso" +
+                "ciation Name=\"FK_HorarioArea_Area\"><End Type=\"AssistanceControlModel.Area\" Role=" +
+                "\"Area\" Multiplicity=\"1\"><OnDelete Action=\"Cascade\" /></End><End Type=\"Assistance" +
+                "ControlModel.HorarioArea\" Role=\"HorarioArea\" Multiplicity=\"*\" /><ReferentialCons" +
+                "traint><Principal Role=\"Area\"><PropertyRef Name=\"AreaId\" /></Principal><Dependen" +
+                "t Role=\"HorarioArea\"><PropertyRef Name=\"AreaId\" /></Dependent></ReferentialConst" +
+                "raint></Association><Association Name=\"FK_Asistencia_Empleado\"><End Type=\"Assist" +
+                "anceControlModel.Empleado\" Role=\"Empleado\" Multiplicity=\"1\"><OnDelete Action=\"Ca" +
+                "scade\" /></End><End Type=\"AssistanceControlModel.Asistencia\" Role=\"Asistencia\" M" +
+                "ultiplicity=\"*\" /><ReferentialConstraint><Principal Role=\"Empleado\"><PropertyRef" +
+                " Name=\"EmpleadoId\" /></Principal><Dependent Role=\"Asistencia\"><PropertyRef Name=" +
+                "\"EmpleadoId\" /></Dependent></ReferentialConstraint></Association><Association Na" +
+                "me=\"FK_EmpleadoPermiso_Empleado\"><End Type=\"AssistanceControlModel.Empleado\" Rol" +
+                "e=\"Empleado\" Multiplicity=\"1\"><OnDelete Action=\"Cascade\" /></End><End Type=\"Assi" +
+                "stanceControlModel.EmpleadoPermiso\" Role=\"EmpleadoPermiso\" Multiplicity=\"*\" /><R" +
+                "eferentialConstraint><Principal Role=\"Empleado\"><PropertyRef Name=\"EmpleadoId\" /" +
+                "></Principal><Dependent Role=\"EmpleadoPermiso\"><PropertyRef Name=\"EmpleadoId\" />" +
+                "</Dependent></ReferentialConstraint></Association><Association Name=\"FK_Empleado" +
+                "Permiso_Permiso\"><End Type=\"AssistanceControlModel.Permiso\" Role=\"Permiso\" Multi" +
+                "plicity=\"1\"><OnDelete Action=\"Cascade\" /></End><End Type=\"AssistanceControlModel" +
+                ".EmpleadoPermiso\" Role=\"EmpleadoPermiso\" Multiplicity=\"*\" /><ReferentialConstrai" +
+                "nt><Principal Role=\"Permiso\"><PropertyRef Name=\"PermisoId\" /></Principal><Depend" +
+                "ent Role=\"EmpleadoPermiso\"><PropertyRef Name=\"PermisoId\" /></Dependent></Referen" +
+                "tialConstraint></Association><Association Name=\"FK_HorarioArea_Horario\"><End Typ" +
+                "e=\"AssistanceControlModel.Horario\" Role=\"Horario\" Multiplicity=\"1\"><OnDelete Act" +
+                "ion=\"Cascade\" /></End><End Type=\"AssistanceControlModel.HorarioArea\" Role=\"Horar" +
+                "ioArea\" Multiplicity=\"*\" /><ReferentialConstraint><Principal Role=\"Horario\"><Pro" +
+                "pertyRef Name=\"HorarioId\" /></Principal><Dependent Role=\"HorarioArea\"><PropertyR" +
+                "ef Name=\"HorarioId\" /></Dependent></ReferentialConstraint></Association></Schema" +
+                "><Schema Namespace=\"Assistance_ControlDLL\" xmlns=\"http://schemas.microsoft.com/a" +
+                "do/2009/11/edm\"><EntityContainer Name=\"AssistanceControlEntities\" m:IsDefaultEnt" +
+                "ityContainer=\"true\" p6:LazyLoadingEnabled=\"true\" xmlns:p6=\"http://schemas.micros" +
+                "oft.com/ado/2009/02/edm/annotation\"><EntitySet Name=\"Area\" EntityType=\"Assistanc" +
+                "eControlModel.Area\" /><EntitySet Name=\"Asistencia\" EntityType=\"AssistanceControl" +
+                "Model.Asistencia\" /><EntitySet Name=\"Empleado\" EntityType=\"AssistanceControlMode" +
+                "l.Empleado\" /><EntitySet Name=\"EmpleadoPermiso\" EntityType=\"AssistanceControlMod" +
+                "el.EmpleadoPermiso\" /><EntitySet Name=\"Horario\" EntityType=\"AssistanceControlMod" +
+                "el.Horario\" /><EntitySet Name=\"HorarioArea\" EntityType=\"AssistanceControlModel.H" +
+                "orarioArea\" /><EntitySet Name=\"Permiso\" EntityType=\"AssistanceControlModel.Permi" +
+                "so\" /><EntitySet Name=\"Usuario\" EntityType=\"AssistanceControlModel.Usuario\" /><A" +
+                "ssociationSet Name=\"FK_EmpleadoArea\" Association=\"AssistanceControlModel.FK_Empl" +
+                "eadoArea\"><End Role=\"Area\" EntitySet=\"Area\" /><End Role=\"Empleado\" EntitySet=\"Em" +
+                "pleado\" /></AssociationSet><AssociationSet Name=\"FK_HorarioArea_Area\" Associatio" +
+                "n=\"AssistanceControlModel.FK_HorarioArea_Area\"><End Role=\"Area\" EntitySet=\"Area\"" +
+                " /><End Role=\"HorarioArea\" EntitySet=\"HorarioArea\" /></AssociationSet><Associati" +
+                "onSet Name=\"FK_Asistencia_Empleado\" Association=\"AssistanceControlModel.FK_Asist" +
+                "encia_Empleado\"><End Role=\"Asistencia\" EntitySet=\"Asistencia\" /><End Role=\"Emple" +
+                "ado\" EntitySet=\"Empleado\" /></AssociationSet><AssociationSet Name=\"FK_EmpleadoPe" +
                 "rmiso_Empleado\" Association=\"AssistanceControlModel.FK_EmpleadoPermiso_Empleado\"" +
                 "><End Role=\"Empleado\" EntitySet=\"Empleado\" /><End Role=\"EmpleadoPermiso\" EntityS" +
                 "et=\"EmpleadoPermiso\" /></AssociationSet><AssociationSet Name=\"FK_EmpleadoPermiso" +
@@ -507,16 +473,16 @@ namespace AssistanceControl_BLL.AssistanceService
         /// </summary>
         /// <param name="areaId">Initial value of AreaId.</param>
         /// <param name="nombre">Initial value of Nombre.</param>
-        /// <param name="descripcion">Initial value of Descripcion.</param>
+        /// <param name="estatus">Initial value of Estatus.</param>
         /// <param name="usuarioRegistro">Initial value of UsuarioRegistro.</param>
         /// <param name="fechaHoraRegistro">Initial value of FechaHoraRegistro.</param>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public static Area CreateArea(int areaId, string nombre, string descripcion, int usuarioRegistro, global::System.DateTime fechaHoraRegistro)
+        public static Area CreateArea(int areaId, string nombre, int estatus, string usuarioRegistro, global::System.DateTime fechaHoraRegistro)
         {
             Area area = new Area();
             area.AreaId = areaId;
             area.Nombre = nombre;
-            area.Descripcion = descripcion;
+            area.Estatus = estatus;
             area.UsuarioRegistro = usuarioRegistro;
             area.FechaHoraRegistro = fechaHoraRegistro;
             return area;
@@ -566,32 +532,32 @@ namespace AssistanceControl_BLL.AssistanceService
         partial void OnNombreChanging(string value);
         partial void OnNombreChanged();
         /// <summary>
-        /// There are no comments for Property Descripcion in the schema.
+        /// There are no comments for Property Estatus in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public string Descripcion
+        public int Estatus
         {
             get
             {
-                return this._Descripcion;
+                return this._Estatus;
             }
             set
             {
-                this.OnDescripcionChanging(value);
-                this._Descripcion = value;
-                this.OnDescripcionChanged();
-                this.OnPropertyChanged("Descripcion");
+                this.OnEstatusChanging(value);
+                this._Estatus = value;
+                this.OnEstatusChanged();
+                this.OnPropertyChanged("Estatus");
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private string _Descripcion;
-        partial void OnDescripcionChanging(string value);
-        partial void OnDescripcionChanged();
+        private int _Estatus;
+        partial void OnEstatusChanging(int value);
+        partial void OnEstatusChanged();
         /// <summary>
         /// There are no comments for Property UsuarioRegistro in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public int UsuarioRegistro
+        public string UsuarioRegistro
         {
             get
             {
@@ -606,8 +572,8 @@ namespace AssistanceControl_BLL.AssistanceService
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private int _UsuarioRegistro;
-        partial void OnUsuarioRegistroChanging(int value);
+        private string _UsuarioRegistro;
+        partial void OnUsuarioRegistroChanging(string value);
         partial void OnUsuarioRegistroChanged();
         /// <summary>
         /// There are no comments for Property FechaHoraRegistro in the schema.
@@ -632,23 +598,23 @@ namespace AssistanceControl_BLL.AssistanceService
         partial void OnFechaHoraRegistroChanging(global::System.DateTime value);
         partial void OnFechaHoraRegistroChanged();
         /// <summary>
-        /// There are no comments for EmpleadoArea in the schema.
+        /// There are no comments for Empleado in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public global::System.Data.Services.Client.DataServiceCollection<EmpleadoArea> EmpleadoArea
+        public global::System.Data.Services.Client.DataServiceCollection<Empleado> Empleado
         {
             get
             {
-                return this._EmpleadoArea;
+                return this._Empleado;
             }
             set
             {
-                this._EmpleadoArea = value;
-                this.OnPropertyChanged("EmpleadoArea");
+                this._Empleado = value;
+                this.OnPropertyChanged("Empleado");
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private global::System.Data.Services.Client.DataServiceCollection<EmpleadoArea> _EmpleadoArea = new global::System.Data.Services.Client.DataServiceCollection<EmpleadoArea>(null, global::System.Data.Services.Client.TrackingMode.None);
+        private global::System.Data.Services.Client.DataServiceCollection<Empleado> _Empleado = new global::System.Data.Services.Client.DataServiceCollection<Empleado>(null, global::System.Data.Services.Client.TrackingMode.None);
         /// <summary>
         /// There are no comments for HorarioArea in the schema.
         /// </summary>
@@ -837,20 +803,30 @@ namespace AssistanceControl_BLL.AssistanceService
         /// </summary>
         /// <param name="empleadoId">Initial value of EmpleadoId.</param>
         /// <param name="nombre">Initial value of Nombre.</param>
-        /// <param name="apellido1">Initial value of Apellido1.</param>
-        /// <param name="apellido2">Initial value of Apellido2.</param>
-        /// <param name="edad">Initial value of Edad.</param>
+        /// <param name="apellidoPaterno">Initial value of ApellidoPaterno.</param>
+        /// <param name="apellidoMaterno">Initial value of ApellidoMaterno.</param>
+        /// <param name="fechaNacimiento">Initial value of FechaNacimiento.</param>
+        /// <param name="rFC">Initial value of RFC.</param>
+        /// <param name="cURP">Initial value of CURP.</param>
+        /// <param name="fechaIngreso">Initial value of FechaIngreso.</param>
+        /// <param name="estatus">Initial value of Estatus.</param>
+        /// <param name="areaId">Initial value of AreaId.</param>
         /// <param name="usuarioRegistro">Initial value of UsuarioRegistro.</param>
         /// <param name="fechaHoraRegistro">Initial value of FechaHoraRegistro.</param>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public static Empleado CreateEmpleado(int empleadoId, string nombre, string apellido1, string apellido2, string edad, int usuarioRegistro, global::System.DateTime fechaHoraRegistro)
+        public static Empleado CreateEmpleado(int empleadoId, string nombre, string apellidoPaterno, string apellidoMaterno, string fechaNacimiento, string rFC, string cURP, global::System.DateTime fechaIngreso, int estatus, int areaId, string usuarioRegistro, global::System.DateTime fechaHoraRegistro)
         {
             Empleado empleado = new Empleado();
             empleado.EmpleadoId = empleadoId;
             empleado.Nombre = nombre;
-            empleado.Apellido1 = apellido1;
-            empleado.Apellido2 = apellido2;
-            empleado.Edad = edad;
+            empleado.ApellidoPaterno = apellidoPaterno;
+            empleado.ApellidoMaterno = apellidoMaterno;
+            empleado.FechaNacimiento = fechaNacimiento;
+            empleado.RFC = rFC;
+            empleado.CURP = cURP;
+            empleado.FechaIngreso = fechaIngreso;
+            empleado.Estatus = estatus;
+            empleado.AreaId = areaId;
             empleado.UsuarioRegistro = usuarioRegistro;
             empleado.FechaHoraRegistro = fechaHoraRegistro;
             return empleado;
@@ -900,346 +876,137 @@ namespace AssistanceControl_BLL.AssistanceService
         partial void OnNombreChanging(string value);
         partial void OnNombreChanged();
         /// <summary>
-        /// There are no comments for Property Apellido1 in the schema.
+        /// There are no comments for Property ApellidoPaterno in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public string Apellido1
+        public string ApellidoPaterno
         {
             get
             {
-                return this._Apellido1;
+                return this._ApellidoPaterno;
             }
             set
             {
-                this.OnApellido1Changing(value);
-                this._Apellido1 = value;
-                this.OnApellido1Changed();
-                this.OnPropertyChanged("Apellido1");
+                this.OnApellidoPaternoChanging(value);
+                this._ApellidoPaterno = value;
+                this.OnApellidoPaternoChanged();
+                this.OnPropertyChanged("ApellidoPaterno");
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private string _Apellido1;
-        partial void OnApellido1Changing(string value);
-        partial void OnApellido1Changed();
+        private string _ApellidoPaterno;
+        partial void OnApellidoPaternoChanging(string value);
+        partial void OnApellidoPaternoChanged();
         /// <summary>
-        /// There are no comments for Property Apellido2 in the schema.
+        /// There are no comments for Property ApellidoMaterno in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public string Apellido2
+        public string ApellidoMaterno
         {
             get
             {
-                return this._Apellido2;
+                return this._ApellidoMaterno;
             }
             set
             {
-                this.OnApellido2Changing(value);
-                this._Apellido2 = value;
-                this.OnApellido2Changed();
-                this.OnPropertyChanged("Apellido2");
+                this.OnApellidoMaternoChanging(value);
+                this._ApellidoMaterno = value;
+                this.OnApellidoMaternoChanged();
+                this.OnPropertyChanged("ApellidoMaterno");
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private string _Apellido2;
-        partial void OnApellido2Changing(string value);
-        partial void OnApellido2Changed();
+        private string _ApellidoMaterno;
+        partial void OnApellidoMaternoChanging(string value);
+        partial void OnApellidoMaternoChanged();
         /// <summary>
-        /// There are no comments for Property Edad in the schema.
+        /// There are no comments for Property FechaNacimiento in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public string Edad
+        public string FechaNacimiento
         {
             get
             {
-                return this._Edad;
+                return this._FechaNacimiento;
             }
             set
             {
-                this.OnEdadChanging(value);
-                this._Edad = value;
-                this.OnEdadChanged();
-                this.OnPropertyChanged("Edad");
+                this.OnFechaNacimientoChanging(value);
+                this._FechaNacimiento = value;
+                this.OnFechaNacimientoChanged();
+                this.OnPropertyChanged("FechaNacimiento");
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private string _Edad;
-        partial void OnEdadChanging(string value);
-        partial void OnEdadChanged();
+        private string _FechaNacimiento;
+        partial void OnFechaNacimientoChanging(string value);
+        partial void OnFechaNacimientoChanged();
         /// <summary>
-        /// There are no comments for Property UsuarioRegistro in the schema.
+        /// There are no comments for Property RFC in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public int UsuarioRegistro
+        public string RFC
         {
             get
             {
-                return this._UsuarioRegistro;
+                return this._RFC;
             }
             set
             {
-                this.OnUsuarioRegistroChanging(value);
-                this._UsuarioRegistro = value;
-                this.OnUsuarioRegistroChanged();
-                this.OnPropertyChanged("UsuarioRegistro");
+                this.OnRFCChanging(value);
+                this._RFC = value;
+                this.OnRFCChanged();
+                this.OnPropertyChanged("RFC");
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private int _UsuarioRegistro;
-        partial void OnUsuarioRegistroChanging(int value);
-        partial void OnUsuarioRegistroChanged();
+        private string _RFC;
+        partial void OnRFCChanging(string value);
+        partial void OnRFCChanged();
         /// <summary>
-        /// There are no comments for Property FechaHoraRegistro in the schema.
+        /// There are no comments for Property CURP in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public global::System.DateTime FechaHoraRegistro
+        public string CURP
         {
             get
             {
-                return this._FechaHoraRegistro;
+                return this._CURP;
             }
             set
             {
-                this.OnFechaHoraRegistroChanging(value);
-                this._FechaHoraRegistro = value;
-                this.OnFechaHoraRegistroChanged();
-                this.OnPropertyChanged("FechaHoraRegistro");
+                this.OnCURPChanging(value);
+                this._CURP = value;
+                this.OnCURPChanged();
+                this.OnPropertyChanged("CURP");
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private global::System.DateTime _FechaHoraRegistro;
-        partial void OnFechaHoraRegistroChanging(global::System.DateTime value);
-        partial void OnFechaHoraRegistroChanged();
+        private string _CURP;
+        partial void OnCURPChanging(string value);
+        partial void OnCURPChanged();
         /// <summary>
-        /// There are no comments for Asistencia in the schema.
+        /// There are no comments for Property FechaIngreso in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public global::System.Data.Services.Client.DataServiceCollection<Asistencia> Asistencia
+        public global::System.DateTime FechaIngreso
         {
             get
             {
-                return this._Asistencia;
+                return this._FechaIngreso;
             }
             set
             {
-                this._Asistencia = value;
-                this.OnPropertyChanged("Asistencia");
+                this.OnFechaIngresoChanging(value);
+                this._FechaIngreso = value;
+                this.OnFechaIngresoChanged();
+                this.OnPropertyChanged("FechaIngreso");
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private global::System.Data.Services.Client.DataServiceCollection<Asistencia> _Asistencia = new global::System.Data.Services.Client.DataServiceCollection<Asistencia>(null, global::System.Data.Services.Client.TrackingMode.None);
-        /// <summary>
-        /// There are no comments for EmpleadoArea in the schema.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public global::System.Data.Services.Client.DataServiceCollection<EmpleadoArea> EmpleadoArea
-        {
-            get
-            {
-                return this._EmpleadoArea;
-            }
-            set
-            {
-                this._EmpleadoArea = value;
-                this.OnPropertyChanged("EmpleadoArea");
-            }
-        }
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private global::System.Data.Services.Client.DataServiceCollection<EmpleadoArea> _EmpleadoArea = new global::System.Data.Services.Client.DataServiceCollection<EmpleadoArea>(null, global::System.Data.Services.Client.TrackingMode.None);
-        /// <summary>
-        /// There are no comments for EmpleadoPermiso in the schema.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public global::System.Data.Services.Client.DataServiceCollection<EmpleadoPermiso> EmpleadoPermiso
-        {
-            get
-            {
-                return this._EmpleadoPermiso;
-            }
-            set
-            {
-                this._EmpleadoPermiso = value;
-                this.OnPropertyChanged("EmpleadoPermiso");
-            }
-        }
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private global::System.Data.Services.Client.DataServiceCollection<EmpleadoPermiso> _EmpleadoPermiso = new global::System.Data.Services.Client.DataServiceCollection<EmpleadoPermiso>(null, global::System.Data.Services.Client.TrackingMode.None);
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public event global::System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        protected virtual void OnPropertyChanged(string property)
-        {
-            if ((this.PropertyChanged != null))
-            {
-                this.PropertyChanged(this, new global::System.ComponentModel.PropertyChangedEventArgs(property));
-            }
-        }
-    }
-    /// <summary>
-    /// There are no comments for AssistanceControlModel.EmpleadoArea in the schema.
-    /// </summary>
-    /// <KeyProperties>
-    /// AreaId
-    /// EmpleadoId
-    /// </KeyProperties>
-    [global::System.Data.Services.Common.EntitySetAttribute("EmpleadoArea")]
-    [global::System.Data.Services.Common.DataServiceKeyAttribute("AreaId", "EmpleadoId")]
-    public partial class EmpleadoArea : global::System.ComponentModel.INotifyPropertyChanged
-    {
-        /// <summary>
-        /// Create a new EmpleadoArea object.
-        /// </summary>
-        /// <param name="empleadoId">Initial value of EmpleadoId.</param>
-        /// <param name="areaId">Initial value of AreaId.</param>
-        /// <param name="fechaInicio">Initial value of FechaInicio.</param>
-        /// <param name="fechaFinal">Initial value of FechaFinal.</param>
-        /// <param name="usuarioRegistro">Initial value of UsuarioRegistro.</param>
-        /// <param name="fechaHoraRegistro">Initial value of FechaHoraRegistro.</param>
-        /// <param name="estatus">Initial value of Estatus.</param>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public static EmpleadoArea CreateEmpleadoArea(int empleadoId, int areaId, global::System.DateTime fechaInicio, global::System.DateTime fechaFinal, int usuarioRegistro, global::System.DateTime fechaHoraRegistro, int estatus)
-        {
-            EmpleadoArea empleadoArea = new EmpleadoArea();
-            empleadoArea.EmpleadoId = empleadoId;
-            empleadoArea.AreaId = areaId;
-            empleadoArea.FechaInicio = fechaInicio;
-            empleadoArea.FechaFinal = fechaFinal;
-            empleadoArea.UsuarioRegistro = usuarioRegistro;
-            empleadoArea.FechaHoraRegistro = fechaHoraRegistro;
-            empleadoArea.Estatus = estatus;
-            return empleadoArea;
-        }
-        /// <summary>
-        /// There are no comments for Property EmpleadoId in the schema.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public int EmpleadoId
-        {
-            get
-            {
-                return this._EmpleadoId;
-            }
-            set
-            {
-                this.OnEmpleadoIdChanging(value);
-                this._EmpleadoId = value;
-                this.OnEmpleadoIdChanged();
-                this.OnPropertyChanged("EmpleadoId");
-            }
-        }
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private int _EmpleadoId;
-        partial void OnEmpleadoIdChanging(int value);
-        partial void OnEmpleadoIdChanged();
-        /// <summary>
-        /// There are no comments for Property AreaId in the schema.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public int AreaId
-        {
-            get
-            {
-                return this._AreaId;
-            }
-            set
-            {
-                this.OnAreaIdChanging(value);
-                this._AreaId = value;
-                this.OnAreaIdChanged();
-                this.OnPropertyChanged("AreaId");
-            }
-        }
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private int _AreaId;
-        partial void OnAreaIdChanging(int value);
-        partial void OnAreaIdChanged();
-        /// <summary>
-        /// There are no comments for Property FechaInicio in the schema.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public global::System.DateTime FechaInicio
-        {
-            get
-            {
-                return this._FechaInicio;
-            }
-            set
-            {
-                this.OnFechaInicioChanging(value);
-                this._FechaInicio = value;
-                this.OnFechaInicioChanged();
-                this.OnPropertyChanged("FechaInicio");
-            }
-        }
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private global::System.DateTime _FechaInicio;
-        partial void OnFechaInicioChanging(global::System.DateTime value);
-        partial void OnFechaInicioChanged();
-        /// <summary>
-        /// There are no comments for Property FechaFinal in the schema.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public global::System.DateTime FechaFinal
-        {
-            get
-            {
-                return this._FechaFinal;
-            }
-            set
-            {
-                this.OnFechaFinalChanging(value);
-                this._FechaFinal = value;
-                this.OnFechaFinalChanged();
-                this.OnPropertyChanged("FechaFinal");
-            }
-        }
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private global::System.DateTime _FechaFinal;
-        partial void OnFechaFinalChanging(global::System.DateTime value);
-        partial void OnFechaFinalChanged();
-        /// <summary>
-        /// There are no comments for Property UsuarioRegistro in the schema.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public int UsuarioRegistro
-        {
-            get
-            {
-                return this._UsuarioRegistro;
-            }
-            set
-            {
-                this.OnUsuarioRegistroChanging(value);
-                this._UsuarioRegistro = value;
-                this.OnUsuarioRegistroChanged();
-                this.OnPropertyChanged("UsuarioRegistro");
-            }
-        }
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private int _UsuarioRegistro;
-        partial void OnUsuarioRegistroChanging(int value);
-        partial void OnUsuarioRegistroChanged();
-        /// <summary>
-        /// There are no comments for Property FechaHoraRegistro in the schema.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public global::System.DateTime FechaHoraRegistro
-        {
-            get
-            {
-                return this._FechaHoraRegistro;
-            }
-            set
-            {
-                this.OnFechaHoraRegistroChanging(value);
-                this._FechaHoraRegistro = value;
-                this.OnFechaHoraRegistroChanged();
-                this.OnPropertyChanged("FechaHoraRegistro");
-            }
-        }
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private global::System.DateTime _FechaHoraRegistro;
-        partial void OnFechaHoraRegistroChanging(global::System.DateTime value);
-        partial void OnFechaHoraRegistroChanged();
+        private global::System.DateTime _FechaIngreso;
+        partial void OnFechaIngresoChanging(global::System.DateTime value);
+        partial void OnFechaIngresoChanged();
         /// <summary>
         /// There are no comments for Property Estatus in the schema.
         /// </summary>
@@ -1263,6 +1030,72 @@ namespace AssistanceControl_BLL.AssistanceService
         partial void OnEstatusChanging(int value);
         partial void OnEstatusChanged();
         /// <summary>
+        /// There are no comments for Property AreaId in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public int AreaId
+        {
+            get
+            {
+                return this._AreaId;
+            }
+            set
+            {
+                this.OnAreaIdChanging(value);
+                this._AreaId = value;
+                this.OnAreaIdChanged();
+                this.OnPropertyChanged("AreaId");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private int _AreaId;
+        partial void OnAreaIdChanging(int value);
+        partial void OnAreaIdChanged();
+        /// <summary>
+        /// There are no comments for Property UsuarioRegistro in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public string UsuarioRegistro
+        {
+            get
+            {
+                return this._UsuarioRegistro;
+            }
+            set
+            {
+                this.OnUsuarioRegistroChanging(value);
+                this._UsuarioRegistro = value;
+                this.OnUsuarioRegistroChanged();
+                this.OnPropertyChanged("UsuarioRegistro");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private string _UsuarioRegistro;
+        partial void OnUsuarioRegistroChanging(string value);
+        partial void OnUsuarioRegistroChanged();
+        /// <summary>
+        /// There are no comments for Property FechaHoraRegistro in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public global::System.DateTime FechaHoraRegistro
+        {
+            get
+            {
+                return this._FechaHoraRegistro;
+            }
+            set
+            {
+                this.OnFechaHoraRegistroChanging(value);
+                this._FechaHoraRegistro = value;
+                this.OnFechaHoraRegistroChanged();
+                this.OnPropertyChanged("FechaHoraRegistro");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private global::System.DateTime _FechaHoraRegistro;
+        partial void OnFechaHoraRegistroChanging(global::System.DateTime value);
+        partial void OnFechaHoraRegistroChanged();
+        /// <summary>
         /// There are no comments for Area in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
@@ -1281,23 +1114,41 @@ namespace AssistanceControl_BLL.AssistanceService
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
         private Area _Area;
         /// <summary>
-        /// There are no comments for Empleado in the schema.
+        /// There are no comments for Asistencia in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public Empleado Empleado
+        public global::System.Data.Services.Client.DataServiceCollection<Asistencia> Asistencia
         {
             get
             {
-                return this._Empleado;
+                return this._Asistencia;
             }
             set
             {
-                this._Empleado = value;
-                this.OnPropertyChanged("Empleado");
+                this._Asistencia = value;
+                this.OnPropertyChanged("Asistencia");
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private Empleado _Empleado;
+        private global::System.Data.Services.Client.DataServiceCollection<Asistencia> _Asistencia = new global::System.Data.Services.Client.DataServiceCollection<Asistencia>(null, global::System.Data.Services.Client.TrackingMode.None);
+        /// <summary>
+        /// There are no comments for EmpleadoPermiso in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public global::System.Data.Services.Client.DataServiceCollection<EmpleadoPermiso> EmpleadoPermiso
+        {
+            get
+            {
+                return this._EmpleadoPermiso;
+            }
+            set
+            {
+                this._EmpleadoPermiso = value;
+                this.OnPropertyChanged("EmpleadoPermiso");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private global::System.Data.Services.Client.DataServiceCollection<EmpleadoPermiso> _EmpleadoPermiso = new global::System.Data.Services.Client.DataServiceCollection<EmpleadoPermiso>(null, global::System.Data.Services.Client.TrackingMode.None);
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
         public event global::System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
@@ -1329,7 +1180,7 @@ namespace AssistanceControl_BLL.AssistanceService
         /// <param name="fechaFinal">Initial value of FechaFinal.</param>
         /// <param name="usuarioRegistro">Initial value of UsuarioRegistro.</param>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public static EmpleadoPermiso CreateEmpleadoPermiso(int empleadoId, int permisoId, global::System.DateTime fechaInicio, global::System.DateTime fechaFinal, int usuarioRegistro)
+        public static EmpleadoPermiso CreateEmpleadoPermiso(int empleadoId, int permisoId, global::System.DateTime fechaInicio, global::System.DateTime fechaFinal, string usuarioRegistro)
         {
             EmpleadoPermiso empleadoPermiso = new EmpleadoPermiso();
             empleadoPermiso.EmpleadoId = empleadoId;
@@ -1431,7 +1282,7 @@ namespace AssistanceControl_BLL.AssistanceService
         /// There are no comments for Property UsuarioRegistro in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public int UsuarioRegistro
+        public string UsuarioRegistro
         {
             get
             {
@@ -1446,8 +1297,8 @@ namespace AssistanceControl_BLL.AssistanceService
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private int _UsuarioRegistro;
-        partial void OnUsuarioRegistroChanging(int value);
+        private string _UsuarioRegistro;
+        partial void OnUsuarioRegistroChanging(string value);
         partial void OnUsuarioRegistroChanged();
         /// <summary>
         /// There are no comments for Property FechaHoraRegistro in the schema.
@@ -1535,16 +1386,18 @@ namespace AssistanceControl_BLL.AssistanceService
         /// <param name="nombre">Initial value of Nombre.</param>
         /// <param name="horaEntrada">Initial value of HoraEntrada.</param>
         /// <param name="horaSalida">Initial value of HoraSalida.</param>
+        /// <param name="estatus">Initial value of Estatus.</param>
         /// <param name="usuarioRegistro">Initial value of UsuarioRegistro.</param>
         /// <param name="fechaHoraRegistro">Initial value of FechaHoraRegistro.</param>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public static Horario CreateHorario(int horarioId, string nombre, global::System.DateTime horaEntrada, global::System.DateTime horaSalida, int usuarioRegistro, global::System.DateTime fechaHoraRegistro)
+        public static Horario CreateHorario(int horarioId, string nombre, string horaEntrada, string horaSalida, int estatus, string usuarioRegistro, global::System.DateTime fechaHoraRegistro)
         {
             Horario horario = new Horario();
             horario.HorarioId = horarioId;
             horario.Nombre = nombre;
             horario.HoraEntrada = horaEntrada;
             horario.HoraSalida = horaSalida;
+            horario.Estatus = estatus;
             horario.UsuarioRegistro = usuarioRegistro;
             horario.FechaHoraRegistro = fechaHoraRegistro;
             return horario;
@@ -1597,7 +1450,7 @@ namespace AssistanceControl_BLL.AssistanceService
         /// There are no comments for Property HoraEntrada in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public global::System.DateTime HoraEntrada
+        public string HoraEntrada
         {
             get
             {
@@ -1612,14 +1465,14 @@ namespace AssistanceControl_BLL.AssistanceService
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private global::System.DateTime _HoraEntrada;
-        partial void OnHoraEntradaChanging(global::System.DateTime value);
+        private string _HoraEntrada;
+        partial void OnHoraEntradaChanging(string value);
         partial void OnHoraEntradaChanged();
         /// <summary>
         /// There are no comments for Property HoraSalida in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public global::System.DateTime HoraSalida
+        public string HoraSalida
         {
             get
             {
@@ -1634,14 +1487,36 @@ namespace AssistanceControl_BLL.AssistanceService
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private global::System.DateTime _HoraSalida;
-        partial void OnHoraSalidaChanging(global::System.DateTime value);
+        private string _HoraSalida;
+        partial void OnHoraSalidaChanging(string value);
         partial void OnHoraSalidaChanged();
+        /// <summary>
+        /// There are no comments for Property Estatus in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public int Estatus
+        {
+            get
+            {
+                return this._Estatus;
+            }
+            set
+            {
+                this.OnEstatusChanging(value);
+                this._Estatus = value;
+                this.OnEstatusChanged();
+                this.OnPropertyChanged("Estatus");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private int _Estatus;
+        partial void OnEstatusChanging(int value);
+        partial void OnEstatusChanged();
         /// <summary>
         /// There are no comments for Property UsuarioRegistro in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public int UsuarioRegistro
+        public string UsuarioRegistro
         {
             get
             {
@@ -1656,8 +1531,8 @@ namespace AssistanceControl_BLL.AssistanceService
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private int _UsuarioRegistro;
-        partial void OnUsuarioRegistroChanging(int value);
+        private string _UsuarioRegistro;
+        partial void OnUsuarioRegistroChanging(string value);
         partial void OnUsuarioRegistroChanged();
         /// <summary>
         /// There are no comments for Property FechaHoraRegistro in the schema.
@@ -1731,7 +1606,7 @@ namespace AssistanceControl_BLL.AssistanceService
         /// <param name="usuarioRegistro">Initial value of UsuarioRegistro.</param>
         /// <param name="fechaHoraRegistro">Initial value of FechaHoraRegistro.</param>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public static HorarioArea CreateHorarioArea(int horarioId, int areaId, global::System.DateTime fechaInicio, global::System.DateTime fechaFinal, int usuarioRegistro, global::System.DateTime fechaHoraRegistro)
+        public static HorarioArea CreateHorarioArea(int horarioId, int areaId, global::System.DateTime fechaInicio, global::System.DateTime fechaFinal, string usuarioRegistro, global::System.DateTime fechaHoraRegistro)
         {
             HorarioArea horarioArea = new HorarioArea();
             horarioArea.HorarioId = horarioId;
@@ -1834,7 +1709,7 @@ namespace AssistanceControl_BLL.AssistanceService
         /// There are no comments for Property UsuarioRegistro in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public int UsuarioRegistro
+        public string UsuarioRegistro
         {
             get
             {
@@ -1849,8 +1724,8 @@ namespace AssistanceControl_BLL.AssistanceService
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private int _UsuarioRegistro;
-        partial void OnUsuarioRegistroChanging(int value);
+        private string _UsuarioRegistro;
+        partial void OnUsuarioRegistroChanging(string value);
         partial void OnUsuarioRegistroChanged();
         /// <summary>
         /// There are no comments for Property FechaHoraRegistro in the schema.
@@ -1937,15 +1812,17 @@ namespace AssistanceControl_BLL.AssistanceService
         /// <param name="permisoId">Initial value of PermisoId.</param>
         /// <param name="nombre">Initial value of Nombre.</param>
         /// <param name="descripcion">Initial value of Descripcion.</param>
+        /// <param name="estatus">Initial value of Estatus.</param>
         /// <param name="usuarioRegistro">Initial value of UsuarioRegistro.</param>
         /// <param name="fechaHoraRegistro">Initial value of FechaHoraRegistro.</param>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public static Permiso CreatePermiso(int permisoId, string nombre, string descripcion, int usuarioRegistro, global::System.DateTime fechaHoraRegistro)
+        public static Permiso CreatePermiso(int permisoId, string nombre, string descripcion, int estatus, string usuarioRegistro, global::System.DateTime fechaHoraRegistro)
         {
             Permiso permiso = new Permiso();
             permiso.PermisoId = permisoId;
             permiso.Nombre = nombre;
             permiso.Descripcion = descripcion;
+            permiso.Estatus = estatus;
             permiso.UsuarioRegistro = usuarioRegistro;
             permiso.FechaHoraRegistro = fechaHoraRegistro;
             return permiso;
@@ -2017,10 +1894,32 @@ namespace AssistanceControl_BLL.AssistanceService
         partial void OnDescripcionChanging(string value);
         partial void OnDescripcionChanged();
         /// <summary>
+        /// There are no comments for Property Estatus in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public int Estatus
+        {
+            get
+            {
+                return this._Estatus;
+            }
+            set
+            {
+                this.OnEstatusChanging(value);
+                this._Estatus = value;
+                this.OnEstatusChanged();
+                this.OnPropertyChanged("Estatus");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private int _Estatus;
+        partial void OnEstatusChanging(int value);
+        partial void OnEstatusChanged();
+        /// <summary>
         /// There are no comments for Property UsuarioRegistro in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public int UsuarioRegistro
+        public string UsuarioRegistro
         {
             get
             {
@@ -2035,8 +1934,8 @@ namespace AssistanceControl_BLL.AssistanceService
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private int _UsuarioRegistro;
-        partial void OnUsuarioRegistroChanging(int value);
+        private string _UsuarioRegistro;
+        partial void OnUsuarioRegistroChanging(string value);
         partial void OnUsuarioRegistroChanged();
         /// <summary>
         /// There are no comments for Property FechaHoraRegistro in the schema.
@@ -2106,16 +2005,18 @@ namespace AssistanceControl_BLL.AssistanceService
         /// <param name="empleadoId">Initial value of EmpleadoId.</param>
         /// <param name="contrasena">Initial value of Contrasena.</param>
         /// <param name="nivel">Initial value of Nivel.</param>
+        /// <param name="estatus">Initial value of Estatus.</param>
         /// <param name="usuarioRegistro">Initial value of UsuarioRegistro.</param>
         /// <param name="fechaHoraRegistro">Initial value of FechaHoraRegistro.</param>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public static Usuario CreateUsuario(string usuarioId, int empleadoId, string contrasena, int nivel, int usuarioRegistro, global::System.DateTime fechaHoraRegistro)
+        public static Usuario CreateUsuario(string usuarioId, int empleadoId, string contrasena, int nivel, int estatus, string usuarioRegistro, global::System.DateTime fechaHoraRegistro)
         {
             Usuario usuario = new Usuario();
             usuario.UsuarioId = usuarioId;
             usuario.EmpleadoId = empleadoId;
             usuario.Contrasena = contrasena;
             usuario.Nivel = nivel;
+            usuario.Estatus = estatus;
             usuario.UsuarioRegistro = usuarioRegistro;
             usuario.FechaHoraRegistro = fechaHoraRegistro;
             return usuario;
@@ -2209,10 +2110,32 @@ namespace AssistanceControl_BLL.AssistanceService
         partial void OnNivelChanging(int value);
         partial void OnNivelChanged();
         /// <summary>
+        /// There are no comments for Property Estatus in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public int Estatus
+        {
+            get
+            {
+                return this._Estatus;
+            }
+            set
+            {
+                this.OnEstatusChanging(value);
+                this._Estatus = value;
+                this.OnEstatusChanged();
+                this.OnPropertyChanged("Estatus");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private int _Estatus;
+        partial void OnEstatusChanging(int value);
+        partial void OnEstatusChanged();
+        /// <summary>
         /// There are no comments for Property UsuarioRegistro in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public int UsuarioRegistro
+        public string UsuarioRegistro
         {
             get
             {
@@ -2227,8 +2150,8 @@ namespace AssistanceControl_BLL.AssistanceService
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private int _UsuarioRegistro;
-        partial void OnUsuarioRegistroChanging(int value);
+        private string _UsuarioRegistro;
+        partial void OnUsuarioRegistroChanging(string value);
         partial void OnUsuarioRegistroChanged();
         /// <summary>
         /// There are no comments for Property FechaHoraRegistro in the schema.

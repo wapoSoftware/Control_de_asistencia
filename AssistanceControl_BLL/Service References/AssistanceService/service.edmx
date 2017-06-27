@@ -6,11 +6,11 @@
           <PropertyRef Name="AreaId" />
         </Key>
         <Property Name="AreaId" Type="Edm.Int32" Nullable="false" p6:StoreGeneratedPattern="Identity" xmlns:p6="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
-        <Property Name="Nombre" Type="Edm.String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
-        <Property Name="Descripcion" Type="Edm.String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
-        <Property Name="UsuarioRegistro" Type="Edm.Int32" Nullable="false" />
+        <Property Name="Nombre" Type="Edm.String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+        <Property Name="Estatus" Type="Edm.Int32" Nullable="false" />
+        <Property Name="UsuarioRegistro" Type="Edm.String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
         <Property Name="FechaHoraRegistro" Type="Edm.DateTime" Nullable="false" Precision="3" />
-        <NavigationProperty Name="EmpleadoArea" Relationship="AssistanceControlModel.FK_EmpleadoArea_Area" ToRole="EmpleadoArea" FromRole="Area" />
+        <NavigationProperty Name="Empleado" Relationship="AssistanceControlModel.FK_EmpleadoArea" ToRole="Empleado" FromRole="Area" />
         <NavigationProperty Name="HorarioArea" Relationship="AssistanceControlModel.FK_HorarioArea_Area" ToRole="HorarioArea" FromRole="Area" />
       </EntityType>
       <EntityType Name="Asistencia">
@@ -29,29 +29,19 @@
         </Key>
         <Property Name="EmpleadoId" Type="Edm.Int32" Nullable="false" />
         <Property Name="Nombre" Type="Edm.String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
-        <Property Name="Apellido1" Type="Edm.String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
-        <Property Name="Apellido2" Type="Edm.String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
-        <Property Name="Edad" Type="Edm.String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
-        <Property Name="UsuarioRegistro" Type="Edm.Int32" Nullable="false" />
-        <Property Name="FechaHoraRegistro" Type="Edm.DateTime" Nullable="false" Precision="3" />
-        <NavigationProperty Name="Asistencia" Relationship="AssistanceControlModel.FK_Asistencia_Empleado" ToRole="Asistencia" FromRole="Empleado" />
-        <NavigationProperty Name="EmpleadoArea" Relationship="AssistanceControlModel.FK_EmpleadoArea_Empleado" ToRole="EmpleadoArea" FromRole="Empleado" />
-        <NavigationProperty Name="EmpleadoPermiso" Relationship="AssistanceControlModel.FK_EmpleadoPermiso_Empleado" ToRole="EmpleadoPermiso" FromRole="Empleado" />
-      </EntityType>
-      <EntityType Name="EmpleadoArea">
-        <Key>
-          <PropertyRef Name="AreaId" />
-          <PropertyRef Name="EmpleadoId" />
-        </Key>
-        <Property Name="EmpleadoId" Type="Edm.Int32" Nullable="false" />
-        <Property Name="AreaId" Type="Edm.Int32" Nullable="false" />
-        <Property Name="FechaInicio" Type="Edm.DateTime" Nullable="false" Precision="3" />
-        <Property Name="FechaFinal" Type="Edm.DateTime" Nullable="false" Precision="3" />
-        <Property Name="UsuarioRegistro" Type="Edm.Int32" Nullable="false" />
-        <Property Name="FechaHoraRegistro" Type="Edm.DateTime" Nullable="false" Precision="3" />
+        <Property Name="ApellidoPaterno" Type="Edm.String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+        <Property Name="ApellidoMaterno" Type="Edm.String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+        <Property Name="FechaNacimiento" Type="Edm.String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+        <Property Name="RFC" Type="Edm.String" Nullable="false" MaxLength="12" FixedLength="false" Unicode="false" />
+        <Property Name="CURP" Type="Edm.String" Nullable="false" MaxLength="18" FixedLength="false" Unicode="false" />
+        <Property Name="FechaIngreso" Type="Edm.DateTime" Nullable="false" Precision="3" />
         <Property Name="Estatus" Type="Edm.Int32" Nullable="false" />
-        <NavigationProperty Name="Area" Relationship="AssistanceControlModel.FK_EmpleadoArea_Area" ToRole="Area" FromRole="EmpleadoArea" />
-        <NavigationProperty Name="Empleado" Relationship="AssistanceControlModel.FK_EmpleadoArea_Empleado" ToRole="Empleado" FromRole="EmpleadoArea" />
+        <Property Name="AreaId" Type="Edm.Int32" Nullable="false" />
+        <Property Name="UsuarioRegistro" Type="Edm.String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+        <Property Name="FechaHoraRegistro" Type="Edm.DateTime" Nullable="false" Precision="3" />
+        <NavigationProperty Name="Area" Relationship="AssistanceControlModel.FK_EmpleadoArea" ToRole="Area" FromRole="Empleado" />
+        <NavigationProperty Name="Asistencia" Relationship="AssistanceControlModel.FK_Asistencia_Empleado" ToRole="Asistencia" FromRole="Empleado" />
+        <NavigationProperty Name="EmpleadoPermiso" Relationship="AssistanceControlModel.FK_EmpleadoPermiso_Empleado" ToRole="EmpleadoPermiso" FromRole="Empleado" />
       </EntityType>
       <EntityType Name="EmpleadoPermiso">
         <Key>
@@ -62,7 +52,7 @@
         <Property Name="PermisoId" Type="Edm.Int32" Nullable="false" />
         <Property Name="FechaInicio" Type="Edm.DateTime" Nullable="false" Precision="3" />
         <Property Name="FechaFinal" Type="Edm.DateTime" Nullable="false" Precision="3" />
-        <Property Name="UsuarioRegistro" Type="Edm.Int32" Nullable="false" />
+        <Property Name="UsuarioRegistro" Type="Edm.String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
         <Property Name="FechaHoraRegistro" Type="Edm.DateTime" Precision="3" />
         <NavigationProperty Name="Empleado" Relationship="AssistanceControlModel.FK_EmpleadoPermiso_Empleado" ToRole="Empleado" FromRole="EmpleadoPermiso" />
         <NavigationProperty Name="Permiso" Relationship="AssistanceControlModel.FK_EmpleadoPermiso_Permiso" ToRole="Permiso" FromRole="EmpleadoPermiso" />
@@ -73,9 +63,10 @@
         </Key>
         <Property Name="HorarioId" Type="Edm.Int32" Nullable="false" p6:StoreGeneratedPattern="Identity" xmlns:p6="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
         <Property Name="Nombre" Type="Edm.String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
-        <Property Name="HoraEntrada" Type="Edm.DateTime" Nullable="false" Precision="3" />
-        <Property Name="HoraSalida" Type="Edm.DateTime" Nullable="false" Precision="3" />
-        <Property Name="UsuarioRegistro" Type="Edm.Int32" Nullable="false" />
+        <Property Name="HoraEntrada" Type="Edm.String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+        <Property Name="HoraSalida" Type="Edm.String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+        <Property Name="Estatus" Type="Edm.Int32" Nullable="false" />
+        <Property Name="UsuarioRegistro" Type="Edm.String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
         <Property Name="FechaHoraRegistro" Type="Edm.DateTime" Nullable="false" Precision="3" />
         <NavigationProperty Name="HorarioArea" Relationship="AssistanceControlModel.FK_HorarioArea_Horario" ToRole="HorarioArea" FromRole="Horario" />
       </EntityType>
@@ -88,7 +79,7 @@
         <Property Name="AreaId" Type="Edm.Int32" Nullable="false" />
         <Property Name="FechaInicio" Type="Edm.DateTime" Nullable="false" Precision="3" />
         <Property Name="FechaFinal" Type="Edm.DateTime" Nullable="false" Precision="3" />
-        <Property Name="UsuarioRegistro" Type="Edm.Int32" Nullable="false" />
+        <Property Name="UsuarioRegistro" Type="Edm.String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
         <Property Name="FechaHoraRegistro" Type="Edm.DateTime" Nullable="false" Precision="3" />
         <NavigationProperty Name="Area" Relationship="AssistanceControlModel.FK_HorarioArea_Area" ToRole="Area" FromRole="HorarioArea" />
         <NavigationProperty Name="Horario" Relationship="AssistanceControlModel.FK_HorarioArea_Horario" ToRole="Horario" FromRole="HorarioArea" />
@@ -99,8 +90,9 @@
         </Key>
         <Property Name="PermisoId" Type="Edm.Int32" Nullable="false" p6:StoreGeneratedPattern="Identity" xmlns:p6="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
         <Property Name="Nombre" Type="Edm.String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
-        <Property Name="Descripcion" Type="Edm.String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-        <Property Name="UsuarioRegistro" Type="Edm.Int32" Nullable="false" />
+        <Property Name="Descripcion" Type="Edm.String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+        <Property Name="Estatus" Type="Edm.Int32" Nullable="false" />
+        <Property Name="UsuarioRegistro" Type="Edm.String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
         <Property Name="FechaHoraRegistro" Type="Edm.DateTime" Nullable="false" Precision="3" />
         <NavigationProperty Name="EmpleadoPermiso" Relationship="AssistanceControlModel.FK_EmpleadoPermiso_Permiso" ToRole="EmpleadoPermiso" FromRole="Permiso" />
       </EntityType>
@@ -108,23 +100,24 @@
         <Key>
           <PropertyRef Name="UsuarioId" />
         </Key>
-        <Property Name="UsuarioId" Type="Edm.String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+        <Property Name="UsuarioId" Type="Edm.String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
         <Property Name="EmpleadoId" Type="Edm.Int32" Nullable="false" />
-        <Property Name="Contrasena" Type="Edm.String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+        <Property Name="Contrasena" Type="Edm.String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
         <Property Name="Nivel" Type="Edm.Int32" Nullable="false" />
-        <Property Name="UsuarioRegistro" Type="Edm.Int32" Nullable="false" />
+        <Property Name="Estatus" Type="Edm.Int32" Nullable="false" />
+        <Property Name="UsuarioRegistro" Type="Edm.String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
         <Property Name="FechaHoraRegistro" Type="Edm.DateTime" Nullable="false" Precision="3" />
       </EntityType>
-      <Association Name="FK_EmpleadoArea_Area">
+      <Association Name="FK_EmpleadoArea">
         <End Type="AssistanceControlModel.Area" Role="Area" Multiplicity="1">
           <OnDelete Action="Cascade" />
         </End>
-        <End Type="AssistanceControlModel.EmpleadoArea" Role="EmpleadoArea" Multiplicity="*" />
+        <End Type="AssistanceControlModel.Empleado" Role="Empleado" Multiplicity="*" />
         <ReferentialConstraint>
           <Principal Role="Area">
             <PropertyRef Name="AreaId" />
           </Principal>
-          <Dependent Role="EmpleadoArea">
+          <Dependent Role="Empleado">
             <PropertyRef Name="AreaId" />
           </Dependent>
         </ReferentialConstraint>
@@ -153,20 +146,6 @@
             <PropertyRef Name="EmpleadoId" />
           </Principal>
           <Dependent Role="Asistencia">
-            <PropertyRef Name="EmpleadoId" />
-          </Dependent>
-        </ReferentialConstraint>
-      </Association>
-      <Association Name="FK_EmpleadoArea_Empleado">
-        <End Type="AssistanceControlModel.Empleado" Role="Empleado" Multiplicity="1">
-          <OnDelete Action="Cascade" />
-        </End>
-        <End Type="AssistanceControlModel.EmpleadoArea" Role="EmpleadoArea" Multiplicity="*" />
-        <ReferentialConstraint>
-          <Principal Role="Empleado">
-            <PropertyRef Name="EmpleadoId" />
-          </Principal>
-          <Dependent Role="EmpleadoArea">
             <PropertyRef Name="EmpleadoId" />
           </Dependent>
         </ReferentialConstraint>
@@ -219,15 +198,14 @@
         <EntitySet Name="Area" EntityType="AssistanceControlModel.Area" />
         <EntitySet Name="Asistencia" EntityType="AssistanceControlModel.Asistencia" />
         <EntitySet Name="Empleado" EntityType="AssistanceControlModel.Empleado" />
-        <EntitySet Name="EmpleadoArea" EntityType="AssistanceControlModel.EmpleadoArea" />
         <EntitySet Name="EmpleadoPermiso" EntityType="AssistanceControlModel.EmpleadoPermiso" />
         <EntitySet Name="Horario" EntityType="AssistanceControlModel.Horario" />
         <EntitySet Name="HorarioArea" EntityType="AssistanceControlModel.HorarioArea" />
         <EntitySet Name="Permiso" EntityType="AssistanceControlModel.Permiso" />
         <EntitySet Name="Usuario" EntityType="AssistanceControlModel.Usuario" />
-        <AssociationSet Name="FK_EmpleadoArea_Area" Association="AssistanceControlModel.FK_EmpleadoArea_Area">
+        <AssociationSet Name="FK_EmpleadoArea" Association="AssistanceControlModel.FK_EmpleadoArea">
           <End Role="Area" EntitySet="Area" />
-          <End Role="EmpleadoArea" EntitySet="EmpleadoArea" />
+          <End Role="Empleado" EntitySet="Empleado" />
         </AssociationSet>
         <AssociationSet Name="FK_HorarioArea_Area" Association="AssistanceControlModel.FK_HorarioArea_Area">
           <End Role="Area" EntitySet="Area" />
@@ -236,10 +214,6 @@
         <AssociationSet Name="FK_Asistencia_Empleado" Association="AssistanceControlModel.FK_Asistencia_Empleado">
           <End Role="Asistencia" EntitySet="Asistencia" />
           <End Role="Empleado" EntitySet="Empleado" />
-        </AssociationSet>
-        <AssociationSet Name="FK_EmpleadoArea_Empleado" Association="AssistanceControlModel.FK_EmpleadoArea_Empleado">
-          <End Role="Empleado" EntitySet="Empleado" />
-          <End Role="EmpleadoArea" EntitySet="EmpleadoArea" />
         </AssociationSet>
         <AssociationSet Name="FK_EmpleadoPermiso_Empleado" Association="AssistanceControlModel.FK_EmpleadoPermiso_Empleado">
           <End Role="Empleado" EntitySet="Empleado" />
