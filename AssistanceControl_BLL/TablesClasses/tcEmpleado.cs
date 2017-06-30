@@ -1,4 +1,5 @@
-﻿using AssistanceControl_BLL;
+﻿using Assistance_ControlBLL.TablesClasses;
+using AssistanceControl_BLL;
 using AssistanceControl_BLL.AssistanceService;
 using AssistanceControl_BLL.TablesClasses;
 using System;
@@ -12,6 +13,7 @@ namespace AssistanceControl_BLL
     public class tcEmpleado : tcGenerico<Empleado>
     {
         private Uri _uriServicio;
+        private tcArea areaDAO;
 
         public tcEmpleado(Uri uriServicio)
         {
@@ -19,9 +21,17 @@ namespace AssistanceControl_BLL
         }
         public async Task<List<Empleado>> getAllEmpleados()
         {
+            List<Empleado> respuesta = null;
+            areaDAO = new tcArea(_uriServicio);
             String URL = _uriServicio.AbsoluteUri;
-            URL += "/Empleado";
-            return await getDataList(URL);
+            URL += "/Empleado?$filter=Estatus eq 1";
+            respuesta = await getDataList(URL);
+            foreach (Empleado item in respuesta)
+            {
+                item.Area = await areaDAO.getAreaById(item.AreaId);
+            }
+
+            return respuesta;
         }
 
         public async Task Insertar(Empleado entidad)
@@ -50,8 +60,7 @@ namespace AssistanceControl_BLL
         {
             try
             {
-                //entidad.Estatus = 0;
-                entidad.Nombre = "Eliminado";
+                entidad.Estatus = 0;
                 await base.update(_uriServicio, entidad);
             }
             catch(Exception ex)

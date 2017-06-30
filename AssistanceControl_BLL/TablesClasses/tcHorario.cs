@@ -17,7 +17,7 @@ namespace AssistanceControl_BLL.TablesClasses
         public async Task<List<Horario>> getAllHorarios()
         {
             String URL = _uriServicio.AbsoluteUri;
-            URL += "/Horario";
+            URL += "/Horario?$filter=Estatus eq 1";
             return await getDataList(URL);
         }
         public async Task<int> getNextId()

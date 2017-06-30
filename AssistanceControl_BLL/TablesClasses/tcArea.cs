@@ -19,8 +19,14 @@ namespace Assistance_ControlBLL.TablesClasses
         public async Task<List<Area>> getAllAreas()
         {
             String URL = _uriServicio.AbsoluteUri;
-            URL += "/Area";
+            URL += "/Area?$filter=Estatus eq 1";    
             return await getDataList(URL);
+        }
+        public async Task<Area> getAreaById(int areaId)
+        {
+            String URL = _uriServicio.AbsoluteUri;
+            URL += "/Area?$filter=AreaId eq " + areaId;
+            return await getData(URL);
         }
         public async Task<int> getNextId()
         {
@@ -65,7 +71,7 @@ namespace Assistance_ControlBLL.TablesClasses
         {
             try
             {
-                //entidad.Estatus = 0;
+                entidad.Estatus = 0;
                 await base.update(_uriServicio, entidad);
             }
             catch (Exception ex)

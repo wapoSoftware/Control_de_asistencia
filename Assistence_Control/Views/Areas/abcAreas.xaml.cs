@@ -81,7 +81,6 @@ namespace Assistence_Control.Views.Areas
                 gridAgregar.Visibility = Visibility.Visible;
                 tbClave.Text = areaSeleccionada.AreaId.ToString();
                 tbNombreArea.Text = areaSeleccionada.Nombre;
-                tbDescripcion.Text = areaSeleccionada.Descripcion;
             }
             else
             {
@@ -97,9 +96,10 @@ namespace Assistence_Control.Views.Areas
                 {
                     estado = (int)ACCION.ELIMINAR;
                     MessageDialog messageDialog = new MessageDialog("Esta seguro de que desea eliminar el area seleccionada?", "Aviso");
-                    messageDialog.Commands.Add(new UICommand("Si", (command) =>
+                    messageDialog.Commands.Add(new UICommand("Si", async (command) =>
                     {
-                        areaDAO.Eliminar(areaSeleccionada);
+                        await areaDAO.Eliminar(areaSeleccionada);
+                        cargarAreas();
                     }));
                     messageDialog.Commands.Add(new UICommand("No", (command) =>
                     {
@@ -174,7 +174,6 @@ namespace Assistence_Control.Views.Areas
         {
             tbClave.Text = (await getNextAreaId()).ToString();
             tbNombreArea.Text = string.Empty;
-            tbDescripcion.Text = string.Empty;
             areaSeleccionada = null;
         }
         private async Task<int> getNextAreaId()
@@ -188,9 +187,9 @@ namespace Assistence_Control.Views.Areas
                 nuevaArea = new Area()
                 {
                     Nombre = tbNombreArea.Text.ToUpper(),
-                    Descripcion = tbDescripcion.Text.ToUpper(),
-                    UsuarioRegistro = int.Parse(App.usuarioAutentificado.UsuarioId),
-                    FechaHoraRegistro = DateTime.Now
+                    UsuarioRegistro = App.usuarioAutentificado.UsuarioId,
+                    FechaHoraRegistro = DateTime.Now,
+                    Estatus = 1,                    
                 };
                 if(estado == (int)ACCION.ACTUALIZAR)
                 {

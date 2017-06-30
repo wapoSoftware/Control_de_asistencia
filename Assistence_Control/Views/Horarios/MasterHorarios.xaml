@@ -255,7 +255,7 @@
                         </Button>
 
                     </StackPanel>
-                    <Grid Name="gridAgregar" Visibility="Visible" Grid.Row="3" Margin="30,0">
+                    <Grid Name="gridAgregar" Visibility="Collapsed" Grid.Row="3" Margin="30,0">
                         <Grid.RowDefinitions>
                             <RowDefinition Height="auto"/>
                             <RowDefinition Height="auto"/>
@@ -288,6 +288,7 @@
                             </Button.Foreground>
                         </Button>
                     </Grid>
+                    <ProgressRing Name="prLoading" Width="200" Height="200" Grid.ColumnSpan="2" Grid.RowSpan="5" />
                 </Grid>
             </PivotItem>
         </Pivot>

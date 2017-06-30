@@ -34,7 +34,7 @@ namespace Assistence_Control.Inicio
                     EmpleadoId = 14490224,
                     Contrasena = "potter13",
                     Nivel = 1,
-                    UsuarioRegistro = 0,
+                    UsuarioRegistro = App.usuarioAutentificado.UsuarioId,
                     FechaHoraRegistro = DateTime.Now,
                     UsuarioId = "2"
                 };

@@ -10,6 +10,7 @@ using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Threading.Tasks;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Popups;
@@ -81,6 +82,11 @@ namespace Assistance_Control.Views.Horarios
             });
             gvMenu.ItemsSource = menus;
         }
+        private async void cargarHorarios()
+        {
+            listHorarios = await horarioDAO.getAllHorarios();
+            DataGrid.ItemsSource = listHorarios;
+        }
         private async void cargarCombos()
         {
             try
@@ -112,6 +118,7 @@ namespace Assistance_Control.Views.Horarios
             {
                 case "Asignar/Reasignar":
                     mainPivot.SelectedIndex = 1;
+                    cargarHorarios();
                     break;
                 case "Crear/Modificar":
                     mainPivot.SelectedIndex = 2;
@@ -138,10 +145,11 @@ namespace Assistance_Control.Views.Horarios
         }
         private void btnEliminar_Click(object sender, RoutedEventArgs e)
         {
-
+            estado = (int)ACCION.ELIMINAR;
         }
         private void btnAgregar_Click(object sender, RoutedEventArgs e)
         {
+            estado = (int)ACCION.INSERTAR;
             if (gridAgregar.Visibility == Visibility.Collapsed)
             {
                 gridAgregar.Visibility = Visibility.Visible;
@@ -151,25 +159,63 @@ namespace Assistance_Control.Views.Horarios
                 limpiarCampos();
             }
         }
-        private void btnGuardarHorario_Click(object sender, RoutedEventArgs e)
+        private async void btnGuardarHorario_Click(object sender, RoutedEventArgs e)
         {
-            //if (empleadoSeleccionado != null)//Actualizar
-            //{
-            //    int selectedIndex = empleados.IndexOf(empleadoSeleccionado);
-            //    empleados[selectedIndex].NoEmpleado = tbNumeroEmpleado.Text;
-            //    empleados[selectedIndex].Nombre = tbNombre.Text;
-            //    empleados[selectedIndex].ApellidoMaterno = tbApellidoMaterno.Text;
-            //    empleados[selectedIndex].ApellidoPaterno = tbApellidoPaterno.Text;
-            //    DataGrid.ItemsSource = null;
-            //    DataGrid.ItemsSource = empleados;
-            //    DataGrid.SelectedItem = empleadoSeleccionado;
-            //}
-            //else
-            //{
-            //    //InsertarNuevo
-            //}
-            //limpiarCampos();
-            //await new MessageDialog("Empleado actualizado correctamente!", "").ShowAsync();
+            try
+            {
+                prLoading.IsActive = true;
+                switch (estado)
+                {
+                    case (int)ACCION.ACTUALIZAR:
+                        if (await obtenerDatosVista())
+                        {
+                            await horarioDAO.Actualizar(nuevoHorario);
+                            cargarHorarios();
+                            DataGrid.SelectedItem = horarioSeleccionado;
+                            await new MessageDialog("Area actualizada correctamente!", "").ShowAsync();
+                        }
+                        break;
+                    case (int)ACCION.INSERTAR:
+                        if (await obtenerDatosVista())
+                        {
+                            await horarioDAO.Insertar(nuevoHorario);
+                            cargarHorarios();
+                            await new MessageDialog("El area fue creada correctamente.", "").ShowAsync();
+                        }
+                        break;
+                }
+                limpiarCampos();
+            }
+            catch (Exception ex)
+            {
+                await new MessageDialog(ex.Message).ShowAsync();
+            }
+            finally
+            {
+                prLoading.IsActive = false;
+            }
+
+        }
+        private async Task<bool> obtenerDatosVista()
+        {
+            if (await validarCampos())
+            {
+                nuevoHorario = new Horario()
+                {
+                    Nombre = tbNombreHorario.Text.ToUpper(),
+                    UsuarioRegistro = App.usuarioAutentificado.UsuarioId,
+                    FechaHoraRegistro = DateTime.Now,
+                    Estatus = 1,
+                    HoraEntrada = dpEntrada.Time.ToString(),
+                    HoraSalida = dpSalida.Time.ToString()
+                };
+                if (estado == (int)ACCION.ACTUALIZAR)
+                {
+                    nuevoHorario.HorarioId = horarioSeleccionado.HorarioId;
+                }
+                return true;
+            }
+            return false;
         }
         private void btnCancelar_Click(object sender, RoutedEventArgs e)
         {
@@ -194,6 +240,16 @@ namespace Assistance_Control.Views.Horarios
             }
         }
         //Administracion
+        private async Task<bool> validarCampos()
+        {
+            if (string.IsNullOrWhiteSpace(tbNombreHorario.Text))
+            {
+                await new MessageDialog("Capture el nombre del horario.").ShowAsync();
+                tbNombreHorario.Focus(FocusState.Programmatic);
+                return false;
+            }
+            return true;
+        }
         private void limpiarCampos()
         {
             //tbNumeroEmpleado.Text = string.Empty;

@@ -27,11 +27,11 @@
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
                     <TextBlock Text="Empleados" Margin="30,0,0,0" FontSize="50" VerticalAlignment="Bottom"></TextBlock>
-                    <AutoSuggestBox Grid.Column="1" PlaceholderText="Buscar Empleado" DisplayMemberPath="Nombre" QueryIcon="Find" Width="200" TextChanged="AutoSuggestBox_TextChanged" QuerySubmitted="AutoSuggestBox_QuerySubmitted" SuggestionChosen="AutoSuggestBox_SuggestionChosen" VerticalAlignment="Bottom" FontSize="25" Height="32" HorizontalAlignment="Right" Margin="0,0,30,10"/>
+                    <AutoSuggestBox x:ConnectionId='18' Grid.Column="1" PlaceholderText="Buscar Empleado" DisplayMemberPath="Nombre" QueryIcon="Find" Width="200"                                                                                                                                            VerticalAlignment="Bottom" FontSize="25" Height="32" HorizontalAlignment="Right" Margin="0,0,30,10"/>
                 </Grid>
-                <ProgressRing Name="prLoading" Grid.RowSpan="4" Visibility="Visible" Width="200" Height="200"/>
+                <ProgressRing x:ConnectionId='1' Name="prLoading" Grid.RowSpan="4" Visibility="Visible" Width="200" Height="200"/>
                 <ScrollViewer HorizontalScrollMode="Enabled" HorizontalScrollBarVisibility="Visible" Grid.Row="1" Margin="30,0,30,10">
-                    <controls:DataGrid MaxHeight="360" SelectionChanged="DataGrid_SelectionChanged" x:Name="DataGrid" SelectionMode="Single" ItemsSource="{Binding EmpleadoITem}" HeaderBackground="#FF8B8383" >
+                    <controls:DataGrid x:ConnectionId='17' MaxHeight="360"                                              x:Name="DataGrid" SelectionMode="Single" ItemsSource="{Binding EmpleadoITem}" HeaderBackground="#FF8B8383" >
                         <controls:DataGrid.Foreground>
                             <SolidColorBrush Color="White"/>
                         </controls:DataGrid.Foreground>
@@ -49,25 +49,25 @@
                     </controls:DataGrid>
                 </ScrollViewer>
                 <StackPanel Orientation="Horizontal" Grid.Row="2" Margin="18,0">
-                    <Button Name="btnEditar" VerticalAlignment="Top" Content="Editar" Foreground="#FF0F06C7" Click="btnEditar_Click">
+                    <Button x:ConnectionId='14' Name="btnEditar" VerticalAlignment="Top" Content="Editar" Foreground="#FF0F06C7"                        >
                         <Button.Background>
                             <SolidColorBrush Color="{StaticResource MainBackground}"/>
                         </Button.Background>
                     </Button>
-                    <Button Name="btnEliminar" VerticalAlignment="Top" Content="Eliminar" Foreground="#FF0F06C7" Click="btnEliminar_Click">
+                    <Button x:ConnectionId='15' Name="btnEliminar" VerticalAlignment="Top" Content="Eliminar" Foreground="#FF0F06C7"                          >
                         <Button.Background>
                             <SolidColorBrush Color="{StaticResource MainBackground}"/>
                         </Button.Background>
                     </Button>
 
-                    <Button Name="btnAgregar" Click="btnAgregar_Click" VerticalAlignment="Top" Content="Agregar Nuevo" Foreground="#FF0F06C7">
+                    <Button x:ConnectionId='16' Name="btnAgregar"                          VerticalAlignment="Top" Content="Agregar Nuevo" Foreground="#FF0F06C7">
                         <Button.Background>
                             <SolidColorBrush Color="{StaticResource MainBackground}"/>
                         </Button.Background>
                     </Button>
 
                 </StackPanel>
-                <Grid Name="gridAgregar" Visibility="Collapsed" Grid.Row="3" Margin="30,0">
+                <Grid x:ConnectionId='2' Name="gridAgregar" Visibility="Collapsed" Grid.Row="3" Margin="30,0">
                     <Grid.RowDefinitions>
                         <RowDefinition/>
                         <RowDefinition/>
@@ -80,16 +80,16 @@
                         <ColumnDefinition/>
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
-                    <TextBox Name="tbNumeroEmpleado" MaxLength="15" Header="Numero de empleado" TextChanged="numeric_TextChanged" Margin="0,0,10,0" TabIndex="1"></TextBox>
-                    <TextBox Name="tbNombre" Header="Nombre(s)" Grid.Row="1" Margin="0,0,10,0" TabIndex="2"></TextBox>
-                    <TextBox Name="tbApellidoPaterno" Header="Apellido Paterno" Grid.Row="2" Margin="0,0,10,0" TabIndex="3"></TextBox>
-                    <TextBox Name="tbApellidoMaterno" Header="Apellido Materno" Grid.Row="3" Margin="0,0,10,0" TabIndex="4"></TextBox>
+                    <TextBox x:ConnectionId='3' Name="tbNumeroEmpleado" MaxLength="15" Header="Numero de empleado"                                   Margin="0,0,10,0" TabIndex="1"></TextBox>
+                    <TextBox x:ConnectionId='4' Name="tbNombre" Header="Nombre(s)" Grid.Row="1" Margin="0,0,10,0" TabIndex="2"></TextBox>
+                    <TextBox x:ConnectionId='5' Name="tbApellidoPaterno" Header="Apellido Paterno" Grid.Row="2" Margin="0,0,10,0" TabIndex="3"></TextBox>
+                    <TextBox x:ConnectionId='6' Name="tbApellidoMaterno" Header="Apellido Materno" Grid.Row="3" Margin="0,0,10,0" TabIndex="4"></TextBox>
                     <Grid Grid.Row="4" Margin="0,0,10,0">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition/>
                             <ColumnDefinition/>
                         </Grid.ColumnDefinitions>
-                        <Button Name="btnGuardar" Content="Guardar" Margin="0,10,10,10" Height="60" FontSize="25" Click="btnGuardar_Click" HorizontalAlignment="Stretch" TabIndex="10">
+                        <Button x:ConnectionId='12' Name="btnGuardar" Content="Guardar" Margin="0,10,10,10" Height="60" FontSize="25"                          HorizontalAlignment="Stretch" TabIndex="10">
                             <Button.Foreground>
                                 <SolidColorBrush Color="{StaticResource MainBackground}"/>
                             </Button.Foreground>
@@ -97,7 +97,7 @@
                                 <SolidColorBrush Color="#FF70AD47"/>
                             </Button.Background>
                         </Button>
-                        <Button Name="btnCancelar" Content="Cancelar" Grid.Column="2" Margin="10,10,0,10" Height="60" FontSize="25" Click="btnCancelar_Click" HorizontalAlignment="Stretch" TabIndex="11">
+                        <Button x:ConnectionId='13' Name="btnCancelar" Content="Cancelar" Grid.Column="2" Margin="10,10,0,10" Height="60" FontSize="25"                           HorizontalAlignment="Stretch" TabIndex="11">
                             <Button.Background>
                                 <SolidColorBrush Color="{StaticResource btnCancel}"/>
                             </Button.Background>
@@ -106,13 +106,14 @@
                             </Button.Foreground>
                         </Button>
                     </Grid>
-                    <TextBox Name="tbCurp" Header="CURP" Grid.Row="0" Grid.Column="1" Margin="10,0" TabIndex="5"></TextBox>
-                    <TextBox Name="tbRfc" Header="RFC" Grid.Row="1" Grid.Column="1" Margin="10,0" TabIndex="6"></TextBox>
-                    <DatePicker Name="dpNacimiento" Header="Fecha de Nacimiento" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="1" Grid.Row="2" Margin="10,0" TabIndex="7"/>
-                    <DatePicker Name="dpIngreso" Header="Fecha de Ingreso" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="1" Grid.Row="3" Margin="10,0" TabIndex="8"/>
-                    <ComboBox Name="cbAreas" PlaceholderText="Seleccione area" DisplayMemberPath="Nombre" Header="Area" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="2" Margin="10,0,0,0" TabIndex="9"/>
+                    <TextBox x:ConnectionId='7' Name="tbCurp" Header="CURP" Grid.Row="0" Grid.Column="1" Margin="10,0" TabIndex="5"></TextBox>
+                    <TextBox x:ConnectionId='8' Name="tbRfc" Header="RFC" Grid.Row="1" Grid.Column="1" Margin="10,0" TabIndex="6"></TextBox>
+                    <DatePicker x:ConnectionId='9' Name="dpNacimiento" Header="Fecha de Nacimiento" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="1" Grid.Row="2" Margin="10,0" TabIndex="7"/>
+                    <DatePicker x:ConnectionId='10' Name="dpIngreso" Header="Fecha de Ingreso" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="1" Grid.Row="3" Margin="10,0" TabIndex="8"/>
+                    <ComboBox x:ConnectionId='11' Name="cbAreas" PlaceholderText="Seleccione area" DisplayMemberPath="Nombre" Header="Area" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="2" Margin="10,0,0,0" TabIndex="9"/>
                 </Grid>
             </Grid>
         </ScrollViewer>
     </Grid>
 </Page>
+
