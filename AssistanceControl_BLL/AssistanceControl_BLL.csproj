@@ -92,6 +92,7 @@
     <Compile Include="TablesClasses\tcEmpleado.cs" />
     <Compile Include="TablesClasses\tcGenerico.cs" />
     <Compile Include="TablesClasses\tcHorario.cs" />
+    <Compile Include="TablesClasses\tcHorarioArea.cs" />
     <Compile Include="TablesClasses\tcUsuario.cs" />
   </ItemGroup>
   <ItemGroup>

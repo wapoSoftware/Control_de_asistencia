@@ -41,6 +41,10 @@ namespace Assistance_Control.Views.Horarios
         int estado = 0;
         Horario horarioSeleccionado = null;
         Horario nuevoHorario = null;
+        tcHorarioArea haDAO;
+        HorarioArea nuevoHorarioArea = null;
+        HorarioArea horarioAreaSeleccionado = null;
+        Area areaSeleccionada = null;
 
         //Constructos
         public MasterHorarios()
@@ -49,8 +53,10 @@ namespace Assistance_Control.Views.Horarios
             thisFrame.SizeChanged += RootFrame_SizeChanged;
             horarioDAO = new tcHorario(App.uriServicio);
             areaDAO = new tcArea(App.uriServicio);
+            haDAO = new tcHorarioArea(App.uriServicio);
             cargarMenus();
             cargarCombos();
+            cargarHorarios();
         }
         //Metodos de carga
         private void cargarMenus()
@@ -130,22 +136,48 @@ namespace Assistance_Control.Views.Horarios
 
             }
         }
-        private void cbAreas_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private async void cbAreas_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             ComboBox cb = (ComboBox)sender;
-            Area item = (Area)cb.SelectedItem;
-            //TODO: Buscar si el area seleccionada ya fue asignada y cargar datos
-            lblAreaSeleccionada.Text = item.Nombre;
+            areaSeleccionada = (Area)cb.SelectedItem;
+            dgHorarios.ItemsSource = await haDAO.getHorariosByAreaId(areaSeleccionada.AreaId);
+            estado = (int)ACCION.INSERTAR;
         }
-        private void cbHorarios_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private async void btnEliminar_Click(object sender, RoutedEventArgs e)
         {
-            ComboBox cb = (ComboBox)sender;
-            Area item = (Area)cb.SelectedItem;
-            lblHorario.Text = item.Nombre;
-        }
-        private void btnEliminar_Click(object sender, RoutedEventArgs e)
-        {
-            estado = (int)ACCION.ELIMINAR;
+            prLoading.IsActive = true;
+            try
+            {
+                if (horarioSeleccionado != null)
+                {
+                    estado = (int)ACCION.ELIMINAR;
+                    MessageDialog messageDialog = new MessageDialog("Esta seguro de que desea eliminar el horario seleccionado?");
+                    messageDialog.Commands.Add(new UICommand("Si", async (command) =>
+                    {
+                        await horarioDAO.Eliminar(horarioSeleccionado);
+                        cargarHorarios();
+                        limpiarCampos();
+                    }));
+                    messageDialog.Commands.Add(new UICommand("No", (command) =>
+                    {
+                        return;
+                    }));
+                    await messageDialog.ShowAsync();
+                }
+                else
+                {
+                    await new MessageDialog("Seleccione un horario.").ShowAsync();
+                }
+
+            }
+            catch (Exception ex)
+            {
+                await new MessageDialog(ex.Message).ShowAsync();
+            }
+            finally
+            {
+                prLoading.IsActive = false;
+            }
         }
         private void btnAgregar_Click(object sender, RoutedEventArgs e)
         {
@@ -172,7 +204,7 @@ namespace Assistance_Control.Views.Horarios
                             await horarioDAO.Actualizar(nuevoHorario);
                             cargarHorarios();
                             DataGrid.SelectedItem = horarioSeleccionado;
-                            await new MessageDialog("Area actualizada correctamente!", "").ShowAsync();
+                            await new MessageDialog("Horario actualizado correctamente!", "").ShowAsync();
                         }
                         break;
                     case (int)ACCION.INSERTAR:
@@ -180,7 +212,7 @@ namespace Assistance_Control.Views.Horarios
                         {
                             await horarioDAO.Insertar(nuevoHorario);
                             cargarHorarios();
-                            await new MessageDialog("El area fue creada correctamente.", "").ShowAsync();
+                            await new MessageDialog("El horario fue creado correctamente.", "").ShowAsync();
                         }
                         break;
                 }
@@ -195,6 +227,45 @@ namespace Assistance_Control.Views.Horarios
                 prLoading.IsActive = false;
             }
 
+        }
+        private async Task<bool> obtenerDatosVistaHorarioArea()
+        {
+            if (await validarCamposHorarioArea())
+            {
+                nuevoHorarioArea = new HorarioArea()
+                {
+                    HorarioId = ((Horario)cbHorarios.SelectedItem).HorarioId,
+                    AreaId = areaSeleccionada.AreaId,
+                    FechaInicio = dpFechaInicial.Date.DateTime,
+                    FechaFinal = dpFechaFinal.Date.DateTime,
+                    UsuarioRegistro = App.usuarioAutentificado.UsuarioId,
+                    FechaHoraRegistro = DateTime.Now,
+                    Area = await areaDAO.getAreaById(areaSeleccionada.AreaId),
+                    Horario = await horarioDAO.getHorarioByHorarioId(((Horario)cbHorarios.SelectedItem).HorarioId)
+                };
+                if (estado == (int)ACCION.ACTUALIZAR)
+                {
+                    nuevoHorarioArea.HorarioId = horarioSeleccionado.HorarioId;
+                }
+                return true;
+            }
+            return false;
+        }
+        private async Task<bool> validarCamposHorarioArea()
+        {
+            if (areaSeleccionada == null)
+            {
+                await new MessageDialog("Seleccione el Area.").ShowAsync();
+                cbAreas.Focus(FocusState.Programmatic);
+                return false;
+            }
+            if (cbHorarios.SelectedItem == null)
+            {
+                await new MessageDialog("Seleccione el horario.").ShowAsync();
+                cbHorarios.Focus(FocusState.Programmatic);
+                return false;
+            }
+            return true;
         }
         private async Task<bool> obtenerDatosVista()
         {
@@ -229,15 +300,24 @@ namespace Assistance_Control.Views.Horarios
             {
                 gridAgregar.Visibility = Visibility.Visible;
                 tbNombreHorario.Text = horarioSeleccionado.Nombre.ToUpper();
-                //dpEntrada.Time = horarioSeleccionado.HoraEntrada,
+                TimeSpan time;
+                TimeSpan.TryParse(horarioSeleccionado.HoraEntrada, out time);
+                dpEntrada.Time = time;
+                TimeSpan.TryParse(horarioSeleccionado.HoraSalida, out time);
+                dpSalida.Time = time;
 
                 //= areaSeleccionada.Nombre;
                 //    tbDescripcion.Text = areaSeleccionada.Descripcion;
             }
             else
             {
-                await new MessageDialog("Seleccione un area para editar", "Atención").ShowAsync();
+                await new MessageDialog("Seleccione un horario para editar", "Atención").ShowAsync();
             }
+        }
+        private void DataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            MyToolkit.Controls.DataGrid dg = (MyToolkit.Controls.DataGrid)sender;
+            horarioSeleccionado = (Horario)dg.SelectedItem;
         }
         //Administracion
         private async Task<bool> validarCampos()
@@ -252,11 +332,83 @@ namespace Assistance_Control.Views.Horarios
         }
         private void limpiarCampos()
         {
-            //tbNumeroEmpleado.Text = string.Empty;
-            //tbNombre.Text = string.Empty;
-            //tbApellidoPaterno.Text = string.Empty;
-            //tbApellidoMaterno.Text = string.Empty;
-            //empleadoSeleccionado = null;
+            tbNombreHorario.Text = string.Empty;
+            dpEntrada.Time = DateTime.Now.TimeOfDay;
+            dpSalida.Time = DateTime.Now.TimeOfDay;
+        }
+        private async void asignarHorarioArea()
+        {
+            try
+            {
+                bool existe = false;
+                List<HorarioArea> horariosArea = await haDAO.getHorariosByAreaId(nuevoHorarioArea.AreaId);
+                if (horariosArea != null)
+                {
+                    List<HorarioArea> horarios = horariosArea.Where(w => w.HorarioId == nuevoHorarioArea.HorarioId).ToList();
+                    if (horarios != null && horarios.Count > 0)
+                    {
+                        HorarioArea ultimoHorario = horarios.OrderByDescending(o => o.FechaFinal).FirstOrDefault();
+                        if (nuevoHorarioArea.FechaInicio < ultimoHorario.FechaFinal)
+                        {
+                            existe = true;
+                        }
+                    }
+                }
+                if (!existe)
+                {
+                    await haDAO.Insertar(nuevoHorarioArea);
+                    await new MessageDialog("El horario fue creado correctamente.").ShowAsync();
+                }
+                else
+                {
+                    await new MessageDialog("La fecha de inicio no puede ser menor a la fecha final del horario anterior.").ShowAsync();
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+        private async void btnGuardar_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                prLoading.IsActive = true;
+                switch (estado)
+                {
+                    case (int)ACCION.ACTUALIZAR:
+                        if (await obtenerDatosVistaHorarioArea())
+                        {
+                            await haDAO.Actualizar(nuevoHorarioArea);
+                            cargarHorariosArea();
+                            DataGrid.SelectedItem = horarioSeleccionado;
+                            await new MessageDialog("Horario actualizado correctamente!", "").ShowAsync();
+                        }
+                        break;
+                    case (int)ACCION.INSERTAR:
+                        if (await obtenerDatosVistaHorarioArea())
+                        {
+                            asignarHorarioArea();
+                            cargarHorariosArea();
+                        }
+                        break;
+                }
+                limpiarCampos();
+            }
+            catch (Exception ex)
+            {
+                await new MessageDialog(ex.Message).ShowAsync();
+            }
+        }
+        private async void cargarHorariosArea()
+        {
+            dgHorarios.ItemsSource = await haDAO.getHorariosByAreaId(areaSeleccionada.AreaId);
+        }
+
+        private void dgHorarios_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            MyToolkit.Controls.DataGrid dg = (MyToolkit.Controls.DataGrid)sender;
+            horarioAreaSeleccionado = (HorarioArea)dg.SelectedItem;
         }
     }
 }

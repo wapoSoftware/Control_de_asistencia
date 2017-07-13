@@ -7,15 +7,21 @@
     <RootPropertyPathName Name="DatosMenu" />
     <RootPropertyPathName Name="AreaItem" />
     <RootPropertyPathName Name="Nombre" />
-    <RootPropertyPathName Name="Clave" />
+    <RootPropertyPathName Name="AreaId" />
     <RootPropertyPathName Name="EmpleadoITem" />
     <RootPropertyPathName Name="FechaHoraRegistro" />
-    <RootPropertyPathName Name="Edad" />
-    <RootPropertyPathName Name="Apellido2" />
-    <RootPropertyPathName Name="Apellido1" />
+    <RootPropertyPathName Name="FechaNacimiento" />
+    <RootPropertyPathName Name="RFC" />
+    <RootPropertyPathName Name="CURP" />
+    <RootPropertyPathName Name="Area" />
+    <RootPropertyPathName Name="ApellidoMaterno" />
+    <RootPropertyPathName Name="ApellidoPaterno" />
     <RootPropertyPathName Name="EmpleadoId" />
-    <RootPropertyPathName Name="Salida" />
-    <RootPropertyPathName Name="Entrada" />
+    <RootPropertyPathName Name="HoraSalida" />
+    <RootPropertyPathName Name="HoraEntrada" />
+    <RootPropertyPathName Name="FechaFinal" />
+    <RootPropertyPathName Name="FechaInicio" />
+    <RootPropertyPathName Name="Horario" />
     <RootPropertyPathName Name="listHorarios" />
     <RootPropertyPathName Name="listAreas" />
   </Roots.PropertyPathNames>
@@ -43,6 +49,7 @@
       <RootProperty Name="Background" />
       <RootProperty Name="Style" />
       <RootProperty Name="Height" />
+      <RootProperty Name="TabIndex" />
       <RootEvent Name="Click" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Control">
@@ -146,7 +153,6 @@
       <RootProperty Name="Foreground" />
       <RootProperty Name="Style" />
       <RootProperty Name="FontWeight" />
-      <RootProperty Name="Name" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Data.Binding" />
     <RootType FullName="Windows.UI.Xaml.Controls.Page">
@@ -166,6 +172,7 @@
       <RootProperty Name="Name" />
       <RootProperty Name="Height" />
       <RootProperty Name="Width" />
+      <RootProperty Name="Visibility" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
       <RootProperty Name="Name" />
@@ -174,6 +181,7 @@
       <RootProperty Name="Margin" />
       <RootProperty Name="IsReadOnly" />
       <RootProperty Name="MaxLength" />
+      <RootProperty Name="TabIndex" />
       <RootEvent Name="TextChanged" />
       <RootEvent Name="KeyUp" />
     </RootType>
@@ -248,6 +256,9 @@
     <RootType FullName="Assistence_Control.Menu.pMasterPage" />
     <RootType FullName="Windows.UI.Xaml.Controls.ScrollViewer">
       <RootProperty Name="Content" />
+      <RootProperty Name="HorizontalScrollMode" />
+      <RootProperty Name="HorizontalScrollBarVisibility" />
+      <RootProperty Name="Margin" />
     </RootType>
     <RootType FullName="MyToolkit.Controls.DataGrid">
       <RootProperty Name="MaxHeight" />
@@ -257,6 +268,7 @@
       <RootProperty Name="HeaderBackground" />
       <RootProperty Name="Foreground" />
       <RootProperty Name="Columns" />
+      <RootEvent Name="SelectionChanged" />
     </RootType>
     <RootType FullName="MyToolkit.Controls.DataGridTextColumn">
       <RootProperty Name="Width" />
@@ -264,6 +276,28 @@
       <RootProperty Name="Binding" />
     </RootType>
     <RootType FullName="Assistence_Control.Views.Areas.abcAreas" />
+    <RootType FullName="Windows.UI.Xaml.Controls.DatePicker">
+      <RootProperty Name="Name" />
+      <RootProperty Name="Header" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="TabIndex" />
+      <RootProperty Name="FontSize" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.ComboBox">
+      <RootProperty Name="Name" />
+      <RootProperty Name="PlaceholderText" />
+      <RootProperty Name="DisplayMemberPath" />
+      <RootProperty Name="Header" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="TabIndex" />
+      <RootProperty Name="ItemsSource" />
+      <RootProperty Name="FontSize" />
+      <RootEvent Name="SelectionChanged" />
+    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.AutoSuggestBox">
       <RootProperty Name="PlaceholderText" />
       <RootProperty Name="DisplayMemberPath" />
@@ -306,25 +340,6 @@
     <RootType FullName="Windows.UI.Xaml.Controls.TimePicker">
       <RootProperty Name="Name" />
       <RootProperty Name="Header" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.ComboBox">
-      <RootProperty Name="Name" />
-      <RootProperty Name="Header" />
-      <RootProperty Name="ItemsSource" />
-      <RootProperty Name="DisplayMemberPath" />
-      <RootProperty Name="HorizontalAlignment" />
-      <RootProperty Name="VerticalAlignment" />
-      <RootProperty Name="FontSize" />
-      <RootProperty Name="Margin" />
-      <RootEvent Name="SelectionChanged" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.DatePicker">
-      <RootProperty Name="Name" />
-      <RootProperty Name="Header" />
-      <RootProperty Name="HorizontalAlignment" />
-      <RootProperty Name="VerticalAlignment" />
-      <RootProperty Name="FontSize" />
-      <RootProperty Name="Margin" />
     </RootType>
     <RootType FullName="Assistance_Control.Views.Horarios.MasterHorarios" />
   </Roots.RootTypes>

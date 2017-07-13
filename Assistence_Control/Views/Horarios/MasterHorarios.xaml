@@ -165,47 +165,24 @@
                     </Grid.RowDefinitions>
                     <TextBlock Text="Asignar" Margin="30,0,0,0" FontSize="50" VerticalAlignment="Bottom" Grid.ColumnSpan="2"></TextBlock>
                     <ComboBox Header="Areas" ItemsSource="{Binding listAreas}" SelectionChanged="cbAreas_SelectionChanged" DisplayMemberPath="Nombre"  Name="cbAreas" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="2" Grid.ColumnSpan="2" FontSize="20" Margin="30,0,0,10"/>
-                    <ComboBox Header="Horario" ItemsSource="{Binding listHorarios}" SelectionChanged="cbHorarios_SelectionChanged"  Name="cbHorarios" Grid.Row="3" FontSize="20" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.ColumnSpan="2" Margin="30,0,0,10"/>
+                    <ComboBox Header="Horario" ItemsSource="{Binding listHorarios}" DisplayMemberPath="Nombre"  Name="cbHorarios" Grid.Row="3" FontSize="20" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.ColumnSpan="2" Margin="30,0,0,10"/>
                     <DatePicker Header="Fecha Inicial" Name="dpFechaInicial" Grid.Row="4" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontSize="20" Margin="0,0,0,10" Grid.ColumnSpan="2"/>
                     <DatePicker Header="Fecha Final" Name="dpFechaFinal" Grid.Row="5" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontSize="20" Margin="0,0,0,10"/>
-                    <Button Name="btnGuardar" Content="Guardar" Foreground="White" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="6" Margin="30,10,0,10" FontSize="25">
+                    <Button Name="btnGuardar" Content="Guardar" Foreground="White" Click="btnGuardar_Click" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="6" Margin="30,10,0,10" FontSize="25">
                         <Button.Background>
                             <SolidColorBrush Color="{StaticResource MainColor}"/>
                         </Button.Background>
                     </Button>
-                    <Grid Grid.Row="2" Grid.Column="3" Grid.ColumnSpan="2" Grid.RowSpan="4" Background="#FFB9B7B7">
-                        <Grid.RowDefinitions>
-                            <RowDefinition/>
-                            <RowDefinition/>
-                            <RowDefinition/>
-                            <RowDefinition/>
-                            <RowDefinition/>
-                            <RowDefinition/>
-                        </Grid.RowDefinitions>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition/>
-                            <ColumnDefinition/>
-                        </Grid.ColumnDefinitions>
-                        <TextBlock Name="lblAreaSeleccionada" FontSize="50" VerticalAlignment="Center" Grid.RowSpan="2" Margin="20,0,0,0" Grid.ColumnSpan="2"/>
-                        <TextBlock Text="Horario Seleccionado: " Grid.Row="2" VerticalAlignment="Center" FontSize="30" Margin="20,0,0,0"/>
-                        <TextBlock Name="lblHorario" Grid.Row="2" VerticalAlignment="Center" FontSize="30" Foreground="Red" Grid.Column="1"/>
-                        <StackPanel Orientation="Horizontal" Grid.Row="3" Margin="20,0,0,0">
-                            <TextBlock Text="Del dia: " HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30" Margin="0,0,30,0"/>
-                            <TextBlock Name="lblDesde" VerticalAlignment="Center" FontSize="30" Foreground="Red" HorizontalAlignment="Right"/>
-                        </StackPanel>
-                        <StackPanel Orientation="Horizontal" Grid.Row="3" Grid.Column="1">
-                            <TextBlock Text="Al dia: " HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30" Margin="0,0,30,0"/>
-                            <TextBlock Name="lblHasta" VerticalAlignment="Center" FontSize="30" Foreground="Red" HorizontalAlignment="Right"/>
-                        </StackPanel>
-                        <StackPanel Orientation="Horizontal" Grid.Row="4" Margin="20,0,0,0" Grid.ColumnSpan="2">
-                            <TextBlock Text="Hora de entrada: " HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30" Margin="0,0,30,0"/>
-                            <TextBlock Name="lblEntrada" VerticalAlignment="Center" FontSize="30" Foreground="Red" HorizontalAlignment="Right"/>
-                        </StackPanel>
-                        <StackPanel Orientation="Horizontal" Grid.Row="5" Margin="20,0,0,0" Grid.ColumnSpan="2">
-                            <TextBlock Text="Hora de salida: " HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30" Margin="0,0,30,0"/>
-                            <TextBlock Name="lblSalida" VerticalAlignment="Center" FontSize="30" Foreground="Red" HorizontalAlignment="Right"/>
-                        </StackPanel>
-                    </Grid>
+                    <controls:DataGrid MaxHeight="360" x:Name="dgHorarios" SelectionChanged="dgHorarios_SelectionChanged" SelectionMode="Single" Margin="0" Grid.Row="2" ItemsSource="{Binding}" HeaderBackground="#FF8B8383" Grid.Column="3" Grid.ColumnSpan="2" Grid.RowSpan="4" >
+                        <controls:DataGrid.Foreground>
+                            <SolidColorBrush Color="White"/>
+                        </controls:DataGrid.Foreground>
+                        <controls:DataGrid.Columns>
+                            <controls:DataGridTextColumn Width="200" Header="Horario" Binding="{Binding Horario.Nombre}"/>
+                            <controls:DataGridTextColumn Width="200" Header="Hora Entrada" Binding="{Binding FechaInicio}"/>
+                            <controls:DataGridTextColumn Width="200" Header="Hora Salida" Binding="{Binding FechaFinal}" />
+                        </controls:DataGrid.Columns>
+                    </controls:DataGrid>
                 </Grid>
             </PivotItem>
             <PivotItem Name="pHorarios">
@@ -227,7 +204,7 @@
                         </Grid.ColumnDefinitions>
                         <TextBlock Text="Horarios" Margin="30,0,0,0" FontSize="50" VerticalAlignment="Bottom"></TextBlock>
                     </Grid>
-                    <controls:DataGrid MaxHeight="360" x:Name="DataGrid" SelectionMode="Single" Margin="30,0,30,10" Grid.Row="1" ItemsSource="{Binding EmpleadoITem}" HeaderBackground="#FF8B8383" >
+                    <controls:DataGrid MaxHeight="360" x:Name="DataGrid" SelectionChanged="DataGrid_SelectionChanged" SelectionMode="Single" Margin="30,0,30,10" Grid.Row="1" ItemsSource="{Binding EmpleadoITem}" HeaderBackground="#FF8B8383" >
                         <controls:DataGrid.Foreground>
                             <SolidColorBrush Color="White"/>
                         </controls:DataGrid.Foreground>

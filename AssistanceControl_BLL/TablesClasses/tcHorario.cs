@@ -20,6 +20,12 @@ namespace AssistanceControl_BLL.TablesClasses
             URL += "/Horario?$filter=Estatus eq 1";
             return await getDataList(URL);
         }
+        public async Task<Horario> getHorarioByHorarioId(int horarioId)
+        {
+            String URL = _uriServicio.AbsoluteUri;
+            URL += "/Horario?$filter=HorarioId eq " + horarioId;
+            return await getData(URL);
+        }
         public async Task<int> getNextId()
         {
             List<Horario> areas = null;
@@ -44,7 +50,7 @@ namespace AssistanceControl_BLL.TablesClasses
             }
             catch (Exception)
             {
-                throw new Exception("Error al insertar area.");
+                throw new Exception("Error al insertar Horario.");
             }
         }
         public async Task Actualizar(Horario entidad)
@@ -55,14 +61,14 @@ namespace AssistanceControl_BLL.TablesClasses
             }
             catch (Exception ex)
             {
-                throw new Exception("Error al actualizar area.");
+                throw new Exception("Error al actualizar Horario.");
             }
         }
         public async Task Eliminar(Horario entidad)
         {
             try
             {
-                //entidad.Estatus = 0;
+                entidad.Estatus = 0;
                 await base.update(_uriServicio, entidad);
             }
             catch (Exception ex)

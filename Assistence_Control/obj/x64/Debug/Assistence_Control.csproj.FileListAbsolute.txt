@@ -1,4 +1,3 @@
-C:\Assistence_Control\Assistence_Control\obj\x64\Debug\Assistence_Control.csprojResolveAssemblyReference.cache
 C:\Assistence_Control\Assistence_Control\bin\x64\Debug\App.xbf
 C:\Assistence_Control\Assistence_Control\bin\x64\Debug\Inicio\Login.xbf
 C:\Assistence_Control\Assistence_Control\bin\x64\Debug\Menu\MasterPage.xbf
@@ -197,16 +196,16 @@ C:\Assistence_Control\Assistence_Control\obj\x64\Debug\Menu\MasterPage.xaml
 C:\Assistence_Control\Assistence_Control\obj\x64\Debug\Menu\Main.xaml
 C:\Assistence_Control\Assistence_Control\obj\x64\Debug\Menu\pMasterPage.xaml
 C:\Assistence_Control\Assistence_Control\obj\x64\Debug\Views\Areas\abcAreas.xaml
-C:\Assistence_Control\Assistence_Control\obj\x64\Debug\Views\Horarios\MasterHorarios.xaml
 C:\Assistence_Control\Assistence_Control\obj\x64\Debug\Views\Empleados\abcEmpleado.xaml
+C:\Assistence_Control\Assistence_Control\obj\x64\Debug\Views\Horarios\MasterHorarios.xaml
 C:\Assistence_Control\Assistence_Control\obj\x64\Debug\App.xbf
 C:\Assistence_Control\Assistence_Control\obj\x64\Debug\Inicio\Login.xbf
 C:\Assistence_Control\Assistence_Control\obj\x64\Debug\Menu\MasterPage.xbf
 C:\Assistence_Control\Assistence_Control\obj\x64\Debug\Menu\Main.xbf
 C:\Assistence_Control\Assistence_Control\obj\x64\Debug\Menu\pMasterPage.xbf
 C:\Assistence_Control\Assistence_Control\obj\x64\Debug\Views\Areas\abcAreas.xbf
-C:\Assistence_Control\Assistence_Control\obj\x64\Debug\Views\Horarios\MasterHorarios.xbf
 C:\Assistence_Control\Assistence_Control\obj\x64\Debug\Views\Empleados\abcEmpleado.xbf
+C:\Assistence_Control\Assistence_Control\obj\x64\Debug\Views\Horarios\MasterHorarios.xbf
 C:\Assistence_Control\Assistence_Control\obj\x64\Debug\XamlSaveStateFile.xml
 C:\Assistence_Control\Assistence_Control\obj\x64\Debug\Assistance_Control.exe
 C:\Assistence_Control\Assistence_Control\obj\x64\Debug\Assistance_Control.pdb
@@ -282,3 +281,4 @@ C:\Assistence_Control\Assistence_Control\obj\x64\Debug\qualifiers.txt.intermedia
 C:\Assistence_Control\Assistence_Control\obj\x64\Debug\MultipleQualifiersPerDimensionFound.txt
 C:\Assistence_Control\Assistence_Control\obj\x64\Debug\MyToolkit.Extended.pri.xml
 C:\Assistence_Control\Assistence_Control\obj\x64\Debug\ProjectArchitectures.txt
+C:\Assistence_Control\Assistence_Control\obj\x64\Debug\Assistence_Control.csprojResolveAssemblyReference.cache

@@ -104,15 +104,15 @@
                     <Grid.Background>
                         <SolidColorBrush Color="{StaticResource MainBackground}"/>
                     </Grid.Background>
-                    <GridView x:ConnectionId='27' x:Name="gvMenu" 
+                    <GridView x:ConnectionId='22' x:Name="gvMenu" 
               VerticalAlignment="Center" 
               ItemsSource="{Binding DatosMenu}"
               ItemTemplateSelector="{StaticResource MenuTemplateSelector}"
               IsItemClickEnabled="True"
                                            HorizontalAlignment="Center">
                         <VisualStateManager.VisualStateGroups>
-                            <VisualStateGroup x:ConnectionId='28' x:Name="Devices">
-                                <VisualState x:ConnectionId='29' x:Name="Tablet">
+                            <VisualStateGroup x:ConnectionId='23' x:Name="Devices">
+                                <VisualState x:ConnectionId='24' x:Name="Tablet">
                                     <VisualState.Setters>
                                         <Setter Target="gvMenu.(FrameworkElement.HorizontalAlignment)" Value="Center"/>
                                         <Setter Target="gvMenu.(FrameworkElement.VerticalAlignment)" Value="Center"/>
@@ -126,7 +126,7 @@
                                         <AdaptiveTrigger MinWindowWidth="720"/>
                                     </VisualState.StateTriggers>
                                 </VisualState>
-                                <VisualState x:ConnectionId='30' x:Name="Mobile">
+                                <VisualState x:ConnectionId='25' x:Name="Mobile">
                                     <VisualState.Setters>
                                         <Setter Target="gvMenu.(Control.Padding)">
                                             <Setter.Value>
@@ -165,47 +165,24 @@
                     </Grid.RowDefinitions>
                     <TextBlock Text="Asignar" Margin="30,0,0,0" FontSize="50" VerticalAlignment="Bottom" Grid.ColumnSpan="2"></TextBlock>
                     <ComboBox x:ConnectionId='16' Header="Areas" ItemsSource="{Binding listAreas}"                                             DisplayMemberPath="Nombre"  Name="cbAreas" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="2" Grid.ColumnSpan="2" FontSize="20" Margin="30,0,0,10"/>
-                    <ComboBox x:ConnectionId='17' Header="Horario" ItemsSource="{Binding listHorarios}"                                                 Name="cbHorarios" Grid.Row="3" FontSize="20" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.ColumnSpan="2" Margin="30,0,0,10"/>
+                    <ComboBox x:ConnectionId='17' Header="Horario" ItemsSource="{Binding listHorarios}" DisplayMemberPath="Nombre"  Name="cbHorarios" Grid.Row="3" FontSize="20" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.ColumnSpan="2" Margin="30,0,0,10"/>
                     <DatePicker x:ConnectionId='18' Header="Fecha Inicial" Name="dpFechaInicial" Grid.Row="4" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontSize="20" Margin="0,0,0,10" Grid.ColumnSpan="2"/>
                     <DatePicker x:ConnectionId='19' Header="Fecha Final" Name="dpFechaFinal" Grid.Row="5" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontSize="20" Margin="0,0,0,10"/>
-                    <Button x:ConnectionId='20' Name="btnGuardar" Content="Guardar" Foreground="White" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="6" Margin="30,10,0,10" FontSize="25">
+                    <Button x:ConnectionId='20' Name="btnGuardar" Content="Guardar" Foreground="White"                          HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="6" Margin="30,10,0,10" FontSize="25">
                         <Button.Background>
                             <SolidColorBrush Color="{StaticResource MainColor}"/>
                         </Button.Background>
                     </Button>
-                    <Grid Grid.Row="2" Grid.Column="3" Grid.ColumnSpan="2" Grid.RowSpan="4" Background="#FFB9B7B7">
-                        <Grid.RowDefinitions>
-                            <RowDefinition/>
-                            <RowDefinition/>
-                            <RowDefinition/>
-                            <RowDefinition/>
-                            <RowDefinition/>
-                            <RowDefinition/>
-                        </Grid.RowDefinitions>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition/>
-                            <ColumnDefinition/>
-                        </Grid.ColumnDefinitions>
-                        <TextBlock x:ConnectionId='21' Name="lblAreaSeleccionada" FontSize="50" VerticalAlignment="Center" Grid.RowSpan="2" Margin="20,0,0,0" Grid.ColumnSpan="2"/>
-                        <TextBlock Text="Horario Seleccionado: " Grid.Row="2" VerticalAlignment="Center" FontSize="30" Margin="20,0,0,0"/>
-                        <TextBlock x:ConnectionId='22' Name="lblHorario" Grid.Row="2" VerticalAlignment="Center" FontSize="30" Foreground="Red" Grid.Column="1"/>
-                        <StackPanel Orientation="Horizontal" Grid.Row="3" Margin="20,0,0,0">
-                            <TextBlock Text="Del dia: " HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30" Margin="0,0,30,0"/>
-                            <TextBlock x:ConnectionId='26' Name="lblDesde" VerticalAlignment="Center" FontSize="30" Foreground="Red" HorizontalAlignment="Right"/>
-                        </StackPanel>
-                        <StackPanel Orientation="Horizontal" Grid.Row="3" Grid.Column="1">
-                            <TextBlock Text="Al dia: " HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30" Margin="0,0,30,0"/>
-                            <TextBlock x:ConnectionId='25' Name="lblHasta" VerticalAlignment="Center" FontSize="30" Foreground="Red" HorizontalAlignment="Right"/>
-                        </StackPanel>
-                        <StackPanel Orientation="Horizontal" Grid.Row="4" Margin="20,0,0,0" Grid.ColumnSpan="2">
-                            <TextBlock Text="Hora de entrada: " HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30" Margin="0,0,30,0"/>
-                            <TextBlock x:ConnectionId='24' Name="lblEntrada" VerticalAlignment="Center" FontSize="30" Foreground="Red" HorizontalAlignment="Right"/>
-                        </StackPanel>
-                        <StackPanel Orientation="Horizontal" Grid.Row="5" Margin="20,0,0,0" Grid.ColumnSpan="2">
-                            <TextBlock Text="Hora de salida: " HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30" Margin="0,0,30,0"/>
-                            <TextBlock x:ConnectionId='23' Name="lblSalida" VerticalAlignment="Center" FontSize="30" Foreground="Red" HorizontalAlignment="Right"/>
-                        </StackPanel>
-                    </Grid>
+                    <controls:DataGrid x:ConnectionId='21' MaxHeight="360" x:Name="dgHorarios"                                                SelectionMode="Single" Margin="0" Grid.Row="2" ItemsSource="{Binding}" HeaderBackground="#FF8B8383" Grid.Column="3" Grid.ColumnSpan="2" Grid.RowSpan="4" >
+                        <controls:DataGrid.Foreground>
+                            <SolidColorBrush Color="White"/>
+                        </controls:DataGrid.Foreground>
+                        <controls:DataGrid.Columns>
+                            <controls:DataGridTextColumn Width="200" Header="Horario" Binding="{Binding Horario.Nombre}"/>
+                            <controls:DataGridTextColumn Width="200" Header="Hora Entrada" Binding="{Binding FechaInicio}"/>
+                            <controls:DataGridTextColumn Width="200" Header="Hora Salida" Binding="{Binding FechaFinal}" />
+                        </controls:DataGrid.Columns>
+                    </controls:DataGrid>
                 </Grid>
             </PivotItem>
             <PivotItem x:ConnectionId='4' Name="pHorarios">
@@ -227,7 +204,7 @@
                         </Grid.ColumnDefinitions>
                         <TextBlock Text="Horarios" Margin="30,0,0,0" FontSize="50" VerticalAlignment="Bottom"></TextBlock>
                     </Grid>
-                    <controls:DataGrid x:ConnectionId='5' MaxHeight="360" x:Name="DataGrid" SelectionMode="Single" Margin="30,0,30,10" Grid.Row="1" ItemsSource="{Binding EmpleadoITem}" HeaderBackground="#FF8B8383" >
+                    <controls:DataGrid x:ConnectionId='5' MaxHeight="360" x:Name="DataGrid"                                              SelectionMode="Single" Margin="30,0,30,10" Grid.Row="1" ItemsSource="{Binding EmpleadoITem}" HeaderBackground="#FF8B8383" >
                         <controls:DataGrid.Foreground>
                             <SolidColorBrush Color="White"/>
                         </controls:DataGrid.Foreground>

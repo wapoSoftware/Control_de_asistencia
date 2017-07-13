@@ -28,13 +28,13 @@
     <AppXManifest Include="C:\Assistence_Control\Assistence_Control\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-06-25T01:27:01.396</Modified>
+      <Modified>2017-07-06T02:53:01.382</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Assistence_Control\Assistence_Control\bin\x86\Debug\Assistance_Control.exe">
       <PackagePath>entrypoint\Assistance_Control.exe</PackagePath>
-      <Modified>2017-06-25T01:26:57.108</Modified>
+      <Modified>2017-07-06T02:52:58.744</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\DevExpress 15.2\Components\System\UAP\SDK\15.2.10\DevExpress.Core\15.2\References\CommonConfiguration\neutral\DevExpress.Core.v15.2.dll">
       <PackagePath>DevExpress.Core.v15.2.dll</PackagePath>
@@ -654,7 +654,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Assistence_Control\AssistanceControl_BLL\bin\Debug\AssistanceControl_BLL.dll">
       <PackagePath>AssistanceControl_BLL.dll</PackagePath>
-      <Modified>2017-06-24T06:18:48.450</Modified>
+      <Modified>2017-07-05T05:04:58.088</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Assistence_Control\AssistanceControl_BLL\bin\Debug\Newtonsoft.Json.dll">
       <PackagePath>Newtonsoft.Json.dll</PackagePath>
@@ -695,7 +695,7 @@
     <AppxPackagedFile Include="C:\Assistence_Control\Assistence_Control\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-06-04T20:20:33.870</Modified>
+      <Modified>2017-06-27T01:36:28.063</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Assistence_Control\Assistence_Control\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
@@ -728,7 +728,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Assistence_Control\Assistence_Control\bin\x86\Debug\Assistance_Control.xr.xml">
       <PackagePath>Assistance_Control.xr.xml</PackagePath>
-      <Modified>2017-06-25T01:26:56.426</Modified>
+      <Modified>2017-07-06T02:45:12.935</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -741,11 +741,11 @@
     <AppxPackagedFile Include="C:\Assistence_Control\Assistence_Control\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-06-25T01:27:00.898</Modified>
+      <Modified>2017-07-06T02:53:01.029</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Assistence_Control\Assistence_Control\bin\x86\Debug\Core\Assistance_Control.exe">
       <PackagePath>Assistance_Control.exe</PackagePath>
-      <Modified>2017-06-25T01:27:01.392</Modified>
+      <Modified>2017-07-06T02:53:01.370</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

@@ -19,6 +19,9 @@
     <RootPropertyPathName Name="EmpleadoId" />
     <RootPropertyPathName Name="HoraSalida" />
     <RootPropertyPathName Name="HoraEntrada" />
+    <RootPropertyPathName Name="FechaFinal" />
+    <RootPropertyPathName Name="FechaInicio" />
+    <RootPropertyPathName Name="Horario" />
     <RootPropertyPathName Name="listHorarios" />
     <RootPropertyPathName Name="listAreas" />
   </Roots.PropertyPathNames>
@@ -150,7 +153,6 @@
       <RootProperty Name="Foreground" />
       <RootProperty Name="Style" />
       <RootProperty Name="FontWeight" />
-      <RootProperty Name="Name" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Data.Binding" />
     <RootType FullName="Windows.UI.Xaml.Controls.Page">
