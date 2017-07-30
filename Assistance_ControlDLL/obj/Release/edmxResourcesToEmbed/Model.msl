@@ -4,6 +4,8 @@
     <EntitySetMapping Name="Area">
       <EntityTypeMapping TypeName="AssistanceControlModel.Area">
         <MappingFragment StoreEntitySet="Area">
+          <ScalarProperty Name="FechaHoraModificacion" ColumnName="FechaHoraModificacion" />
+          <ScalarProperty Name="UsuarioModificacion" ColumnName="UsuarioModificacion" />
           <ScalarProperty Name="FechaHoraRegistro" ColumnName="FechaHoraRegistro" />
           <ScalarProperty Name="UsuarioRegistro" ColumnName="UsuarioRegistro" />
           <ScalarProperty Name="Estatus" ColumnName="Estatus" />
@@ -25,14 +27,21 @@
     <EntitySetMapping Name="Empleado">
       <EntityTypeMapping TypeName="AssistanceControlModel.Empleado">
         <MappingFragment StoreEntitySet="Empleado">
+          <ScalarProperty Name="FechaHoraModificacion" ColumnName="FechaHoraModificacion" />
+          <ScalarProperty Name="UsuarioModificacion" ColumnName="UsuarioModificacion" />
           <ScalarProperty Name="FechaHoraRegistro" ColumnName="FechaHoraRegistro" />
           <ScalarProperty Name="UsuarioRegistro" ColumnName="UsuarioRegistro" />
           <ScalarProperty Name="AreaId" ColumnName="AreaId" />
           <ScalarProperty Name="Estatus" ColumnName="Estatus" />
           <ScalarProperty Name="FechaIngreso" ColumnName="FechaIngreso" />
+          <ScalarProperty Name="InformacionSensible" ColumnName="InformacionSensible" />
+          <ScalarProperty Name="LugarNacimiento" ColumnName="LugarNacimiento" />
+          <ScalarProperty Name="NombreMadre" ColumnName="NombreMadre" />
+          <ScalarProperty Name="NombrePadre" ColumnName="NombrePadre" />
+          <ScalarProperty Name="NumeroSeguroSocial" ColumnName="NumeroSeguroSocial" />
           <ScalarProperty Name="CURP" ColumnName="CURP" />
           <ScalarProperty Name="RFC" ColumnName="RFC" />
-          <ScalarProperty Name="FechaNacimiento" ColumnName="FechaNacimiento" />
+          <ScalarProperty Name="Sexo" ColumnName="Sexo" />
           <ScalarProperty Name="ApellidoMaterno" ColumnName="ApellidoMaterno" />
           <ScalarProperty Name="ApellidoPaterno" ColumnName="ApellidoPaterno" />
           <ScalarProperty Name="Nombre" ColumnName="Nombre" />
@@ -55,6 +64,8 @@
     <EntitySetMapping Name="Horario">
       <EntityTypeMapping TypeName="AssistanceControlModel.Horario">
         <MappingFragment StoreEntitySet="Horario">
+          <ScalarProperty Name="FechaHoraModificacion" ColumnName="FechaHoraModificacion" />
+          <ScalarProperty Name="UsuarioModificacion" ColumnName="UsuarioModificacion" />
           <ScalarProperty Name="FechaHoraRegistro" ColumnName="FechaHoraRegistro" />
           <ScalarProperty Name="UsuarioRegistro" ColumnName="UsuarioRegistro" />
           <ScalarProperty Name="Estatus" ColumnName="Estatus" />
@@ -68,18 +79,23 @@
     <EntitySetMapping Name="HorarioArea">
       <EntityTypeMapping TypeName="AssistanceControlModel.HorarioArea">
         <MappingFragment StoreEntitySet="HorarioArea">
+          <ScalarProperty Name="FechaHoraModificacion" ColumnName="FechaHoraModificacion" />
+          <ScalarProperty Name="UsuarioModificacion" ColumnName="UsuarioModificacion" />
           <ScalarProperty Name="FechaHoraRegistro" ColumnName="FechaHoraRegistro" />
           <ScalarProperty Name="UsuarioRegistro" ColumnName="UsuarioRegistro" />
           <ScalarProperty Name="FechaFinal" ColumnName="FechaFinal" />
           <ScalarProperty Name="FechaInicio" ColumnName="FechaInicio" />
           <ScalarProperty Name="AreaId" ColumnName="AreaId" />
           <ScalarProperty Name="HorarioId" ColumnName="HorarioId" />
+          <ScalarProperty Name="HorarioAreaId" ColumnName="HorarioAreaId" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Permiso">
       <EntityTypeMapping TypeName="AssistanceControlModel.Permiso">
         <MappingFragment StoreEntitySet="Permiso">
+          <ScalarProperty Name="FechaHoraModificacion" ColumnName="FechaHoraModificacion" />
+          <ScalarProperty Name="UsuarioModificacion" ColumnName="UsuarioModificacion" />
           <ScalarProperty Name="FechaHoraRegistro" ColumnName="FechaHoraRegistro" />
           <ScalarProperty Name="UsuarioRegistro" ColumnName="UsuarioRegistro" />
           <ScalarProperty Name="Estatus" ColumnName="Estatus" />
@@ -92,6 +108,8 @@
     <EntitySetMapping Name="Usuario">
       <EntityTypeMapping TypeName="AssistanceControlModel.Usuario">
         <MappingFragment StoreEntitySet="Usuario">
+          <ScalarProperty Name="FechaHoraModificacion" ColumnName="FechaHoraModificacion" />
+          <ScalarProperty Name="UsuarioModificacion" ColumnName="UsuarioModificacion" />
           <ScalarProperty Name="FechaHoraRegistro" ColumnName="FechaHoraRegistro" />
           <ScalarProperty Name="UsuarioRegistro" ColumnName="UsuarioRegistro" />
           <ScalarProperty Name="Estatus" ColumnName="Estatus" />

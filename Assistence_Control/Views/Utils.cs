@@ -34,5 +34,21 @@ namespace Assistance_Control.Utilerias
 
             return age;
         }
+        public static string formatearHoras(TimeSpan hora)
+        {
+            var hours = hora.Hours;
+            var minutes = hora.Minutes;
+            var amPmDesignator = "AM";
+            if (hours == 0)
+                hours = 12;
+            else if (hours == 12)
+                amPmDesignator = "PM";
+            else if (hours > 12)
+            {
+                hours -= 12;
+                amPmDesignator = "PM";
+            }
+            return string.Format("{0}:{1:00} {2}", hours, minutes, amPmDesignator);
+        }
     }
 }

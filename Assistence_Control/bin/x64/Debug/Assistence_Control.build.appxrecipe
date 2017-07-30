@@ -25,33 +25,6 @@
     <AppxPackagedFile Include="C:\Assistence_Control\Assistence_Control\bin\x64\Debug\Assistance_Control.exe">
       <PackagePath>entrypoint\Assistance_Control.exe</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Program Files %28x86%29\DevExpress 15.2\Components\System\UAP\SDK\15.2.10\DevExpress.Core\15.2\References\CommonConfiguration\neutral\DevExpress.Core.v15.2.dll">
-      <PackagePath>DevExpress.Core.v15.2.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Program Files %28x86%29\DevExpress 15.2\Components\System\UAP\SDK\15.2.10\DevExpress.Core\15.2\References\CommonConfiguration\neutral\DevExpress.Drawing.v15.2.dll">
-      <PackagePath>DevExpress.Drawing.v15.2.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Program Files %28x86%29\DevExpress 15.2\Components\System\UAP\SDK\15.2.10\DevExpress.Core\15.2\References\CommonConfiguration\neutral\DevExpress.Mvvm.v15.2.dll">
-      <PackagePath>DevExpress.Mvvm.v15.2.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Program Files %28x86%29\DevExpress 15.2\Components\System\UAP\SDK\15.2.10\DevExpress.Controls\15.2\References\CommonConfiguration\neutral\DevExpress.Pdf.Core.v15.2.dll">
-      <PackagePath>DevExpress.Pdf.Core.v15.2.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Program Files %28x86%29\DevExpress 15.2\Components\System\UAP\SDK\15.2.10\DevExpress.Controls\15.2\References\CommonConfiguration\neutral\DevExpress.UI.Xaml.Controls.v15.2.dll">
-      <PackagePath>DevExpress.UI.Xaml.Controls.v15.2.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Program Files %28x86%29\DevExpress 15.2\Components\System\UAP\SDK\15.2.10\DevExpress.Controls\15.2\References\CommonConfiguration\neutral\DevExpress.UI.Xaml.Editors.v15.2.dll">
-      <PackagePath>DevExpress.UI.Xaml.Editors.v15.2.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Program Files %28x86%29\DevExpress 15.2\Components\System\UAP\SDK\15.2.10\DevExpress.Controls\15.2\References\CommonConfiguration\neutral\DevExpress.UI.Xaml.Layout.v15.2.dll">
-      <PackagePath>DevExpress.UI.Xaml.Layout.v15.2.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Program Files %28x86%29\DevExpress 15.2\Components\System\UAP\SDK\15.2.10\DevExpress.Controls\15.2\References\CommonConfiguration\neutral\DevExpress.UI.Xaml.Ribbon.v15.2.dll">
-      <PackagePath>DevExpress.UI.Xaml.Ribbon.v15.2.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Program Files %28x86%29\DevExpress 15.2\Components\System\UAP\SDK\15.2.10\DevExpress.Core\15.2\References\CommonConfiguration\neutral\DevExpress.UI.Xaml.v15.2.dll">
-      <PackagePath>DevExpress.UI.Xaml.v15.2.dll</PackagePath>
-    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Luis Dueñas\.nuget\packages\Microsoft.CSharp\4.0.0\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
     </AppxPackagedFile>

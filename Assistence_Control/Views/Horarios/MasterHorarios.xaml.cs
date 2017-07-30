@@ -37,7 +37,7 @@ namespace Assistance_Control.Views.Horarios
         List<Horario> listHorarios = new List<Horario>();
         tcHorario horarioDAO;
         tcArea areaDAO;
-        enum ACCION { INSERTAR = 1, ACTUALIZAR = 2, ELIMINAR = 3 };
+        enum ACCION { INSERTAR = 1, ACTUALIZAR = 2, ELIMINAR = 3, DEFAULT = 4 };
         int estado = 0;
         Horario horarioSeleccionado = null;
         Horario nuevoHorario = null;
@@ -215,6 +215,14 @@ namespace Assistance_Control.Views.Horarios
                             await new MessageDialog("El horario fue creado correctamente.", "").ShowAsync();
                         }
                         break;
+                    case (int)ACCION.DEFAULT:
+                        if (await obtenerDatosVista())
+                        {
+                            await horarioDAO.Insertar(nuevoHorario);
+                            cargarHorarios();
+                            await new MessageDialog("El horario fue creado correctamente.", "").ShowAsync();
+                        }
+                        break;
                 }
                 limpiarCampos();
             }
@@ -241,11 +249,15 @@ namespace Assistance_Control.Views.Horarios
                     UsuarioRegistro = App.usuarioAutentificado.UsuarioId,
                     FechaHoraRegistro = DateTime.Now,
                     Area = await areaDAO.getAreaById(areaSeleccionada.AreaId),
-                    Horario = await horarioDAO.getHorarioByHorarioId(((Horario)cbHorarios.SelectedItem).HorarioId)
+                    Horario = await horarioDAO.getHorarioByHorarioId(((Horario)cbHorarios.SelectedItem).HorarioId),
+                    UsuarioModificacion = App.usuarioAutentificado.UsuarioId,
+                    FechaHoraModificacion = DateTime.Now
                 };
                 if (estado == (int)ACCION.ACTUALIZAR)
                 {
                     nuevoHorarioArea.HorarioId = horarioSeleccionado.HorarioId;
+                    nuevoHorario.UsuarioRegistro = horarioAreaSeleccionado.UsuarioRegistro;
+                    nuevoHorario.FechaHoraRegistro = horarioAreaSeleccionado.FechaHoraRegistro;
                 }
                 return true;
             }
@@ -277,12 +289,16 @@ namespace Assistance_Control.Views.Horarios
                     UsuarioRegistro = App.usuarioAutentificado.UsuarioId,
                     FechaHoraRegistro = DateTime.Now,
                     Estatus = 1,
-                    HoraEntrada = dpEntrada.Time.ToString(),
-                    HoraSalida = dpSalida.Time.ToString()
+                    HoraEntrada = Utilerias.Utils.formatearHoras(dpEntrada.Time),
+                    HoraSalida = Utilerias.Utils.formatearHoras(dpSalida.Time),
+                    FechaHoraModificacion = DateTime.Now,
+                    UsuarioModificacion = App.usuarioAutentificado.UsuarioId
                 };
                 if (estado == (int)ACCION.ACTUALIZAR)
                 {
                     nuevoHorario.HorarioId = horarioSeleccionado.HorarioId;
+                    nuevoHorario.UsuarioRegistro = horarioSeleccionado.UsuarioRegistro;
+                    nuevoHorario.FechaHoraRegistro = horarioSeleccionado.FechaHoraRegistro;
                 }
                 return true;
             }
@@ -301,9 +317,11 @@ namespace Assistance_Control.Views.Horarios
                 gridAgregar.Visibility = Visibility.Visible;
                 tbNombreHorario.Text = horarioSeleccionado.Nombre.ToUpper();
                 TimeSpan time;
-                TimeSpan.TryParse(horarioSeleccionado.HoraEntrada, out time);
+                // TimeSpan.TryParse(horarioSeleccionado.HoraEntrada, out time);
+                TimeSpan.TryParse(horarioSeleccionado.HoraEntrada.Replace("A", "").Replace("P", "").Replace("M",""), out time);
+
                 dpEntrada.Time = time;
-                TimeSpan.TryParse(horarioSeleccionado.HoraSalida, out time);
+                TimeSpan.TryParse(horarioSeleccionado.HoraSalida.Replace("A", "").Replace("P", "").Replace("M", ""), out time);
                 dpSalida.Time = time;
 
                 //= areaSeleccionada.Nombre;
@@ -335,6 +353,7 @@ namespace Assistance_Control.Views.Horarios
             tbNombreHorario.Text = string.Empty;
             dpEntrada.Time = DateTime.Now.TimeOfDay;
             dpSalida.Time = DateTime.Now.TimeOfDay;
+            estado = (int)ACCION.DEFAULT;
         }
         private async void asignarHorarioArea()
         {
@@ -357,6 +376,7 @@ namespace Assistance_Control.Views.Horarios
                 if (!existe)
                 {
                     await haDAO.Insertar(nuevoHorarioArea);
+                    cargarHorariosArea();
                     await new MessageDialog("El horario fue creado correctamente.").ShowAsync();
                 }
                 else
@@ -389,7 +409,14 @@ namespace Assistance_Control.Views.Horarios
                         if (await obtenerDatosVistaHorarioArea())
                         {
                             asignarHorarioArea();
-                            cargarHorariosArea();
+                            //cargarHorariosArea();
+                        }
+                        break;
+                    case (int)ACCION.DEFAULT:
+                        if (await obtenerDatosVistaHorarioArea())
+                        {
+                            asignarHorarioArea();
+                            //cargarHorariosArea();
                         }
                         break;
                 }

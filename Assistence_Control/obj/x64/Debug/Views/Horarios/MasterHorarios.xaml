@@ -246,8 +246,8 @@
                             <ColumnDefinition/>
                         </Grid.ColumnDefinitions>
                         <TextBox x:ConnectionId='8' Name="tbNombreHorario" Header="Horario" Grid.ColumnSpan="2"></TextBox>
-                        <TimePicker x:ConnectionId='9' Name="dpEntrada" Header="Hora de entrada" Grid.Row="1" Grid.ColumnSpan="2"></TimePicker>
-                        <TimePicker x:ConnectionId='10' Name="dpSalida" Header="Hora de salida" Grid.Row="2" Grid.ColumnSpan="2"></TimePicker>
+                        <TimePicker x:ConnectionId='9' Name="dpEntrada" Header="Hora de entrada" ClockIdentifier="12HourClock" Grid.Row="1" Grid.ColumnSpan="2"></TimePicker>
+                        <TimePicker x:ConnectionId='10' Name="dpSalida" Header="Hora de salida" ClockIdentifier="12HourClock" Grid.Row="2" Grid.ColumnSpan="2"></TimePicker>
                         <Button x:ConnectionId='11' Name="btnGuardarHorario" Content="Guardar" Margin="0,10,10,10" Height="60" FontSize="25"                                 HorizontalAlignment="Stretch" Grid.Row="4">
                             <Button.Foreground>
                                 <SolidColorBrush Color="{StaticResource MainBackground}"/>

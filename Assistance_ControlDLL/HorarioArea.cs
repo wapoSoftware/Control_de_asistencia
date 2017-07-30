@@ -14,12 +14,15 @@ namespace Assistance_ControlDLL
     
     public partial class HorarioArea
     {
+        public int HorarioAreaId { get; set; }
         public int HorarioId { get; set; }
         public int AreaId { get; set; }
         public System.DateTime FechaInicio { get; set; }
         public System.DateTime FechaFinal { get; set; }
         public string UsuarioRegistro { get; set; }
         public System.DateTime FechaHoraRegistro { get; set; }
+        public string UsuarioModificacion { get; set; }
+        public System.DateTime FechaHoraModificacion { get; set; }
     
         public virtual Area Area { get; set; }
         public virtual Horario Horario { get; set; }

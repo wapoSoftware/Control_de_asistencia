@@ -29,7 +29,6 @@
                     <TextBlock Text="Empleados" Margin="30,0,0,0" FontSize="50" VerticalAlignment="Bottom"></TextBlock>
                     <AutoSuggestBox Grid.Column="1" PlaceholderText="Buscar Empleado" DisplayMemberPath="Nombre" QueryIcon="Find" Width="200" TextChanged="AutoSuggestBox_TextChanged" QuerySubmitted="AutoSuggestBox_QuerySubmitted" SuggestionChosen="AutoSuggestBox_SuggestionChosen" VerticalAlignment="Bottom" FontSize="25" Height="32" HorizontalAlignment="Right" Margin="0,0,30,10"/>
                 </Grid>
-                <ProgressRing Name="prLoading" Grid.RowSpan="4" Visibility="Visible" Width="200" Height="200"/>
                 <ScrollViewer HorizontalScrollMode="Enabled" HorizontalScrollBarVisibility="Visible" Grid.Row="1" Margin="30,0,30,10">
                     <controls:DataGrid MaxHeight="360" SelectionChanged="DataGrid_SelectionChanged" x:Name="DataGrid" SelectionMode="Single" ItemsSource="{Binding EmpleadoITem}" HeaderBackground="#FF8B8383" >
                         <controls:DataGrid.Foreground>
@@ -43,8 +42,10 @@
                             <controls:DataGridTextColumn Width="180" Header="Area" Binding="{Binding Area.Nombre}"/>
                             <controls:DataGridTextColumn Width="180" Header="CURP" Binding="{Binding CURP}"/>
                             <controls:DataGridTextColumn Width="180" Header="RFC" Binding="{Binding RFC}"/>
-                            <controls:DataGridTextColumn Width="180" Header="Fecha Nacimiento" Binding="{Binding FechaNacimiento}"/>
-                            <controls:DataGridTextColumn Width="180" Header="Fecha Alta" Binding="{Binding FechaHoraRegistro}"/>
+                            <controls:DataGridTextColumn Width="180" Header="NSS" Binding="{Binding NumeroSeguroSocial}"/>
+                            <controls:DataGridTextColumn Width="180" Header="Padre" Binding="{Binding NombrePadre}"/>
+                            <controls:DataGridTextColumn Width="180" Header="Madre" Binding="{Binding NombreMadre`}"/>
+                            <controls:DataGridTextColumn Width="180" Header="Fecha Ingreso" Binding="{Binding FechaIngreso}"/>
                         </controls:DataGrid.Columns>
                     </controls:DataGrid>
                 </ScrollViewer>
@@ -112,6 +113,7 @@
                     <DatePicker Name="dpIngreso" Header="Fecha de Ingreso" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="1" Grid.Row="3" Margin="10,0" TabIndex="8"/>
                     <ComboBox Name="cbAreas" PlaceholderText="Seleccione area" DisplayMemberPath="Nombre" Header="Area" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="2" Margin="10,0,0,0" TabIndex="9"/>
                 </Grid>
+                <ProgressRing Name="prLoading" Grid.RowSpan="4" Visibility="Visible" Width="100" Height="100"/>
             </Grid>
         </ScrollViewer>
     </Grid>

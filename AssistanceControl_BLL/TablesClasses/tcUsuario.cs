@@ -28,6 +28,12 @@ namespace AssistanceControl_BLL.TablesClasses
             URL += "/Usuario?$filter=EmpleadoId eq " + empleadoId;
             return await getData(URL);
         }
+        public async Task<Usuario> getUsuarioByUsuarioId(string usuarioId)
+        {
+            String URL = _uriServicio.AbsoluteUri;
+            URL += "/Usuario?$filter=UsuarioId eq '" + usuarioId + "'";
+            return await getData(URL);
+        }
         public async void Insertar(Usuario user)
         {
             try

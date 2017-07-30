@@ -25,6 +25,8 @@ namespace Assistance_ControlDLL
         public int Estatus { get; set; }
         public string UsuarioRegistro { get; set; }
         public System.DateTime FechaHoraRegistro { get; set; }
+        public string UsuarioModificacion { get; set; }
+        public System.DateTime FechaHoraModificacion { get; set; }
     
         public virtual ICollection<EmpleadoPermiso> EmpleadoPermiso { get; set; }
     }

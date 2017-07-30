@@ -9,8 +9,10 @@
     <RootPropertyPathName Name="Nombre" />
     <RootPropertyPathName Name="AreaId" />
     <RootPropertyPathName Name="EmpleadoITem" />
-    <RootPropertyPathName Name="FechaHoraRegistro" />
-    <RootPropertyPathName Name="FechaNacimiento" />
+    <RootPropertyPathName Name="FechaIngreso" />
+    <RootPropertyPathName Name="NombreMadre`" />
+    <RootPropertyPathName Name="NombrePadre" />
+    <RootPropertyPathName Name="NumeroSeguroSocial" />
     <RootPropertyPathName Name="RFC" />
     <RootPropertyPathName Name="CURP" />
     <RootPropertyPathName Name="Area" />
@@ -340,6 +342,7 @@
     <RootType FullName="Windows.UI.Xaml.Controls.TimePicker">
       <RootProperty Name="Name" />
       <RootProperty Name="Header" />
+      <RootProperty Name="ClockIdentifier" />
     </RootType>
     <RootType FullName="Assistance_Control.Views.Horarios.MasterHorarios" />
   </Roots.RootTypes>

@@ -14,7 +14,7 @@ namespace Assistance_ControlDLL
     
     public partial class EmpleadoPermiso
     {
-        public int EmpleadoId { get; set; }
+        public string EmpleadoId { get; set; }
         public int PermisoId { get; set; }
         public System.DateTime FechaInicio { get; set; }
         public System.DateTime FechaFinal { get; set; }

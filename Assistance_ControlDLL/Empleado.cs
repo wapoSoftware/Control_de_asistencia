@@ -20,18 +20,25 @@ namespace Assistance_ControlDLL
             this.EmpleadoPermiso = new HashSet<EmpleadoPermiso>();
         }
     
-        public int EmpleadoId { get; set; }
+        public string EmpleadoId { get; set; }
         public string Nombre { get; set; }
         public string ApellidoPaterno { get; set; }
         public string ApellidoMaterno { get; set; }
-        public string FechaNacimiento { get; set; }
+        public string Sexo { get; set; }
         public string RFC { get; set; }
         public string CURP { get; set; }
+        public string NumeroSeguroSocial { get; set; }
+        public string NombrePadre { get; set; }
+        public string NombreMadre { get; set; }
+        public string LugarNacimiento { get; set; }
+        public string InformacionSensible { get; set; }
         public System.DateTime FechaIngreso { get; set; }
         public int Estatus { get; set; }
         public int AreaId { get; set; }
         public string UsuarioRegistro { get; set; }
         public System.DateTime FechaHoraRegistro { get; set; }
+        public string UsuarioModificacion { get; set; }
+        public System.DateTime FechaHoraModificacion { get; set; }
     
         public virtual Area Area { get; set; }
         public virtual ICollection<Asistencia> Asistencia { get; set; }

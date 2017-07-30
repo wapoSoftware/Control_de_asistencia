@@ -9,13 +9,15 @@
     <Property Name="Estatus" Type="int" Nullable="false" />
     <Property Name="UsuarioRegistro" Type="varchar" MaxLength="15" Nullable="false" />
     <Property Name="FechaHoraRegistro" Type="datetime" Nullable="false" />
+    <Property Name="UsuarioModificacion" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="FechaHoraModificacion" Type="datetime" Nullable="false" />
   </EntityType>
   <EntityType Name="Asistencia">
     <Key>
       <PropertyRef Name="AsistenciaId" />
     </Key>
     <Property Name="AsistenciaId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="EmpleadoId" Type="int" Nullable="false" />
+    <Property Name="EmpleadoId" Type="varchar" MaxLength="15" Nullable="false" />
     <Property Name="FechaHora" Type="datetime" Nullable="false" />
     <Property Name="Estado" Type="int" Nullable="false" />
   </EntityType>
@@ -23,25 +25,32 @@
     <Key>
       <PropertyRef Name="EmpleadoId" />
     </Key>
-    <Property Name="EmpleadoId" Type="int" Nullable="false" />
+    <Property Name="EmpleadoId" Type="varchar" MaxLength="15" Nullable="false" />
     <Property Name="Nombre" Type="varchar" MaxLength="30" Nullable="false" />
     <Property Name="ApellidoPaterno" Type="varchar" MaxLength="30" Nullable="false" />
     <Property Name="ApellidoMaterno" Type="varchar" MaxLength="30" Nullable="false" />
-    <Property Name="FechaNacimiento" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Sexo" Type="varchar" MaxLength="1" Nullable="false" />
     <Property Name="RFC" Type="varchar" MaxLength="12" Nullable="false" />
     <Property Name="CURP" Type="varchar" MaxLength="18" Nullable="false" />
+    <Property Name="NumeroSeguroSocial" Type="varchar" MaxLength="18" Nullable="false" />
+    <Property Name="NombrePadre" Type="varchar" MaxLength="70" Nullable="false" />
+    <Property Name="NombreMadre" Type="varchar" MaxLength="70" Nullable="false" />
+    <Property Name="LugarNacimiento" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="InformacionSensible" Type="varchar" MaxLength="100" Nullable="false" />
     <Property Name="FechaIngreso" Type="datetime" Nullable="false" />
     <Property Name="Estatus" Type="int" Nullable="false" />
     <Property Name="AreaId" Type="int" Nullable="false" />
     <Property Name="UsuarioRegistro" Type="varchar" MaxLength="15" Nullable="false" />
     <Property Name="FechaHoraRegistro" Type="datetime" Nullable="false" />
+    <Property Name="UsuarioModificacion" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="FechaHoraModificacion" Type="datetime" Nullable="false" />
   </EntityType>
   <EntityType Name="EmpleadoPermiso">
     <Key>
       <PropertyRef Name="EmpleadoId" />
       <PropertyRef Name="PermisoId" />
     </Key>
-    <Property Name="EmpleadoId" Type="int" Nullable="false" />
+    <Property Name="EmpleadoId" Type="varchar" MaxLength="15" Nullable="false" />
     <Property Name="PermisoId" Type="int" Nullable="false" />
     <Property Name="FechaInicio" Type="datetime" Nullable="false" />
     <Property Name="FechaFinal" Type="datetime" Nullable="false" />
@@ -59,18 +68,22 @@
     <Property Name="Estatus" Type="int" Nullable="false" />
     <Property Name="UsuarioRegistro" Type="varchar" MaxLength="15" Nullable="false" />
     <Property Name="FechaHoraRegistro" Type="datetime" Nullable="false" />
+    <Property Name="UsuarioModificacion" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="FechaHoraModificacion" Type="datetime" Nullable="false" />
   </EntityType>
   <EntityType Name="HorarioArea">
     <Key>
-      <PropertyRef Name="HorarioId" />
-      <PropertyRef Name="AreaId" />
+      <PropertyRef Name="HorarioAreaId" />
     </Key>
+    <Property Name="HorarioAreaId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="HorarioId" Type="int" Nullable="false" />
     <Property Name="AreaId" Type="int" Nullable="false" />
     <Property Name="FechaInicio" Type="datetime" Nullable="false" />
     <Property Name="FechaFinal" Type="datetime" Nullable="false" />
     <Property Name="UsuarioRegistro" Type="varchar" MaxLength="15" Nullable="false" />
     <Property Name="FechaHoraRegistro" Type="datetime" Nullable="false" />
+    <Property Name="UsuarioModificacion" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="FechaHoraModificacion" Type="datetime" Nullable="false" />
   </EntityType>
   <EntityType Name="Permiso">
     <Key>
@@ -82,18 +95,22 @@
     <Property Name="Estatus" Type="int" Nullable="false" />
     <Property Name="UsuarioRegistro" Type="varchar" MaxLength="15" Nullable="false" />
     <Property Name="FechaHoraRegistro" Type="datetime" Nullable="false" />
+    <Property Name="UsuarioModificacion" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="FechaHoraModificacion" Type="datetime" Nullable="false" />
   </EntityType>
   <EntityType Name="Usuario">
     <Key>
       <PropertyRef Name="UsuarioId" />
     </Key>
     <Property Name="UsuarioId" Type="varchar" MaxLength="15" Nullable="false" />
-    <Property Name="EmpleadoId" Type="int" Nullable="false" />
+    <Property Name="EmpleadoId" Type="varchar" MaxLength="15" Nullable="false" />
     <Property Name="Contrasena" Type="varchar" MaxLength="20" Nullable="false" />
     <Property Name="Nivel" Type="int" Nullable="false" />
     <Property Name="Estatus" Type="int" Nullable="false" />
     <Property Name="UsuarioRegistro" Type="varchar" MaxLength="15" Nullable="false" />
     <Property Name="FechaHoraRegistro" Type="datetime" Nullable="false" />
+    <Property Name="UsuarioModificacion" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="FechaHoraModificacion" Type="datetime" Nullable="false" />
   </EntityType>
   <Association Name="FK_Asistencia_Empleado">
     <End Role="Empleado" Type="Self.Empleado" Multiplicity="1">

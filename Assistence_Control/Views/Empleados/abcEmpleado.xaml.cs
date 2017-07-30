@@ -52,6 +52,7 @@ namespace Assistence_Control.Views.Empleados
         {
             try
             {
+                prLoading.IsActive = true;
                 empleados = await empDAO.getAllEmpleados();
                 DataGrid.ItemsSource = null;
                 DataGrid.ItemsSource = empleados.OrderBy(o => o. ApellidoPaterno).ThenBy(o => o.ApellidoMaterno).ThenBy(o => o.Nombre).ToList();
@@ -59,6 +60,10 @@ namespace Assistence_Control.Views.Empleados
             catch (Exception ex)
             {
                 await new MessageDialog("Error al obtener empleados.").ShowAsync();
+            }
+            finally
+            {
+                prLoading.IsActive = false;
             }
         }
         private async void cargarAreas()
@@ -98,7 +103,7 @@ namespace Assistence_Control.Views.Empleados
                 tbCurp.Text = empleadoSeleccionado.CURP;
                 tbRfc.Text = empleadoSeleccionado.RFC;
                 cbAreas.SelectedItem = areas.Where(w => w.AreaId == empleadoSeleccionado.AreaId).FirstOrDefault();
-                dpNacimiento.Date = Convert.ToDateTime(empleadoSeleccionado.FechaNacimiento);
+                //dpNacimiento.Date = Convert.ToDateTime(empleadoSeleccionado.FechaNacimiento);
                 dpIngreso.Date = empleadoSeleccionado.FechaIngreso;
             }
             else
@@ -278,7 +283,7 @@ namespace Assistence_Control.Views.Empleados
                     Nombre = tbNombre.Text.ToUpper(),
                     ApellidoPaterno = tbApellidoPaterno.Text.ToUpper(),
                     ApellidoMaterno = tbApellidoMaterno.Text.ToUpper(),
-                    EmpleadoId = int.Parse(tbNumeroEmpleado.Text),
+                    EmpleadoId = tbNumeroEmpleado.Text,
                     CURP = tbCurp.Text,
                     Area = area,
                     RFC = tbRfc.Text,
@@ -287,7 +292,7 @@ namespace Assistence_Control.Views.Empleados
                     UsuarioRegistro = App.usuarioAutentificado.UsuarioId,
                     Estatus = 1,
                     FechaIngreso = DateTime.Now,
-                    FechaNacimiento = dpNacimiento.Date.ToString("d")
+                    //FechaNacimiento = dpNacimiento.Date.ToString("d")
                 };
                 return true;
             }

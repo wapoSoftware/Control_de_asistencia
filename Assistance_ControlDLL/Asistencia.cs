@@ -15,7 +15,7 @@ namespace Assistance_ControlDLL
     public partial class Asistencia
     {
         public int AsistenciaId { get; set; }
-        public int EmpleadoId { get; set; }
+        public string EmpleadoId { get; set; }
         public System.DateTime FechaHora { get; set; }
         public int Estado { get; set; }
     

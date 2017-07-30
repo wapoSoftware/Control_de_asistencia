@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="9d0dfb2b-4dc8-4a8d-8698-0a3c557eacd7" xmlns="urn:schemas-microsoft-com:xml-dataservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="eb763db5-c9bc-4a48-b1b4-f16ba14cf975" xmlns="urn:schemas-microsoft-com:xml-dataservicemap">
   <MetadataSources>
-    <MetadataSource Address="http://localhost/wsAssistanceControl/DataService.svc/" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://localhost/wsAssistanceControl/DataService.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="service.edmx" MetadataType="Edmx" ID="0b09d89c-6b03-4b1c-9c31-895265dc8ea7" SourceId="1" SourceUrl="http://localhost/wsAssistanceControl/DataService.svc/" />
+    <MetadataFile FileName="service1.edmx" MetadataType="Edmx" ID="5215e182-0dd4-4411-92f5-1b538c73b0a5" SourceId="1" SourceUrl="http://localhost/wsAssistanceControl/DataService.svc" />
   </Metadata>
   <Extensions />
   <Parameters>

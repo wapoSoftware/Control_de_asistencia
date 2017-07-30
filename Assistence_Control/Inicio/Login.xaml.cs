@@ -20,7 +20,7 @@ namespace Assistence_Control.Inicio
             
         }
         //Eventos
-        private async void btnEntrar_Click(object sender, RoutedEventArgs e)
+        private void btnEntrar_Click(object sender, RoutedEventArgs e)
         {
             accesar();
         }
@@ -31,7 +31,7 @@ namespace Assistence_Control.Inicio
             {
                 Usuario user = new Usuario
                 {
-                    EmpleadoId = 14490224,
+                    EmpleadoId = "14490224",
                     Contrasena = "potter13",
                     Nivel = 1,
                     UsuarioRegistro = App.usuarioAutentificado.UsuarioId,
@@ -55,7 +55,7 @@ namespace Assistence_Control.Inicio
                 accesar();
             }
         }
-        private async void numeric_TextChanged(object sender, TextChangedEventArgs e)
+        private void numeric_TextChanged(object sender, TextChangedEventArgs e)
         {
             TextBox txt = sender as TextBox;
             string val = txt.Text;
@@ -105,7 +105,7 @@ namespace Assistence_Control.Inicio
                 if (await validaCampos())
                 {
                     tcUsuario usDAO = new tcUsuario(App.uriServicio);
-                    App.usuarioAutentificado = await usDAO.getUsuarioByEmpleadoId(tbUsuario.Text);
+                    App.usuarioAutentificado = await usDAO.getUsuarioByUsuarioId(tbUsuario.Text);
                     if (App.usuarioAutentificado != null)
                     {
                         if (tbPassword.Password != App.usuarioAutentificado.Contrasena)

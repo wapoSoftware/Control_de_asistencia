@@ -31,7 +31,7 @@ namespace Assistence_Control
             settings.CreateContainer("Configuracion", ApplicationDataCreateDisposition.Always);
             if (settings.Containers["Configuracion"].Values.Count == 0)
             {
-                settings.Containers["Configuracion"].Values["uriServicio"] = "http://localhost/wsAssistanceControl/DataService.svc";
+                settings.Containers["Configuracion"].Values["uriServicio"] = "http://localhost/wsAssistanceControl/DataService.svc/";
             }
 
             uriServicio = new Uri(settings.Containers["Configuracion"].Values["uriServicio"].ToString());

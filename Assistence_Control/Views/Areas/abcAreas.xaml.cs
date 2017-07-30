@@ -30,7 +30,7 @@ namespace Assistence_Control.Views.Areas
         Area nuevaArea = null;
         List<Area> areas = null;
         tcArea areaDAO;
-        enum ACCION { INSERTAR = 1, ACTUALIZAR = 2, ELIMINAR = 3 };
+        enum ACCION { INSERTAR = 1, ACTUALIZAR = 2, ELIMINAR = 3, DEFAULT = 4 };
         int estado = 0;
         //Constructor
         public abcAreas()
@@ -100,6 +100,7 @@ namespace Assistence_Control.Views.Areas
                     {
                         await areaDAO.Eliminar(areaSeleccionada);
                         cargarAreas();
+                        limpiarCampos();
                     }));
                     messageDialog.Commands.Add(new UICommand("No", (command) =>
                     {
@@ -146,6 +147,14 @@ namespace Assistence_Control.Views.Areas
                             await new MessageDialog("El area fue creada correctamente.", "").ShowAsync();
                         }
                         break;
+                    case (int)ACCION.DEFAULT:
+                        if (await obtenerDatosVista())
+                        {
+                            await areaDAO.Insertar(nuevaArea);
+                            cargarAreas();
+                            await new MessageDialog("El area fue creada correctamente.", "").ShowAsync();
+                        }
+                        break;
                 }
                 limpiarCampos();
             }
@@ -175,6 +184,7 @@ namespace Assistence_Control.Views.Areas
             tbClave.Text = (await getNextAreaId()).ToString();
             tbNombreArea.Text = string.Empty;
             areaSeleccionada = null;
+            estado = (int)ACCION.DEFAULT;
         }
         private async Task<int> getNextAreaId()
         {
@@ -189,11 +199,15 @@ namespace Assistence_Control.Views.Areas
                     Nombre = tbNombreArea.Text.ToUpper(),
                     UsuarioRegistro = App.usuarioAutentificado.UsuarioId,
                     FechaHoraRegistro = DateTime.Now,
-                    Estatus = 1,                    
+                    Estatus = 1,
+                    FechaHoraModificacion = DateTime.Now,
+                    UsuarioModificacion = App.usuarioAutentificado.UsuarioId 
                 };
                 if(estado == (int)ACCION.ACTUALIZAR)
                 {
                     nuevaArea.AreaId = areaSeleccionada.AreaId;
+                    nuevaArea.FechaHoraRegistro = areaSeleccionada.FechaHoraRegistro;
+                    nuevaArea.UsuarioRegistro = areaSeleccionada.UsuarioRegistro;
                 }
                 return true;
             }

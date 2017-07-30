@@ -14,15 +14,6 @@ C:\Assistence_Control\Assistence_Control\bin\x64\Debug\AppxManifest.xml
 C:\Assistence_Control\Assistence_Control\bin\x64\Debug\Core\AppxManifest.xml
 C:\Assistence_Control\Assistence_Control\bin\x64\Debug\Core\Assistance_Control.exe
 C:\Assistence_Control\Assistence_Control\bin\x64\Debug\Assistence_Control.build.appxrecipe
-C:\Assistence_Control\Assistence_Control\bin\x64\Debug\DevExpress.Core.v15.2.dll
-C:\Assistence_Control\Assistence_Control\bin\x64\Debug\DevExpress.Drawing.v15.2.dll
-C:\Assistence_Control\Assistence_Control\bin\x64\Debug\DevExpress.Mvvm.v15.2.dll
-C:\Assistence_Control\Assistence_Control\bin\x64\Debug\DevExpress.Pdf.Core.v15.2.dll
-C:\Assistence_Control\Assistence_Control\bin\x64\Debug\DevExpress.UI.Xaml.Controls.v15.2.dll
-C:\Assistence_Control\Assistence_Control\bin\x64\Debug\DevExpress.UI.Xaml.Editors.v15.2.dll
-C:\Assistence_Control\Assistence_Control\bin\x64\Debug\DevExpress.UI.Xaml.Layout.v15.2.dll
-C:\Assistence_Control\Assistence_Control\bin\x64\Debug\DevExpress.UI.Xaml.Ribbon.v15.2.dll
-C:\Assistence_Control\Assistence_Control\bin\x64\Debug\DevExpress.UI.Xaml.v15.2.dll
 C:\Assistence_Control\Assistence_Control\bin\x64\Debug\Microsoft.CSharp.dll
 C:\Assistence_Control\Assistence_Control\bin\x64\Debug\Microsoft.Data.Edm.dll
 C:\Assistence_Control\Assistence_Control\bin\x64\Debug\de\Microsoft.Data.Edm.resources.dll
@@ -173,6 +164,7 @@ C:\Assistence_Control\Assistence_Control\bin\x64\Debug\Newtonsoft.Json.dll
 C:\Assistence_Control\Assistence_Control\bin\x64\Debug\AssistanceControl_BLL.pdb
 C:\Assistence_Control\Assistence_Control\bin\x64\Debug\AssistanceControl_BLL.pri
 C:\Assistence_Control\Assistence_Control\bin\x64\Debug\Newtonsoft.Json.xml
+C:\Assistence_Control\Assistence_Control\obj\x64\Debug\Assistence_Control.csprojResolveAssemblyReference.cache
 C:\Assistence_Control\Assistence_Control\obj\x64\Debug\App.g.i.cs
 C:\Assistence_Control\Assistence_Control\obj\x64\Debug\App.g.cs
 C:\Assistence_Control\Assistence_Control\obj\x64\Debug\Inicio\Login.g.i.cs
@@ -281,4 +273,3 @@ C:\Assistence_Control\Assistence_Control\obj\x64\Debug\qualifiers.txt.intermedia
 C:\Assistence_Control\Assistence_Control\obj\x64\Debug\MultipleQualifiersPerDimensionFound.txt
 C:\Assistence_Control\Assistence_Control\obj\x64\Debug\MyToolkit.Extended.pri.xml
 C:\Assistence_Control\Assistence_Control\obj\x64\Debug\ProjectArchitectures.txt
-C:\Assistence_Control\Assistence_Control\obj\x64\Debug\Assistence_Control.csprojResolveAssemblyReference.cache

@@ -43,6 +43,8 @@
     <Property Name="Estatus" Type="Int32" Nullable="false" />
     <Property Name="UsuarioRegistro" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
     <Property Name="FechaHoraRegistro" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UsuarioModificacion" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="FechaHoraModificacion" Type="DateTime" Nullable="false" Precision="3" />
     <NavigationProperty Name="Empleado" Relationship="AssistanceControlModel.FK_EmpleadoArea" FromRole="Area" ToRole="Empleado" />
     <NavigationProperty Name="HorarioArea" Relationship="AssistanceControlModel.FK_HorarioArea_Area" FromRole="Area" ToRole="HorarioArea" />
   </EntityType>
@@ -51,7 +53,7 @@
       <PropertyRef Name="AsistenciaId" />
     </Key>
     <Property Name="AsistenciaId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="EmpleadoId" Type="Int32" Nullable="false" />
+    <Property Name="EmpleadoId" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
     <Property Name="FechaHora" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="Estado" Type="Int32" Nullable="false" />
     <NavigationProperty Name="Empleado" Relationship="AssistanceControlModel.FK_Asistencia_Empleado" FromRole="Asistencia" ToRole="Empleado" />
@@ -60,18 +62,25 @@
     <Key>
       <PropertyRef Name="EmpleadoId" />
     </Key>
-    <Property Name="EmpleadoId" Type="Int32" Nullable="false" />
+    <Property Name="EmpleadoId" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
     <Property Name="Nombre" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
     <Property Name="ApellidoPaterno" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
     <Property Name="ApellidoMaterno" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
-    <Property Name="FechaNacimiento" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Sexo" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
     <Property Name="RFC" Type="String" Nullable="false" MaxLength="12" FixedLength="false" Unicode="false" />
     <Property Name="CURP" Type="String" Nullable="false" MaxLength="18" FixedLength="false" Unicode="false" />
+    <Property Name="NumeroSeguroSocial" Type="String" Nullable="false" MaxLength="18" FixedLength="false" Unicode="false" />
+    <Property Name="NombrePadre" Type="String" Nullable="false" MaxLength="70" FixedLength="false" Unicode="false" />
+    <Property Name="NombreMadre" Type="String" Nullable="false" MaxLength="70" FixedLength="false" Unicode="false" />
+    <Property Name="LugarNacimiento" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="InformacionSensible" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
     <Property Name="FechaIngreso" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="Estatus" Type="Int32" Nullable="false" />
     <Property Name="AreaId" Type="Int32" Nullable="false" />
     <Property Name="UsuarioRegistro" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
     <Property Name="FechaHoraRegistro" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UsuarioModificacion" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="FechaHoraModificacion" Type="DateTime" Nullable="false" Precision="3" />
     <NavigationProperty Name="Area" Relationship="AssistanceControlModel.FK_EmpleadoArea" FromRole="Empleado" ToRole="Area" />
     <NavigationProperty Name="Asistencia" Relationship="AssistanceControlModel.FK_Asistencia_Empleado" FromRole="Empleado" ToRole="Asistencia" />
     <NavigationProperty Name="EmpleadoPermiso" Relationship="AssistanceControlModel.FK_EmpleadoPermiso_Empleado" FromRole="Empleado" ToRole="EmpleadoPermiso" />
@@ -81,7 +90,7 @@
       <PropertyRef Name="EmpleadoId" />
       <PropertyRef Name="PermisoId" />
     </Key>
-    <Property Name="EmpleadoId" Type="Int32" Nullable="false" />
+    <Property Name="EmpleadoId" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
     <Property Name="PermisoId" Type="Int32" Nullable="false" />
     <Property Name="FechaInicio" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="FechaFinal" Type="DateTime" Nullable="false" Precision="3" />
@@ -101,19 +110,23 @@
     <Property Name="Estatus" Type="Int32" Nullable="false" />
     <Property Name="UsuarioRegistro" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
     <Property Name="FechaHoraRegistro" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UsuarioModificacion" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="FechaHoraModificacion" Type="DateTime" Nullable="false" Precision="3" />
     <NavigationProperty Name="HorarioArea" Relationship="AssistanceControlModel.FK_HorarioArea_Horario" FromRole="Horario" ToRole="HorarioArea" />
   </EntityType>
   <EntityType Name="HorarioArea">
     <Key>
-      <PropertyRef Name="HorarioId" />
-      <PropertyRef Name="AreaId" />
+      <PropertyRef Name="HorarioAreaId" />
     </Key>
+    <Property Name="HorarioAreaId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="HorarioId" Type="Int32" Nullable="false" />
     <Property Name="AreaId" Type="Int32" Nullable="false" />
     <Property Name="FechaInicio" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="FechaFinal" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="UsuarioRegistro" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
     <Property Name="FechaHoraRegistro" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UsuarioModificacion" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="FechaHoraModificacion" Type="DateTime" Nullable="false" Precision="3" />
     <NavigationProperty Name="Area" Relationship="AssistanceControlModel.FK_HorarioArea_Area" FromRole="HorarioArea" ToRole="Area" />
     <NavigationProperty Name="Horario" Relationship="AssistanceControlModel.FK_HorarioArea_Horario" FromRole="HorarioArea" ToRole="Horario" />
   </EntityType>
@@ -127,6 +140,8 @@
     <Property Name="Estatus" Type="Int32" Nullable="false" />
     <Property Name="UsuarioRegistro" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
     <Property Name="FechaHoraRegistro" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UsuarioModificacion" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="FechaHoraModificacion" Type="DateTime" Nullable="false" Precision="3" />
     <NavigationProperty Name="EmpleadoPermiso" Relationship="AssistanceControlModel.FK_EmpleadoPermiso_Permiso" FromRole="Permiso" ToRole="EmpleadoPermiso" />
   </EntityType>
   <EntityType Name="Usuario">
@@ -134,12 +149,14 @@
       <PropertyRef Name="UsuarioId" />
     </Key>
     <Property Name="UsuarioId" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
-    <Property Name="EmpleadoId" Type="Int32" Nullable="false" />
+    <Property Name="EmpleadoId" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
     <Property Name="Contrasena" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
     <Property Name="Nivel" Type="Int32" Nullable="false" />
     <Property Name="Estatus" Type="Int32" Nullable="false" />
     <Property Name="UsuarioRegistro" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
     <Property Name="FechaHoraRegistro" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UsuarioModificacion" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="FechaHoraModificacion" Type="DateTime" Nullable="false" Precision="3" />
   </EntityType>
   <Association Name="FK_EmpleadoArea">
     <End Type="AssistanceControlModel.Area" Role="Area" Multiplicity="1">

@@ -15,11 +15,13 @@ namespace Assistance_ControlDLL
     public partial class Usuario
     {
         public string UsuarioId { get; set; }
-        public int EmpleadoId { get; set; }
+        public string EmpleadoId { get; set; }
         public string Contrasena { get; set; }
         public int Nivel { get; set; }
         public int Estatus { get; set; }
         public string UsuarioRegistro { get; set; }
         public System.DateTime FechaHoraRegistro { get; set; }
+        public string UsuarioModificacion { get; set; }
+        public System.DateTime FechaHoraModificacion { get; set; }
     }
 }

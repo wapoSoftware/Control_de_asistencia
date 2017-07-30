@@ -48,7 +48,7 @@ namespace AssistanceControl_BLL.TablesClasses
             {
                 await base.insert(_uriServicio, entidad);
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 throw new Exception("Error al insertar Horario.");
             }
